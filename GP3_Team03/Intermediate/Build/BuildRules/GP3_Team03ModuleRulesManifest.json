@@ -1,0 +1,10 @@
+{
+	"SourceFiles": [
+		"C:\\Users\\tomas.savela\\Perforce\\FG21FTGP_UE4_GP3_TomasSavela\\GP3_Team03\\Source\\GP3_Team03\\GP3_Team03.Build.cs",
+		"C:\\Users\\tomas.savela\\Perforce\\FG21FTGP_UE4_GP3_TomasSavela\\GP3_Team03\\Plugins\\FMODStudio\\Source\\FMODStudio\\FMODStudio.Build.cs",
+		"C:\\Users\\tomas.savela\\Perforce\\FG21FTGP_UE4_GP3_TomasSavela\\GP3_Team03\\Plugins\\FMODStudio\\Source\\FMODStudioEditor\\FMODStudioEditor.Build.cs",
+		"C:\\Users\\tomas.savela\\Perforce\\FG21FTGP_UE4_GP3_TomasSavela\\GP3_Team03\\Source\\GP3_Team03.Target.cs",
+		"C:\\Users\\tomas.savela\\Perforce\\FG21FTGP_UE4_GP3_TomasSavela\\GP3_Team03\\Source\\GP3_Team03Editor.Target.cs"
+	],
+	"EngineVersion": "4.27.2"
+}

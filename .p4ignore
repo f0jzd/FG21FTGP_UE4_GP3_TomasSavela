@@ -1,0 +1,26 @@
+# Never ignore DLLs in the FMOD subfolder.
+/GP3_Team03/Plugins/FMODStudio/**/lib/*
+                    
+# Ignore the Cache folder since it is updated locally.
+/GP3_Team03/Plugins/FMODStudio/Cache/*
+/GP3_Team03/FMODStudioCache.asset
+                    
+# Log files can be ignored.
+/GP3_Team03/fmod.log
+/GP3_Team03/fmod_editor.log
+/GP3_FMODProj/.cache/
+/GP3_FMODProj/.user/
+/GP3_FMODProj/.unsaved/
+
+#Built data for maps
+*_BuiltData.uasset
+
+#Compiled sourcefiles for the engine to use
+/GP3_Team03/Plugins/*/Intermediate/*
+/GP3_Team03/Plugins/*/Binaries/*
+
+/GP3_Team03/Plugins/FMODStudio/Cache/Editor/FMODStudioCache.asset
+/GP3_Team03/Plugins/FMODStudio/Resources/FMODStudioSettings.asset
+/GP3_Team03/Plugins/FMODStudio/platforms/mac/lib/fmodstudio.bundle/Contents/Info.plist
+/GP3_Team03/Plugins/FMODStudio/platforms/mac/lib/fmodstudioL.bundle/Contents/Info.plist
+/GP3_Team03/Plugins/FMODStudio/platforms/mac/lib/resonanceaudio.bundle/Contents/Info.plist

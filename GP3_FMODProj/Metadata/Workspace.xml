@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="Workspace" id="{83913ac3-fb4f-4539-bef0-6abf5b3e4e0c}">
+		<property name="isSourceControlForBuiltBanksEnabled">
+			<value>false</value>
+		</property>
+		<property name="isSourceControlForProfilerSessionsEnabled">
+			<value>false</value>
+		</property>
+		<property name="builtBanksOutputDirectory">
+			<value>C:/Users/tove.backenroth/Perforce/tove.backenroth_GP3REPO/GP3_Team03/Content/FMOD</value>
+		</property>
+		<relationship name="masterEventFolder">
+			<destination>{e36c5a98-5a4d-408f-8a68-0b404f61e0cd}</destination>
+		</relationship>
+		<relationship name="masterTagFolder">
+			<destination>{753c3d00-50e8-44d0-9c89-7caad59f6afc}</destination>
+		</relationship>
+		<relationship name="masterEffectPresetFolder">
+			<destination>{7f8e0149-fc8e-4700-87d3-1584550fd7b7}</destination>
+		</relationship>
+		<relationship name="masterParameterPresetFolder">
+			<destination>{2d544149-21ae-4625-b4ed-096517666ffa}</destination>
+		</relationship>
+		<relationship name="masterBankFolder">
+			<destination>{d46e30ac-cdcd-41b9-b54a-75fd3647f682}</destination>
+		</relationship>
+		<relationship name="masterSandboxFolder">
+			<destination>{3ba32f47-b469-4ee4-be5d-3ef3f9019f55}</destination>
+		</relationship>
+		<relationship name="masterAssetFolder">
+			<destination>{55eedcd9-f84f-4fd4-a4c0-753b6e7438ee}</destination>
+		</relationship>
+		<relationship name="mixer">
+			<destination>{a78d1256-8c91-4cfc-bb24-64dfce233844}</destination>
+		</relationship>
+		<relationship name="profilerSessionFolder">
+			<destination>{9ba04718-8f74-48d7-b157-750fb0a60d3d}</destination>
+		</relationship>
+		<relationship name="platforms">
+			<destination>{2f4cfdac-f35b-4ed8-b8c1-9f0c633a7cbe}</destination>
+		</relationship>
+	</object>
+</objects>
