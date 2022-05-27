@@ -16,22 +16,32 @@ public:
 	void Move(float ForwardInput, float RightInput, float DeltaTime);
 	
 	UFUNCTION()
-	void CheckInputs(float InForwardInput, float InRightInput, float DeltaTime);
-	
+	void CheckInputs(float InForwardInput, float InRightInput);
+
 	UFUNCTION()
-	float GetMaxDirNormal(float InValue);
+	void UpdateCurveTimers(float DeltaTime);
+
+	UFUNCTION()
+	FVector GetDirectionFromInput(float ForwardAxis, float RightAxis);
+
+	UFUNCTION()
+	FVector CalculateNextStep(FVector Direction);
+
+	UFUNCTION()
+	void ExecuteMovement(FVector InMovement, float DeltaTime);
 	
-	void DepenetrateMovement(FVector InMovement, float DeltaTime);
-	
-	void ApplyDepenetration(FHitResult* HitResult);
+	void ApplyDepenetration (FHitResult* HitResult);
 	
 	void ApplyWallSliding(FHitResult* HitResult);
 
+	UFUNCTION()
 	bool IsGrounded();
-	
+
+	UFUNCTION()
 	void ApplySlopeAxis(FVector ActorLocation);
 	
-	float AngleBetweenTwoVectors(FVector NormalA, FVector NormalB);
+	UFUNCTION()
+	void RotatePlayerWithController();
 
 	UPROPERTY(Category="Character Movement - Editable", EditAnywhere)
 	float MaxForwardSpeed = 500.0f;
@@ -82,7 +92,7 @@ public:
 	float DecelerationCurveValue = 0.0f;
 	
 	UPROPERTY(Category="Character Movement - Debugging Info", EditAnywhere)
-	bool IsUsingDepenetration = false;
+	bool IsUsingTovesMovement = false;
 
 	UPROPERTY(Category="Character Movement - Debugging Info", EditAnywhere)
 	bool DrawHitresultLine = false;
