@@ -6,7 +6,6 @@
 #include "C:/Users/tomas.savela/Perforce/FG21FTGP_UE4_GP3_TomasSavela/GP3_Team03/Intermediate/Build/Win64/UE4Editor/Inc/GP3_Team03/GP3_BTTRangedEnemyMoveTowards.gen.cpp"
 #include "C:/Users/tomas.savela/Perforce/FG21FTGP_UE4_GP3_TomasSavela/GP3_Team03/Intermediate/Build/Win64/UE4Editor/Inc/GP3_Team03/GP3_ChargeEnemyHealth.gen.cpp"
 #include "C:/Users/tomas.savela/Perforce/FG21FTGP_UE4_GP3_TomasSavela/GP3_Team03/Intermediate/Build/Win64/UE4Editor/Inc/GP3_Team03/GP3_Team03GameModeBase.gen.cpp"
-#include "C:/Users/tomas.savela/Perforce/FG21FTGP_UE4_GP3_TomasSavela/GP3_Team03/Intermediate/Build/Win64/UE4Editor/Inc/GP3_Team03/GP3ReloadWidget.gen.cpp"
 #include "C:/Users/tomas.savela/Perforce/FG21FTGP_UE4_GP3_TomasSavela/GP3_Team03/Intermediate/Build/Win64/UE4Editor/Inc/GP3_Team03/GP3SettingsWidget.gen.cpp"
 #include "C:/Users/tomas.savela/Perforce/FG21FTGP_UE4_GP3_TomasSavela/GP3_Team03/Intermediate/Build/Win64/UE4Editor/Inc/GP3_Team03/PlayerPawnMovementComponent.gen.cpp"
 #include "C:/Users/tomas.savela/Perforce/FG21FTGP_UE4_GP3_TomasSavela/GP3_Team03/Intermediate/Build/Win64/UE4Editor/Inc/GP3_Team03/SpellBase.gen.cpp"

@@ -8,6 +8,74 @@ C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Engine\Classes\Engine/
 C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\ServerStatReplicator.generated.h
 C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\GameModeBase.generated.h
 C:\Users\tomas.savela\Perforce\FG21FTGP_UE4_GP3_TomasSavela\GP3_Team03\Intermediate\Build\Win64\UE4Editor\Inc\GP3_Team03\GP3_Team03GameModeBase.generated.h
+C:/Users/tomas.savela/Perforce/FG21FTGP_UE4_GP3_TomasSavela/GP3_Team03/Source/GP3_Team03/Private/AI/AAICEnemy.cpp
+C:\Users\tomas.savela\Perforce\FG21FTGP_UE4_GP3_TomasSavela\GP3_Team03\Source\GP3_Team03\Public\AI/AAICEnemy.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\AIModule\Classes\AIController.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\NavigationSystem\Public\NavFilters/NavigationQueryFilter.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\NavigationSystem\Public\NavAreas/NavArea.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Engine\Classes\AI/Navigation/NavAreaBase.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\NavAreaBase.generated.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\NavigationSystem\NavArea.generated.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\NavigationSystem\NavigationQueryFilter.generated.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\AIModule\Classes\AITypes.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\NavigationSystem\Public\NavigationSystemTypes.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Engine\Classes\AI/NavigationSystemConfig.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\NavigationSystemConfig.generated.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\AIModule\AITypes.generated.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\GameplayTasks\Classes\GameplayTaskOwnerInterface.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\GameplayTasks\Public\GameplayTaskTypes.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\GameplayTasks\GameplayTaskOwnerInterface.generated.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\GameplayTasks\Classes\GameplayTask.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\CoreUObject\Public\UObject/WeakInterfacePtr.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\GameplayTasks\GameplayTask.generated.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\AIModule\Classes\Navigation/PathFollowingComponent.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\NavigationSystem\Public\NavigationData.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Engine\Classes\AI/Navigation/NavigationDataInterface.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\NavigationDataInterface.generated.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\NavigationSystem\NavigationData.generated.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\AIModule\Classes\AIResourceInterface.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\AIModule\AIResourceInterface.generated.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Engine\Classes\GameFramework/NavMovementComponent.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Engine\Classes\AI/Navigation/PathFollowingAgentInterface.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\PathFollowingAgentInterface.generated.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Engine\Classes\GameFramework/MovementComponent.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\MovementComponent.generated.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\NavMovementComponent.generated.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\AIModule\PathFollowingComponent.generated.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\AIModule\Classes\Perception/AIPerceptionListenerInterface.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\AIModule\AIPerceptionListenerInterface.generated.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\AIModule\Classes\GenericTeamAgentInterface.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\AIModule\GenericTeamAgentInterface.generated.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Engine\Public\VisualLogger/VisualLoggerDebugSnapshotInterface.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\VisualLoggerDebugSnapshotInterface.generated.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\AIModule\AIController.generated.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\AIModule\Classes\Navigation/CrowdFollowingComponent.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\AIModule\Classes\Navigation/CrowdAgentInterface.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\AIModule\CrowdAgentInterface.generated.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Engine\Classes\AI/Navigation/NavigationAvoidanceTypes.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\NavigationAvoidanceTypes.generated.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\AIModule\CrowdFollowingComponent.generated.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\AIModule\Classes\Perception/AIPerceptionTypes.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\AIModule\AIPerceptionTypes.generated.h
+C:\Users\tomas.savela\Perforce\FG21FTGP_UE4_GP3_TomasSavela\GP3_Team03\Intermediate\Build\Win64\UE4Editor\Inc\GP3_Team03\AAICEnemy.generated.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Engine\Classes\GameFramework/Character.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Engine\Classes\GameFramework/CharacterMovementReplication.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\CharacterMovementReplication.generated.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Engine\Classes\GameFramework/RootMotionSource.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\RootMotionSource.generated.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\Character.generated.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\AIModule\Classes\Perception/AIPerceptionComponent.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\AIModule\Classes\Perception/AISense.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\AIModule\AISense.generated.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\AIModule\Classes\Perception/AIPerceptionSystem.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\AIModule\Classes\AISubsystem.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\AIModule\Classes\AISystem.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Engine\Classes\AI/AISystemBase.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\AISystemBase.generated.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\AIModule\AISystem.generated.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\AIModule\AISubsystem.generated.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\AIModule\AIPerceptionSystem.generated.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\AIModule\AIPerceptionComponent.generated.h
 C:/Users/tomas.savela/Perforce/FG21FTGP_UE4_GP3_TomasSavela/GP3_Team03/Source/GP3_Team03/Private/AI/AI_Widgets/GP3_ChargeEnemyHealth.cpp
 C:\Users\tomas.savela\Perforce\FG21FTGP_UE4_GP3_TomasSavela\GP3_Team03\Source\GP3_Team03\Public\AI/AI_Widgets/GP3_ChargeEnemyHealth.h
 C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\UMG\Public\Blueprint/UserWidget.h
@@ -114,6 +182,9 @@ C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\UMG\Public\Components/
 C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\UMG\TextWidgetTypes.generated.h
 C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\UMG\TextBlock.generated.h
 C:\Users\tomas.savela\Perforce\FG21FTGP_UE4_GP3_TomasSavela\GP3_Team03\Intermediate\Build\Win64\UE4Editor\Inc\GP3_Team03\GP3_ChargeEnemyHealth.generated.h
+C:/Users/tomas.savela/Perforce/FG21FTGP_UE4_GP3_TomasSavela/GP3_Team03/Source/GP3_Team03/Private/AI/AI_Widgets/GP3_RangedEnemyHealth.cpp
+C:\Users\tomas.savela\Perforce\FG21FTGP_UE4_GP3_TomasSavela\GP3_Team03\Source\GP3_Team03\Public\AI/AI_Widgets/GP3_RangedEnemyHealth.h
+C:\Users\tomas.savela\Perforce\FG21FTGP_UE4_GP3_TomasSavela\GP3_Team03\Intermediate\Build\Win64\UE4Editor\Inc\GP3_Team03\GP3_RangedEnemyHealth.generated.h
 C:/Users/tomas.savela/Perforce/FG21FTGP_UE4_GP3_TomasSavela/GP3_Team03/Source/GP3_Team03/Private/AI/BT_Tasks/BTTask_ChargeAttackAndMove.cpp
 C:\Users\tomas.savela\Perforce\FG21FTGP_UE4_GP3_TomasSavela\GP3_Team03\Source\GP3_Team03\Public\AI/BT_Tasks/BTTask_ChargeAttackAndMove.h
 C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\AIModule\Classes\BehaviorTree/BTTaskNode.h
@@ -123,83 +194,49 @@ C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\In
 C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\AIModule\Classes\BehaviorTree/BehaviorTreeComponent.h
 C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\GameplayTags\Classes\GameplayTagContainer.h
 C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\GameplayTags\GameplayTagContainer.generated.h
-C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\AIModule\Classes\AITypes.h
-C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\NavigationSystem\Public\NavFilters/NavigationQueryFilter.h
-C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\NavigationSystem\Public\NavAreas/NavArea.h
-C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Engine\Classes\AI/Navigation/NavAreaBase.h
-C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\NavAreaBase.generated.h
-C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\NavigationSystem\NavArea.generated.h
-C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\NavigationSystem\NavigationQueryFilter.generated.h
-C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\NavigationSystem\Public\NavigationSystemTypes.h
-C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Engine\Classes\AI/NavigationSystemConfig.h
-C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\NavigationSystemConfig.generated.h
-C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\AIModule\AITypes.generated.h
 C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\AIModule\Classes\BrainComponent.h
-C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\AIModule\Classes\AIResourceInterface.h
-C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\AIModule\AIResourceInterface.generated.h
 C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\AIModule\BrainComponent.generated.h
 C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\AIModule\BehaviorTreeComponent.generated.h
 C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\AIModule\Classes\BehaviorTree/BlackboardAssetProvider.h
 C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\AIModule\BlackboardAssetProvider.generated.h
-C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\GameplayTasks\Classes\GameplayTaskOwnerInterface.h
-C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\GameplayTasks\Public\GameplayTaskTypes.h
-C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\GameplayTasks\GameplayTaskOwnerInterface.generated.h
 C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\AIModule\Classes\Tasks/AITask.h
-C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\GameplayTasks\Classes\GameplayTask.h
-C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\CoreUObject\Public\UObject/WeakInterfacePtr.h
-C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\GameplayTasks\GameplayTask.generated.h
 C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\AIModule\AITask.generated.h
 C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\AIModule\BTNode.generated.h
 C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\AIModule\BTTaskNode.generated.h
 C:\Users\tomas.savela\Perforce\FG21FTGP_UE4_GP3_TomasSavela\GP3_Team03\Intermediate\Build\Win64\UE4Editor\Inc\GP3_Team03\BTTask_ChargeAttackAndMove.generated.h
-C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\AIModule\Classes\AIController.h
-C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\AIModule\Classes\Navigation/PathFollowingComponent.h
-C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\NavigationSystem\Public\NavigationData.h
-C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Engine\Classes\AI/Navigation/NavigationDataInterface.h
-C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\NavigationDataInterface.generated.h
-C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\NavigationSystem\NavigationData.generated.h
-C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Engine\Classes\GameFramework/NavMovementComponent.h
-C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Engine\Classes\AI/Navigation/PathFollowingAgentInterface.h
-C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\PathFollowingAgentInterface.generated.h
-C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Engine\Classes\GameFramework/MovementComponent.h
-C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\MovementComponent.generated.h
-C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\NavMovementComponent.generated.h
-C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\AIModule\PathFollowingComponent.generated.h
-C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\AIModule\Classes\Perception/AIPerceptionListenerInterface.h
-C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\AIModule\AIPerceptionListenerInterface.generated.h
-C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\AIModule\Classes\GenericTeamAgentInterface.h
-C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\AIModule\GenericTeamAgentInterface.generated.h
-C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Engine\Public\VisualLogger/VisualLoggerDebugSnapshotInterface.h
-C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\VisualLoggerDebugSnapshotInterface.generated.h
-C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\AIModule\AIController.generated.h
 C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Engine\Classes\Kismet/KismetMathLibrary.h
 C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\KismetMathLibrary.generated.h
 C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Engine\Classes\Kismet\KismetMathLibrary.inl
 C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\AIModule\Classes\BehaviorTree/BlackboardComponent.h
 C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\AIModule\Classes\BehaviorTree/Blackboard/BlackboardKeyType.h
 C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\AIModule\BlackboardKeyType.generated.h
-C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\AIModule\Classes\AISystem.h
-C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Engine\Classes\AI/AISystemBase.h
-C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\AISystemBase.generated.h
-C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\AIModule\AISystem.generated.h
 C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\AIModule\Classes\BehaviorTree/BlackboardData.h
 C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\AIModule\BlackboardData.generated.h
 C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\AIModule\BlackboardComponent.generated.h
 C:/Users/tomas.savela/Perforce/FG21FTGP_UE4_GP3_TomasSavela/GP3_Team03/Source/GP3_Team03/Private/AI/BT_Tasks/BTTask_RangedAttackState.cpp
 C:\Users\tomas.savela\Perforce\FG21FTGP_UE4_GP3_TomasSavela\GP3_Team03\Source\GP3_Team03\Public\AI/BT_Tasks/BTTask_RangedAttackState.h
 C:\Users\tomas.savela\Perforce\FG21FTGP_UE4_GP3_TomasSavela\GP3_Team03\Intermediate\Build\Win64\UE4Editor\Inc\GP3_Team03\BTTask_RangedAttackState.generated.h
+C:/Users/tomas.savela/Perforce/FG21FTGP_UE4_GP3_TomasSavela/GP3_Team03/Source/GP3_Team03/Private/AI/BT_Tasks/BTTask_RangedBehaviour.cpp
+C:\Users\tomas.savela\Perforce\FG21FTGP_UE4_GP3_TomasSavela\GP3_Team03\Source\GP3_Team03\Public\AI/BT_Tasks/BTTask_RangedBehaviour.h
+C:\Users\tomas.savela\Perforce\FG21FTGP_UE4_GP3_TomasSavela\GP3_Team03\Intermediate\Build\Win64\UE4Editor\Inc\GP3_Team03\BTTask_RangedBehaviour.generated.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Engine\Public\DrawDebugHelpers.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\AIModule\Classes\BehaviorTree/Blackboard/BlackboardKeyType_Object.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\AIModule\BlackboardKeyType_Object.generated.h
 C:/Users/tomas.savela/Perforce/FG21FTGP_UE4_GP3_TomasSavela/GP3_Team03/Source/GP3_Team03/Private/AI/BT_Tasks/GP3_BTTRangedEnemyMoveTowards.cpp
 C:\Users\tomas.savela\Perforce\FG21FTGP_UE4_GP3_TomasSavela\GP3_Team03\Source\GP3_Team03\Public\AI/BT_Tasks/GP3_BTTRangedEnemyMoveTowards.h
 C:\Users\tomas.savela\Perforce\FG21FTGP_UE4_GP3_TomasSavela\GP3_Team03\Intermediate\Build\Win64\UE4Editor\Inc\GP3_Team03\GP3_BTTRangedEnemyMoveTowards.generated.h
-C:/Users/tomas.savela/Perforce/FG21FTGP_UE4_GP3_TomasSavela/GP3_Team03/Source/GP3_Team03/Private/AI/EnemyBaseCharacter/GP3_ChargeEnemyCharacter.cpp
-C:\Users\tomas.savela\Perforce\FG21FTGP_UE4_GP3_TomasSavela\GP3_Team03\Source\GP3_Team03\Public\AI/EnemyBaseCharacter/GP3_ChargeEnemyCharacter.h
+C:/Users/tomas.savela/Perforce/FG21FTGP_UE4_GP3_TomasSavela/GP3_Team03/Source/GP3_Team03/Private/AI/BT_Tasks/GP3BTT_RangedMoveTowards.cpp
+C:\Users\tomas.savela\Perforce\FG21FTGP_UE4_GP3_TomasSavela\GP3_Team03\Source\GP3_Team03\Public\AI/BT_Tasks/GP3BTT_RangedMoveTowards.h
+C:\Users\tomas.savela\Perforce\FG21FTGP_UE4_GP3_TomasSavela\GP3_Team03\Intermediate\Build\Win64\UE4Editor\Inc\GP3_Team03\GP3BTT_RangedMoveTowards.generated.h
+C:/Users/tomas.savela/Perforce/FG21FTGP_UE4_GP3_TomasSavela/GP3_Team03/Source/GP3_Team03/Private/AI/Decorators/GP3BTD_HasLOS.cpp
+C:\Users\tomas.savela\Perforce\FG21FTGP_UE4_GP3_TomasSavela\GP3_Team03\Source\GP3_Team03\Public\AI/Decorators/GP3BTD_HasLOS.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\AIModule\Classes\BehaviorTree/BTDecorator.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\AIModule\Classes\BehaviorTree/BTAuxiliaryNode.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\AIModule\BTAuxiliaryNode.generated.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\AIModule\BTDecorator.generated.h
+C:\Users\tomas.savela\Perforce\FG21FTGP_UE4_GP3_TomasSavela\GP3_Team03\Intermediate\Build\Win64\UE4Editor\Inc\GP3_Team03\GP3BTD_HasLOS.generated.h
+C:/Users/tomas.savela/Perforce/FG21FTGP_UE4_GP3_TomasSavela/GP3_Team03/Source/GP3_Team03/Private/AI/EnemyBaseCharacter/GP3_AI_BaseCharacter.cpp
 C:\Users\tomas.savela\Perforce\FG21FTGP_UE4_GP3_TomasSavela\GP3_Team03\Source\GP3_Team03\Public\AI/EnemyBaseCharacter/GP3_AI_BaseCharacter.h
-C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Engine\Classes\GameFramework/Character.h
-C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Engine\Classes\GameFramework/CharacterMovementReplication.h
-C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\CharacterMovementReplication.generated.h
-C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Engine\Classes\GameFramework/RootMotionSource.h
-C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\RootMotionSource.generated.h
-C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\Character.generated.h
 C:\Users\tomas.savela\Perforce\FG21FTGP_UE4_GP3_TomasSavela\GP3_Team03\Source\GP3_Team03\Public\Weapons/WeaponBase.h
 C:\Users\tomas.savela\Perforce\FG21FTGP_UE4_GP3_TomasSavela\GP3_Team03\Source\GP3_Team03\Public\Weapons\SunShaftProjectile.h
 C:\Users\tomas.savela\Perforce\FG21FTGP_UE4_GP3_TomasSavela\GP3_Team03\Intermediate\Build\Win64\UE4Editor\Inc\GP3_Team03\SunShaftProjectile.generated.h
@@ -208,7 +245,177 @@ C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Engine\Public\DataTabl
 C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\DataTable.generated.h
 C:\Users\tomas.savela\Perforce\FG21FTGP_UE4_GP3_TomasSavela\GP3_Team03\Intermediate\Build\Win64\UE4Editor\Inc\GP3_Team03\WeaponBase.generated.h
 C:\Users\tomas.savela\Perforce\FG21FTGP_UE4_GP3_TomasSavela\GP3_Team03\Intermediate\Build\Win64\UE4Editor\Inc\GP3_Team03\GP3_AI_BaseCharacter.generated.h
+C:/Users/tomas.savela/Perforce/FG21FTGP_UE4_GP3_TomasSavela/GP3_Team03/Source/GP3_Team03/Private/AI/EnemyBaseCharacter/GP3_ChargeEnemyCharacter.cpp
+C:\Users\tomas.savela\Perforce\FG21FTGP_UE4_GP3_TomasSavela\GP3_Team03\Source\GP3_Team03\Public\AI/EnemyBaseCharacter/GP3_ChargeEnemyCharacter.h
 C:\Users\tomas.savela\Perforce\FG21FTGP_UE4_GP3_TomasSavela\GP3_Team03\Intermediate\Build\Win64\UE4Editor\Inc\GP3_Team03\GP3_ChargeEnemyCharacter.generated.h
+C:/Users/tomas.savela/Perforce/FG21FTGP_UE4_GP3_TomasSavela/GP3_Team03/Source/GP3_Team03/Private/AI/EnemyBaseCharacter/GP3_RangedEnemyCharacter.cpp
+C:\Users\tomas.savela\Perforce\FG21FTGP_UE4_GP3_TomasSavela\GP3_Team03\Source\GP3_Team03\Public\AI/EnemyBaseCharacter/GP3_RangedEnemyCharacter.h
+C:\Users\tomas.savela\Perforce\FG21FTGP_UE4_GP3_TomasSavela\GP3_Team03\Intermediate\Build\Win64\UE4Editor\Inc\GP3_Team03\GP3_RangedEnemyCharacter.generated.h
+C:/Users/tomas.savela/Perforce/FG21FTGP_UE4_GP3_TomasSavela/GP3_Team03/Source/GP3_Team03/Private/AI/GP3_AIBullet.cpp
+C:\Users\tomas.savela\Perforce\FG21FTGP_UE4_GP3_TomasSavela\GP3_Team03\Source\GP3_Team03\Public\AI/GP3_AIBullet.h
+C:\Users\tomas.savela\Perforce\FG21FTGP_UE4_GP3_TomasSavela\GP3_Team03\Intermediate\Build\Win64\UE4Editor\Inc\GP3_Team03\GP3_AIBullet.generated.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Engine\Classes\Components/CapsuleComponent.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Engine\Classes\Components/ShapeComponent.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\ShapeComponent.generated.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\CapsuleComponent.generated.h
+C:/Users/tomas.savela/Perforce/FG21FTGP_UE4_GP3_TomasSavela/GP3_Team03/Source/GP3_Team03/Private/AI/GP3_ChargeTrail.cpp
+C:\Users\tomas.savela\Perforce\FG21FTGP_UE4_GP3_TomasSavela\GP3_Team03\Source\GP3_Team03\Public\AI/GP3_ChargeTrail.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Engine\Classes\Components/SplineMeshComponent.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\SplineMeshComponent.generated.h
+C:\Users\tomas.savela\Perforce\FG21FTGP_UE4_GP3_TomasSavela\GP3_Team03\Intermediate\Build\Win64\UE4Editor\Inc\GP3_Team03\GP3_ChargeTrail.generated.h
+C:/Users/tomas.savela/Perforce/FG21FTGP_UE4_GP3_TomasSavela/GP3_Team03/Source/GP3_Team03/Private/AI/SpawningEnemySystem.cpp
+C:\Users\tomas.savela\Perforce\FG21FTGP_UE4_GP3_TomasSavela\GP3_Team03\Source\GP3_Team03\Public\AI/SpawningEnemySystem.h
+C:\Users\tomas.savela\Perforce\FG21FTGP_UE4_GP3_TomasSavela\GP3_Team03\Intermediate\Build\Win64\UE4Editor\Inc\GP3_Team03\SpawningEnemySystem.generated.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\NavigationSystem\Public\NavigationSystem.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\NavigationSystem\Public\NavigationOctree.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\NavigationSystem\Public\NavigationOctreeController.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\NavigationSystem\Public\NavigationDirtyAreasController.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Core\Public\Math/MovingWindowAverageFast.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Source\Editor\UnrealEd\Public\UnrealEdMisc.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Source\Editor\UnrealEd\Public\Editor.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Source\Editor\UnrealEd\Classes\Editor/EditorEngine.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Source\Editor\UnrealEd\Classes\Editor/Transactor.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Core\Public\Serialization/ArchiveSerializedPropertyChain.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\UnrealEd\Transactor.generated.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Source\Editor\UnrealEd\Classes\Settings/LevelEditorViewportSettings.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Source\Editor\UnrealEd\Public\Viewports.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Source\Editor\UnrealEd\Classes\Editor/UnrealEdTypes.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\UnrealEd\UnrealEdTypes.generated.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\UnrealEd\LevelEditorViewportSettings.generated.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Source\Developer\TargetPlatform\Public\Interfaces/ITargetPlatform.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Source\Developer\TargetPlatform\Public\Interfaces/ITargetDevice.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Source\Developer\TargetPlatform\Public\Interfaces/TargetDeviceId.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Source\Developer\TargetPlatform\Public\Interfaces/ITargetPlatformManagerModule.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Source\Editor\UnrealEd\Public\PlayInEditorDataTypes.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\UnrealEd\PlayInEditorDataTypes.generated.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Source\Editor\EditorSubsystem\Public\EditorSubsystem.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\EditorSubsystem\EditorSubsystem.generated.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\UnrealEd\EditorEngine.generated.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Source\Editor\UnrealEd\Public\Subsystems/ImportSubsystem.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\UnrealEd\ImportSubsystem.generated.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\NavigationSystem\NavigationSystem.generated.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Engine\Classes\Kismet/GameplayStatics.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Engine\Classes\Kismet/KismetSystemLibrary.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\CoreUObject\Public\UObject/PropertyAccessUtil.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\KismetSystemLibrary.generated.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Engine\Classes\Sound/DialogueTypes.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\DialogueTypes.generated.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Engine\Classes\Kismet\GameplayStaticsTypes.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\GameplayStaticsTypes.generated.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\GameplayStatics.generated.h
+C:/Users/tomas.savela/Perforce/FG21FTGP_UE4_GP3_TomasSavela/GP3_Team03/Source/GP3_Team03/Private/Data/GP3SettingsSaveGame.cpp
+C:\Users\tomas.savela\Perforce\FG21FTGP_UE4_GP3_TomasSavela\GP3_Team03\Source\GP3_Team03\Public\Data/GP3SettingsSaveGame.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Engine\Classes\GameFramework/SaveGame.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\SaveGame.generated.h
+C:\Users\tomas.savela\Perforce\FG21FTGP_UE4_GP3_TomasSavela\GP3_Team03\Intermediate\Build\Win64\UE4Editor\Inc\GP3_Team03\GP3SettingsSaveGame.generated.h
+C:/Users/tomas.savela/Perforce/FG21FTGP_UE4_GP3_TomasSavela/GP3_Team03/Source/GP3_Team03/Private/GP3GameInstance.cpp
+C:\Users\tomas.savela\Perforce\FG21FTGP_UE4_GP3_TomasSavela\GP3_Team03\Source\GP3_Team03\Public\GP3GameInstance.h
+C:\Users\tomas.savela\Perforce\FG21FTGP_UE4_GP3_TomasSavela\GP3_Team03\Intermediate\Build\Win64\UE4Editor\Inc\GP3_Team03\GP3GameInstance.generated.h
+C:/Users/tomas.savela/Perforce/FG21FTGP_UE4_GP3_TomasSavela/GP3_Team03/Source/GP3_Team03/Private/Player/GP3DashComponent.cpp
+C:\Users\tomas.savela\Perforce\FG21FTGP_UE4_GP3_TomasSavela\GP3_Team03\Source\GP3_Team03\Public\Player/GP3DashComponent.h
+C:\Users\tomas.savela\Perforce\FG21FTGP_UE4_GP3_TomasSavela\GP3_Team03\Intermediate\Build\Win64\UE4Editor\Inc\GP3_Team03\GP3DashComponent.generated.h
+C:\Users\tomas.savela\Perforce\FG21FTGP_UE4_GP3_TomasSavela\GP3_Team03\Source\GP3_Team03\Public\Player/GP3PlayerDashTrail.h
+C:\Users\tomas.savela\Perforce\FG21FTGP_UE4_GP3_TomasSavela\GP3_Team03\Intermediate\Build\Win64\UE4Editor\Inc\GP3_Team03\GP3PlayerDashTrail.generated.h
+C:\Users\tomas.savela\Perforce\FG21FTGP_UE4_GP3_TomasSavela\GP3_Team03\Source\GP3_Team03\Public\Player/GP3PlayerPawn.h
+C:\Users\tomas.savela\Perforce\FG21FTGP_UE4_GP3_TomasSavela\GP3_Team03\Intermediate\Build\Win64\UE4Editor\Inc\GP3_Team03\GP3PlayerPawn.generated.h
+C:\Users\tomas.savela\Perforce\FG21FTGP_UE4_GP3_TomasSavela\GP3_Team03\Source\GP3_Team03\Public\Player/GP3PlayerSpringArmComponent.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Engine\Classes\GameFramework/SpringArmComponent.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\SpringArmComponent.generated.h
+C:\Users\tomas.savela\Perforce\FG21FTGP_UE4_GP3_TomasSavela\GP3_Team03\Source\GP3_Team03\Public\Player/GP3PlayerCameraComponent.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Engine\Classes\Camera/CameraComponent.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\CameraComponent.generated.h
+C:\Users\tomas.savela\Perforce\FG21FTGP_UE4_GP3_TomasSavela\GP3_Team03\Intermediate\Build\Win64\UE4Editor\Inc\GP3_Team03\GP3PlayerCameraComponent.generated.h
+C:\Users\tomas.savela\Perforce\FG21FTGP_UE4_GP3_TomasSavela\GP3_Team03\Intermediate\Build\Win64\UE4Editor\Inc\GP3_Team03\GP3PlayerSpringArmComponent.generated.h
+C:\Users\tomas.savela\Perforce\FG21FTGP_UE4_GP3_TomasSavela\GP3_Team03\Source\GP3_Team03\Public\Player/GP3WASDMovementComponent.h
+C:\Users\tomas.savela\Perforce\FG21FTGP_UE4_GP3_TomasSavela\GP3_Team03\Intermediate\Build\Win64\UE4Editor\Inc\GP3_Team03\GP3WASDMovementComponent.generated.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Engine\Classes\Components/SplineComponent.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\SplineComponent.generated.h
+C:/Users/tomas.savela/Perforce/FG21FTGP_UE4_GP3_TomasSavela/GP3_Team03/Source/GP3_Team03/Private/Player/GP3DodgeComponent.cpp
+C:\Users\tomas.savela\Perforce\FG21FTGP_UE4_GP3_TomasSavela\GP3_Team03\Source\GP3_Team03\Public\Player/GP3DodgeComponent.h
+C:\Users\tomas.savela\Perforce\FG21FTGP_UE4_GP3_TomasSavela\GP3_Team03\Intermediate\Build\Win64\UE4Editor\Inc\GP3_Team03\GP3DodgeComponent.generated.h
+C:/Users/tomas.savela/Perforce/FG21FTGP_UE4_GP3_TomasSavela/GP3_Team03/Source/GP3_Team03/Private/Player/GP3PlayerCameraComponent.cpp
+C:/Users/tomas.savela/Perforce/FG21FTGP_UE4_GP3_TomasSavela/GP3_Team03/Source/GP3_Team03/Private/Player/GP3PlayerDashTrail.cpp
+C:/Users/tomas.savela/Perforce/FG21FTGP_UE4_GP3_TomasSavela/GP3_Team03/Source/GP3_Team03/Private/Player/GP3PlayerPawn.cpp
+C:\Users\tomas.savela\Perforce\FG21FTGP_UE4_GP3_TomasSavela\GP3_Team03\Source\GP3_Team03\Public\Player/GP3ShootComponent.h
+C:\Users\tomas.savela\Perforce\FG21FTGP_UE4_GP3_TomasSavela\GP3_Team03\Intermediate\Build\Win64\UE4Editor\Inc\GP3_Team03\GP3ShootComponent.generated.h
+C:/Users/tomas.savela/Perforce/FG21FTGP_UE4_GP3_TomasSavela/GP3_Team03/Source/GP3_Team03/Private/Player/GP3PlayerSpringArmComponent.cpp
+C:/Users/tomas.savela/Perforce/FG21FTGP_UE4_GP3_TomasSavela/GP3_Team03/Source/GP3_Team03/Private/Player/GP3ShootComponent.cpp
+C:\Users\tomas.savela\Perforce\FG21FTGP_UE4_GP3_TomasSavela\GP3_Team03\Source\GP3_Team03\Public\Weapons/GunProjectile.h
+C:\Users\tomas.savela\Perforce\FG21FTGP_UE4_GP3_TomasSavela\GP3_Team03\Intermediate\Build\Win64\UE4Editor\Inc\GP3_Team03\GunProjectile.generated.h
+C:\Users\tomas.savela\Perforce\FG21FTGP_UE4_GP3_TomasSavela\GP3_Team03\Source\GP3_Team03\Public\Widgets/GP3ReloadWidget.h
+C:\Users\tomas.savela\Perforce\FG21FTGP_UE4_GP3_TomasSavela\GP3_Team03\Intermediate\Build\Win64\UE4Editor\Inc\GP3_Team03\GP3ReloadWidget.generated.h
+C:/Users/tomas.savela/Perforce/FG21FTGP_UE4_GP3_TomasSavela/GP3_Team03/Source/GP3_Team03/Private/Player/GP3WASDMovementComponent.cpp
+C:/Users/tomas.savela/Perforce/FG21FTGP_UE4_GP3_TomasSavela/GP3_Team03/Source/GP3_Team03/Private/Player/PlayerPawnMovementComponent.cpp
+C:\Users\tomas.savela\Perforce\FG21FTGP_UE4_GP3_TomasSavela\GP3_Team03\Source\GP3_Team03\Public\Player/PlayerPawnMovementComponent.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Engine\Classes\GameFramework/PawnMovementComponent.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\PawnMovementComponent.generated.h
+C:\Users\tomas.savela\Perforce\FG21FTGP_UE4_GP3_TomasSavela\GP3_Team03\Intermediate\Build\Win64\UE4Editor\Inc\GP3_Team03\PlayerPawnMovementComponent.generated.h
+C:/Users/tomas.savela/Perforce/FG21FTGP_UE4_GP3_TomasSavela/GP3_Team03/Source/GP3_Team03/Private/Weapons/GunProjectile.cpp
+C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Engine\Classes\Components/SphereComponent.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\SphereComponent.generated.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Engine\Classes\GameFramework/ProjectileMovementComponent.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\ProjectileMovementComponent.generated.h
 C:/Users/tomas.savela/Perforce/FG21FTGP_UE4_GP3_TomasSavela/GP3_Team03/Source/GP3_Team03/Private/Weapons/SpellBase.cpp
 C:\Users\tomas.savela\Perforce\FG21FTGP_UE4_GP3_TomasSavela\GP3_Team03\Source\GP3_Team03\Public\Weapons/SpellBase.h
 C:\Users\tomas.savela\Perforce\FG21FTGP_UE4_GP3_TomasSavela\GP3_Team03\Intermediate\Build\Win64\UE4Editor\Inc\GP3_Team03\SpellBase.generated.h
+C:/Users/tomas.savela/Perforce/FG21FTGP_UE4_GP3_TomasSavela/GP3_Team03/Source/GP3_Team03/Private/Weapons/SunShaftProjectile.cpp
+C:/Users/tomas.savela/Perforce/FG21FTGP_UE4_GP3_TomasSavela/GP3_Team03/Source/GP3_Team03/Private/Weapons/WeaponBase.cpp
+C:/Users/tomas.savela/Perforce/FG21FTGP_UE4_GP3_TomasSavela/GP3_Team03/Source/GP3_Team03/Private/Widgets/GP3CrosshairWidget.cpp
+C:\Users\tomas.savela\Perforce\FG21FTGP_UE4_GP3_TomasSavela\GP3_Team03\Source\GP3_Team03\Public\Widgets/GP3CrosshairWidget.h
+C:\Users\tomas.savela\Perforce\FG21FTGP_UE4_GP3_TomasSavela\GP3_Team03\Intermediate\Build\Win64\UE4Editor\Inc\GP3_Team03\GP3CrosshairWidget.generated.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\MovieSceneTracks\Public\MovieSceneTracksPropertyTypes.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\AnimationCore\Public\EulerTransform.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\AnimationCore\EulerTransform.generated.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\UMG\Public\Components/Image.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Engine\Public\Slate/SlateTextureAtlasInterface.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\SlateTextureAtlasInterface.generated.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Engine\Classes\Engine/StreamableManager.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\UMG\Image.generated.h
+C:/Users/tomas.savela/Perforce/FG21FTGP_UE4_GP3_TomasSavela/GP3_Team03/Source/GP3_Team03/Private/Widgets/GP3DashCooldownWidget.cpp
+C:\Users\tomas.savela\Perforce\FG21FTGP_UE4_GP3_TomasSavela\GP3_Team03\Source\GP3_Team03\Public\Widgets/GP3DashCooldownWidget.h
+C:\Users\tomas.savela\Perforce\FG21FTGP_UE4_GP3_TomasSavela\GP3_Team03\Intermediate\Build\Win64\UE4Editor\Inc\GP3_Team03\GP3DashCooldownWidget.generated.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\UMG\Public\Components/ProgressBar.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Slate\Public\Widgets/Notifications/SProgressBar.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Slate\SProgressBar.generated.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\UMG\ProgressBar.generated.h
+C:/Users/tomas.savela/Perforce/FG21FTGP_UE4_GP3_TomasSavela/GP3_Team03/Source/GP3_Team03/Private/Widgets/GP3KeyActionMapper.cpp
+C:\Users\tomas.savela\Perforce\FG21FTGP_UE4_GP3_TomasSavela\GP3_Team03\Source\GP3_Team03\Public\Widgets/GP3KeyActionMapper.h
+C:\Users\tomas.savela\Perforce\FG21FTGP_UE4_GP3_TomasSavela\GP3_Team03\Intermediate\Build\Win64\UE4Editor\Inc\GP3_Team03\GP3KeyActionMapper.generated.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\UMG\Public\Components/InputKeySelector.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\UMG\InputKeySelector.generated.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Engine\Classes\GameFramework/InputSettings.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Engine\Classes\GameFramework/PlayerInput.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Engine\Public\GestureRecognizer.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Engine\Public\KeyState.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\PlayerInput.generated.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\InputSettings.generated.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Engine\Classes\Kismet/KismetInputLibrary.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\KismetInputLibrary.generated.h
+C:/Users/tomas.savela/Perforce/FG21FTGP_UE4_GP3_TomasSavela/GP3_Team03/Source/GP3_Team03/Private/Widgets/GP3KeyAxisMapper.cpp
+C:\Users\tomas.savela\Perforce\FG21FTGP_UE4_GP3_TomasSavela\GP3_Team03\Source\GP3_Team03\Public\Widgets/GP3KeyAxisMapper.h
+C:\Users\tomas.savela\Perforce\FG21FTGP_UE4_GP3_TomasSavela\GP3_Team03\Intermediate\Build\Win64\UE4Editor\Inc\GP3_Team03\GP3KeyAxisMapper.generated.h
+C:/Users/tomas.savela/Perforce/FG21FTGP_UE4_GP3_TomasSavela/GP3_Team03/Source/GP3_Team03/Private/Widgets/GP3PlayerHealthWidget.cpp
+C:\Users\tomas.savela\Perforce\FG21FTGP_UE4_GP3_TomasSavela\GP3_Team03\Source\GP3_Team03\Public\Widgets/GP3PlayerHealthWidget.h
+C:\Users\tomas.savela\Perforce\FG21FTGP_UE4_GP3_TomasSavela\GP3_Team03\Intermediate\Build\Win64\UE4Editor\Inc\GP3_Team03\GP3PlayerHealthWidget.generated.h
+C:/Users/tomas.savela/Perforce/FG21FTGP_UE4_GP3_TomasSavela/GP3_Team03/Source/GP3_Team03/Private/Widgets/GP3ReloadWidget.cpp
+C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\UMG\Public\Components/CanvasPanel.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Slate\Public\Widgets/Layout/SConstraintCanvas.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\UMG\Public\Components/PanelWidget.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\UMG\Public\Components/PanelSlot.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\UMG\PanelSlot.generated.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\UMG\PanelWidget.generated.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\UMG\CanvasPanel.generated.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\UMG\Public\Components/CanvasPanelSlot.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\UMG\CanvasPanelSlot.generated.h
+C:/Users/tomas.savela/Perforce/FG21FTGP_UE4_GP3_TomasSavela/GP3_Team03/Source/GP3_Team03/Private/Widgets/GP3SettingsWidget.cpp
+C:\Users\tomas.savela\Perforce\FG21FTGP_UE4_GP3_TomasSavela\GP3_Team03\Source\GP3_Team03\Public\Widgets/GP3SettingsWidget.h
+C:\Users\tomas.savela\Perforce\FG21FTGP_UE4_GP3_TomasSavela\GP3_Team03\Intermediate\Build\Win64\UE4Editor\Inc\GP3_Team03\GP3SettingsWidget.generated.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\UMG\Public\Components/CheckBox.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\UMG\Public\Components/ContentWidget.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\UMG\ContentWidget.generated.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\UMG\CheckBox.generated.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\UMG\Public\Components/ComboBoxString.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\UMG\ComboBoxString.generated.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Engine\Classes\GameFramework/GameUserSettings.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Engine\Public\Scalability.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\GameUserSettings.generated.h
