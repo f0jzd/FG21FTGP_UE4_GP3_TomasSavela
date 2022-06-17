@@ -1,6 +1,9 @@
 #include "Weapons/WeaponBase.h"
 #include "DrawDebugHelpers.h"
 #include "Components/SkeletalMeshComponent.h"
+#include "Components/SplineComponent.h"
+#include "Kismet/GameplayStatics.h"
+#include "Weapons/GunProjectile.h"
 
 AWeaponBase::AWeaponBase()
 {
@@ -17,11 +20,9 @@ void AWeaponBase::Tick(float DeltaSeconds)
 	
 	if (IsReLoading)
 	{
-		GEngine->AddOnScreenDebugMessage(0, 5.0f, FColor::Red, TEXT("ReLoading the gun.."));
 		ReLoadTimer-=DeltaSeconds;
 		if (ReLoadTimer<=0)
 		{
-			GEngine->AddOnScreenDebugMessage(0, 5.0f, FColor::Green, TEXT("The gun is now reloaded"));
 			IsReLoading = false;
 			CurrentAmmo = StartAmmo;
 			OnAmmoChanged.Broadcast();
@@ -39,7 +40,6 @@ void AWeaponBase::BeginPlay()
 		}
 	StartAmmo = WeaponData->WeaponAmmo;
 	CurrentAmmo = StartAmmo;
-	GEngine->AddOnScreenDebugMessage(-1, 15.0f, FColor::Red, FString::Printf(TEXT("Ammo: %f"),(WeaponData->WeaponAmmo)));
 }
 
 void AWeaponBase::SelectWeapon(FName WeaponName)
@@ -56,7 +56,9 @@ void AWeaponBase::SelectWeapon(FName WeaponName)
 			CurrentAmmo = StartAmmo;
 			ReLoadTime = WeaponData->WeaponReloadTime;
 			ShootCoolDownTimer = WeaponData->WeaponShootCooldown;
-			MeshComp->SetSkeletalMesh(WeaponData->WeaponMesh); //Set the mesh to the right mesh depending on what "WeaponName/key" is called
+			MeshComp->SetSkeletalMesh(WeaponData->WeaponMesh);//Set the mesh to the right mesh depending on what "WeaponName/key" is called
+			Projectile = WeaponData->Projectile; //TODO did i do this right?
+			
 		}
 	}
 }
@@ -72,27 +74,33 @@ FHitResult AWeaponBase::Use()
 	FHitResult OutHit;
 		if (WeaponData)
 		{
-			FVector LineTraceStart = GetWorld()->GetFirstPlayerController()->PlayerCameraManager->GetCameraLocation();
-			FVector LineTraceEnd = GetWorld()->GetFirstPlayerController()->PlayerCameraManager->GetActorForwardVector() * WeaponData->WeaponRange + LineTraceStart;
 			
-			if (GetWorld()->LineTraceSingleByChannel(OutHit,LineTraceStart,LineTraceEnd,ECC_Visibility))
-			{
-				FVector Start = MeshComp->GetSocketLocation(FName("GunOrigin"));
-				FVector End = OutHit.Location;
-				DrawDebugLine(GetWorld(), Start, End, FColor::Red, false, 5.0f);
-				
+			//FVector LineTraceStart = GetWorld()->GetFirstPlayerController()->PlayerCameraManager->GetCameraLocation();
+			//FVector LineTraceEnd = GetWorld()->GetFirstPlayerController()->PlayerCameraManager->GetActorForwardVector() * WeaponData->WeaponRange + LineTraceStart;
+			//
+			//if (GetWorld()->LineTraceSingleByChannel(OutHit,LineTraceStart,LineTraceEnd,ECC_Visibility))
+			//{
+			//	FVector Start = MeshComp->GetSocketLocation(FName("GunOrigin"));
+			//	FVector End = OutHit.Location;
+			//	DrawDebugLine(GetWorld(), Start, End, FColor::Red, false, 5.0f);
+			//	
 				CurrentAmmo -= 1; //Remove one shot from the ammo amount when using the gun
 				OnAmmoChanged.Broadcast();
-				if (OutHit.GetActor()->ActorHasTag("Enemy")) // TODO can be removed?
-					{
-						FDamageEvent DamageEvent;
-						OutHit.GetActor()->TakeDamage(WeaponData->WeaponDamage, DamageEvent, GetWorld()->GetFirstPlayerController(), this);
-						GEngine->AddOnScreenDebugMessage(0, 5.0f, FColor::Red, TEXT("ow :/"));
-						return OutHit;
-					}
-			}
+			
+			//	if (OutHit.GetActor()->ActorHasTag("Enemy")) // TODO can be removed?
+			//		{
+			//			FDamageEvent DamageEvent;
+			//			OutHit.GetActor()->TakeDamage(WeaponData->WeaponDamage, DamageEvent, GetWorld()->GetFirstPlayerController(), this);
+			//			GEngine->AddOnScreenDebugMessage(0, 5.0f, FColor::Red, TEXT("ow :/"));
+			//			return OutHit;
+			//		}
+			//}
+			//
+			//SplinePath->SetHiddenInGame(true,true);
+			//bCalculateProjectilePath = false;
+			
+			
 		}
-	GEngine->AddOnScreenDebugMessage(-1, 15.0f, FColor::White, FString::Printf(TEXT("New Ammo: %f"),(CurrentAmmo)));
 	return OutHit;
 }
 
@@ -101,6 +109,16 @@ float AWeaponBase::GetDamageFromGun()
 	if (WeaponData)
 	{
 		float WeaponDamage = WeaponData->WeaponDamage;
+		return WeaponDamage;
+	}
+	return 0;
+}
+
+float AWeaponBase::GetCriticalDamageFromGun()
+{
+	if (WeaponData)
+	{
+		float WeaponDamage = WeaponData->WeaponCriticalDamage;
 		return WeaponDamage;
 	}
 	return 0;
@@ -135,8 +153,13 @@ void AWeaponBase::InstantReload()
 		CurrentAmmo = StartAmmo;
 		OnAmmoChanged.Broadcast();
 		OnReloadFinished.Broadcast();
-		GEngine->AddOnScreenDebugMessage(0, 5.0f, FColor::Green, TEXT("The gun is now reloaded"));
 	}
+}
+
+void AWeaponBase::SetProjectileVelocity(float Delta)
+{
+	LaunchVelocity += LaunchVelocity * Delta;
+	LaunchVelocity = FMath::Clamp(LaunchVelocity,500.f,3000.f);
 }
 
 

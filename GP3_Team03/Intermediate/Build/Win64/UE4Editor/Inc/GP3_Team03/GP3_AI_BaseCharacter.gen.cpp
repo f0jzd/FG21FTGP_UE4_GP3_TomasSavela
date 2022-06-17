@@ -23,7 +23,6 @@ void EmptyLinkFunctionForGeneratedCodeGP3_AI_BaseCharacter() {}
 	ENGINE_API UClass* Z_Construct_UClass_ACharacter();
 	ENGINE_API UClass* Z_Construct_UClass_UPrimitiveComponent_NoRegister();
 	ENGINE_API UClass* Z_Construct_UClass_AActor_NoRegister();
-	ENGINE_API UClass* Z_Construct_UClass_UStaticMeshComponent_NoRegister();
 // End Cross Module References
 	struct Z_Construct_UDelegateFunction_GP3_Team03_OnTookDamageDelegate__DelegateSignature_Statics
 	{
@@ -122,6 +121,11 @@ void EmptyLinkFunctionForGeneratedCodeGP3_AI_BaseCharacter() {}
 		P_THIS->OnOverlapBegin(Z_Param_OverlappedComp,Z_Param_OtherActor,Z_Param_OtherComp,Z_Param_OtherBodyIndex,Z_Param_bFromSweep,Z_Param_Out_SweepResult);
 		P_NATIVE_END;
 	}
+	static FName NAME_AGP3_AI_BaseCharacter_DeathAnimation = FName(TEXT("DeathAnimation"));
+	void AGP3_AI_BaseCharacter::DeathAnimation()
+	{
+		ProcessEvent(FindFunctionChecked(NAME_AGP3_AI_BaseCharacter_DeathAnimation),NULL);
+	}
 	static FName NAME_AGP3_AI_BaseCharacter_TakeGunDamage = FName(TEXT("TakeGunDamage"));
 	void AGP3_AI_BaseCharacter::TakeGunDamage(float GunDamage)
 	{
@@ -142,6 +146,28 @@ void EmptyLinkFunctionForGeneratedCodeGP3_AI_BaseCharacter() {}
 			{ "TakeGunDamage", &AGP3_AI_BaseCharacter::execTakeGunDamage },
 		};
 		FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, UE_ARRAY_COUNT(Funcs));
+	}
+	struct Z_Construct_UFunction_AGP3_AI_BaseCharacter_DeathAnimation_Statics
+	{
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UE4CodeGen_Private::FFunctionParams FuncParams;
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_AGP3_AI_BaseCharacter_DeathAnimation_Statics::Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "Public/AI/EnemyBaseCharacter/GP3_AI_BaseCharacter.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AGP3_AI_BaseCharacter_DeathAnimation_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AGP3_AI_BaseCharacter, nullptr, "DeathAnimation", nullptr, nullptr, 0, nullptr, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x08020800, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_AGP3_AI_BaseCharacter_DeathAnimation_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_AGP3_AI_BaseCharacter_DeathAnimation_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_AGP3_AI_BaseCharacter_DeathAnimation()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AGP3_AI_BaseCharacter_DeathAnimation_Statics::FuncParams);
+		}
+		return ReturnFunction;
 	}
 	struct Z_Construct_UFunction_AGP3_AI_BaseCharacter_OnOverlapBegin_Statics
 	{
@@ -242,7 +268,7 @@ void EmptyLinkFunctionForGeneratedCodeGP3_AI_BaseCharacter() {}
 		{ "ModuleRelativePath", "Public/AI/EnemyBaseCharacter/GP3_AI_BaseCharacter.h" },
 	};
 #endif
-	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AGP3_AI_BaseCharacter_TakeGunDamage_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AGP3_AI_BaseCharacter, nullptr, "TakeGunDamage", nullptr, nullptr, sizeof(GP3_AI_BaseCharacter_eventTakeGunDamage_Parms), Z_Construct_UFunction_AGP3_AI_BaseCharacter_TakeGunDamage_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_AGP3_AI_BaseCharacter_TakeGunDamage_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x08020C00, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_AGP3_AI_BaseCharacter_TakeGunDamage_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_AGP3_AI_BaseCharacter_TakeGunDamage_Statics::Function_MetaDataParams)) };
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AGP3_AI_BaseCharacter_TakeGunDamage_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AGP3_AI_BaseCharacter, nullptr, "TakeGunDamage", nullptr, nullptr, sizeof(GP3_AI_BaseCharacter_eventTakeGunDamage_Parms), Z_Construct_UFunction_AGP3_AI_BaseCharacter_TakeGunDamage_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_AGP3_AI_BaseCharacter_TakeGunDamage_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x0C020C00, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_AGP3_AI_BaseCharacter_TakeGunDamage_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_AGP3_AI_BaseCharacter_TakeGunDamage_Statics::Function_MetaDataParams)) };
 	UFunction* Z_Construct_UFunction_AGP3_AI_BaseCharacter_TakeGunDamage()
 	{
 		static UFunction* ReturnFunction = nullptr;
@@ -298,17 +324,18 @@ void EmptyLinkFunctionForGeneratedCodeGP3_AI_BaseCharacter() {}
 #endif
 		static const UE4CodeGen_Private::FMulticastDelegatePropertyParams NewProp_OnTookGunDamage;
 #if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_HitboxCheck_MetaData[];
-#endif
-		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_HitboxCheck;
-#if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_CollisionCheckDistance_MetaData[];
-#endif
-		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_CollisionCheckDistance;
-#if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_Health_MetaData[];
 #endif
 		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_Health;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_Damage_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_Damage;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_IsDebuffed_MetaData[];
+#endif
+		static void NewProp_IsDebuffed_SetBit(void* Obj);
+		static const UE4CodeGen_Private::FBoolPropertyParams NewProp_IsDebuffed;
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
 		static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
 		static const UE4CodeGen_Private::FClassParams ClassParams;
@@ -318,8 +345,9 @@ void EmptyLinkFunctionForGeneratedCodeGP3_AI_BaseCharacter() {}
 		(UObject* (*)())Z_Construct_UPackage__Script_GP3_Team03,
 	};
 	const FClassFunctionLinkInfo Z_Construct_UClass_AGP3_AI_BaseCharacter_Statics::FuncInfo[] = {
+		{ &Z_Construct_UFunction_AGP3_AI_BaseCharacter_DeathAnimation, "DeathAnimation" }, // 761429271
 		{ &Z_Construct_UFunction_AGP3_AI_BaseCharacter_OnOverlapBegin, "OnOverlapBegin" }, // 2050341560
-		{ &Z_Construct_UFunction_AGP3_AI_BaseCharacter_TakeGunDamage, "TakeGunDamage" }, // 3637178481
+		{ &Z_Construct_UFunction_AGP3_AI_BaseCharacter_TakeGunDamage, "TakeGunDamage" }, // 3573110867
 		{ &Z_Construct_UFunction_AGP3_AI_BaseCharacter_TookDamageEvent, "TookDamageEvent" }, // 2504686648
 	};
 #if WITH_METADATA
@@ -348,34 +376,37 @@ void EmptyLinkFunctionForGeneratedCodeGP3_AI_BaseCharacter() {}
 #endif
 	const UE4CodeGen_Private::FMulticastDelegatePropertyParams Z_Construct_UClass_AGP3_AI_BaseCharacter_Statics::NewProp_OnTookGunDamage = { "OnTookGunDamage", nullptr, (EPropertyFlags)0x0010100010080000, UE4CodeGen_Private::EPropertyGenFlags::InlineMulticastDelegate, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AGP3_AI_BaseCharacter, OnTookGunDamage), Z_Construct_UDelegateFunction_GP3_Team03_OnTookDamageDelegate__DelegateSignature, METADATA_PARAMS(Z_Construct_UClass_AGP3_AI_BaseCharacter_Statics::NewProp_OnTookGunDamage_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AGP3_AI_BaseCharacter_Statics::NewProp_OnTookGunDamage_MetaData)) };
 #if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AGP3_AI_BaseCharacter_Statics::NewProp_HitboxCheck_MetaData[] = {
-		{ "Category", "GP3_AI_BaseCharacter" },
-		{ "EditInline", "true" },
-		{ "ModuleRelativePath", "Public/AI/EnemyBaseCharacter/GP3_AI_BaseCharacter.h" },
-	};
-#endif
-	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AGP3_AI_BaseCharacter_Statics::NewProp_HitboxCheck = { "HitboxCheck", nullptr, (EPropertyFlags)0x0010000000080009, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AGP3_AI_BaseCharacter, HitboxCheck), Z_Construct_UClass_UStaticMeshComponent_NoRegister, METADATA_PARAMS(Z_Construct_UClass_AGP3_AI_BaseCharacter_Statics::NewProp_HitboxCheck_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AGP3_AI_BaseCharacter_Statics::NewProp_HitboxCheck_MetaData)) };
-#if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AGP3_AI_BaseCharacter_Statics::NewProp_CollisionCheckDistance_MetaData[] = {
-		{ "Category", "GP3_AI_BaseCharacter" },
-		{ "ModuleRelativePath", "Public/AI/EnemyBaseCharacter/GP3_AI_BaseCharacter.h" },
-	};
-#endif
-	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UClass_AGP3_AI_BaseCharacter_Statics::NewProp_CollisionCheckDistance = { "CollisionCheckDistance", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AGP3_AI_BaseCharacter, CollisionCheckDistance), METADATA_PARAMS(Z_Construct_UClass_AGP3_AI_BaseCharacter_Statics::NewProp_CollisionCheckDistance_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AGP3_AI_BaseCharacter_Statics::NewProp_CollisionCheckDistance_MetaData)) };
-#if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AGP3_AI_BaseCharacter_Statics::NewProp_Health_MetaData[] = {
-		{ "Category", "GP3_AI_BaseCharacter" },
+		{ "Category", "Enemy Values and Stats" },
 		{ "ModuleRelativePath", "Public/AI/EnemyBaseCharacter/GP3_AI_BaseCharacter.h" },
 	};
 #endif
 	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UClass_AGP3_AI_BaseCharacter_Statics::NewProp_Health = { "Health", nullptr, (EPropertyFlags)0x0010000000000005, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AGP3_AI_BaseCharacter, Health), METADATA_PARAMS(Z_Construct_UClass_AGP3_AI_BaseCharacter_Statics::NewProp_Health_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AGP3_AI_BaseCharacter_Statics::NewProp_Health_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AGP3_AI_BaseCharacter_Statics::NewProp_Damage_MetaData[] = {
+		{ "Category", "Enemy Values and Stats" },
+		{ "ModuleRelativePath", "Public/AI/EnemyBaseCharacter/GP3_AI_BaseCharacter.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UClass_AGP3_AI_BaseCharacter_Statics::NewProp_Damage = { "Damage", nullptr, (EPropertyFlags)0x0010000000000005, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AGP3_AI_BaseCharacter, Damage), METADATA_PARAMS(Z_Construct_UClass_AGP3_AI_BaseCharacter_Statics::NewProp_Damage_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AGP3_AI_BaseCharacter_Statics::NewProp_Damage_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AGP3_AI_BaseCharacter_Statics::NewProp_IsDebuffed_MetaData[] = {
+		{ "Category", "GP3_AI_BaseCharacter" },
+		{ "ModuleRelativePath", "Public/AI/EnemyBaseCharacter/GP3_AI_BaseCharacter.h" },
+	};
+#endif
+	void Z_Construct_UClass_AGP3_AI_BaseCharacter_Statics::NewProp_IsDebuffed_SetBit(void* Obj)
+	{
+		((AGP3_AI_BaseCharacter*)Obj)->IsDebuffed = 1;
+	}
+	const UE4CodeGen_Private::FBoolPropertyParams Z_Construct_UClass_AGP3_AI_BaseCharacter_Statics::NewProp_IsDebuffed = { "IsDebuffed", nullptr, (EPropertyFlags)0x0010000000000004, UE4CodeGen_Private::EPropertyGenFlags::Bool | UE4CodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, sizeof(bool), sizeof(AGP3_AI_BaseCharacter), &Z_Construct_UClass_AGP3_AI_BaseCharacter_Statics::NewProp_IsDebuffed_SetBit, METADATA_PARAMS(Z_Construct_UClass_AGP3_AI_BaseCharacter_Statics::NewProp_IsDebuffed_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AGP3_AI_BaseCharacter_Statics::NewProp_IsDebuffed_MetaData)) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_AGP3_AI_BaseCharacter_Statics::PropPointers[] = {
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AGP3_AI_BaseCharacter_Statics::NewProp_HitObjectDelegate,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AGP3_AI_BaseCharacter_Statics::NewProp_TakeGunDamageDelegate,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AGP3_AI_BaseCharacter_Statics::NewProp_OnTookGunDamage,
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AGP3_AI_BaseCharacter_Statics::NewProp_HitboxCheck,
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AGP3_AI_BaseCharacter_Statics::NewProp_CollisionCheckDistance,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AGP3_AI_BaseCharacter_Statics::NewProp_Health,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AGP3_AI_BaseCharacter_Statics::NewProp_Damage,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AGP3_AI_BaseCharacter_Statics::NewProp_IsDebuffed,
 	};
 	const FCppClassTypeInfoStatic Z_Construct_UClass_AGP3_AI_BaseCharacter_Statics::StaticCppClassTypeInfo = {
 		TCppClassTypeTraits<AGP3_AI_BaseCharacter>::IsAbstract,
@@ -404,7 +435,7 @@ void EmptyLinkFunctionForGeneratedCodeGP3_AI_BaseCharacter() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(AGP3_AI_BaseCharacter, 650771450);
+	IMPLEMENT_CLASS(AGP3_AI_BaseCharacter, 753967457);
 	template<> GP3_TEAM03_API UClass* StaticClass<AGP3_AI_BaseCharacter>()
 	{
 		return AGP3_AI_BaseCharacter::StaticClass();

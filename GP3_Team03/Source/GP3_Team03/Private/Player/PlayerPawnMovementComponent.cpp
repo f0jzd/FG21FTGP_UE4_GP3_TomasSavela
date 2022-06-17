@@ -33,7 +33,7 @@ void UPlayerPawnMovementComponent::TickComponent(float DeltaTime, ELevelTick Tic
 		if (InternalCoolDownTimer <= 0.0f)
 		{
 			ReadyToShoot = true;
-			InternalCoolDownTimer = Player->Gun->ShootCoolDownTimer;
+			//InternalCoolDownTimer = Player->Gun->ShootCoolDownTimer;
 			
 			// If player has pressed shoot during the past 1-something second, shoot again instantly.
 			if (GetWorld()->GetTimeSeconds() - ShootTimeStamp < DelayedInputValue)
@@ -100,28 +100,28 @@ void UPlayerPawnMovementComponent::Shoot()
 		ShootTimeStamp = GetWorld()->GetTimeSeconds();
 	}
 	
-	 if (ReadyToShoot && Player->Gun->HasAmmo())
-	 {
-	 	InternalCoolDownTimer = Player->Gun->ShootCoolDownTimer;
-	 	ReadyToShoot = false;
-	 	FHitResult Hit = Player->Gun->Use();
-	 	
-
-	 	GEngine->AddOnScreenDebugMessage(0, 5.0f, FColor::Cyan, TEXT("Pang pang"));
-	 	
- 		if (Cast<AGP3_AI_BaseCharacter>(Hit.GetActor()))
- 		{
- 			//DealDamage to AI
- 			auto Enemy = Cast<AGP3_AI_BaseCharacter> (Hit.GetActor());
- 			Enemy->TakeGunDamage(Player->Gun->GetDamageFromGun());
- 		}
-	 }
+	// if (ReadyToShoot && Player->Gun->HasAmmo())
+	// {
+	// 	InternalCoolDownTimer = Player->Gun->ShootCoolDownTimer;
+	// 	ReadyToShoot = false;
+	// 	FHitResult Hit = Player->Gun->Use();
+	// 	
+//
+	// 	GEngine->AddOnScreenDebugMessage(0, 5.0f, FColor::Cyan, TEXT("Pang pang"));
+	// 	
+ 	//	if (Cast<AGP3_AI_BaseCharacter>(Hit.GetActor()))
+ 	//	{
+ 	//		//DealDamage to AI
+ 	//		auto Enemy = Cast<AGP3_AI_BaseCharacter> (Hit.GetActor());
+ 	//		Enemy->TakeGunDamage(Player->Gun->GetDamageFromGun());
+ 	//	}
+	// }
 }
 
 void UPlayerPawnMovementComponent::ReLoad()
 {
 	GEngine->AddOnScreenDebugMessage(0, 5.0f, FColor::Cyan, TEXT("ReLoadar"));
-	Player->Gun->ReLoadGun();
+	//Player->Gun->ReLoadGun();
 }
 
 void UPlayerPawnMovementComponent::GroundCheck()

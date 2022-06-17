@@ -2,10 +2,18 @@
 
 #include "Player/GP3WASDMovementComponent.h"
 #include "DrawDebugHelpers.h"
+#include "Player/GP3PlayerPawn.h"
 
 UGP3WASDMovementComponent::UGP3WASDMovementComponent()
 {
-	Owner = GetOwner();
+	
+}
+
+void UGP3WASDMovementComponent::BeginPlay()
+{
+	Super::BeginPlay();
+	
+	Owner = Cast<AGP3PlayerPawn, AActor>(GetOwner());
 }
 
 void UGP3WASDMovementComponent::Move(float ForwardInput, float RightInput, float DeltaTime)
@@ -16,124 +24,176 @@ void UGP3WASDMovementComponent::Move(float ForwardInput, float RightInput, float
 	AccelerationCurveValue = AccelerationCurve->GetFloatValue(AcceleratingTime);
 	DecelerationCurveValue = DecelerationCurve->GetFloatValue(DeceleratingTime);
 	
-	FVector Direction = GetDirectionFromInput(ForwardInput, RightInput);
-	FVector NextStep = CalculateNextStep(Direction);
+	Input = CalculateInput(ForwardInput, RightInput);
+	InstantVelocity = CalculateAccelerationDeceleration(Input, DeltaTime);
+
+	if (InstantVelocity == FVector(0.0f, 0.0f, 0.0f))
+	{
+		Owner->OnMoveFinish();
+	}
 	
-	if (!IsUsingTovesMovement)
+	if (!Owner->bIsDashing)
 	{
-		Owner->AddActorLocalOffset(NextStep * DeltaTime);
+		ExecuteMovement(InstantVelocity, DeltaTime);
+		RotatePlayerWithController();
 	}
-
-	else
-	{
-		ExecuteMovement(NextStep, DeltaTime);
-	}
-
-	RotatePlayerWithController();
 }
 
 void UGP3WASDMovementComponent::CheckInputs(float InForwardInput, float InRightInput)
 {
 	// If player is moving, add deltatime to timestamps. If forward input has decreased to 0, then reset timestamps..
 	// .. and set moving to false.
-	if (IsMoving && InForwardInput == 0.0f && InRightInput == 0.0f)
+	if (IsReceivingInput && InForwardInput == 0.0f && InRightInput == 0.0f)
 	{
 		DeceleratingTime = 0.0f;
+		IsReceivingInput = false;
+
 		IsMoving = false;
 	}
-
+	
 	// If player is not moving, add deltatime to timestamps. If forward input has increased from 0, then reset timestamps..
 	// .. and set moving to true.
-	else if (!IsMoving && (InForwardInput > 0.01f || InForwardInput < -0.01f || InRightInput > 0.01f || InRightInput < -0.01f))
+	else if (!IsReceivingInput && (FMath::Abs(InForwardInput) > 0.01f || FMath::Abs(InRightInput) > 0.01f))
 	{
 		AcceleratingTime = 0.0f;
+		IsReceivingInput = true;
+		
 		IsMoving = true;
+
+		if (!Owner->bIsDashing)
+		{
+			Owner->OnMoveStart();
+		}
 	}
 }
 
 void UGP3WASDMovementComponent::UpdateCurveTimers(float DeltaTime)
 {
-	if (IsMoving)
+	if (IsReceivingInput)
 	{
 		AcceleratingTime += DeltaTime;
 	}
-
+	
 	DeceleratingTime += DeltaTime;
 }
 
-FVector UGP3WASDMovementComponent::GetDirectionFromInput(float ForwardAxis, float RightAxis)
+FVector UGP3WASDMovementComponent::CalculateInput(float ForwardAxis, float RightAxis)
 {
-	FVector NewDirection = {ForwardAxis, RightAxis, 0.0f};
-	if (!IsMoving)
+	float SmoothTurnAlpha = GetWorld()->GetDeltaSeconds() * InputTurnSpeed;
+	FVector NewInput = {ForwardAxis, RightAxis, 0.0f};
+	AnimationSpeed = NewInput;
+
+	// if player is not using gamepad, and player is moving diagonally, divide the animation speed to keep it at 1.
+	if (!Owner->bIsUsingGamepad && (NewInput.X != 0.0f && NewInput.Y != 0.0f || NewInput.X * NewInput.Y != 0.0f))
 	{
-		NewDirection.X = LastRegisteredInput.X;
+		AnimationSpeed /= DiagonalMovementDivider;
 	}
 
+	// if the player is not receiving any input, set NewInput to last registered input for deceleration purposes.
+	if (!IsReceivingInput)
+	{
+		NewInput.X = LastRegisteredInput.X;
+	}
+	
 	else
 	{
-		LastRegisteredInput.X = FMath::Sign(NewDirection.X);
-	}
-
-	if (!IsMoving)
-	{
-		NewDirection.Y = LastRegisteredInput.Y;
-	}
-
-	else
-	{
-		LastRegisteredInput.Y = FMath::Sign(NewDirection.Y);
-	}
-
-	return NewDirection;
-}
-
-FVector UGP3WASDMovementComponent::CalculateNextStep(FVector Direction)
-{
-	if (IsMoving)
-	{
-		AccelerationCurveValue = FMath::Clamp(AccelerationCurveValue, DecelerationCurveValue, 1.0f);
-		
-		Velocity.X = MaxForwardSpeed * AccelerationCurveValue;
-		Velocity.Y = MaxRightSpeed * AccelerationCurveValue;
-		
-		if (Direction.X != 0.0f && Direction.Y != 0.0f || Direction.X * Direction.Y != 0.0f)
+		// if player is switching forward axis fast, and is not moving sideways, activate turn lerp.
+		if (NewInput.X != Input.X && NewInput.X != 0.0f && LastRegisteredInput.X != 0.0f && NewInput.Y == 0.0f)
 		{
-			Velocity /= DiagonalMovementDivider;
+			NewInput.X = FMath::Lerp(Input.X, ForwardAxis, SmoothTurnAlpha);
+		}
+
+		// if player is using gamepad, set lastregisteredinput to the current input.
+		if (Owner->bIsUsingGamepad)
+		{
+			LastRegisteredInput.X = NewInput.X;
 		}
 		
-		FVector DistanceToMove = Direction * Velocity;
-		return DistanceToMove;
+		// else, set lastregisteredinput to the signed current input for deceleration purposes.
+		else
+		{
+			LastRegisteredInput.X = FMath::Sign(NewInput.X);
+		}
 	}
+	
+	if (!IsReceivingInput)
+	{
+		NewInput.Y = LastRegisteredInput.Y;
+	}
+	
+	else
+	{
+		if (NewInput.Y != Input.Y && NewInput.Y != 0.0f && LastRegisteredInput.Y != 0.0f && NewInput.X == 0.0f)
+		{
+			NewInput.Y = FMath::Lerp(Input.Y, NewInput.Y, SmoothTurnAlpha);
+		}
 
+		if (Owner->bIsUsingGamepad)
+		{
+			LastRegisteredInput.Y = NewInput.Y;
+		}
+		else
+		{
+			LastRegisteredInput.Y = FMath::Sign(NewInput.Y);
+		}
+	}
+	
+	return NewInput;
+}
+
+FVector UGP3WASDMovementComponent::CalculateAccelerationDeceleration(FVector InInput, float DeltaTime)
+{
+	if (IsReceivingInput)
+	{
+		AccelerationCurveValue = FMath::Clamp(AccelerationCurveValue, DecelerationCurveValue, 1.0f);
+
+		Acceleration = {MaxForwardSpeed * AccelerationCurveValue, MaxForwardSpeed * AccelerationCurveValue, 0.0f};
+		
+		if (!Owner->bIsUsingGamepad && (InInput.X != 0.0f && InInput.Y != 0.0f || InInput.X * InInput.Y != 0.0f))
+		{
+			Acceleration /= DiagonalMovementDivider;
+		}
+		
+		FVector ReturnInstantVelocity = InInput * Acceleration * DeltaTime;
+		return ReturnInstantVelocity;
+	}
+	
 	DecelerationCurveValue = FMath::Clamp(DecelerationCurveValue, 0.0f, AccelerationCurveValue);
-	FVector DistanceToStop = Direction * Velocity * DecelerationCurveValue;
-
-	return DistanceToStop;
+	FVector Deceleration = {Acceleration.X * DecelerationCurveValue, Acceleration.Y * DecelerationCurveValue, 0.0f};
+	
+	FVector ReturnInstantVelocity = InInput * Deceleration * DeltaTime;
+	
+	return ReturnInstantVelocity;
 }
 
 void UGP3WASDMovementComponent::ExecuteMovement(FVector InMovement, float DeltaTime)
 {
 	FHitResult Hit;
 	
-	RotatedMovement = Owner->GetActorRotation().RotateVector(InMovement);
-	ApplySlopeAxis((RotatedMovement * DeltaTime) + Owner->GetActorLocation());
-	Owner->SetActorLocation((RotatedMovement * DeltaTime) + Owner->GetActorLocation(), true, &Hit);
-
+	LocalInstantVelocity = Owner->GetActorRotation().RotateVector(InMovement);
+	ApplySlopeAxis((LocalInstantVelocity) + Owner->GetActorLocation());
+	FVector PreviousPosition = Owner->GetActorLocation();
+	Owner->SetActorLocation((LocalInstantVelocity) + Owner->GetActorLocation(), true, &Hit);
+	
 	if (Hit.bBlockingHit)
 	{
+		FVector ImpactVelocity = FVector::DotProduct(Owner->GetActorLocation() - PreviousPosition, Hit.Normal) * Hit.Normal;
+		Owner->SetActorLocation(Owner->GetActorLocation() - ImpactVelocity);
+		Owner->SetActorLocation(Owner->GetActorLocation() - ImpactVelocity * 0.3f);
+
+		float UpwardDot = FVector::DotProduct(Owner->GetActorUpVector(), Hit.ImpactNormal);
+		
 		if (Hit.bStartPenetrating)
 		{
 			ApplyDepenetration(&Hit);
 			return;
 		}
-
-		ApplyWallSliding(&Hit);
+		
+		if (UpwardDot == 0.0f)
+		{
+			ApplyWallSliding(&Hit);
+		}
 	}
-
-	// if (!IsGrounded())
-	// {
-	// 	Owner->AddActorWorldOffset(-GravityForce * DeltaTime);
-	// }
 }
 
 void UGP3WASDMovementComponent::ApplyDepenetration(FHitResult* HitResult)
@@ -143,31 +203,45 @@ void UGP3WASDMovementComponent::ApplyDepenetration(FHitResult* HitResult)
 
 void UGP3WASDMovementComponent::ApplyWallSliding(FHitResult* HitResult)
 {
-	RotatedMovement = FVector::VectorPlaneProject (RotatedMovement, HitResult->Normal);
-	Owner->SetActorLocation((RotatedMovement * GetWorld()->GetDeltaSeconds()) + Owner->GetActorLocation());
+	LocalInstantVelocity = FVector::VectorPlaneProject (LocalInstantVelocity, HitResult->Normal);
+	Owner->SetActorLocation(LocalInstantVelocity + Owner->GetActorLocation());
 }
 
-void UGP3WASDMovementComponent::ApplySlopeAxis(FVector ActorLocation)
+void UGP3WASDMovementComponent::ApplySlopeAxis(FVector NextLocation)
 {
-	FVector ForwardRayCastOrigin = ActorLocation;
-	FVector ForwardRayCastEnd = ForwardRayCastOrigin + FVector(0.0f, 0.0f, -400.0f);
+	FVector DownwardRaycastOrigin = Owner->GetActorLocation();
+	FVector DownwardRayCastEnd = DownwardRaycastOrigin + FVector(0.0f, 0.0f, -400.0f);
+	
+	bool SlopeAxisApplied = false;
+	
+	FCollisionQueryParams CollisionQueryParams;
+	CollisionQueryParams.AddIgnoredActor(Owner);
 	
 	FHitResult SlopeHitResult;
 	if (GetWorld()->LineTraceSingleByChannel(
 		SlopeHitResult,
-		ForwardRayCastOrigin,
-		ForwardRayCastEnd,
-		ECC_WorldStatic))
+		DownwardRaycastOrigin,
+		DownwardRayCastEnd,
+		ECC_WorldStatic,
+		CollisionQueryParams))
 	{
-		if (SlopeHitResult.bBlockingHit)
+		if (SlopeHitResult.Normal.Z > KINDA_SMALL_NUMBER && SlopeHitResult.bBlockingHit)
 		{
-			float Dot = FVector::DotProduct(RotatedMovement.GetSafeNormal(0.0f), SlopeHitResult.Normal);
+			float DownwardDot = FVector::DotProduct(-Owner->GetActorUpVector(), SlopeHitResult.Normal);
+			float SlopeAngleInDegrees =  FMath::RadiansToDegrees(FMath::Acos(DownwardDot));
 			
-			if (Dot > (1 - MaxSlopeAngle * 0.01f))
+			if (180.f - FMath::Abs(SlopeAngleInDegrees) < MaxSlopeAngle && DownwardDot > -1.0f)
 			{
-				RotatedMovement = FVector::VectorPlaneProject (RotatedMovement, SlopeHitResult.Normal);
+				LocalInstantVelocity = FVector::VectorPlaneProject (LocalInstantVelocity, SlopeHitResult.Normal);
+				SlopeAxisApplied = true;
 			}
 		}
+	}
+
+	if (!SlopeAxisApplied && !IsGrounded())
+	{
+		CurrentGravityForce += GravityAcceleration * GravityScalar * GetWorld()->GetDeltaSeconds();
+		LocalInstantVelocity += -CurrentGravityForce;
 	}
 }
 
@@ -182,12 +256,16 @@ bool UGP3WASDMovementComponent::IsGrounded()
 	FVector RayCastOrigin = Owner->GetActorLocation() - OffsetToActorFeet;
 	FVector RayCastEnd = RayCastOrigin - CharacterOffsetToGround;
 	FHitResult GroundHit;
+
+	FCollisionQueryParams CollisionQueryParams;
+	CollisionQueryParams.AddIgnoredActor(Owner);
 	
 	if (GetWorld()->LineTraceSingleByChannel(
 		GroundHit,
 		RayCastOrigin,
 		RayCastEnd,
-		ECC_WorldStatic))
+		ECC_WorldStatic,
+		CollisionQueryParams))
 	{
 		if (GroundHit.bBlockingHit)
 		{
@@ -197,6 +275,8 @@ bool UGP3WASDMovementComponent::IsGrounded()
 				   GroundHit.ImpactPoint + FVector(0.0f, 0.0f, 10.0f),
 				   FColor::Red, false, 5.0f);
 			}
+			CurrentGravityForce = {0.0f, 0.0f, 0.0f};
+			
 			IsOnGround = true;
 			return true;
 		}

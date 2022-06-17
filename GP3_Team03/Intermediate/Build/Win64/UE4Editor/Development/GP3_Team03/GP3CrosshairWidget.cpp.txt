@@ -100,6 +100,9 @@ C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\In
 C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\UMG\WidgetBlueprintGeneratedClass.generated.h
 C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\UMG\UserWidget.generated.h
 C:\Users\tomas.savela\Perforce\FG21FTGP_UE4_GP3_TomasSavela\GP3_Team03\Intermediate\Build\Win64\UE4Editor\Inc\GP3_Team03\GP3CrosshairWidget.generated.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\MovieSceneTracks\Public\MovieSceneTracksPropertyTypes.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\AnimationCore\Public\EulerTransform.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\AnimationCore\EulerTransform.generated.h
 C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\UMG\Public\Components/Image.h
 C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Engine\Public\Slate/SlateTextureAtlasInterface.h
 C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\SlateTextureAtlasInterface.generated.h
@@ -115,9 +118,23 @@ C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Engine\Classes\Kismet\
 C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\GameplayStaticsTypes.generated.h
 C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\GameplayStatics.generated.h
 C:\Users\tomas.savela\Perforce\FG21FTGP_UE4_GP3_TomasSavela\GP3_Team03\Source\GP3_Team03\Public\Player/GP3PlayerPawn.h
+C:\Users\tomas.savela\Perforce\FG21FTGP_UE4_GP3_TomasSavela\GP3_Team03\Source\GP3_Team03\Public\Player\GP3DashComponent.h
+C:\Users\tomas.savela\Perforce\FG21FTGP_UE4_GP3_TomasSavela\GP3_Team03\Intermediate\Build\Win64\UE4Editor\Inc\GP3_Team03\GP3DashComponent.generated.h
+C:\Users\tomas.savela\Perforce\FG21FTGP_UE4_GP3_TomasSavela\GP3_Team03\Source\GP3_Team03\Public\GP3GameInstance.h
+C:\Users\tomas.savela\Perforce\FG21FTGP_UE4_GP3_TomasSavela\GP3_Team03\Intermediate\Build\Win64\UE4Editor\Inc\GP3_Team03\GP3GameInstance.generated.h
+C:\Users\tomas.savela\Perforce\FG21FTGP_UE4_GP3_TomasSavela\GP3_Team03\Source\GP3_Team03\Public\AI/GP3_ChargeTrail.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Engine\Classes\Components/SplineMeshComponent.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\SplineMeshComponent.generated.h
+C:\Users\tomas.savela\Perforce\FG21FTGP_UE4_GP3_TomasSavela\GP3_Team03\Intermediate\Build\Win64\UE4Editor\Inc\GP3_Team03\GP3_ChargeTrail.generated.h
 C:\Users\tomas.savela\Perforce\FG21FTGP_UE4_GP3_TomasSavela\GP3_Team03\Intermediate\Build\Win64\UE4Editor\Inc\GP3_Team03\GP3PlayerPawn.generated.h
+C:\Users\tomas.savela\Perforce\FG21FTGP_UE4_GP3_TomasSavela\GP3_Team03\Source\GP3_Team03\Public\Player/GP3ShootComponent.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Engine\Classes\Components/SplineComponent.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\SplineComponent.generated.h
 C:\Users\tomas.savela\Perforce\FG21FTGP_UE4_GP3_TomasSavela\GP3_Team03\Source\GP3_Team03\Public\Weapons/WeaponBase.h
+C:\Users\tomas.savela\Perforce\FG21FTGP_UE4_GP3_TomasSavela\GP3_Team03\Source\GP3_Team03\Public\Weapons\SunShaftProjectile.h
+C:\Users\tomas.savela\Perforce\FG21FTGP_UE4_GP3_TomasSavela\GP3_Team03\Intermediate\Build\Win64\UE4Editor\Inc\GP3_Team03\SunShaftProjectile.generated.h
 C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Engine\Classes\Engine/DataTable.h
 C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Engine\Public\DataTableUtils.h
 C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\DataTable.generated.h
 C:\Users\tomas.savela\Perforce\FG21FTGP_UE4_GP3_TomasSavela\GP3_Team03\Intermediate\Build\Win64\UE4Editor\Inc\GP3_Team03\WeaponBase.generated.h
+C:\Users\tomas.savela\Perforce\FG21FTGP_UE4_GP3_TomasSavela\GP3_Team03\Intermediate\Build\Win64\UE4Editor\Inc\GP3_Team03\GP3ShootComponent.generated.h

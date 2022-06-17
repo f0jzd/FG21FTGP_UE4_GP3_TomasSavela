@@ -3,23 +3,34 @@
 #pragma once
 
 #include "CoreMinimal.h"
+#include "SunShaftProjectile.h"
 #include "GameFramework/Actor.h"
 #include "Engine/DataTable.h"
 #include "WeaponBase.generated.h"
 
+class USplineComponent;
 USTRUCT(BlueprintType)
 struct FWeaponData : public FTableRowBase
 {
 	GENERATED_BODY()
 
 	UPROPERTY(EditAnywhere)
-	class USkeletalMesh* WeaponMesh; 
+	class USkeletalMesh* WeaponMesh;
+
+	UPROPERTY(EditAnywhere)
+	TSubclassOf<AActor>Projectile;
+
+	UPROPERTY(EditAnywhere)
+	TSubclassOf<UParticleSystem> Particle;
 
 	UPROPERTY(EditAnywhere)
 	FString WeaponName;
 
 	UPROPERTY(EditAnywhere)
 	float WeaponDamage;
+
+	UPROPERTY(EditAnywhere)//Added critical damage
+	float WeaponCriticalDamage;
 
 	UPROPERTY(EditAnywhere)
 	float WeaponRange;
@@ -32,7 +43,7 @@ struct FWeaponData : public FTableRowBase
 
 	UPROPERTY(EditAnywhere)
 	float WeaponAmmo;
-
+	
 	//UPROPERTY(EditAnywhere)
 	//class UAnimationAsset* FireAnimation;
 };
@@ -51,8 +62,9 @@ public:
 protected:
 	
 	UPROPERTY()
+	
 	class USkeletalMeshComponent* MeshComp;
-
+	
 	UPROPERTY(EditAnywhere)
 	class UDataTable* WeaponDataTable;
 
@@ -65,20 +77,29 @@ protected:
 	virtual void Tick(float DeltaSeconds) override;
 	virtual void BeginPlay() override;
 
-public:	
+public:
+
+	UPROPERTY()
+	TSubclassOf<AActor> Projectile;
+	
+	UPROPERTY()
+	TSubclassOf<UParticleSystem> Particle;
 	void SelectWeapon(FName SpellName);
 	FHitResult Use();
 	float GetDamageFromGun();
+	float GetCriticalDamageFromGun();
 	float StartAmmo;
 	float CurrentAmmo;
 	float ShootCoolDownTimer;
 	float ReLoadTimer;
 	float ReLoadTime;
+
+	UPROPERTY(BlueprintReadOnly)
 	bool IsReLoading;
 	
 	bool HasAmmo();
 	
-	UFUNCTION(BlueprintCallable) // ta bort blueprint
+	UFUNCTION()
 	void ReLoadGun();
 
 	UFUNCTION(BlueprintCallable)
@@ -89,4 +110,23 @@ public:
 
 	UPROPERTY()
 	FOnAmmoChangedEvent OnAmmoChanged;
+
+	void SetProjectileVelocity(float Delta);
+
+	//UPROPERTY(VisibleDefaultsOnly,BlueprintReadWrite, meta =(AllowPrivateAccess="true"))
+	//USplineComponent* SplinePath;
+	//
+	//UPROPERTY(Category="Built in components", EditDefaultsOnly) //
+	//USceneComponent* StartProjectileLocation;
+//
+	//bool bCalculateProjectilePath; //
+
+	UPROPERTY()
+	float LaunchVelocity = 1500; // fix exposed
+
+	UPROPERTY()
+	float MinLaunchVelocity = 500.f; // fix exposed
+
+	UPROPERTY()
+	float MaxLaunchVelocity = 3000.f; // fix exposed
 };

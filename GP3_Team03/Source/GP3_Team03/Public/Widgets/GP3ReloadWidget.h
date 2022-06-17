@@ -73,4 +73,7 @@ private:
 
 	UPROPERTY(EditDefaultsOnly)
 	float SafetyBufferTime = 0.2f;
+
+	UPROPERTY(EditDefaultsOnly)
+	float StartDelayTime = 0.2f;
 };

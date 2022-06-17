@@ -15,18 +15,18 @@ struct FAIStimulus;
 #endif
 #define GP3_TEAM03_AAICEnemy_generated_h
 
-#define GP3_Team03_Source_GP3_Team03_Public_AI_AAICEnemy_h_24_SPARSE_DATA
-#define GP3_Team03_Source_GP3_Team03_Public_AI_AAICEnemy_h_24_RPC_WRAPPERS \
+#define GP3_Team03_Source_GP3_Team03_Public_AI_AAICEnemy_h_28_SPARSE_DATA
+#define GP3_Team03_Source_GP3_Team03_Public_AI_AAICEnemy_h_28_RPC_WRAPPERS \
  \
 	DECLARE_FUNCTION(execOnPercieved);
 
 
-#define GP3_Team03_Source_GP3_Team03_Public_AI_AAICEnemy_h_24_RPC_WRAPPERS_NO_PURE_DECLS \
+#define GP3_Team03_Source_GP3_Team03_Public_AI_AAICEnemy_h_28_RPC_WRAPPERS_NO_PURE_DECLS \
  \
 	DECLARE_FUNCTION(execOnPercieved);
 
 
-#define GP3_Team03_Source_GP3_Team03_Public_AI_AAICEnemy_h_24_INCLASS_NO_PURE_DECLS \
+#define GP3_Team03_Source_GP3_Team03_Public_AI_AAICEnemy_h_28_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesAAICEnemy(); \
 	friend struct Z_Construct_UClass_AAICEnemy_Statics; \
@@ -35,7 +35,7 @@ public: \
 	DECLARE_SERIALIZER(AAICEnemy)
 
 
-#define GP3_Team03_Source_GP3_Team03_Public_AI_AAICEnemy_h_24_INCLASS \
+#define GP3_Team03_Source_GP3_Team03_Public_AI_AAICEnemy_h_28_INCLASS \
 private: \
 	static void StaticRegisterNativesAAICEnemy(); \
 	friend struct Z_Construct_UClass_AAICEnemy_Statics; \
@@ -44,7 +44,7 @@ public: \
 	DECLARE_SERIALIZER(AAICEnemy)
 
 
-#define GP3_Team03_Source_GP3_Team03_Public_AI_AAICEnemy_h_24_STANDARD_CONSTRUCTORS \
+#define GP3_Team03_Source_GP3_Team03_Public_AI_AAICEnemy_h_28_STANDARD_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	NO_API AAICEnemy(const FObjectInitializer& ObjectInitializer); \
 	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(AAICEnemy) \
@@ -57,7 +57,7 @@ private: \
 public:
 
 
-#define GP3_Team03_Source_GP3_Team03_Public_AI_AAICEnemy_h_24_ENHANCED_CONSTRUCTORS \
+#define GP3_Team03_Source_GP3_Team03_Public_AI_AAICEnemy_h_28_ENHANCED_CONSTRUCTORS \
 private: \
 	/** Private move- and copy-constructors, should never be used */ \
 	NO_API AAICEnemy(AAICEnemy&&); \
@@ -68,28 +68,28 @@ public: \
 	DEFINE_DEFAULT_CONSTRUCTOR_CALL(AAICEnemy)
 
 
-#define GP3_Team03_Source_GP3_Team03_Public_AI_AAICEnemy_h_24_PRIVATE_PROPERTY_OFFSET
-#define GP3_Team03_Source_GP3_Team03_Public_AI_AAICEnemy_h_17_PROLOG
-#define GP3_Team03_Source_GP3_Team03_Public_AI_AAICEnemy_h_24_GENERATED_BODY_LEGACY \
+#define GP3_Team03_Source_GP3_Team03_Public_AI_AAICEnemy_h_28_PRIVATE_PROPERTY_OFFSET
+#define GP3_Team03_Source_GP3_Team03_Public_AI_AAICEnemy_h_15_PROLOG
+#define GP3_Team03_Source_GP3_Team03_Public_AI_AAICEnemy_h_28_GENERATED_BODY_LEGACY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	GP3_Team03_Source_GP3_Team03_Public_AI_AAICEnemy_h_24_PRIVATE_PROPERTY_OFFSET \
-	GP3_Team03_Source_GP3_Team03_Public_AI_AAICEnemy_h_24_SPARSE_DATA \
-	GP3_Team03_Source_GP3_Team03_Public_AI_AAICEnemy_h_24_RPC_WRAPPERS \
-	GP3_Team03_Source_GP3_Team03_Public_AI_AAICEnemy_h_24_INCLASS \
-	GP3_Team03_Source_GP3_Team03_Public_AI_AAICEnemy_h_24_STANDARD_CONSTRUCTORS \
+	GP3_Team03_Source_GP3_Team03_Public_AI_AAICEnemy_h_28_PRIVATE_PROPERTY_OFFSET \
+	GP3_Team03_Source_GP3_Team03_Public_AI_AAICEnemy_h_28_SPARSE_DATA \
+	GP3_Team03_Source_GP3_Team03_Public_AI_AAICEnemy_h_28_RPC_WRAPPERS \
+	GP3_Team03_Source_GP3_Team03_Public_AI_AAICEnemy_h_28_INCLASS \
+	GP3_Team03_Source_GP3_Team03_Public_AI_AAICEnemy_h_28_STANDARD_CONSTRUCTORS \
 public: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
 
-#define GP3_Team03_Source_GP3_Team03_Public_AI_AAICEnemy_h_24_GENERATED_BODY \
+#define GP3_Team03_Source_GP3_Team03_Public_AI_AAICEnemy_h_28_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	GP3_Team03_Source_GP3_Team03_Public_AI_AAICEnemy_h_24_PRIVATE_PROPERTY_OFFSET \
-	GP3_Team03_Source_GP3_Team03_Public_AI_AAICEnemy_h_24_SPARSE_DATA \
-	GP3_Team03_Source_GP3_Team03_Public_AI_AAICEnemy_h_24_RPC_WRAPPERS_NO_PURE_DECLS \
-	GP3_Team03_Source_GP3_Team03_Public_AI_AAICEnemy_h_24_INCLASS_NO_PURE_DECLS \
-	GP3_Team03_Source_GP3_Team03_Public_AI_AAICEnemy_h_24_ENHANCED_CONSTRUCTORS \
+	GP3_Team03_Source_GP3_Team03_Public_AI_AAICEnemy_h_28_PRIVATE_PROPERTY_OFFSET \
+	GP3_Team03_Source_GP3_Team03_Public_AI_AAICEnemy_h_28_SPARSE_DATA \
+	GP3_Team03_Source_GP3_Team03_Public_AI_AAICEnemy_h_28_RPC_WRAPPERS_NO_PURE_DECLS \
+	GP3_Team03_Source_GP3_Team03_Public_AI_AAICEnemy_h_28_INCLASS_NO_PURE_DECLS \
+	GP3_Team03_Source_GP3_Team03_Public_AI_AAICEnemy_h_28_ENHANCED_CONSTRUCTORS \
 public: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 

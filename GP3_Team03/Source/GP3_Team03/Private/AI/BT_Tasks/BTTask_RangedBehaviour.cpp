@@ -41,16 +41,13 @@ EBTNodeResult::Type UBTTask_RangedBehaviour::ExecuteTask(UBehaviorTreeComponent&
 		DrawDebugLine(GetWorld(), Start, End, FColor::White);
 		if (HitRes.GetActor() == PlayerRef)
 		{
-			GEngine->AddOnScreenDebugMessage(INDEX_NONE, 0.5f, FColor::Cyan, TEXT("Seeing player"));
 			return EBTNodeResult::Succeeded;
 		}
 		if (HitRes.GetActor() != PlayerRef)
 		{
 			SelfActor = Cast<AAIController>(SelfActor);
-			GEngine->AddOnScreenDebugMessage(INDEX_NONE, 0.5f, FColor::Cyan, TEXT("NOT Seeing player"));
-			return EBTNodeResult::Failed;
+			return EBTNodeResult::Succeeded;
 		}
-		GEngine->AddOnScreenDebugMessage(INDEX_NONE, 1.0f, FColor::Cyan, TEXT("Player is not null"));
 		return EBTNodeResult::Failed;
 	}
 

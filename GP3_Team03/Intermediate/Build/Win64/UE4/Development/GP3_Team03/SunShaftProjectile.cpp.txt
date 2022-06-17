@@ -1,0 +1,11 @@
+C:\Users\tomas.savela\Perforce\FG21FTGP_UE4_GP3_TomasSavela\GP3_Team03\Intermediate\Build\Win64\UE4\Development\GP3_Team03\Definitions.GP3_Team03.h
+C:\Users\tomas.savela\Perforce\FG21FTGP_UE4_GP3_TomasSavela\GP3_Team03\Source\GP3_Team03\Public\Weapons/SunShaftProjectile.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Engine\Classes\Components/SphereComponent.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Engine\Classes\Components/ShapeComponent.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4\Inc\Engine\ShapeComponent.generated.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4\Inc\Engine\SphereComponent.generated.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Engine\Classes\GameFramework/ProjectileMovementComponent.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Engine\Classes\GameFramework/MovementComponent.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4\Inc\Engine\MovementComponent.generated.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4\Inc\Engine\ProjectileMovementComponent.generated.h
+C:\Users\tomas.savela\Perforce\FG21FTGP_UE4_GP3_TomasSavela\GP3_Team03\Intermediate\Build\Win64\UE4\Inc\GP3_Team03\SunShaftProjectile.generated.h

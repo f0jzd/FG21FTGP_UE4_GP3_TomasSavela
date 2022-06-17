@@ -1,0 +1,5 @@
+C:\Users\tomas.savela\Perforce\FG21FTGP_UE4_GP3_TomasSavela\GP3_Team03\Intermediate\Build\Win64\UE4Editor\Development\GP3_Team03\Definitions.GP3_Team03.h
+C:\Users\tomas.savela\Perforce\FG21FTGP_UE4_GP3_TomasSavela\GP3_Team03\Source\GP3_Team03\Public\Player/GP3PlayerDashTrail.h
+C:\Users\tomas.savela\Perforce\FG21FTGP_UE4_GP3_TomasSavela\GP3_Team03\Intermediate\Build\Win64\UE4Editor\Inc\GP3_Team03\GP3PlayerDashTrail.generated.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Engine\Classes\Components/SplineComponent.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\SplineComponent.generated.h

@@ -5,12 +5,16 @@
 #include "CoreMinimal.h"
 #include "GP3WASDMovementComponent.generated.h"
 
+class AGP3PlayerPawn;
+
 UCLASS()
 class GP3_TEAM03_API UGP3WASDMovementComponent : public UActorComponent
 {
 	GENERATED_BODY()
 public:
 	UGP3WASDMovementComponent();
+
+	void BeginPlay() override;
 
 	UFUNCTION(BlueprintCallable)
 	void Move(float ForwardInput, float RightInput, float DeltaTime);
@@ -22,10 +26,10 @@ public:
 	void UpdateCurveTimers(float DeltaTime);
 
 	UFUNCTION()
-	FVector GetDirectionFromInput(float ForwardAxis, float RightAxis);
+	FVector CalculateInput(float ForwardAxis, float RightAxis);
 
 	UFUNCTION()
-	FVector CalculateNextStep(FVector Direction);
+	FVector CalculateAccelerationDeceleration(FVector InInput, float DeltaTime);
 
 	UFUNCTION()
 	void ExecuteMovement(FVector InMovement, float DeltaTime);
@@ -38,16 +42,19 @@ public:
 	bool IsGrounded();
 
 	UFUNCTION()
-	void ApplySlopeAxis(FVector ActorLocation);
+	void ApplySlopeAxis(FVector NextLocation);
 	
 	UFUNCTION()
 	void RotatePlayerWithController();
-
-	UPROPERTY(Category="Character Movement - Editable", EditAnywhere)
-	float MaxForwardSpeed = 500.0f;
 	
 	UPROPERTY(Category="Character Movement - Editable", EditAnywhere)
-	float MaxRightSpeed = 400.0f;
+	float MaxForwardSpeed = 600.0f;
+	
+	UPROPERTY(Category="Character Movement - Editable", EditAnywhere)
+	float MaxRightSpeed = 600.0f;
+
+	UPROPERTY(Category="Character Movement - Editable", EditAnywhere)
+	float InputTurnSpeed = 10.0f;
 	
 	UPROPERTY(Category="Character Movement - Editable", EditAnywhere)
 	float DiagonalMovementDivider = 1.414f;
@@ -59,7 +66,7 @@ public:
 	FVector OffsetToActorFeet = {0.0f, 0.0f, 48.0f};
 	
 	UPROPERTY(Category="Character Movement - Editable", EditAnywhere)
-	FVector GravityForce = {0.0f, 0.0f, 500.f};
+	FVector GravityAcceleration = {0.0f, 0.0f, 500.f};
 	
 	UPROPERTY(Category="Character Movement - Editable", EditAnywhere)
 	FVector CharacterOffsetToGround = {0.0f, 0.0f, 10.0f};
@@ -71,40 +78,62 @@ public:
 	UCurveFloat* DecelerationCurve = NULL;
 	
 	UPROPERTY(Category="Character Movement - Debugging Info", VisibleAnywhere)
-	bool IsMoving = false;
+	bool IsReceivingInput = false;
 	
 	UPROPERTY(Category="Character Movement - Debugging Info", VisibleAnywhere)
 	bool IsOnGround = false;
 	
 	UPROPERTY(Category="Character Movement - Debugging Info", VisibleAnywhere)
-	FVector Velocity = {0.0f, 0.0f, 0.0f};
+	FVector Acceleration = {0.0f, 0.0f, 0.0f};
 	
 	UPROPERTY(Category="Character Movement - Debugging Info", VisibleAnywhere)
 	FVector LastRegisteredInput = {0.0f, 0.0f, 0.0f};
 	
 	UPROPERTY(Category="Character Movement - Debugging Info", VisibleAnywhere)
-	FVector RotatedMovement = {0.0f, 0.0f, 0.0f};
+	FVector Input = {0.0f, 0.0f, 0.0f};
+	
+	UPROPERTY(Category="Character Movement - Debugging Info", VisibleAnywhere, BlueprintReadOnly)
+	FVector LocalInstantVelocity = {0.0f, 0.0f, 0.0f};
+
+	UPROPERTY(Category="Character Movement - Debugging Info", VisibleAnywhere, BlueprintReadOnly)
+	FVector AnimationSpeed = {0.0f, 0.0f, 0.0f};
 	
 	UPROPERTY(Category="Character Movement - Debugging Info", VisibleAnywhere)
 	float AccelerationCurveValue = 0.0f;
 	
 	UPROPERTY(Category="Character Movement - Debugging Info", VisibleAnywhere)
 	float DecelerationCurveValue = 0.0f;
-	
-	UPROPERTY(Category="Character Movement - Debugging Info", EditAnywhere)
-	bool IsUsingTovesMovement = false;
 
 	UPROPERTY(Category="Character Movement - Debugging Info", EditAnywhere)
 	bool DrawHitresultLine = false;
+
+	UPROPERTY(Category="Character Movement - Debugging Info", EditAnywhere)
+	bool MovementDisabled = false;
+
+	UPROPERTY(Category="Character Movement - Debugging Info", VisibleAnywhere, BlueprintReadOnly)
+	FVector InstantVelocity;
 	
 	UPROPERTY()
 	float AcceleratingTime = 0.0f;
 	
 	UPROPERTY()
 	float DeceleratingTime = 0.0f;
+
+	UPROPERTY()
+	float TimeBeforeStopped = 2.0f;
+
+	bool IsMoving = false;
 	
 	UPROPERTY()
 	int DepenetrationIterationCount = 0.0f;
 
-	AActor* Owner = NULL;
+	float InternalStopTimer = 0.0f;
+
+	UPROPERTY()
+	float GravityScalar = 0.05f;
+
+	UPROPERTY()
+	FVector CurrentGravityForce = {0.0f, 0.0f, 0.0f};
+	
+	AGP3PlayerPawn* Owner = NULL;
 };

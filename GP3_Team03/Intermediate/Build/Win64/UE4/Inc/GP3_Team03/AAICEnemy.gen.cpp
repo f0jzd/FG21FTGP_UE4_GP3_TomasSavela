@@ -20,6 +20,7 @@ void EmptyLinkFunctionForGeneratedCodeAAICEnemy() {}
 	ENGINE_API UClass* Z_Construct_UClass_AActor_NoRegister();
 	AIMODULE_API UScriptStruct* Z_Construct_UScriptStruct_FAIStimulus();
 	AIMODULE_API UClass* Z_Construct_UClass_UAIPerceptionComponent_NoRegister();
+	AIMODULE_API UClass* Z_Construct_UClass_UCrowdFollowingComponent_NoRegister();
 // End Cross Module References
 	DEFINE_FUNCTION(AAICEnemy::execOnPercieved)
 	{
@@ -89,6 +90,10 @@ void EmptyLinkFunctionForGeneratedCodeAAICEnemy() {}
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_Perception_MetaData[];
 #endif
 		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_Perception;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_CrowdFollowing_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_CrowdFollowing;
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
 		static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
 		static const UE4CodeGen_Private::FClassParams ClassParams;
@@ -115,8 +120,17 @@ void EmptyLinkFunctionForGeneratedCodeAAICEnemy() {}
 	};
 #endif
 	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AAICEnemy_Statics::NewProp_Perception = { "Perception", nullptr, (EPropertyFlags)0x0010000000090009, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AAICEnemy, Perception), Z_Construct_UClass_UAIPerceptionComponent_NoRegister, METADATA_PARAMS(Z_Construct_UClass_AAICEnemy_Statics::NewProp_Perception_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AAICEnemy_Statics::NewProp_Perception_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AAICEnemy_Statics::NewProp_CrowdFollowing_MetaData[] = {
+		{ "Category", "AICEnemy" },
+		{ "EditInline", "true" },
+		{ "ModuleRelativePath", "Public/AI/AAICEnemy.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AAICEnemy_Statics::NewProp_CrowdFollowing = { "CrowdFollowing", nullptr, (EPropertyFlags)0x0010000000080009, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AAICEnemy, CrowdFollowing), Z_Construct_UClass_UCrowdFollowingComponent_NoRegister, METADATA_PARAMS(Z_Construct_UClass_AAICEnemy_Statics::NewProp_CrowdFollowing_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AAICEnemy_Statics::NewProp_CrowdFollowing_MetaData)) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_AAICEnemy_Statics::PropPointers[] = {
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AAICEnemy_Statics::NewProp_Perception,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AAICEnemy_Statics::NewProp_CrowdFollowing,
 	};
 	const FCppClassTypeInfoStatic Z_Construct_UClass_AAICEnemy_Statics::StaticCppClassTypeInfo = {
 		TCppClassTypeTraits<AAICEnemy>::IsAbstract,
@@ -145,7 +159,7 @@ void EmptyLinkFunctionForGeneratedCodeAAICEnemy() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(AAICEnemy, 3310124362);
+	IMPLEMENT_CLASS(AAICEnemy, 1333939747);
 	template<> GP3_TEAM03_API UClass* StaticClass<AAICEnemy>()
 	{
 		return AAICEnemy::StaticClass();

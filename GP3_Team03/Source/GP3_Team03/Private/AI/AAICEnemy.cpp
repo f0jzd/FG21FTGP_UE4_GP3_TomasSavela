@@ -16,15 +16,11 @@ AAICEnemy::AAICEnemy()
 
 	TeamId = FGenericTeamId(1);
 
-
 }
 
 void AAICEnemy::BeginPlay()
 {
 	Super::BeginPlay();
-
-	
-
 
 }
 
@@ -37,16 +33,13 @@ ETeamAttitude::Type AAICEnemy::GetTeamAttitudeTowards(const AActor& Other) const
 	const APawn* OtherPawn = Cast<APawn>(&Other);
 	if (OtherPawn == nullptr)
 	{
-		GEngine->AddOnScreenDebugMessage(INDEX_NONE, 2.f, FColor::Green, TEXT("ReturningNeutral"));
 		return ETeamAttitude::Neutral;
 	}
-
 	auto PlayerTI = Cast<IGenericTeamAgentInterface>(&Other);
-	class IGenericTeamAgentInterface* BotTI = Cast<IGenericTeamAgentInterface>(OtherPawn->GetController());
+	IGenericTeamAgentInterface* BotTI = Cast<IGenericTeamAgentInterface>(OtherPawn->GetController());
 
 	if (BotTI && PlayerTI == nullptr)
 	{
-		GEngine->AddOnScreenDebugMessage(INDEX_NONE, 2.f, FColor::Green, TEXT("ReturningNeutral"));
 		return ETeamAttitude::Neutral;
 	}
 
@@ -63,22 +56,14 @@ ETeamAttitude::Type AAICEnemy::GetTeamAttitudeTowards(const AActor& Other) const
 	FGenericTeamId ThisId = GetGenericTeamId();
 	if (OtherActorTeamId == 8)
 	{
-		GEngine->AddOnScreenDebugMessage(INDEX_NONE, 2.f, FColor::Green, TEXT("ReturningNeutral"));
-
 		return ETeamAttitude::Neutral;
 	}
-	else if (OtherActorTeamId == ThisId)
+	if (OtherActorTeamId == ThisId)
 	{
-		GEngine->AddOnScreenDebugMessage(INDEX_NONE, 2.f, FColor::Green, TEXT("ReturningFriendly"));
-
 		return ETeamAttitude::Friendly;
 	}
-	else
-	{
-		GEngine->AddOnScreenDebugMessage(INDEX_NONE, 2.f, FColor::Green, TEXT("ReturningHostile"));
-
-		return ETeamAttitude::Hostile;
-	}
+	return ETeamAttitude::Hostile;
+	
 
 }
 

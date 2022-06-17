@@ -3,7 +3,7 @@
   <ItemGroup>
     <None Include="..\..\GP3_Team03.uproject" />
     <Filter Include="Source">
-      <UniqueIdentifier>{FD4CE600-FEBD-4B90-B9D4-740F7E4BB7E7}</UniqueIdentifier>
+      <UniqueIdentifier>{B57529FD-467F-4B8F-A0B2-560C96A5C191}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\GP3_Team03.Target.cs">
       <Filter>Source</Filter>
@@ -11,10 +11,8 @@
     <None Include="..\..\Source\GP3_Team03Editor.Target.cs">
       <Filter>Source</Filter>
     </None>
-    <None Include="..\..\GP3_Team03.sln.DotSettings.2022-05-17T13-29-47.user" />
-    <None Include="..\..\GP3_Team03.sln.DotSettings.user" />
     <Filter Include="Config">
-      <UniqueIdentifier>{AB6F3F79-B1EF-40AA-98D7-6EC3750BC812}</UniqueIdentifier>
+      <UniqueIdentifier>{AAF8E551-D059-4E25-859A-609AE126F4EA}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Config\DefaultEditor.ini">
       <Filter>Config</Filter>
@@ -29,16 +27,16 @@
       <Filter>Config</Filter>
     </None>
     <Filter Include="Plugins">
-      <UniqueIdentifier>{65CAC177-87F7-4DE7-AFAB-61418BF9B37A}</UniqueIdentifier>
+      <UniqueIdentifier>{2F777DDB-2F14-4C00-AD37-6C768AEFB81B}</UniqueIdentifier>
     </Filter>
     <Filter Include="Plugins\FMODStudio">
-      <UniqueIdentifier>{5FA38D0C-27E1-420C-A785-3F55EFF3E9C6}</UniqueIdentifier>
+      <UniqueIdentifier>{CEE1580C-EEBD-4152-A8A2-DA33C0481AF2}</UniqueIdentifier>
     </Filter>
     <Filter Include="Plugins\FMODStudio\Source">
-      <UniqueIdentifier>{C7651A1C-BDE9-4DFC-B708-8CD0191A7B53}</UniqueIdentifier>
+      <UniqueIdentifier>{80081A95-8A6D-47A2-9346-9423C1AEA444}</UniqueIdentifier>
     </Filter>
     <Filter Include="Plugins\FMODStudio\Source\FMODStudio">
-      <UniqueIdentifier>{2217A2BA-9536-4AE1-BA9A-3F201F83EF48}</UniqueIdentifier>
+      <UniqueIdentifier>{6C4ABC39-58A8-4CEE-AFDD-F9FCEC712589}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Plugins\FMODStudio\Source\FMODStudio\FMODStudio.Build.cs">
       <Filter>Plugins\FMODStudio\Source\FMODStudio</Filter>
@@ -50,7 +48,7 @@
       <Filter>Plugins\FMODStudio\Source\FMODStudio</Filter>
     </None>
     <Filter Include="Plugins\FMODStudio\Source\FMODStudio\Classes">
-      <UniqueIdentifier>{4ACC03F9-F70C-47E0-8DF9-15748262ED4D}</UniqueIdentifier>
+      <UniqueIdentifier>{46443596-64AA-43FD-AF37-72A8730671A1}</UniqueIdentifier>
     </Filter>
     <ClInclude Include="..\..\Plugins\FMODStudio\Source\FMODStudio\Classes\FMODAmbientSound.h">
       <Filter>Plugins\FMODStudio\Source\FMODStudio\Classes</Filter>
@@ -92,7 +90,7 @@
       <Filter>Plugins\FMODStudio\Source\FMODStudio\Classes</Filter>
     </ClInclude>
     <Filter Include="Plugins\FMODStudio\Source\FMODStudio\Private">
-      <UniqueIdentifier>{C426954C-D2F5-4F27-893F-9BCFC4CBF0A5}</UniqueIdentifier>
+      <UniqueIdentifier>{36B98747-D393-4E2D-A3E4-453BC272CD5A}</UniqueIdentifier>
     </Filter>
     <ClCompile Include="..\..\Plugins\FMODStudio\Source\FMODStudio\Private\FMODAmbientSound.cpp">
       <Filter>Plugins\FMODStudio\Source\FMODStudio\Private</Filter>
@@ -173,7 +171,7 @@
       <Filter>Plugins\FMODStudio\Source\FMODStudio\Private</Filter>
     </ClCompile>
     <Filter Include="Plugins\FMODStudio\Source\FMODStudio\Private\Sequencer">
-      <UniqueIdentifier>{C402E4DF-8FE0-4A66-8A07-CBA1DD973481}</UniqueIdentifier>
+      <UniqueIdentifier>{88A20BA2-51E5-4C7C-BF9F-0603507997A9}</UniqueIdentifier>
     </Filter>
     <ClCompile Include="..\..\Plugins\FMODStudio\Source\FMODStudio\Private\Sequencer\FMODEventControlSection.cpp">
       <Filter>Plugins\FMODStudio\Source\FMODStudio\Private\Sequencer</Filter>
@@ -206,7 +204,7 @@
       <Filter>Plugins\FMODStudio\Source\FMODStudio\Private\Sequencer</Filter>
     </ClInclude>
     <Filter Include="Plugins\FMODStudio\Source\FMODStudio\Public">
-      <UniqueIdentifier>{119672E1-A0A7-438F-8636-ABBC2C648742}</UniqueIdentifier>
+      <UniqueIdentifier>{DF568BAC-95B7-40FC-BCF6-8432805516C6}</UniqueIdentifier>
     </Filter>
     <ClInclude Include="..\..\Plugins\FMODStudio\Source\FMODStudio\Public\FMODStudioModule.h">
       <Filter>Plugins\FMODStudio\Source\FMODStudio\Public</Filter>
@@ -215,7 +213,7 @@
       <Filter>Plugins\FMODStudio\Source\FMODStudio\Public</Filter>
     </ClInclude>
     <Filter Include="Plugins\FMODStudio\Source\FMODStudio\Public\FMOD">
-      <UniqueIdentifier>{1BAFFD1B-AA3B-4287-B33E-9FAC13E08D3C}</UniqueIdentifier>
+      <UniqueIdentifier>{4E27ADB1-E9BA-480F-AB44-D83250F248FB}</UniqueIdentifier>
     </Filter>
     <ClInclude Include="..\..\Plugins\FMODStudio\Source\FMODStudio\Public\FMOD\fmod.h">
       <Filter>Plugins\FMODStudio\Source\FMODStudio\Public\FMOD</Filter>
@@ -257,19 +255,19 @@
       <Filter>Plugins\FMODStudio</Filter>
     </None>
     <Filter Include="Plugins\FMODStudio\Resources">
-      <UniqueIdentifier>{2C85CE34-6453-47B7-80FB-BE9B02A46A50}</UniqueIdentifier>
+      <UniqueIdentifier>{962B56ED-B0E8-4460-865B-8F17D1238D7D}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Plugins\FMODStudio\Resources\Icon128.png">
       <Filter>Plugins\FMODStudio\Resources</Filter>
     </None>
     <Filter Include="Plugins\FMODStudio\Source\FMODStudioEditor">
-      <UniqueIdentifier>{12B235BD-C15E-4600-BFB0-0217430469D9}</UniqueIdentifier>
+      <UniqueIdentifier>{AF040FB3-B1A1-4740-9E83-3256995BB646}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Plugins\FMODStudio\Source\FMODStudioEditor\FMODStudioEditor.Build.cs">
       <Filter>Plugins\FMODStudio\Source\FMODStudioEditor</Filter>
     </None>
     <Filter Include="Plugins\FMODStudio\Source\FMODStudioEditor\Classes">
-      <UniqueIdentifier>{76CB9D3E-E072-48D6-BA78-D690BDB8913A}</UniqueIdentifier>
+      <UniqueIdentifier>{D5415448-6268-4A68-ACB0-FC087FCA65EC}</UniqueIdentifier>
     </Filter>
     <ClInclude Include="..\..\Plugins\FMODStudio\Source\FMODStudioEditor\Classes\FMODAmbientSoundActorFactory.h">
       <Filter>Plugins\FMODStudio\Source\FMODStudioEditor\Classes</Filter>
@@ -281,7 +279,7 @@
       <Filter>Plugins\FMODStudio\Source\FMODStudioEditor\Classes</Filter>
     </ClInclude>
     <Filter Include="Plugins\FMODStudio\Source\FMODStudioEditor\Private">
-      <UniqueIdentifier>{5B24D256-B65C-4432-91F6-2CFC8CA6C3E7}</UniqueIdentifier>
+      <UniqueIdentifier>{8585E47D-5471-45CF-954C-0E17DBE2CB80}</UniqueIdentifier>
     </Filter>
     <ClCompile Include="..\..\Plugins\FMODStudio\Source\FMODStudioEditor\Private\AssetTypeActions_FMODEvent.cpp">
       <Filter>Plugins\FMODStudio\Source\FMODStudioEditor\Private</Filter>
@@ -350,7 +348,7 @@
       <Filter>Plugins\FMODStudio\Source\FMODStudioEditor\Private</Filter>
     </ClInclude>
     <Filter Include="Plugins\FMODStudio\Source\FMODStudioEditor\Private\Sequencer">
-      <UniqueIdentifier>{D4C17FAD-FA1A-400E-818C-A78FD77B53F5}</UniqueIdentifier>
+      <UniqueIdentifier>{5EBE2195-3549-48A0-ADCA-84030EFF59C5}</UniqueIdentifier>
     </Filter>
     <ClCompile Include="..\..\Plugins\FMODStudio\Source\FMODStudioEditor\Private\Sequencer\FMODChannelEditors.cpp">
       <Filter>Plugins\FMODStudio\Source\FMODStudioEditor\Private\Sequencer</Filter>
@@ -377,13 +375,13 @@
       <Filter>Plugins\FMODStudio\Source\FMODStudioEditor\Private\Sequencer</Filter>
     </ClInclude>
     <Filter Include="Plugins\FMODStudio\Source\FMODStudioEditor\Public">
-      <UniqueIdentifier>{044DC37F-ED1D-48F5-A4A2-F65C31738A0D}</UniqueIdentifier>
+      <UniqueIdentifier>{0EBFAF29-60FD-4E30-92A2-820455AAE31D}</UniqueIdentifier>
     </Filter>
     <ClInclude Include="..\..\Plugins\FMODStudio\Source\FMODStudioEditor\Public\FMODStudioEditorModule.h">
       <Filter>Plugins\FMODStudio\Source\FMODStudioEditor\Public</Filter>
     </ClInclude>
     <Filter Include="Source\GP3_Team03">
-      <UniqueIdentifier>{B4F8A294-6726-492A-A743-94F60301D1F5}</UniqueIdentifier>
+      <UniqueIdentifier>{F4FB74ED-28B1-4084-9F4C-48D6E01DC8E5}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\GP3_Team03\GP3_Team03.Build.cs">
       <Filter>Source\GP3_Team03</Filter>
@@ -401,22 +399,37 @@
       <Filter>Source\GP3_Team03</Filter>
     </ClInclude>
     <Filter Include="Source\GP3_Team03\Private">
-      <UniqueIdentifier>{888A8D5A-7DF3-430B-9A73-14055FA602C8}</UniqueIdentifier>
+      <UniqueIdentifier>{E3235F98-9898-4BFC-B1A8-1E55392588D9}</UniqueIdentifier>
     </Filter>
+    <ClCompile Include="..\..\Source\GP3_Team03\Private\GP3GameInstance.cpp">
+      <Filter>Source\GP3_Team03\Private</Filter>
+    </ClCompile>
     <Filter Include="Source\GP3_Team03\Private\AI">
-      <UniqueIdentifier>{618D218B-5DB8-498A-9B06-DEB8D8FC2ED3}</UniqueIdentifier>
+      <UniqueIdentifier>{FF73F1CB-B68D-43B6-86BA-850284EA7311}</UniqueIdentifier>
     </Filter>
     <ClCompile Include="..\..\Source\GP3_Team03\Private\AI\AAICEnemy.cpp">
       <Filter>Source\GP3_Team03\Private\AI</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\Source\GP3_Team03\Private\AI\GP3_AIBullet.cpp">
+      <Filter>Source\GP3_Team03\Private\AI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\GP3_Team03\Private\AI\GP3_ChargeTrail.cpp">
+      <Filter>Source\GP3_Team03\Private\AI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\GP3_Team03\Private\AI\SpawningEnemySystem.cpp">
+      <Filter>Source\GP3_Team03\Private\AI</Filter>
+    </ClCompile>
     <Filter Include="Source\GP3_Team03\Private\AI\AI_Widgets">
-      <UniqueIdentifier>{A210EE68-719C-4674-9B75-DE1CA6537664}</UniqueIdentifier>
+      <UniqueIdentifier>{B42AB4A7-B19E-4AF8-838B-B3DB07B726DC}</UniqueIdentifier>
     </Filter>
     <ClCompile Include="..\..\Source\GP3_Team03\Private\AI\AI_Widgets\GP3_ChargeEnemyHealth.cpp">
       <Filter>Source\GP3_Team03\Private\AI\AI_Widgets</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\Source\GP3_Team03\Private\AI\AI_Widgets\GP3_RangedEnemyHealth.cpp">
+      <Filter>Source\GP3_Team03\Private\AI\AI_Widgets</Filter>
+    </ClCompile>
     <Filter Include="Source\GP3_Team03\Private\AI\BT_Tasks">
-      <UniqueIdentifier>{4EE3EF6C-B4D7-4171-BEDA-F2B2BFC49EB3}</UniqueIdentifier>
+      <UniqueIdentifier>{10DE978C-9881-4E8D-9540-A751875AD6E0}</UniqueIdentifier>
     </Filter>
     <ClCompile Include="..\..\Source\GP3_Team03\Private\AI\BT_Tasks\BTTask_ChargeAttackAndMove.cpp">
       <Filter>Source\GP3_Team03\Private\AI\BT_Tasks</Filter>
@@ -427,11 +440,20 @@
     <ClCompile Include="..\..\Source\GP3_Team03\Private\AI\BT_Tasks\BTTask_RangedBehaviour.cpp">
       <Filter>Source\GP3_Team03\Private\AI\BT_Tasks</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\Source\GP3_Team03\Private\AI\BT_Tasks\GP3BTT_RangedMoveTowards.cpp">
+      <Filter>Source\GP3_Team03\Private\AI\BT_Tasks</Filter>
+    </ClCompile>
     <ClCompile Include="..\..\Source\GP3_Team03\Private\AI\BT_Tasks\GP3_BTTRangedEnemyMoveTowards.cpp">
       <Filter>Source\GP3_Team03\Private\AI\BT_Tasks</Filter>
     </ClCompile>
+    <Filter Include="Source\GP3_Team03\Private\AI\Decorators">
+      <UniqueIdentifier>{13CEA3B5-201A-42C8-8965-A5004FC61A3E}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\GP3_Team03\Private\AI\Decorators\GP3BTD_HasLOS.cpp">
+      <Filter>Source\GP3_Team03\Private\AI\Decorators</Filter>
+    </ClCompile>
     <Filter Include="Source\GP3_Team03\Private\AI\EnemyBaseCharacter">
-      <UniqueIdentifier>{DD77A449-F12F-456A-9675-DE9733EAC3BE}</UniqueIdentifier>
+      <UniqueIdentifier>{17962E89-EF18-436A-AB15-6B09CBADB134}</UniqueIdentifier>
     </Filter>
     <ClCompile Include="..\..\Source\GP3_Team03\Private\AI\EnemyBaseCharacter\GP3_AI_BaseCharacter.cpp">
       <Filter>Source\GP3_Team03\Private\AI\EnemyBaseCharacter</Filter>
@@ -439,10 +461,34 @@
     <ClCompile Include="..\..\Source\GP3_Team03\Private\AI\EnemyBaseCharacter\GP3_ChargeEnemyCharacter.cpp">
       <Filter>Source\GP3_Team03\Private\AI\EnemyBaseCharacter</Filter>
     </ClCompile>
-    <Filter Include="Source\GP3_Team03\Private\Player">
-      <UniqueIdentifier>{AD69BF9C-149D-43C2-8C12-67591E983CC5}</UniqueIdentifier>
+    <ClCompile Include="..\..\Source\GP3_Team03\Private\AI\EnemyBaseCharacter\GP3_RangedEnemyCharacter.cpp">
+      <Filter>Source\GP3_Team03\Private\AI\EnemyBaseCharacter</Filter>
+    </ClCompile>
+    <Filter Include="Source\GP3_Team03\Private\Data">
+      <UniqueIdentifier>{D0AA3FD3-731E-4F5E-9DE6-4412DD7E97A9}</UniqueIdentifier>
     </Filter>
+    <ClCompile Include="..\..\Source\GP3_Team03\Private\Data\GP3SettingsSaveGame.cpp">
+      <Filter>Source\GP3_Team03\Private\Data</Filter>
+    </ClCompile>
+    <Filter Include="Source\GP3_Team03\Private\Player">
+      <UniqueIdentifier>{F5F73C65-869C-48A3-A95B-C847DDE18816}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\GP3_Team03\Private\Player\GP3DashComponent.cpp">
+      <Filter>Source\GP3_Team03\Private\Player</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\GP3_Team03\Private\Player\GP3DodgeComponent.cpp">
+      <Filter>Source\GP3_Team03\Private\Player</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\GP3_Team03\Private\Player\GP3PlayerCameraComponent.cpp">
+      <Filter>Source\GP3_Team03\Private\Player</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\GP3_Team03\Private\Player\GP3PlayerDashTrail.cpp">
+      <Filter>Source\GP3_Team03\Private\Player</Filter>
+    </ClCompile>
     <ClCompile Include="..\..\Source\GP3_Team03\Private\Player\GP3PlayerPawn.cpp">
+      <Filter>Source\GP3_Team03\Private\Player</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\GP3_Team03\Private\Player\GP3PlayerSpringArmComponent.cpp">
       <Filter>Source\GP3_Team03\Private\Player</Filter>
     </ClCompile>
     <ClCompile Include="..\..\Source\GP3_Team03\Private\Player\GP3ShootComponent.cpp">
@@ -455,18 +501,36 @@
       <Filter>Source\GP3_Team03\Private\Player</Filter>
     </ClCompile>
     <Filter Include="Source\GP3_Team03\Private\Weapons">
-      <UniqueIdentifier>{747477F6-505A-4DC6-BF95-AC6160A27FE1}</UniqueIdentifier>
+      <UniqueIdentifier>{DBAC62FD-7083-4C28-83DB-D53BCF32CA6D}</UniqueIdentifier>
     </Filter>
+    <ClCompile Include="..\..\Source\GP3_Team03\Private\Weapons\GunProjectile.cpp">
+      <Filter>Source\GP3_Team03\Private\Weapons</Filter>
+    </ClCompile>
     <ClCompile Include="..\..\Source\GP3_Team03\Private\Weapons\SpellBase.cpp">
+      <Filter>Source\GP3_Team03\Private\Weapons</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\GP3_Team03\Private\Weapons\SunShaftProjectile.cpp">
       <Filter>Source\GP3_Team03\Private\Weapons</Filter>
     </ClCompile>
     <ClCompile Include="..\..\Source\GP3_Team03\Private\Weapons\WeaponBase.cpp">
       <Filter>Source\GP3_Team03\Private\Weapons</Filter>
     </ClCompile>
     <Filter Include="Source\GP3_Team03\Private\Widgets">
-      <UniqueIdentifier>{3663DAA8-430C-498F-B587-B26A93384F94}</UniqueIdentifier>
+      <UniqueIdentifier>{BA828A39-4EF8-491B-9EC3-389E2366710C}</UniqueIdentifier>
     </Filter>
     <ClCompile Include="..\..\Source\GP3_Team03\Private\Widgets\GP3CrosshairWidget.cpp">
+      <Filter>Source\GP3_Team03\Private\Widgets</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\GP3_Team03\Private\Widgets\GP3DashCooldownWidget.cpp">
+      <Filter>Source\GP3_Team03\Private\Widgets</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\GP3_Team03\Private\Widgets\GP3KeyActionMapper.cpp">
+      <Filter>Source\GP3_Team03\Private\Widgets</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\GP3_Team03\Private\Widgets\GP3KeyAxisMapper.cpp">
+      <Filter>Source\GP3_Team03\Private\Widgets</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\GP3_Team03\Private\Widgets\GP3PlayerHealthWidget.cpp">
       <Filter>Source\GP3_Team03\Private\Widgets</Filter>
     </ClCompile>
     <ClCompile Include="..\..\Source\GP3_Team03\Private\Widgets\GP3ReloadWidget.cpp">
@@ -476,22 +540,37 @@
       <Filter>Source\GP3_Team03\Private\Widgets</Filter>
     </ClCompile>
     <Filter Include="Source\GP3_Team03\Public">
-      <UniqueIdentifier>{344A6C1A-17AD-4874-81AC-D810A2E15279}</UniqueIdentifier>
+      <UniqueIdentifier>{4DB18323-C125-450B-B746-EAC861C8F5A8}</UniqueIdentifier>
     </Filter>
+    <ClInclude Include="..\..\Source\GP3_Team03\Public\GP3GameInstance.h">
+      <Filter>Source\GP3_Team03\Public</Filter>
+    </ClInclude>
     <Filter Include="Source\GP3_Team03\Public\AI">
-      <UniqueIdentifier>{7D683F3A-4A3E-4E96-A5AF-A2A08C11767E}</UniqueIdentifier>
+      <UniqueIdentifier>{A1342CCD-9A12-444E-AE26-429AD7306A2E}</UniqueIdentifier>
     </Filter>
     <ClInclude Include="..\..\Source\GP3_Team03\Public\AI\AAICEnemy.h">
       <Filter>Source\GP3_Team03\Public\AI</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\Source\GP3_Team03\Public\AI\GP3_AIBullet.h">
+      <Filter>Source\GP3_Team03\Public\AI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\GP3_Team03\Public\AI\GP3_ChargeTrail.h">
+      <Filter>Source\GP3_Team03\Public\AI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\GP3_Team03\Public\AI\SpawningEnemySystem.h">
+      <Filter>Source\GP3_Team03\Public\AI</Filter>
+    </ClInclude>
     <Filter Include="Source\GP3_Team03\Public\AI\AI_Widgets">
-      <UniqueIdentifier>{1460366E-BBDA-4845-953F-638D09DD9E4A}</UniqueIdentifier>
+      <UniqueIdentifier>{126F659D-1351-44BC-9C6C-370EECEC24C5}</UniqueIdentifier>
     </Filter>
     <ClInclude Include="..\..\Source\GP3_Team03\Public\AI\AI_Widgets\GP3_ChargeEnemyHealth.h">
       <Filter>Source\GP3_Team03\Public\AI\AI_Widgets</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\Source\GP3_Team03\Public\AI\AI_Widgets\GP3_RangedEnemyHealth.h">
+      <Filter>Source\GP3_Team03\Public\AI\AI_Widgets</Filter>
+    </ClInclude>
     <Filter Include="Source\GP3_Team03\Public\AI\BT_Tasks">
-      <UniqueIdentifier>{ECB4A3B7-2AA8-4C03-A9EF-680D01C1529B}</UniqueIdentifier>
+      <UniqueIdentifier>{6794692D-F4D4-4145-A497-98880DCE9F5B}</UniqueIdentifier>
     </Filter>
     <ClInclude Include="..\..\Source\GP3_Team03\Public\AI\BT_Tasks\BTTask_ChargeAttackAndMove.h">
       <Filter>Source\GP3_Team03\Public\AI\BT_Tasks</Filter>
@@ -502,11 +581,20 @@
     <ClInclude Include="..\..\Source\GP3_Team03\Public\AI\BT_Tasks\BTTask_RangedBehaviour.h">
       <Filter>Source\GP3_Team03\Public\AI\BT_Tasks</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\Source\GP3_Team03\Public\AI\BT_Tasks\GP3BTT_RangedMoveTowards.h">
+      <Filter>Source\GP3_Team03\Public\AI\BT_Tasks</Filter>
+    </ClInclude>
     <ClInclude Include="..\..\Source\GP3_Team03\Public\AI\BT_Tasks\GP3_BTTRangedEnemyMoveTowards.h">
       <Filter>Source\GP3_Team03\Public\AI\BT_Tasks</Filter>
     </ClInclude>
+    <Filter Include="Source\GP3_Team03\Public\AI\Decorators">
+      <UniqueIdentifier>{41E3A79D-9A8B-4540-9EA9-761F0FD5D605}</UniqueIdentifier>
+    </Filter>
+    <ClInclude Include="..\..\Source\GP3_Team03\Public\AI\Decorators\GP3BTD_HasLOS.h">
+      <Filter>Source\GP3_Team03\Public\AI\Decorators</Filter>
+    </ClInclude>
     <Filter Include="Source\GP3_Team03\Public\AI\EnemyBaseCharacter">
-      <UniqueIdentifier>{2E2D667E-73FF-4A73-A52A-635A14A75E81}</UniqueIdentifier>
+      <UniqueIdentifier>{3C0039F2-03BB-421C-AED9-11934C1953FD}</UniqueIdentifier>
     </Filter>
     <ClInclude Include="..\..\Source\GP3_Team03\Public\AI\EnemyBaseCharacter\GP3_AI_BaseCharacter.h">
       <Filter>Source\GP3_Team03\Public\AI\EnemyBaseCharacter</Filter>
@@ -514,10 +602,34 @@
     <ClInclude Include="..\..\Source\GP3_Team03\Public\AI\EnemyBaseCharacter\GP3_ChargeEnemyCharacter.h">
       <Filter>Source\GP3_Team03\Public\AI\EnemyBaseCharacter</Filter>
     </ClInclude>
-    <Filter Include="Source\GP3_Team03\Public\Player">
-      <UniqueIdentifier>{F9A1844F-A904-4107-B82C-89B0B11EA5F1}</UniqueIdentifier>
+    <ClInclude Include="..\..\Source\GP3_Team03\Public\AI\EnemyBaseCharacter\GP3_RangedEnemyCharacter.h">
+      <Filter>Source\GP3_Team03\Public\AI\EnemyBaseCharacter</Filter>
+    </ClInclude>
+    <Filter Include="Source\GP3_Team03\Public\Data">
+      <UniqueIdentifier>{BDC4C53E-BF1A-4A7D-A32D-0D100F6BB83D}</UniqueIdentifier>
     </Filter>
+    <ClInclude Include="..\..\Source\GP3_Team03\Public\Data\GP3SettingsSaveGame.h">
+      <Filter>Source\GP3_Team03\Public\Data</Filter>
+    </ClInclude>
+    <Filter Include="Source\GP3_Team03\Public\Player">
+      <UniqueIdentifier>{AFE1B53F-0CD1-45E6-A168-08CCA0BA779F}</UniqueIdentifier>
+    </Filter>
+    <ClInclude Include="..\..\Source\GP3_Team03\Public\Player\GP3DashComponent.h">
+      <Filter>Source\GP3_Team03\Public\Player</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\GP3_Team03\Public\Player\GP3DodgeComponent.h">
+      <Filter>Source\GP3_Team03\Public\Player</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\GP3_Team03\Public\Player\GP3PlayerCameraComponent.h">
+      <Filter>Source\GP3_Team03\Public\Player</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\GP3_Team03\Public\Player\GP3PlayerDashTrail.h">
+      <Filter>Source\GP3_Team03\Public\Player</Filter>
+    </ClInclude>
     <ClInclude Include="..\..\Source\GP3_Team03\Public\Player\GP3PlayerPawn.h">
+      <Filter>Source\GP3_Team03\Public\Player</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\GP3_Team03\Public\Player\GP3PlayerSpringArmComponent.h">
       <Filter>Source\GP3_Team03\Public\Player</Filter>
     </ClInclude>
     <ClInclude Include="..\..\Source\GP3_Team03\Public\Player\GP3ShootComponent.h">
@@ -530,18 +642,36 @@
       <Filter>Source\GP3_Team03\Public\Player</Filter>
     </ClInclude>
     <Filter Include="Source\GP3_Team03\Public\Weapons">
-      <UniqueIdentifier>{9D02B1ED-1FB0-4120-8178-343B1FE6065C}</UniqueIdentifier>
+      <UniqueIdentifier>{C915D838-D750-4B59-B1A4-CD4BD1DCD88F}</UniqueIdentifier>
     </Filter>
+    <ClInclude Include="..\..\Source\GP3_Team03\Public\Weapons\GunProjectile.h">
+      <Filter>Source\GP3_Team03\Public\Weapons</Filter>
+    </ClInclude>
     <ClInclude Include="..\..\Source\GP3_Team03\Public\Weapons\SpellBase.h">
+      <Filter>Source\GP3_Team03\Public\Weapons</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\GP3_Team03\Public\Weapons\SunShaftProjectile.h">
       <Filter>Source\GP3_Team03\Public\Weapons</Filter>
     </ClInclude>
     <ClInclude Include="..\..\Source\GP3_Team03\Public\Weapons\WeaponBase.h">
       <Filter>Source\GP3_Team03\Public\Weapons</Filter>
     </ClInclude>
     <Filter Include="Source\GP3_Team03\Public\Widgets">
-      <UniqueIdentifier>{FD53A968-2B1C-4127-A842-AC4895871813}</UniqueIdentifier>
+      <UniqueIdentifier>{C3B08C16-2037-4FE9-94C1-86DDFE0FBD93}</UniqueIdentifier>
     </Filter>
     <ClInclude Include="..\..\Source\GP3_Team03\Public\Widgets\GP3CrosshairWidget.h">
+      <Filter>Source\GP3_Team03\Public\Widgets</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\GP3_Team03\Public\Widgets\GP3DashCooldownWidget.h">
+      <Filter>Source\GP3_Team03\Public\Widgets</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\GP3_Team03\Public\Widgets\GP3KeyActionMapper.h">
+      <Filter>Source\GP3_Team03\Public\Widgets</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\GP3_Team03\Public\Widgets\GP3KeyAxisMapper.h">
+      <Filter>Source\GP3_Team03\Public\Widgets</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\GP3_Team03\Public\Widgets\GP3PlayerHealthWidget.h">
       <Filter>Source\GP3_Team03\Public\Widgets</Filter>
     </ClInclude>
     <ClInclude Include="..\..\Source\GP3_Team03\Public\Widgets\GP3ReloadWidget.h">

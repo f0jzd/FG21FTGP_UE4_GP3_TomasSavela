@@ -1,0 +1,58 @@
+#include "Weapons/GunProjectile.h"
+
+#include "AI/EnemyBaseCharacter/GP3_ChargeEnemyCharacter.h"
+#include "Components/SphereComponent.h"
+#include "GameFramework/ProjectileMovementComponent.h"
+#include "Player/GP3PlayerPawn.h"
+
+
+AGunProjectile::AGunProjectile()
+{
+ 
+	PrimaryActorTick.bCanEverTick = true;
+
+	Collision = CreateDefaultSubobject<USphereComponent>(TEXT("Collision"));
+	RootComponent = Collision;
+	Collision->SetSphereRadius(10.0f);
+	Collision->SetCollisionProfileName(TEXT("BlockAll"));
+
+	Mesh = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("Mesh"));
+	Mesh->SetupAttachment(Collision);
+
+	ProjectileComponent = CreateDefaultSubobject<UProjectileMovementComponent>(TEXT("Projectile Movement Component"));
+	ProjectileComponent->InitialSpeed = 1000.f;
+	ProjectileComponent->Velocity = FVector(1,0.03,0.2);
+
+}
+
+void AGunProjectile::OnConstruction(const FTransform& Transform)
+{
+	Super::OnConstruction(Transform);
+	ProjectileComponent->InitialSpeed = InitialSpeed;
+}
+
+void AGunProjectile::BeginPlay()
+{
+	Super::BeginPlay();
+	//ShellVelocity = GetActorForwardVector() * 1500.f;
+}
+
+void AGunProjectile::Tick(float DeltaTime)
+{
+	Super::Tick(DeltaTime);
+	
+	FHitResult Hit;
+	AddActorWorldOffset(ProjectileComponent->Velocity * DeltaTime, true, &Hit);
+	//
+	//if (Hit.bBlockingHit)
+	//{
+	//	if (Hit.Actor->IsA<AGP3_ChargeEnemyCharacter>()) // if i hit a car with the poopashell they die
+	//		{
+	//			GEngine->AddOnScreenDebugMessage(0, 5.0f, FColor::Cyan, TEXT("Hit A charge enemy"));
+	//			Destroy(); // destroy the projectile
+	//			return;
+	//		}
+	//	GEngine->AddOnScreenDebugMessage(0, 5.0f, FColor::Cyan, TEXT("Did not Hit A charge enemy"));
+	//	Destroy();
+	//}
+}

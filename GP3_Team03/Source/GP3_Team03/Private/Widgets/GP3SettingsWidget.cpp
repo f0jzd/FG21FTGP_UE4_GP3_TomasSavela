@@ -8,6 +8,8 @@
 
 void UGP3SettingsWidget::NativeConstruct()
 {
+	Super::NativeConstruct();
+
 	Settings = GEngine->GameUserSettings;
 
 	SetupFullscreenModeDropdown(GetFullscreenModeDropdown());

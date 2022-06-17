@@ -144,5 +144,6 @@ private:
 	
 	float DeltaSeconds = 0.0f;
 
-	AGP3PlayerPawn* Player = NULL;
+	AGP3PlayerPawn* Player = NULL; // ta bort?
+	
 };

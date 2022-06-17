@@ -8,6 +8,7 @@
 #include "Components/CanvasPanelSlot.h"
 #include "Kismet/GameplayStatics.h"
 #include "Player/GP3PlayerPawn.h"
+#include "Player/GP3ShootComponent.h"
 #include "Weapons/WeaponBase.h"
 
 void UGP3ReloadWidget::NativeConstruct()
@@ -33,7 +34,9 @@ void UGP3ReloadWidget::NativeTick(const FGeometry& MyGeometry, float InDeltaTime
 	if (IsReloading && UGameplayStatics::IsGamePaused(this) == false)
 	{
 		TimeSpentReloading += InDeltaTime;
-		float X = FMath::Lerp(FromX, ToX, TimeSpentReloading / ReloadTime);
+
+		float T = FMath::Clamp((TimeSpentReloading - StartDelayTime) / (ReloadTime - StartDelayTime), 0.f, 1.f);
+		float X = FMath::Lerp(FromX, ToX, T);
 		float Y = HitBar->GetPosition().Y;
 		HitBar->SetPosition(FVector2D(X, Y));
 
@@ -52,7 +55,7 @@ void UGP3ReloadWidget::StartReload()
 {
 	IsReloading = true;
 	TimeSpentReloading = 0;
-	ReloadTime = PlayerPawn->Gun->ReLoadTime;
+	ReloadTime = PlayerPawn->ShootComp->Gun->ReLoadTime;
 
 	//Reset the bar position to the start
 	HitBar->SetPosition(FVector2D(FromX, HitBar->GetPosition().Y));
@@ -90,11 +93,11 @@ bool UGP3ReloadWidget::DoQuickReload()
 	{
 		OnReloadSuccess();
 	}
-	else if (TimeSpentReloading > SafetyBufferTime)
+	else if (TimeSpentReloading > SafetyBufferTime + StartDelayTime)
 	{
 		//Restart the active reload without the hit zone if player clicked at the wrong time.
 		FailedQuickReload = true;
-		PlayerPawn->Gun->ReLoadTimer = PlayerPawn->Gun->ReLoadTime;
+		PlayerPawn->ShootComp->Gun->ReLoadTimer = PlayerPawn->ShootComp->Gun->ReLoadTime;
 		StartReload();
 		OnReloadFail();
 	}

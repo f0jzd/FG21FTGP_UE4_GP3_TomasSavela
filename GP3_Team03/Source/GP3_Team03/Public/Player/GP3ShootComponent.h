@@ -3,6 +3,7 @@
 #pragma once
 
 #include "CoreMinimal.h"
+#include "Components/SplineComponent.h"
 #include "Weapons/WeaponBase.h"
 #include "GP3ShootComponent.generated.h"
 
@@ -13,14 +14,19 @@ UCLASS()
 class GP3_TEAM03_API UGP3ShootComponent : public UActorComponent
 {
 	GENERATED_BODY()
+
+	DECLARE_DYNAMIC_MULTICAST_DELEGATE(FOnWeaponEquippedEvent);
 public:
 	UGP3ShootComponent();
 
 	UFUNCTION(BlueprintCallable)
 	void Shoot();
+	
 	UFUNCTION(BlueprintCallable)
 	void Reload();
-	
+
+	UFUNCTION()
+	void SetProjectileVelocity(float Delta);
 
 protected:
 	virtual void BeginPlay() override;
@@ -32,15 +38,28 @@ public:
 	UPROPERTY(Category="Shoot buffertime", EditAnywhere)
 	float ShootBuffer = 0.5f;
 
+	UPROPERTY(VisibleAnywhere,BlueprintReadOnly)
 	bool ReadyToShoot = true;
+
 	float ShootTimeStamp = 0.0f;
 	float InternalCooldownTimer = 0.0f;
 
 	UPROPERTY(EditDefaultsOnly)
 	TSubclassOf<UGP3ReloadWidget> ReloadWidgetClass;
 
+	UPROPERTY(EditAnywhere)
+	TSubclassOf<class AWeaponBase> WeaponClass;
+
+	UPROPERTY(BlueprintReadOnly)
+	AWeaponBase* Gun;
+
+	UPROPERTY()
+	FOnWeaponEquippedEvent OnWeaponEquipped;
+	
 	UPROPERTY()
 	UGP3ReloadWidget* ReloadWidget;
+
+	bool bCalculateProjectilePath;
 
 private:
 	UFUNCTION()

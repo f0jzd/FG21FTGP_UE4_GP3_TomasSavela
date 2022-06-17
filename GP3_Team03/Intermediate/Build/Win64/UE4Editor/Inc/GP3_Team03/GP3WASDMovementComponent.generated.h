@@ -8,27 +8,40 @@
 #include "UObject/ScriptMacros.h"
 
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
+struct FVector;
 #ifdef GP3_TEAM03_GP3WASDMovementComponent_generated_h
 #error "GP3WASDMovementComponent.generated.h already included, missing '#pragma once' in GP3WASDMovementComponent.h"
 #endif
 #define GP3_TEAM03_GP3WASDMovementComponent_generated_h
 
-#define GP3_Team03_Source_GP3_Team03_Public_Player_GP3WASDMovementComponent_h_11_SPARSE_DATA
-#define GP3_Team03_Source_GP3_Team03_Public_Player_GP3WASDMovementComponent_h_11_RPC_WRAPPERS \
+#define GP3_Team03_Source_GP3_Team03_Public_Player_GP3WASDMovementComponent_h_13_SPARSE_DATA
+#define GP3_Team03_Source_GP3_Team03_Public_Player_GP3WASDMovementComponent_h_13_RPC_WRAPPERS \
  \
-	DECLARE_FUNCTION(execGetMaxDirNormal); \
+	DECLARE_FUNCTION(execRotatePlayerWithController); \
+	DECLARE_FUNCTION(execApplySlopeAxis); \
+	DECLARE_FUNCTION(execIsGrounded); \
+	DECLARE_FUNCTION(execExecuteMovement); \
+	DECLARE_FUNCTION(execCalculateAccelerationDeceleration); \
+	DECLARE_FUNCTION(execCalculateInput); \
+	DECLARE_FUNCTION(execUpdateCurveTimers); \
 	DECLARE_FUNCTION(execCheckInputs); \
 	DECLARE_FUNCTION(execMove);
 
 
-#define GP3_Team03_Source_GP3_Team03_Public_Player_GP3WASDMovementComponent_h_11_RPC_WRAPPERS_NO_PURE_DECLS \
+#define GP3_Team03_Source_GP3_Team03_Public_Player_GP3WASDMovementComponent_h_13_RPC_WRAPPERS_NO_PURE_DECLS \
  \
-	DECLARE_FUNCTION(execGetMaxDirNormal); \
+	DECLARE_FUNCTION(execRotatePlayerWithController); \
+	DECLARE_FUNCTION(execApplySlopeAxis); \
+	DECLARE_FUNCTION(execIsGrounded); \
+	DECLARE_FUNCTION(execExecuteMovement); \
+	DECLARE_FUNCTION(execCalculateAccelerationDeceleration); \
+	DECLARE_FUNCTION(execCalculateInput); \
+	DECLARE_FUNCTION(execUpdateCurveTimers); \
 	DECLARE_FUNCTION(execCheckInputs); \
 	DECLARE_FUNCTION(execMove);
 
 
-#define GP3_Team03_Source_GP3_Team03_Public_Player_GP3WASDMovementComponent_h_11_INCLASS_NO_PURE_DECLS \
+#define GP3_Team03_Source_GP3_Team03_Public_Player_GP3WASDMovementComponent_h_13_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesUGP3WASDMovementComponent(); \
 	friend struct Z_Construct_UClass_UGP3WASDMovementComponent_Statics; \
@@ -37,7 +50,7 @@ public: \
 	DECLARE_SERIALIZER(UGP3WASDMovementComponent)
 
 
-#define GP3_Team03_Source_GP3_Team03_Public_Player_GP3WASDMovementComponent_h_11_INCLASS \
+#define GP3_Team03_Source_GP3_Team03_Public_Player_GP3WASDMovementComponent_h_13_INCLASS \
 private: \
 	static void StaticRegisterNativesUGP3WASDMovementComponent(); \
 	friend struct Z_Construct_UClass_UGP3WASDMovementComponent_Statics; \
@@ -46,7 +59,7 @@ public: \
 	DECLARE_SERIALIZER(UGP3WASDMovementComponent)
 
 
-#define GP3_Team03_Source_GP3_Team03_Public_Player_GP3WASDMovementComponent_h_11_STANDARD_CONSTRUCTORS \
+#define GP3_Team03_Source_GP3_Team03_Public_Player_GP3WASDMovementComponent_h_13_STANDARD_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	NO_API UGP3WASDMovementComponent(const FObjectInitializer& ObjectInitializer); \
 	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(UGP3WASDMovementComponent) \
@@ -59,7 +72,7 @@ private: \
 public:
 
 
-#define GP3_Team03_Source_GP3_Team03_Public_Player_GP3WASDMovementComponent_h_11_ENHANCED_CONSTRUCTORS \
+#define GP3_Team03_Source_GP3_Team03_Public_Player_GP3WASDMovementComponent_h_13_ENHANCED_CONSTRUCTORS \
 private: \
 	/** Private move- and copy-constructors, should never be used */ \
 	NO_API UGP3WASDMovementComponent(UGP3WASDMovementComponent&&); \
@@ -70,28 +83,28 @@ public: \
 	DEFINE_DEFAULT_CONSTRUCTOR_CALL(UGP3WASDMovementComponent)
 
 
-#define GP3_Team03_Source_GP3_Team03_Public_Player_GP3WASDMovementComponent_h_11_PRIVATE_PROPERTY_OFFSET
-#define GP3_Team03_Source_GP3_Team03_Public_Player_GP3WASDMovementComponent_h_8_PROLOG
-#define GP3_Team03_Source_GP3_Team03_Public_Player_GP3WASDMovementComponent_h_11_GENERATED_BODY_LEGACY \
+#define GP3_Team03_Source_GP3_Team03_Public_Player_GP3WASDMovementComponent_h_13_PRIVATE_PROPERTY_OFFSET
+#define GP3_Team03_Source_GP3_Team03_Public_Player_GP3WASDMovementComponent_h_10_PROLOG
+#define GP3_Team03_Source_GP3_Team03_Public_Player_GP3WASDMovementComponent_h_13_GENERATED_BODY_LEGACY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	GP3_Team03_Source_GP3_Team03_Public_Player_GP3WASDMovementComponent_h_11_PRIVATE_PROPERTY_OFFSET \
-	GP3_Team03_Source_GP3_Team03_Public_Player_GP3WASDMovementComponent_h_11_SPARSE_DATA \
-	GP3_Team03_Source_GP3_Team03_Public_Player_GP3WASDMovementComponent_h_11_RPC_WRAPPERS \
-	GP3_Team03_Source_GP3_Team03_Public_Player_GP3WASDMovementComponent_h_11_INCLASS \
-	GP3_Team03_Source_GP3_Team03_Public_Player_GP3WASDMovementComponent_h_11_STANDARD_CONSTRUCTORS \
+	GP3_Team03_Source_GP3_Team03_Public_Player_GP3WASDMovementComponent_h_13_PRIVATE_PROPERTY_OFFSET \
+	GP3_Team03_Source_GP3_Team03_Public_Player_GP3WASDMovementComponent_h_13_SPARSE_DATA \
+	GP3_Team03_Source_GP3_Team03_Public_Player_GP3WASDMovementComponent_h_13_RPC_WRAPPERS \
+	GP3_Team03_Source_GP3_Team03_Public_Player_GP3WASDMovementComponent_h_13_INCLASS \
+	GP3_Team03_Source_GP3_Team03_Public_Player_GP3WASDMovementComponent_h_13_STANDARD_CONSTRUCTORS \
 public: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
 
-#define GP3_Team03_Source_GP3_Team03_Public_Player_GP3WASDMovementComponent_h_11_GENERATED_BODY \
+#define GP3_Team03_Source_GP3_Team03_Public_Player_GP3WASDMovementComponent_h_13_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	GP3_Team03_Source_GP3_Team03_Public_Player_GP3WASDMovementComponent_h_11_PRIVATE_PROPERTY_OFFSET \
-	GP3_Team03_Source_GP3_Team03_Public_Player_GP3WASDMovementComponent_h_11_SPARSE_DATA \
-	GP3_Team03_Source_GP3_Team03_Public_Player_GP3WASDMovementComponent_h_11_RPC_WRAPPERS_NO_PURE_DECLS \
-	GP3_Team03_Source_GP3_Team03_Public_Player_GP3WASDMovementComponent_h_11_INCLASS_NO_PURE_DECLS \
-	GP3_Team03_Source_GP3_Team03_Public_Player_GP3WASDMovementComponent_h_11_ENHANCED_CONSTRUCTORS \
+	GP3_Team03_Source_GP3_Team03_Public_Player_GP3WASDMovementComponent_h_13_PRIVATE_PROPERTY_OFFSET \
+	GP3_Team03_Source_GP3_Team03_Public_Player_GP3WASDMovementComponent_h_13_SPARSE_DATA \
+	GP3_Team03_Source_GP3_Team03_Public_Player_GP3WASDMovementComponent_h_13_RPC_WRAPPERS_NO_PURE_DECLS \
+	GP3_Team03_Source_GP3_Team03_Public_Player_GP3WASDMovementComponent_h_13_INCLASS_NO_PURE_DECLS \
+	GP3_Team03_Source_GP3_Team03_Public_Player_GP3WASDMovementComponent_h_13_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 

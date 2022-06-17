@@ -40,33 +40,32 @@ public:
 		int32 OtherBodyIndex, 
 		bool bFromSweep, 
 		const FHitResult& SweepResult);
-
-
-	UPROPERTY(EditAnywhere)
-	UStaticMeshComponent* HitboxCheck;
+	
 
 	AGP3_AI_BaseCharacter();
 
 	virtual void Tick(float DeltaSeconds) override;
 
-
-	UPROPERTY(EditAnywhere)
-		float CollisionCheckDistance;
-
-
-	UPROPERTY(EditAnywhere,BlueprintReadWrite)
+	UPROPERTY(Category = "Enemy Values and Stats", EditAnywhere, BlueprintReadWrite)
 		float Health = 200;
 
-	UFUNCTION(BlueprintNativeEvent)
-		void TakeGunDamage(float GunDamage);
+	UPROPERTY(Category = "Enemy Values and Stats", EditAnywhere,BlueprintReadWrite)
+		float Damage = 200;
 
+	UFUNCTION(BlueprintCallable,BlueprintNativeEvent)
+		void TakeGunDamage(float GunDamage);
 
 	UFUNCTION(BlueprintImplementableEvent)
 		void TookDamageEvent();
 
-	
-	
+	UFUNCTION(BlueprintImplementableEvent)
+		void DeathAnimation();
 
-	
+	UPROPERTY(BlueprintReadWrite)
+		bool IsDebuffed;
+
 };
+
+
+
 

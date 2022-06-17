@@ -152,13 +152,13 @@
 			]
 		},
 		{
-			"ShaderMapHash": "DD30E89915AE2462924A4213E7BCDD2694D8C9AA",
+			"ShaderMapHash": "E1AFA634E3AB713D9AF1CE895241F0CAF55A3813",
 			"Assets": [
 				"/Engine/VREditor/TransformGizmo/TranslucentTransformGizmoMaterial"
 			]
 		},
 		{
-			"ShaderMapHash": "172D354B2E688E8694B4B56AA1A24E7CE17FFAB6",
+			"ShaderMapHash": "D1CD339FEE452E5B3914E87435A66220C3B5604A",
 			"Assets": [
 				"/Engine/VREditor/TransformGizmo/TransformGizmoMaterial"
 			]
@@ -267,6 +267,35 @@
 			]
 		},
 		{
+			"ShaderMapHash": "A4BC21BDB19D9A2A7ACA48D6578362C6FF2248BE",
+			"Assets": [
+				"/Game/3D_Art/Characters/Sanara/Mesh/Scarf",
+				"/Game/3D_Art/Characters/Sanara/Mesh/Mouth",
+				"/Game/3D_Art/Characters/Sanara/Mesh/Head_low",
+				"/Game/3D_Art/Characters/Sanara/Mesh/Hair",
+				"/Game/3D_Art/Characters/Sanara/Mesh/Eye_Brow_Lashes",
+				"/Game/3D_Art/Characters/Sanara/Mesh/eyeballs",
+				"/Game/3D_Art/Characters/Sanara/Mesh/ElbowBand",
+				"/Game/3D_Art/Characters/Sanara/Mesh/Cloth",
+				"/Game/3D_Art/Characters/Sanara/Mesh/Boots",
+				"/Game/3D_Art/Characters/Sanara/Mesh/Body",
+				"/Game/3D_Art/Characters/Sanara/Mesh/Belt",
+				"/Game/3D_Art/lambert1"
+			]
+		},
+		{
+			"ShaderMapHash": "03C3A6AB8D37BB2B60C53A51399CA645CC5D01C3",
+			"Assets": [
+				"/Game/3D_Art/Characters/Sanara/Mesh/ClothBack"
+			]
+		},
+		{
+			"ShaderMapHash": "8D5C9971654E22D92212E61C55D92EEA6D6F673A",
+			"Assets": [
+				"/Engine/BasicShapes/BasicShapeMaterial"
+			]
+		},
+		{
 			"ShaderMapHash": "C380564A6414222F6A7E5F57D0F14982D5FD4F14",
 			"Assets": [
 				"/Engine/EngineSky/M_Sky_Panning_Clouds2"
@@ -282,6 +311,69 @@
 			"ShaderMapHash": "5532C31F2D3986334CDEFCBF4E1201FB6D4D6B00",
 			"Assets": [
 				"/Engine/EngineDebugMaterials/DebugEditorMaterial"
+			]
+		},
+		{
+			"ShaderMapHash": "A5D32F548B1EBE36C24B65D686FF51931FA0A834",
+			"Assets": [
+				"/Engine/VREditor/LaserPointer/M_LaserPointer-Outer"
+			]
+		},
+		{
+			"ShaderMapHash": "F4087CBFC96A1FA5CBB775D59564D738700B0DEF",
+			"Assets": [
+				"/Game/3D_Art/Characters/Monster/Charge_01/lambert1",
+				"/Game/3D_Art/Characters/Monster/Ranged_01/Ranged_02"
+			]
+		},
+		{
+			"ShaderMapHash": "66CACE543954CB7B8CA20DABD4E8B2F18088D31E",
+			"Assets": [
+				"/Game/Materials/Sand_Material"
+			]
+		},
+		{
+			"ShaderMapHash": "D6D45141B90A1A71E35CD8F6C2F34ABE3EA0DC5B",
+			"Assets": [
+				"/Game/Materials/DefaultTextMaterialOpaque"
+			]
+		},
+		{
+			"ShaderMapHash": "75B43402EEA2BB1522BE5E8B59C46A68254F0B50",
+			"Assets": [
+				"/Game/Materials/Blockout/Materials/M_BlockoutTools_Grid"
+			]
+		},
+		{
+			"ShaderMapHash": "E70679D569A960CCC6D268DA326DB27BFCA59893",
+			"Assets": [
+				"/Engine/VREditor/LaserPointer/M_LaserPointer-Core"
+			]
+		},
+		{
+			"ShaderMapHash": "9ABEFE9E2D0CE80D10BB033DE4DE301E6959E919",
+			"Assets": [
+				"/Engine/EngineResources/M_StreamingPause"
+			]
+		},
+		{
+			"ShaderMapHash": "A71E049E1D07E0C6DF8D255FC9D343476638C114",
+			"Assets": [
+				"/Game/Maps/Sub_Level_01_Start",
+				"/Game/Maps/OssiansTestLevels/OssianLevel2",
+				"/Game/Maps/OssiansTestLevels/OssianLevel3"
+			]
+		},
+		{
+			"ShaderMapHash": "13D38AFEE94DF184B459A1141BB5F684828B2BF8",
+			"Assets": [
+				"/Game/3D_Art/Materials/Substance/Secondtest/Rocky/FloorTiles4x4"
+			]
+		},
+		{
+			"ShaderMapHash": "97225365049B312779A26182345F09A59CF9D5A7",
+			"Assets": [
+				"/Game/3D_Art/Materials/Substance/Secondtest/Rocky/LandscapeMaterials/StylizedDesert"
 			]
 		}
 	]
