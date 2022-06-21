@@ -24,16 +24,19 @@ void UGP3DashCooldownWidget::NativeTick(const FGeometry& MyGeometry, float InDel
 
 	if (bIsOnCooldown)
 	{
-		float CooldownTimer = DashComp->InternalDashCooldownTimer;
-		float Cooldown = DashComp->DashCooldown;
-		float RemainingTime = Cooldown - CooldownTimer;
-
-		float Percentage = RemainingTime / Cooldown;
-
-		ProgressBar->SetPercent(Percentage);
-
-		if (RemainingTime <= 0)
+		if (DashComp->ReadyToDash == false)
 		{
+			float CooldownTimer = DashComp->InternalDashCooldownTimer;
+			float Cooldown = DashComp->DashCooldown;
+			float RemainingTime = Cooldown - CooldownTimer;
+
+			float Percentage = RemainingTime / Cooldown;
+
+			ProgressBar->SetPercent(Percentage);
+		}
+		else
+		{
+			ProgressBar->SetPercent(0);
 			bIsOnCooldown = false;
 			OnCooldownEnd();
 		}

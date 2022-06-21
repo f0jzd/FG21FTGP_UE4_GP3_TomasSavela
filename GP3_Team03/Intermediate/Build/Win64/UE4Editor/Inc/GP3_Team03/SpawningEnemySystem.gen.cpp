@@ -22,13 +22,6 @@ void EmptyLinkFunctionForGeneratedCodeSpawningEnemySystem() {}
 	GP3_TEAM03_API UClass* Z_Construct_UClass_AGP3_AI_BaseCharacter_NoRegister();
 	NAVIGATIONSYSTEM_API UClass* Z_Construct_UClass_UNavigationSystemV1_NoRegister();
 // End Cross Module References
-	DEFINE_FUNCTION(ASpawningEnemySystem::execSpawnEnemiesOnTimer)
-	{
-		P_FINISH;
-		P_NATIVE_BEGIN;
-		P_THIS->SpawnEnemiesOnTimer();
-		P_NATIVE_END;
-	}
 	DEFINE_FUNCTION(ASpawningEnemySystem::execSpawnEnemy)
 	{
 		P_GET_OBJECT(UClass,Z_Param_EnemyType);
@@ -59,7 +52,6 @@ void EmptyLinkFunctionForGeneratedCodeSpawningEnemySystem() {}
 		UClass* Class = ASpawningEnemySystem::StaticClass();
 		static const FNameNativePtrPair Funcs[] = {
 			{ "SpawnEnemies", &ASpawningEnemySystem::execSpawnEnemies },
-			{ "SpawnEnemiesOnTimer", &ASpawningEnemySystem::execSpawnEnemiesOnTimer },
 			{ "SpawnEnemy", &ASpawningEnemySystem::execSpawnEnemy },
 		};
 		FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, UE_ARRAY_COUNT(Funcs));
@@ -133,28 +125,6 @@ void EmptyLinkFunctionForGeneratedCodeSpawningEnemySystem() {}
 		if (!ReturnFunction)
 		{
 			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_ASpawningEnemySystem_SpawnEnemies_Statics::FuncParams);
-		}
-		return ReturnFunction;
-	}
-	struct Z_Construct_UFunction_ASpawningEnemySystem_SpawnEnemiesOnTimer_Statics
-	{
-#if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
-#endif
-		static const UE4CodeGen_Private::FFunctionParams FuncParams;
-	};
-#if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_ASpawningEnemySystem_SpawnEnemiesOnTimer_Statics::Function_MetaDataParams[] = {
-		{ "ModuleRelativePath", "Public/AI/SpawningEnemySystem.h" },
-	};
-#endif
-	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_ASpawningEnemySystem_SpawnEnemiesOnTimer_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ASpawningEnemySystem, nullptr, "SpawnEnemiesOnTimer", nullptr, nullptr, 0, nullptr, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_ASpawningEnemySystem_SpawnEnemiesOnTimer_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_ASpawningEnemySystem_SpawnEnemiesOnTimer_Statics::Function_MetaDataParams)) };
-	UFunction* Z_Construct_UFunction_ASpawningEnemySystem_SpawnEnemiesOnTimer()
-	{
-		static UFunction* ReturnFunction = nullptr;
-		if (!ReturnFunction)
-		{
-			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_ASpawningEnemySystem_SpawnEnemiesOnTimer_Statics::FuncParams);
 		}
 		return ReturnFunction;
 	}
@@ -239,7 +209,6 @@ void EmptyLinkFunctionForGeneratedCodeSpawningEnemySystem() {}
 	const FClassFunctionLinkInfo Z_Construct_UClass_ASpawningEnemySystem_Statics::FuncInfo[] = {
 		{ &Z_Construct_UFunction_ASpawningEnemySystem_OnSpawn, "OnSpawn" }, // 2572017267
 		{ &Z_Construct_UFunction_ASpawningEnemySystem_SpawnEnemies, "SpawnEnemies" }, // 2181755033
-		{ &Z_Construct_UFunction_ASpawningEnemySystem_SpawnEnemiesOnTimer, "SpawnEnemiesOnTimer" }, // 327667501
 		{ &Z_Construct_UFunction_ASpawningEnemySystem_SpawnEnemy, "SpawnEnemy" }, // 2087979096
 	};
 #if WITH_METADATA
@@ -330,7 +299,7 @@ void EmptyLinkFunctionForGeneratedCodeSpawningEnemySystem() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(ASpawningEnemySystem, 1824933451);
+	IMPLEMENT_CLASS(ASpawningEnemySystem, 3342836116);
 	template<> GP3_TEAM03_API UClass* StaticClass<ASpawningEnemySystem>()
 	{
 		return ASpawningEnemySystem::StaticClass();

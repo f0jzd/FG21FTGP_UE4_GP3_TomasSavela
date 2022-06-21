@@ -1,16 +1,11 @@
 #include "Weapons/WeaponBase.h"
 #include "DrawDebugHelpers.h"
-#include "Components/SkeletalMeshComponent.h"
 #include "Components/SplineComponent.h"
 #include "Kismet/GameplayStatics.h"
-#include "Weapons/GunProjectile.h"
 
 AWeaponBase::AWeaponBase()
 {
 	PrimaryActorTick.bCanEverTick = true;
-	
-	MeshComp = CreateDefaultSubobject<USkeletalMeshComponent>("SkeletalMeshComponent");
-	RootComponent = MeshComp;
 	DefaultWeaponName = FName("");
 }
 
@@ -56,8 +51,7 @@ void AWeaponBase::SelectWeapon(FName WeaponName)
 			CurrentAmmo = StartAmmo;
 			ReLoadTime = WeaponData->WeaponReloadTime;
 			ShootCoolDownTimer = WeaponData->WeaponShootCooldown;
-			MeshComp->SetSkeletalMesh(WeaponData->WeaponMesh);//Set the mesh to the right mesh depending on what "WeaponName/key" is called
-			Projectile = WeaponData->Projectile; //TODO did i do this right?
+			Projectile = WeaponData->Projectile;
 			
 		}
 	}
@@ -65,12 +59,6 @@ void AWeaponBase::SelectWeapon(FName WeaponName)
 
 FHitResult AWeaponBase::Use() 
 {
-	///Can be used to play different animation for different guns
-	//if (WeaponData && WeaponData->FireAnimation)
-	//{
-	//	UE_LOG(LogTemp,Warning, TEXT("Using ability"))
-	//	MeshComp->PlayAnimation(WeaponData->FireAnimation,false);
-	//}
 	FHitResult OutHit;
 		if (WeaponData)
 		{
@@ -98,8 +86,6 @@ FHitResult AWeaponBase::Use()
 			//
 			//SplinePath->SetHiddenInGame(true,true);
 			//bCalculateProjectilePath = false;
-			
-			
 		}
 	return OutHit;
 }

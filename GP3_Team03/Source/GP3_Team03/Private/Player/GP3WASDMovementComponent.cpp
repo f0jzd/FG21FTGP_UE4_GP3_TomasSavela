@@ -80,7 +80,11 @@ void UGP3WASDMovementComponent::UpdateCurveTimers(float DeltaTime)
 FVector UGP3WASDMovementComponent::CalculateInput(float ForwardAxis, float RightAxis)
 {
 	float SmoothTurnAlpha = GetWorld()->GetDeltaSeconds() * InputTurnSpeed;
-	FVector NewInput = {ForwardAxis, RightAxis, 0.0f};
+	
+	// we're clamping the input between 0 and 1, so the player can't get double the speed from pressing both controller and keyboard
+	// input at the same time.
+	FVector NewInput = {FMath::Clamp(ForwardAxis, -1.0f, 1.0f), FMath::Clamp(RightAxis, -1.0f, 1.0f), 0.0f};
+	
 	AnimationSpeed = NewInput;
 
 	// if player is not using gamepad, and player is moving diagonally, divide the animation speed to keep it at 1.
@@ -100,7 +104,7 @@ FVector UGP3WASDMovementComponent::CalculateInput(float ForwardAxis, float Right
 		// if player is switching forward axis fast, and is not moving sideways, activate turn lerp.
 		if (NewInput.X != Input.X && NewInput.X != 0.0f && LastRegisteredInput.X != 0.0f && NewInput.Y == 0.0f)
 		{
-			NewInput.X = FMath::Lerp(Input.X, ForwardAxis, SmoothTurnAlpha);
+			NewInput.X = FMath::Lerp(Input.X, NewInput.X, SmoothTurnAlpha);
 		}
 
 		// if player is using gamepad, set lastregisteredinput to the current input.
@@ -238,7 +242,7 @@ void UGP3WASDMovementComponent::ApplySlopeAxis(FVector NextLocation)
 		}
 	}
 
-	if (!SlopeAxisApplied && !IsGrounded())
+	if (!IsGrounded())
 	{
 		CurrentGravityForce += GravityAcceleration * GravityScalar * GetWorld()->GetDeltaSeconds();
 		LocalInstantVelocity += -CurrentGravityForce;
@@ -269,16 +273,21 @@ bool UGP3WASDMovementComponent::IsGrounded()
 	{
 		if (GroundHit.bBlockingHit)
 		{
-			if (DrawHitresultLine)
+			if (GetWorld()->LineTraceSingleByChannel(
+		GroundHit,
+		RayCastOrigin,
+		RayCastEnd - CharacterOffsetToGround,
+		ECC_WorldStatic,
+		CollisionQueryParams))
 			{
-				DrawDebugLine(GetWorld(), RayCastOrigin,
-				   GroundHit.ImpactPoint + FVector(0.0f, 0.0f, 10.0f),
-				   FColor::Red, false, 5.0f);
-			}
-			CurrentGravityForce = {0.0f, 0.0f, 0.0f};
+				if (GroundHit.bBlockingHit)
+				{
+					CurrentGravityForce = {0.0f, 0.0f, 0.0f};
 			
-			IsOnGround = true;
-			return true;
+					IsOnGround = true;
+					return true;
+				}
+			}
 		}
 	}
 	IsOnGround = false;

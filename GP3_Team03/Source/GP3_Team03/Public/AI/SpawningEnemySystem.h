@@ -26,13 +26,8 @@ public:
 	UFUNCTION(BlueprintCallable)
 	void SpawnEnemy(TSubclassOf<AGP3_AI_BaseCharacter> EnemyType, AGP3_AI_BaseCharacter* &SpawnedEnemy);
 
-	UFUNCTION(BlueprintCallable)
-	void SpawnEnemiesOnTimer();
-
 	UFUNCTION(BlueprintImplementableEvent)
 	void OnSpawn(const FVector &SpawnedEnemyLocation);
-
-	void SpawnMoreEnemiesAfterKills();
 
 	int NumberToSpawn = 0;
 

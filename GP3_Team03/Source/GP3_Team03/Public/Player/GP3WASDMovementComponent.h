@@ -77,42 +77,29 @@ public:
 	UPROPERTY(Category="Character Movement - Curves", EditDefaultsOnly)
 	UCurveFloat* DecelerationCurve = NULL;
 	
-	UPROPERTY(Category="Character Movement - Debugging Info", VisibleAnywhere)
+	UPROPERTY()
 	bool IsReceivingInput = false;
 	
-	UPROPERTY(Category="Character Movement - Debugging Info", VisibleAnywhere)
+	UPROPERTY()
 	bool IsOnGround = false;
-	
-	UPROPERTY(Category="Character Movement - Debugging Info", VisibleAnywhere)
-	FVector Acceleration = {0.0f, 0.0f, 0.0f};
-	
-	UPROPERTY(Category="Character Movement - Debugging Info", VisibleAnywhere)
-	FVector LastRegisteredInput = {0.0f, 0.0f, 0.0f};
-	
-	UPROPERTY(Category="Character Movement - Debugging Info", VisibleAnywhere)
-	FVector Input = {0.0f, 0.0f, 0.0f};
-	
-	UPROPERTY(Category="Character Movement - Debugging Info", VisibleAnywhere, BlueprintReadOnly)
-	FVector LocalInstantVelocity = {0.0f, 0.0f, 0.0f};
 
-	UPROPERTY(Category="Character Movement - Debugging Info", VisibleAnywhere, BlueprintReadOnly)
-	FVector AnimationSpeed = {0.0f, 0.0f, 0.0f};
-	
-	UPROPERTY(Category="Character Movement - Debugging Info", VisibleAnywhere)
-	float AccelerationCurveValue = 0.0f;
-	
-	UPROPERTY(Category="Character Movement - Debugging Info", VisibleAnywhere)
-	float DecelerationCurveValue = 0.0f;
-
-	UPROPERTY(Category="Character Movement - Debugging Info", EditAnywhere)
-	bool DrawHitresultLine = false;
-
-	UPROPERTY(Category="Character Movement - Debugging Info", EditAnywhere)
+	UPROPERTY()
 	bool MovementDisabled = false;
 
-	UPROPERTY(Category="Character Movement - Debugging Info", VisibleAnywhere, BlueprintReadOnly)
-	FVector InstantVelocity;
+	bool IsMoving = false;
+
+	UPROPERTY()
+	int DepenetrationIterationCount = 0.0f;
 	
+	UPROPERTY()
+	float GravityScalar = 0.05f;
+	
+	UPROPERTY()
+	float AccelerationCurveValue = 0.0f;
+	
+	UPROPERTY()
+	float DecelerationCurveValue = 0.0f;
+
 	UPROPERTY()
 	float AcceleratingTime = 0.0f;
 	
@@ -122,15 +109,25 @@ public:
 	UPROPERTY()
 	float TimeBeforeStopped = 2.0f;
 
-	bool IsMoving = false;
+	float InternalStopTimer = 0.0f;
+		
+	UPROPERTY(BlueprintReadOnly)
+	FVector LocalInstantVelocity = {0.0f, 0.0f, 0.0f};
+
+	UPROPERTY(BlueprintReadOnly)
+	FVector AnimationSpeed = {0.0f, 0.0f, 0.0f};
+
+	UPROPERTY(BlueprintReadOnly)
+	FVector InstantVelocity = {0.0f, 0.0f, 0.0f};
 	
 	UPROPERTY()
-	int DepenetrationIterationCount = 0.0f;
-
-	float InternalStopTimer = 0.0f;
-
+	FVector Acceleration = {0.0f, 0.0f, 0.0f};
+	
 	UPROPERTY()
-	float GravityScalar = 0.05f;
+	FVector LastRegisteredInput = {0.0f, 0.0f, 0.0f};
+	
+	UPROPERTY()
+	FVector Input = {0.0f, 0.0f, 0.0f};
 
 	UPROPERTY()
 	FVector CurrentGravityForce = {0.0f, 0.0f, 0.0f};

@@ -15,13 +15,7 @@ struct FWeaponData : public FTableRowBase
 	GENERATED_BODY()
 
 	UPROPERTY(EditAnywhere)
-	class USkeletalMesh* WeaponMesh;
-
-	UPROPERTY(EditAnywhere)
 	TSubclassOf<AActor>Projectile;
-
-	UPROPERTY(EditAnywhere)
-	TSubclassOf<UParticleSystem> Particle;
 
 	UPROPERTY(EditAnywhere)
 	FString WeaponName;
@@ -43,9 +37,6 @@ struct FWeaponData : public FTableRowBase
 
 	UPROPERTY(EditAnywhere)
 	float WeaponAmmo;
-	
-	//UPROPERTY(EditAnywhere)
-	//class UAnimationAsset* FireAnimation;
 };
 UCLASS()
 class GP3_TEAM03_API AWeaponBase : public AActor
@@ -60,10 +51,6 @@ public:
 	AWeaponBase();
 
 protected:
-	
-	UPROPERTY()
-	
-	class USkeletalMeshComponent* MeshComp;
 	
 	UPROPERTY(EditAnywhere)
 	class UDataTable* WeaponDataTable;
@@ -81,9 +68,6 @@ public:
 
 	UPROPERTY()
 	TSubclassOf<AActor> Projectile;
-	
-	UPROPERTY()
-	TSubclassOf<UParticleSystem> Particle;
 	void SelectWeapon(FName SpellName);
 	FHitResult Use();
 	float GetDamageFromGun();

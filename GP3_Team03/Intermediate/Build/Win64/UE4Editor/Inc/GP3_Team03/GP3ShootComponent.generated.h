@@ -24,7 +24,6 @@ static inline void FOnWeaponEquippedEvent_DelegateWrapper(const FMulticastScript
 #define GP3_Team03_Source_GP3_Team03_Public_Player_GP3ShootComponent_h_16_RPC_WRAPPERS \
  \
 	DECLARE_FUNCTION(execOnReloaded); \
-	DECLARE_FUNCTION(execSetProjectileVelocity); \
 	DECLARE_FUNCTION(execReload); \
 	DECLARE_FUNCTION(execShoot);
 
@@ -32,7 +31,6 @@ static inline void FOnWeaponEquippedEvent_DelegateWrapper(const FMulticastScript
 #define GP3_Team03_Source_GP3_Team03_Public_Player_GP3ShootComponent_h_16_RPC_WRAPPERS_NO_PURE_DECLS \
  \
 	DECLARE_FUNCTION(execOnReloaded); \
-	DECLARE_FUNCTION(execSetProjectileVelocity); \
 	DECLARE_FUNCTION(execReload); \
 	DECLARE_FUNCTION(execShoot);
 

@@ -497,9 +497,10 @@ void EmptyLinkFunctionForGeneratedCodeGP3DashComponent() {}
 #endif
 		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_DashCurve;
 #if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_DashInstantVelocity_MetaData[];
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_IsDashing_MetaData[];
 #endif
-		static const UE4CodeGen_Private::FStructPropertyParams NewProp_DashInstantVelocity;
+		static void NewProp_IsDashing_SetBit(void* Obj);
+		static const UE4CodeGen_Private::FBoolPropertyParams NewProp_IsDashing;
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_DashTime_MetaData[];
 #endif
@@ -512,6 +513,14 @@ void EmptyLinkFunctionForGeneratedCodeGP3DashComponent() {}
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_DistanceTravelled_MetaData[];
 #endif
 		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_DistanceTravelled;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_InternalDashCooldownTimer_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_InternalDashCooldownTimer;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_DashInstantVelocity_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FStructPropertyParams NewProp_DashInstantVelocity;
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_StartPosition_MetaData[];
 #endif
@@ -528,15 +537,6 @@ void EmptyLinkFunctionForGeneratedCodeGP3DashComponent() {}
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_Owner_MetaData[];
 #endif
 		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_Owner;
-#if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_IsDashing_MetaData[];
-#endif
-		static void NewProp_IsDashing_SetBit(void* Obj);
-		static const UE4CodeGen_Private::FBoolPropertyParams NewProp_IsDashing;
-#if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_InternalDashCooldownTimer_MetaData[];
-#endif
-		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_InternalDashCooldownTimer;
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
 		static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
 		static const UE4CodeGen_Private::FClassParams ClassParams;
@@ -635,61 +635,6 @@ void EmptyLinkFunctionForGeneratedCodeGP3DashComponent() {}
 #endif
 	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_UGP3DashComponent_Statics::NewProp_DashCurve = { "DashCurve", nullptr, (EPropertyFlags)0x0010000000010001, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UGP3DashComponent, DashCurve), Z_Construct_UClass_UCurveFloat_NoRegister, METADATA_PARAMS(Z_Construct_UClass_UGP3DashComponent_Statics::NewProp_DashCurve_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UGP3DashComponent_Statics::NewProp_DashCurve_MetaData)) };
 #if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UGP3DashComponent_Statics::NewProp_DashInstantVelocity_MetaData[] = {
-		{ "Category", "Dash - Debug Info" },
-		{ "ModuleRelativePath", "Public/Player/GP3DashComponent.h" },
-	};
-#endif
-	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UClass_UGP3DashComponent_Statics::NewProp_DashInstantVelocity = { "DashInstantVelocity", nullptr, (EPropertyFlags)0x0010000000020001, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UGP3DashComponent, DashInstantVelocity), Z_Construct_UScriptStruct_FVector, METADATA_PARAMS(Z_Construct_UClass_UGP3DashComponent_Statics::NewProp_DashInstantVelocity_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UGP3DashComponent_Statics::NewProp_DashInstantVelocity_MetaData)) };
-#if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UGP3DashComponent_Statics::NewProp_DashTime_MetaData[] = {
-		{ "Category", "Dash - Debug Info" },
-		{ "ModuleRelativePath", "Public/Player/GP3DashComponent.h" },
-	};
-#endif
-	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UClass_UGP3DashComponent_Statics::NewProp_DashTime = { "DashTime", nullptr, (EPropertyFlags)0x0010000000020001, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UGP3DashComponent, DashTime), METADATA_PARAMS(Z_Construct_UClass_UGP3DashComponent_Statics::NewProp_DashTime_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UGP3DashComponent_Statics::NewProp_DashTime_MetaData)) };
-#if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UGP3DashComponent_Statics::NewProp_DashCurveValue_MetaData[] = {
-		{ "Category", "Dash - Debug Info" },
-		{ "ModuleRelativePath", "Public/Player/GP3DashComponent.h" },
-	};
-#endif
-	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UClass_UGP3DashComponent_Statics::NewProp_DashCurveValue = { "DashCurveValue", nullptr, (EPropertyFlags)0x0010000000020001, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UGP3DashComponent, DashCurveValue), METADATA_PARAMS(Z_Construct_UClass_UGP3DashComponent_Statics::NewProp_DashCurveValue_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UGP3DashComponent_Statics::NewProp_DashCurveValue_MetaData)) };
-#if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UGP3DashComponent_Statics::NewProp_DistanceTravelled_MetaData[] = {
-		{ "Category", "Dash - Debug Info" },
-		{ "ModuleRelativePath", "Public/Player/GP3DashComponent.h" },
-	};
-#endif
-	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UClass_UGP3DashComponent_Statics::NewProp_DistanceTravelled = { "DistanceTravelled", nullptr, (EPropertyFlags)0x0010000000020001, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UGP3DashComponent, DistanceTravelled), METADATA_PARAMS(Z_Construct_UClass_UGP3DashComponent_Statics::NewProp_DistanceTravelled_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UGP3DashComponent_Statics::NewProp_DistanceTravelled_MetaData)) };
-#if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UGP3DashComponent_Statics::NewProp_StartPosition_MetaData[] = {
-		{ "Category", "Dash - Debug Info" },
-		{ "ModuleRelativePath", "Public/Player/GP3DashComponent.h" },
-	};
-#endif
-	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UClass_UGP3DashComponent_Statics::NewProp_StartPosition = { "StartPosition", nullptr, (EPropertyFlags)0x0010000000020001, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UGP3DashComponent, StartPosition), Z_Construct_UScriptStruct_FVector, METADATA_PARAMS(Z_Construct_UClass_UGP3DashComponent_Statics::NewProp_StartPosition_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UGP3DashComponent_Statics::NewProp_StartPosition_MetaData)) };
-#if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UGP3DashComponent_Statics::NewProp_Direction_MetaData[] = {
-		{ "Category", "Dash - Debug Info" },
-		{ "ModuleRelativePath", "Public/Player/GP3DashComponent.h" },
-	};
-#endif
-	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UClass_UGP3DashComponent_Statics::NewProp_Direction = { "Direction", nullptr, (EPropertyFlags)0x0010000000020001, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UGP3DashComponent, Direction), Z_Construct_UScriptStruct_FVector, METADATA_PARAMS(Z_Construct_UClass_UGP3DashComponent_Statics::NewProp_Direction_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UGP3DashComponent_Statics::NewProp_Direction_MetaData)) };
-#if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UGP3DashComponent_Statics::NewProp_DashMagnitude_MetaData[] = {
-		{ "Category", "Dash - Debug Info" },
-		{ "ModuleRelativePath", "Public/Player/GP3DashComponent.h" },
-	};
-#endif
-	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UClass_UGP3DashComponent_Statics::NewProp_DashMagnitude = { "DashMagnitude", nullptr, (EPropertyFlags)0x0010000000020001, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UGP3DashComponent, DashMagnitude), Z_Construct_UScriptStruct_FVector, METADATA_PARAMS(Z_Construct_UClass_UGP3DashComponent_Statics::NewProp_DashMagnitude_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UGP3DashComponent_Statics::NewProp_DashMagnitude_MetaData)) };
-#if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UGP3DashComponent_Statics::NewProp_Owner_MetaData[] = {
-		{ "ModuleRelativePath", "Public/Player/GP3DashComponent.h" },
-	};
-#endif
-	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_UGP3DashComponent_Statics::NewProp_Owner = { "Owner", nullptr, (EPropertyFlags)0x0010000000000000, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UGP3DashComponent, Owner), Z_Construct_UClass_AGP3PlayerPawn_NoRegister, METADATA_PARAMS(Z_Construct_UClass_UGP3DashComponent_Statics::NewProp_Owner_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UGP3DashComponent_Statics::NewProp_Owner_MetaData)) };
-#if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UGP3DashComponent_Statics::NewProp_IsDashing_MetaData[] = {
 		{ "Category", "GP3DashComponent" },
 		{ "ModuleRelativePath", "Public/Player/GP3DashComponent.h" },
@@ -701,12 +646,59 @@ void EmptyLinkFunctionForGeneratedCodeGP3DashComponent() {}
 	}
 	const UE4CodeGen_Private::FBoolPropertyParams Z_Construct_UClass_UGP3DashComponent_Statics::NewProp_IsDashing = { "IsDashing", nullptr, (EPropertyFlags)0x0010000000000014, UE4CodeGen_Private::EPropertyGenFlags::Bool | UE4CodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, sizeof(bool), sizeof(UGP3DashComponent), &Z_Construct_UClass_UGP3DashComponent_Statics::NewProp_IsDashing_SetBit, METADATA_PARAMS(Z_Construct_UClass_UGP3DashComponent_Statics::NewProp_IsDashing_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UGP3DashComponent_Statics::NewProp_IsDashing_MetaData)) };
 #if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UGP3DashComponent_Statics::NewProp_InternalDashCooldownTimer_MetaData[] = {
-		{ "Category", "Dash - Debug Info" },
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UGP3DashComponent_Statics::NewProp_DashTime_MetaData[] = {
 		{ "ModuleRelativePath", "Public/Player/GP3DashComponent.h" },
 	};
 #endif
-	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UClass_UGP3DashComponent_Statics::NewProp_InternalDashCooldownTimer = { "InternalDashCooldownTimer", nullptr, (EPropertyFlags)0x0010000000020001, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UGP3DashComponent, InternalDashCooldownTimer), METADATA_PARAMS(Z_Construct_UClass_UGP3DashComponent_Statics::NewProp_InternalDashCooldownTimer_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UGP3DashComponent_Statics::NewProp_InternalDashCooldownTimer_MetaData)) };
+	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UClass_UGP3DashComponent_Statics::NewProp_DashTime = { "DashTime", nullptr, (EPropertyFlags)0x0010000000000000, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UGP3DashComponent, DashTime), METADATA_PARAMS(Z_Construct_UClass_UGP3DashComponent_Statics::NewProp_DashTime_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UGP3DashComponent_Statics::NewProp_DashTime_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UGP3DashComponent_Statics::NewProp_DashCurveValue_MetaData[] = {
+		{ "ModuleRelativePath", "Public/Player/GP3DashComponent.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UClass_UGP3DashComponent_Statics::NewProp_DashCurveValue = { "DashCurveValue", nullptr, (EPropertyFlags)0x0010000000000000, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UGP3DashComponent, DashCurveValue), METADATA_PARAMS(Z_Construct_UClass_UGP3DashComponent_Statics::NewProp_DashCurveValue_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UGP3DashComponent_Statics::NewProp_DashCurveValue_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UGP3DashComponent_Statics::NewProp_DistanceTravelled_MetaData[] = {
+		{ "ModuleRelativePath", "Public/Player/GP3DashComponent.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UClass_UGP3DashComponent_Statics::NewProp_DistanceTravelled = { "DistanceTravelled", nullptr, (EPropertyFlags)0x0010000000000000, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UGP3DashComponent, DistanceTravelled), METADATA_PARAMS(Z_Construct_UClass_UGP3DashComponent_Statics::NewProp_DistanceTravelled_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UGP3DashComponent_Statics::NewProp_DistanceTravelled_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UGP3DashComponent_Statics::NewProp_InternalDashCooldownTimer_MetaData[] = {
+		{ "ModuleRelativePath", "Public/Player/GP3DashComponent.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UClass_UGP3DashComponent_Statics::NewProp_InternalDashCooldownTimer = { "InternalDashCooldownTimer", nullptr, (EPropertyFlags)0x0010000000000000, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UGP3DashComponent, InternalDashCooldownTimer), METADATA_PARAMS(Z_Construct_UClass_UGP3DashComponent_Statics::NewProp_InternalDashCooldownTimer_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UGP3DashComponent_Statics::NewProp_InternalDashCooldownTimer_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UGP3DashComponent_Statics::NewProp_DashInstantVelocity_MetaData[] = {
+		{ "ModuleRelativePath", "Public/Player/GP3DashComponent.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UClass_UGP3DashComponent_Statics::NewProp_DashInstantVelocity = { "DashInstantVelocity", nullptr, (EPropertyFlags)0x0010000000000000, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UGP3DashComponent, DashInstantVelocity), Z_Construct_UScriptStruct_FVector, METADATA_PARAMS(Z_Construct_UClass_UGP3DashComponent_Statics::NewProp_DashInstantVelocity_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UGP3DashComponent_Statics::NewProp_DashInstantVelocity_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UGP3DashComponent_Statics::NewProp_StartPosition_MetaData[] = {
+		{ "ModuleRelativePath", "Public/Player/GP3DashComponent.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UClass_UGP3DashComponent_Statics::NewProp_StartPosition = { "StartPosition", nullptr, (EPropertyFlags)0x0010000000000000, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UGP3DashComponent, StartPosition), Z_Construct_UScriptStruct_FVector, METADATA_PARAMS(Z_Construct_UClass_UGP3DashComponent_Statics::NewProp_StartPosition_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UGP3DashComponent_Statics::NewProp_StartPosition_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UGP3DashComponent_Statics::NewProp_Direction_MetaData[] = {
+		{ "ModuleRelativePath", "Public/Player/GP3DashComponent.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UClass_UGP3DashComponent_Statics::NewProp_Direction = { "Direction", nullptr, (EPropertyFlags)0x0010000000000000, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UGP3DashComponent, Direction), Z_Construct_UScriptStruct_FVector, METADATA_PARAMS(Z_Construct_UClass_UGP3DashComponent_Statics::NewProp_Direction_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UGP3DashComponent_Statics::NewProp_Direction_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UGP3DashComponent_Statics::NewProp_DashMagnitude_MetaData[] = {
+		{ "ModuleRelativePath", "Public/Player/GP3DashComponent.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UClass_UGP3DashComponent_Statics::NewProp_DashMagnitude = { "DashMagnitude", nullptr, (EPropertyFlags)0x0010000000000000, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UGP3DashComponent, DashMagnitude), Z_Construct_UScriptStruct_FVector, METADATA_PARAMS(Z_Construct_UClass_UGP3DashComponent_Statics::NewProp_DashMagnitude_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UGP3DashComponent_Statics::NewProp_DashMagnitude_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UGP3DashComponent_Statics::NewProp_Owner_MetaData[] = {
+		{ "ModuleRelativePath", "Public/Player/GP3DashComponent.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_UGP3DashComponent_Statics::NewProp_Owner = { "Owner", nullptr, (EPropertyFlags)0x0010000000000000, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UGP3DashComponent, Owner), Z_Construct_UClass_AGP3PlayerPawn_NoRegister, METADATA_PARAMS(Z_Construct_UClass_UGP3DashComponent_Statics::NewProp_Owner_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UGP3DashComponent_Statics::NewProp_Owner_MetaData)) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_UGP3DashComponent_Statics::PropPointers[] = {
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UGP3DashComponent_Statics::NewProp_DashTrail,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UGP3DashComponent_Statics::NewProp_MaxDashSpeed,
@@ -718,16 +710,16 @@ void EmptyLinkFunctionForGeneratedCodeGP3DashComponent() {}
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UGP3DashComponent_Statics::NewProp_CooldownBonusOnWeakpointHit,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UGP3DashComponent_Statics::NewProp_DashDamage,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UGP3DashComponent_Statics::NewProp_DashCurve,
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UGP3DashComponent_Statics::NewProp_DashInstantVelocity,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UGP3DashComponent_Statics::NewProp_IsDashing,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UGP3DashComponent_Statics::NewProp_DashTime,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UGP3DashComponent_Statics::NewProp_DashCurveValue,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UGP3DashComponent_Statics::NewProp_DistanceTravelled,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UGP3DashComponent_Statics::NewProp_InternalDashCooldownTimer,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UGP3DashComponent_Statics::NewProp_DashInstantVelocity,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UGP3DashComponent_Statics::NewProp_StartPosition,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UGP3DashComponent_Statics::NewProp_Direction,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UGP3DashComponent_Statics::NewProp_DashMagnitude,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UGP3DashComponent_Statics::NewProp_Owner,
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UGP3DashComponent_Statics::NewProp_IsDashing,
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UGP3DashComponent_Statics::NewProp_InternalDashCooldownTimer,
 	};
 	const FCppClassTypeInfoStatic Z_Construct_UClass_UGP3DashComponent_Statics::StaticCppClassTypeInfo = {
 		TCppClassTypeTraits<UGP3DashComponent>::IsAbstract,
@@ -756,7 +748,7 @@ void EmptyLinkFunctionForGeneratedCodeGP3DashComponent() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(UGP3DashComponent, 2967403680);
+	IMPLEMENT_CLASS(UGP3DashComponent, 1762766230);
 	template<> GP3_TEAM03_API UClass* StaticClass<UGP3DashComponent>()
 	{
 		return UGP3DashComponent::StaticClass();

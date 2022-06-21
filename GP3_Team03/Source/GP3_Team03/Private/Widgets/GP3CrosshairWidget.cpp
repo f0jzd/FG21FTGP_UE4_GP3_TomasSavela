@@ -2,9 +2,7 @@
 
 
 #include "Widgets/GP3CrosshairWidget.h"
-#include "Widgets/GP3CrosshairWidget.h"
 
-#include "MovieSceneTracksPropertyTypes.h"
 #include "Components/Image.h"
 #include "Kismet/GameplayStatics.h"
 #include "Player/GP3PlayerPawn.h"
@@ -17,7 +15,9 @@ void UGP3CrosshairWidget::NativeConstruct()
 
 	AmmoImages = GetAmmoImages();
 	ShootComp = Cast<AGP3PlayerPawn>(UGameplayStatics::GetPlayerPawn(GetWorld(), 0))->ShootComp;
-	WeaponChanged();
+
+	WeaponChanged(); // Make sure to subscribe to starting weapons events because of execution order
+
 	ShootComp->OnWeaponEquipped.AddDynamic(this, &UGP3CrosshairWidget::WeaponChanged);
 }
 

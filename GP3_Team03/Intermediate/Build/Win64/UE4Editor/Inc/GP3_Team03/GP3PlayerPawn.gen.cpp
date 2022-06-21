@@ -673,14 +673,6 @@ void EmptyLinkFunctionForGeneratedCodeGP3PlayerPawn() {}
 #endif
 		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_ForwardInputValue;
 #if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_HorizontalMouseSensitivity_MetaData[];
-#endif
-		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_HorizontalMouseSensitivity;
-#if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_VerticalMouseSensitivity_MetaData[];
-#endif
-		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_VerticalMouseSensitivity;
-#if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_LaunchVelocity_MetaData[];
 #endif
 		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_LaunchVelocity;
@@ -899,20 +891,6 @@ void EmptyLinkFunctionForGeneratedCodeGP3PlayerPawn() {}
 #endif
 	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UClass_AGP3PlayerPawn_Statics::NewProp_ForwardInputValue = { "ForwardInputValue", nullptr, (EPropertyFlags)0x0010000000000004, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AGP3PlayerPawn, ForwardInputValue), METADATA_PARAMS(Z_Construct_UClass_AGP3PlayerPawn_Statics::NewProp_ForwardInputValue_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AGP3PlayerPawn_Statics::NewProp_ForwardInputValue_MetaData)) };
 #if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AGP3PlayerPawn_Statics::NewProp_HorizontalMouseSensitivity_MetaData[] = {
-		{ "Category", "GP3PlayerPawn" },
-		{ "ModuleRelativePath", "Public/Player/GP3PlayerPawn.h" },
-	};
-#endif
-	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UClass_AGP3PlayerPawn_Statics::NewProp_HorizontalMouseSensitivity = { "HorizontalMouseSensitivity", nullptr, (EPropertyFlags)0x0010000000000004, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AGP3PlayerPawn, HorizontalMouseSensitivity), METADATA_PARAMS(Z_Construct_UClass_AGP3PlayerPawn_Statics::NewProp_HorizontalMouseSensitivity_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AGP3PlayerPawn_Statics::NewProp_HorizontalMouseSensitivity_MetaData)) };
-#if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AGP3PlayerPawn_Statics::NewProp_VerticalMouseSensitivity_MetaData[] = {
-		{ "Category", "GP3PlayerPawn" },
-		{ "ModuleRelativePath", "Public/Player/GP3PlayerPawn.h" },
-	};
-#endif
-	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UClass_AGP3PlayerPawn_Statics::NewProp_VerticalMouseSensitivity = { "VerticalMouseSensitivity", nullptr, (EPropertyFlags)0x0010000000010015, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AGP3PlayerPawn, VerticalMouseSensitivity), METADATA_PARAMS(Z_Construct_UClass_AGP3PlayerPawn_Statics::NewProp_VerticalMouseSensitivity_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AGP3PlayerPawn_Statics::NewProp_VerticalMouseSensitivity_MetaData)) };
-#if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AGP3PlayerPawn_Statics::NewProp_LaunchVelocity_MetaData[] = {
 		{ "ModuleRelativePath", "Public/Player/GP3PlayerPawn.h" },
 	};
@@ -1054,8 +1032,6 @@ void EmptyLinkFunctionForGeneratedCodeGP3PlayerPawn() {}
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AGP3PlayerPawn_Statics::NewProp_PlayerMaxHealth,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AGP3PlayerPawn_Statics::NewProp_RightInputValue,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AGP3PlayerPawn_Statics::NewProp_ForwardInputValue,
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AGP3PlayerPawn_Statics::NewProp_HorizontalMouseSensitivity,
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AGP3PlayerPawn_Statics::NewProp_VerticalMouseSensitivity,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AGP3PlayerPawn_Statics::NewProp_LaunchVelocity,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AGP3PlayerPawn_Statics::NewProp_MinLaunchVelocity,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AGP3PlayerPawn_Statics::NewProp_MaxLaunchVelocity,
@@ -1100,7 +1076,7 @@ void EmptyLinkFunctionForGeneratedCodeGP3PlayerPawn() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(AGP3PlayerPawn, 329720049);
+	IMPLEMENT_CLASS(AGP3PlayerPawn, 735792553);
 	template<> GP3_TEAM03_API UClass* StaticClass<AGP3PlayerPawn>()
 	{
 		return AGP3PlayerPawn::StaticClass();

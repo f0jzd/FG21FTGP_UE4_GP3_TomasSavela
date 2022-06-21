@@ -18,14 +18,12 @@ struct FVector;
 #define GP3_Team03_Source_GP3_Team03_Public_AI_SpawningEnemySystem_h_14_SPARSE_DATA
 #define GP3_Team03_Source_GP3_Team03_Public_AI_SpawningEnemySystem_h_14_RPC_WRAPPERS \
  \
-	DECLARE_FUNCTION(execSpawnEnemiesOnTimer); \
 	DECLARE_FUNCTION(execSpawnEnemy); \
 	DECLARE_FUNCTION(execSpawnEnemies);
 
 
 #define GP3_Team03_Source_GP3_Team03_Public_AI_SpawningEnemySystem_h_14_RPC_WRAPPERS_NO_PURE_DECLS \
  \
-	DECLARE_FUNCTION(execSpawnEnemiesOnTimer); \
 	DECLARE_FUNCTION(execSpawnEnemy); \
 	DECLARE_FUNCTION(execSpawnEnemies);
 

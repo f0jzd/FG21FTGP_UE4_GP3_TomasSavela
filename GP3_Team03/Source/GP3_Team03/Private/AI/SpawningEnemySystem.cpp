@@ -16,12 +16,6 @@ void ASpawningEnemySystem::BeginPlay()
 	SpawnIntervalTimer = SpawnInterval;
 	bTimerIsOn = false;
 	bReadyToSpawn = false;
-
-// call this two in BP somewhere
-	//ReadyToSpawn = true;
-	//SpawnEnemiesOnTimer();
-	//SpawnEnemies(Amount1);
-	//SpawnMoreEnemiesAfterKills();
 }
 
 void ASpawningEnemySystem::Tick(float DeltaTime)
@@ -84,21 +78,4 @@ void ASpawningEnemySystem::SpawnEnemy(TSubclassOf<AGP3_AI_BaseCharacter> EnemyTy
 		//bReadyToSpawn = false;
 		OnSpawn(FVector(SpawnLocation.Location.X,SpawnLocation.Location.Y,SpawnLocation.Location.Z+SpawnOffset));
 	}
-}
-
-void ASpawningEnemySystem::SpawnEnemiesOnTimer()
-{
-	bTimerIsOn = true;
-	if (bReadyToSpawn)
-	{
-		GEngine->AddOnScreenDebugMessage(0, 5.0f, FColor::Red, TEXT("Timer ended"));
-		//SpawnEnemys();
-	}
-}
-
-void ASpawningEnemySystem::SpawnMoreEnemiesAfterKills()
-{
-	NumberToSpawn *=2;
-	bReadyToSpawn = true;
-	//SpawnEnemys();
 }

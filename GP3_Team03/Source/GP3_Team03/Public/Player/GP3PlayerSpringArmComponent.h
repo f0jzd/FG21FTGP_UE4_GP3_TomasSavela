@@ -19,6 +19,13 @@ public:
 	UPROPERTY(EditAnywhere, Category = "DefaultCameraSettings")
 	float DefaultFov = 90;
 
+	/** Speed of mouse look. Higher = faster. */
+	UPROPERTY(EditAnywhere, Category = "DefaultCameraSettings")
+	float VerticalLookSpeed = 0.5f;
+
+	UPROPERTY(EditAnywhere, Category = "DefaultCameraSettings")
+	float HorizontalLookSpeed = 0.0f;
+
 	UPROPERTY(EditAnywhere, Category = "CameraAimZoomSettings")
 	/** Change FOV for aiming? */
 	bool UseFov = true;
@@ -63,6 +70,13 @@ public:
 	/** Speed of arm length changing. Higher = faster. */
 	UPROPERTY(EditAnywhere, Category = "CameraAimZoomSettings")
 	float AimZoomArmSpeed = 9.f;
+
+	/** Speed of mouse look. Higher = faster. */
+	UPROPERTY(EditAnywhere, Category = "CameraAimZoomSettings")
+	float AimZoomVerticalLookSpeed = 0.5f;
+
+	UPROPERTY(EditAnywhere, Category = "CameraAimZoomSettings")
+	float AimZoomHorizontalLookSpeed = 0.0f;
 	
 	// ************************************************************************ //
 	// FOV Dash Settings ****************************************************** //

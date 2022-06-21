@@ -39,35 +39,20 @@ void UGP3ShootComponent::Shoot()
 	{
 		InternalCooldownTimer = Gun->ShootCoolDownTimer;
 		ReadyToShoot = false;
-		bCalculateProjectilePath = true;
+		//bCalculateProjectilePath = true;
 		Gun->Use();
-		
-		//GEngine->AddOnScreenDebugMessage(-1, 2.0f, FColor::Green, TEXT("fire gunprojectile"));
-		//FVector Start = GetWorld()->GetFirstPlayerController()->PlayerCameraManager->GetCameraLocation();
 		FVector Start = Owner->MeshComp->GetSocketLocation(FName("RightHand_ProjectileSocket"));
-		//FRotator Rotator = GetWorld()->GetFirstPlayerController()->PlayerCameraManager->GetCameraRotation();
 		FRotator Rotator = Owner->GetControlRotation();
-		//FVector Rotator = FVector(400.f,GetWorld()->GetFirstPlayerController()->PlayerCameraManager->GetCameraLocation().Y,GetWorld()->GetFirstPlayerController()->PlayerCameraManager->GetCameraLocation().Z);
-		//FVector target = GetWorld()->GetFirstPlayerController()->PlayerCameraManager->GetViewTarget();
-		//FVector direction = -(target - Start);
-		
-		//FRotator targetRot = FRotationMatrix::MakeFromX(Rotator).Rotator();
-		//FRotator targetRot = GetWorld()->GetFirstPlayerController()->PlayerCameraManager->GetViewTarget()->GetActorRotation();
 
 		FActorSpawnParameters SpawnParams;
 		SpawnParams.SpawnCollisionHandlingOverride = ESpawnActorCollisionHandlingMethod::AlwaysSpawn; // make sure the projectile always spawn
-		
-		//ASunShaftProjectile* ProjectileInstance = GetWorld()->SpawnActor<ASunShaftProjectile>(Projectile, Start,Rotator,SpawnParams);
 		
 		FTransform SpawnTransform;
 		SpawnTransform.SetComponents(FQuat::MakeFromEuler(Rotator.Euler()),Start, FVector(1,1,1));
 		
 		AGunProjectile* ProjectileInstance = GetWorld()->SpawnActorDeferred<AGunProjectile>(Gun->Projectile,SpawnTransform);
 		ProjectileInstance->OnWeakPointHit.AddDynamic(Owner->DashComp, &UGP3DashComponent::DecreaseDashCooldown);
-		ProjectileInstance->InitialSpeed = FMath::Clamp(Gun->LaunchVelocity,500.f,3000.f);
 		UGameplayStatics::FinishSpawningActor(ProjectileInstance,SpawnTransform);
-
-		//GEngine->AddOnScreenDebugMessage(0, 5.0f, FColor::Cyan, TEXT("Pang pang"));
 
 		ProjectileInstance->Damage = Gun->GetDamageFromGun();
 		ProjectileInstance->CriticalDamage = Gun->GetCriticalDamageFromGun();
@@ -125,8 +110,7 @@ void UGP3ShootComponent::Shoot()
 		{
 			ReloadWidget->StartReload();
 			Gun->ReLoadGun();
-
-			// TODO: Move to BeginPlay when possible/subscribe when Gun is set on Owner
+			
 			Gun->OnReloadFinished.AddUniqueDynamic(this, &UGP3ShootComponent::OnReloaded);
 		}
 		else if (ReloadWidget->DoQuickReload())
@@ -138,15 +122,9 @@ void UGP3ShootComponent::Shoot()
 
 void UGP3ShootComponent::Reload()
 {
-	//GEngine->AddOnScreenDebugMessage(0, 5.0f, FColor::Cyan, TEXT("ReLoadar"));
 	Gun->ReLoadGun();
 }
 
-void UGP3ShootComponent::SetProjectileVelocity(float Delta)
-{
-	Gun->LaunchVelocity += Gun->LaunchVelocity * Delta;
-	Gun->LaunchVelocity = FMath::Clamp(Gun->LaunchVelocity,500.f,3000.f);
-}
 
 void UGP3ShootComponent::OnReloaded()
 {
@@ -163,7 +141,6 @@ void UGP3ShootComponent::BeginPlay()
 
 	if (WeaponClass)
 	{
-		//TODO Fix so the gun spawn at the right place
 		FTransform SpellTransform;
 		SpellTransform.SetLocation(FVector::ZeroVector);
 		SpellTransform.SetRotation(FQuat(FRotator::ZeroRotator));
@@ -173,11 +150,6 @@ void UGP3ShootComponent::BeginPlay()
 		if (Gun)
 		{
 			Gun->SelectWeapon("Gun"); //Select what gun to use
-			//Gun->AttachToComponent(MeshComp,FAttachmentTransformRules::Sock); //Attach the gun to the player 
-			///Can use if we have a skelletonmesh for the character sp we can fix a socket s_hand_r
-			///Getmesh() in this context is the players UskelletonMesh
-			///
-			Gun->AttachToComponent(Owner->MeshComp,FAttachmentTransformRules::SnapToTargetIncludingScale,FName("Arm"));
 			OnWeaponEquipped.Broadcast();
 		}
 	}

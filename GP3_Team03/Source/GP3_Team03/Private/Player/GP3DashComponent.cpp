@@ -266,7 +266,6 @@ FVector UGP3DashComponent::ApplySlopeAxis(FVector TargetDestination)
 			if (180.0f - FMath::Abs(SlopeAngleInDegrees) < Owner->WASDMovementComp->MaxSlopeAngle && DownwardDot > -1.0f)
 			{
 				ReturnDestination = FVector::VectorPlaneProject (ReturnDestination, SlopeHitResult.Normal);
-				//GEngine->AddOnScreenDebugMessage(-1, 5.0f, FColor::Red, FString::Printf(TEXT("DOT DOWN: %f"), DownwardDot));
 			}
 		}
 	}
@@ -314,19 +313,3 @@ void UGP3DashComponent::InterruptDash()
 {
 	ObstacleMet = true;
 }
-
-
-// bool UGP3DashComponent::IsUpSlopeWalkable(FVector TargetDestination, FHitResult* Hit)
-// {
-// 	float Dot = FVector::DotProduct(TargetDestination.GetSafeNormal(0.0f), Hit->Normal);
-//
-// 	//if (Dot > (Owner->WASDMovementComp->MaxSlopeAngle * -0.01f))
-// 	GEngine->AddOnScreenDebugMessage(-1, 5.0f, FColor::Red, FString::Printf(TEXT("DOT: %f"), Dot));
-// 	if (Dot < (Owner->WASDMovementComp->MaxSlopeAngle * -0.01f) && FMath::Abs(Dot) > 0.0f)
-// 	{
-// 		return true;
-// 	}
-// 	
-// 	return false;
-// }
-

@@ -218,7 +218,6 @@ C:\Users\tomas.savela\Perforce\FG21FTGP_UE4_GP3_TomasSavela\GP3_Team03\Intermedi
 C:/Users/tomas.savela/Perforce/FG21FTGP_UE4_GP3_TomasSavela/GP3_Team03/Intermediate/Build/Win64/UE4Editor/Inc/GP3_Team03/GP3_RangedEnemyHealth.gen.cpp
 C:\Users\tomas.savela\Perforce\FG21FTGP_UE4_GP3_TomasSavela\GP3_Team03\Source\GP3_Team03/Public/AI/AI_Widgets/GP3_RangedEnemyHealth.h
 C:\Users\tomas.savela\Perforce\FG21FTGP_UE4_GP3_TomasSavela\GP3_Team03\Intermediate\Build\Win64\UE4Editor\Inc\GP3_Team03\GP3_RangedEnemyHealth.generated.h
-C:/Users/tomas.savela/Perforce/FG21FTGP_UE4_GP3_TomasSavela/GP3_Team03/Intermediate/Build/Win64/UE4Editor/Inc/GP3_Team03/GP3_Team03.init.gen.cpp
 C:/Users/tomas.savela/Perforce/FG21FTGP_UE4_GP3_TomasSavela/GP3_Team03/Intermediate/Build/Win64/UE4Editor/Inc/GP3_Team03/GP3_Team03GameModeBase.gen.cpp
 C:\Users\tomas.savela\Perforce\FG21FTGP_UE4_GP3_TomasSavela\GP3_Team03\Source\GP3_Team03/GP3_Team03GameModeBase.h
 C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Engine\Classes\GameFramework/GameModeBase.h
@@ -268,14 +267,6 @@ C:\Users\tomas.savela\Perforce\FG21FTGP_UE4_GP3_TomasSavela\GP3_Team03\Intermedi
 C:/Users/tomas.savela/Perforce/FG21FTGP_UE4_GP3_TomasSavela/GP3_Team03/Intermediate/Build/Win64/UE4Editor/Inc/GP3_Team03/GP3PlayerHealthWidget.gen.cpp
 C:\Users\tomas.savela\Perforce\FG21FTGP_UE4_GP3_TomasSavela\GP3_Team03\Source\GP3_Team03/Public/Widgets/GP3PlayerHealthWidget.h
 C:\Users\tomas.savela\Perforce\FG21FTGP_UE4_GP3_TomasSavela\GP3_Team03\Intermediate\Build\Win64\UE4Editor\Inc\GP3_Team03\GP3PlayerHealthWidget.generated.h
-C:/Users/tomas.savela/Perforce/FG21FTGP_UE4_GP3_TomasSavela/GP3_Team03/Intermediate/Build/Win64/UE4Editor/Inc/GP3_Team03/GP3PlayerPawn.gen.cpp
-C:\Users\tomas.savela\Perforce\FG21FTGP_UE4_GP3_TomasSavela\GP3_Team03\Source\GP3_Team03/Public/Player/GP3PlayerPawn.h
-C:\Users\tomas.savela\Perforce\FG21FTGP_UE4_GP3_TomasSavela\GP3_Team03\Intermediate\Build\Win64\UE4Editor\Inc\GP3_Team03\GP3PlayerPawn.generated.h
-C:/Users/tomas.savela/Perforce/FG21FTGP_UE4_GP3_TomasSavela/GP3_Team03/Intermediate/Build/Win64/UE4Editor/Inc/GP3_Team03/GP3PlayerSpringArmComponent.gen.cpp
-C:\Users\tomas.savela\Perforce\FG21FTGP_UE4_GP3_TomasSavela\GP3_Team03\Source\GP3_Team03/Public/Player/GP3PlayerSpringArmComponent.h
-C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Engine\Classes\GameFramework/SpringArmComponent.h
-C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\SpringArmComponent.generated.h
-C:\Users\tomas.savela\Perforce\FG21FTGP_UE4_GP3_TomasSavela\GP3_Team03\Intermediate\Build\Win64\UE4Editor\Inc\GP3_Team03\GP3PlayerSpringArmComponent.generated.h
 C:/Users/tomas.savela/Perforce/FG21FTGP_UE4_GP3_TomasSavela/GP3_Team03/Intermediate/Build/Win64/UE4Editor/Inc/GP3_Team03/GP3ReloadWidget.gen.cpp
 C:\Users\tomas.savela\Perforce\FG21FTGP_UE4_GP3_TomasSavela\GP3_Team03\Source\GP3_Team03/Public/Widgets/GP3ReloadWidget.h
 C:\Users\tomas.savela\Perforce\FG21FTGP_UE4_GP3_TomasSavela\GP3_Team03\Intermediate\Build\Win64\UE4Editor\Inc\GP3_Team03\GP3ReloadWidget.generated.h
@@ -287,11 +278,6 @@ C:\Users\tomas.savela\Perforce\FG21FTGP_UE4_GP3_TomasSavela\GP3_Team03\Intermedi
 C:/Users/tomas.savela/Perforce/FG21FTGP_UE4_GP3_TomasSavela/GP3_Team03/Intermediate/Build/Win64/UE4Editor/Inc/GP3_Team03/GP3SettingsWidget.gen.cpp
 C:\Users\tomas.savela\Perforce\FG21FTGP_UE4_GP3_TomasSavela\GP3_Team03\Source\GP3_Team03/Public/Widgets/GP3SettingsWidget.h
 C:\Users\tomas.savela\Perforce\FG21FTGP_UE4_GP3_TomasSavela\GP3_Team03\Intermediate\Build\Win64\UE4Editor\Inc\GP3_Team03\GP3SettingsWidget.generated.h
-C:/Users/tomas.savela/Perforce/FG21FTGP_UE4_GP3_TomasSavela/GP3_Team03/Intermediate/Build/Win64/UE4Editor/Inc/GP3_Team03/GP3ShootComponent.gen.cpp
-C:\Users\tomas.savela\Perforce\FG21FTGP_UE4_GP3_TomasSavela\GP3_Team03\Source\GP3_Team03/Public/Player/GP3ShootComponent.h
-C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Engine\Classes\Components/SplineComponent.h
-C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\SplineComponent.generated.h
-C:\Users\tomas.savela\Perforce\FG21FTGP_UE4_GP3_TomasSavela\GP3_Team03\Intermediate\Build\Win64\UE4Editor\Inc\GP3_Team03\GP3ShootComponent.generated.h
 C:/Users/tomas.savela/Perforce/FG21FTGP_UE4_GP3_TomasSavela/GP3_Team03/Intermediate/Build/Win64/UE4Editor/Inc/GP3_Team03/GP3WASDMovementComponent.gen.cpp
 C:\Users\tomas.savela\Perforce\FG21FTGP_UE4_GP3_TomasSavela\GP3_Team03\Source\GP3_Team03/Public/Player/GP3WASDMovementComponent.h
 C:\Users\tomas.savela\Perforce\FG21FTGP_UE4_GP3_TomasSavela\GP3_Team03\Intermediate\Build\Win64\UE4Editor\Inc\GP3_Team03\GP3WASDMovementComponent.generated.h
@@ -303,11 +289,7 @@ C:\Users\tomas.savela\Perforce\FG21FTGP_UE4_GP3_TomasSavela\GP3_Team03\Source\GP
 C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Engine\Classes\GameFramework/PawnMovementComponent.h
 C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\PawnMovementComponent.generated.h
 C:\Users\tomas.savela\Perforce\FG21FTGP_UE4_GP3_TomasSavela\GP3_Team03\Intermediate\Build\Win64\UE4Editor\Inc\GP3_Team03\PlayerPawnMovementComponent.generated.h
-C:/Users/tomas.savela/Perforce/FG21FTGP_UE4_GP3_TomasSavela/GP3_Team03/Intermediate/Build/Win64/UE4Editor/Inc/GP3_Team03/SpawningEnemySystem.gen.cpp
-C:\Users\tomas.savela\Perforce\FG21FTGP_UE4_GP3_TomasSavela\GP3_Team03\Source\GP3_Team03/Public/AI/SpawningEnemySystem.h
-C:\Users\tomas.savela\Perforce\FG21FTGP_UE4_GP3_TomasSavela\GP3_Team03\Intermediate\Build\Win64\UE4Editor\Inc\GP3_Team03\SpawningEnemySystem.generated.h
 C:/Users/tomas.savela/Perforce/FG21FTGP_UE4_GP3_TomasSavela/GP3_Team03/Intermediate/Build/Win64/UE4Editor/Inc/GP3_Team03/SpellBase.gen.cpp
 C:\Users\tomas.savela\Perforce\FG21FTGP_UE4_GP3_TomasSavela\GP3_Team03\Source\GP3_Team03/Public/Weapons/SpellBase.h
 C:\Users\tomas.savela\Perforce\FG21FTGP_UE4_GP3_TomasSavela\GP3_Team03\Intermediate\Build\Win64\UE4Editor\Inc\GP3_Team03\SpellBase.generated.h
 C:/Users/tomas.savela/Perforce/FG21FTGP_UE4_GP3_TomasSavela/GP3_Team03/Intermediate/Build/Win64/UE4Editor/Inc/GP3_Team03/SunShaftProjectile.gen.cpp
-C:/Users/tomas.savela/Perforce/FG21FTGP_UE4_GP3_TomasSavela/GP3_Team03/Intermediate/Build/Win64/UE4Editor/Inc/GP3_Team03/WeaponBase.gen.cpp

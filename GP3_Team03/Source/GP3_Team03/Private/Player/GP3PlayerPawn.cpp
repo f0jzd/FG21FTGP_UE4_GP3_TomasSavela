@@ -46,6 +46,8 @@ void AGP3PlayerPawn::BeginPlay()
 	GameInstance = GetWorld()->GetGameInstance<UGP3GameInstance>();
 	
 	//GEngine->AddOnScreenDebugMessage(999, 5.f, FColor::Red, FString::Printf(TEXT("Death Counter: %d"), GameInstance->DeathCount));
+	CurrentVerticalLookSpeed = SpringArmComp->VerticalLookSpeed;
+	CurrentHorizontalLookSpeed = SpringArmComp->HorizontalLookSpeed;
 	
 	Super::BeginPlay();
 	PlayerController = UGameplayStatics::GetPlayerController(this, 0);
@@ -124,53 +126,57 @@ void AGP3PlayerPawn::HandleMoveRightInput(float RightInput)
 
 void AGP3PlayerPawn::HandleLookYawInput(float YawInput)
 {
-	AddControllerYawInput(YawInput * HorizontalMouseSensitivity);
+	AddControllerYawInput(YawInput * CurrentHorizontalLookSpeed);
 	RotatePlayerWithController();
 }
 
 void AGP3PlayerPawn::HandleLookPitchInput(float PitchInput)
 {
-	AddControllerPitchInput(PitchInput * VerticalMouseSensitivity);
+	AddControllerPitchInput(PitchInput * CurrentVerticalLookSpeed);
 	RotatePlayerWithController();
 	SetProjectileVelocity(-PitchInput);
 }
 
 void AGP3PlayerPawn::Aim()
 {
+	CurrentVerticalLookSpeed = SpringArmComp->AimZoomVerticalLookSpeed;
+	CurrentHorizontalLookSpeed = SpringArmComp->AimZoomHorizontalLookSpeed;
 	SpringArmComp->AimZoomStart();
 }
 
 void AGP3PlayerPawn::StopAim()
 {
+	CurrentVerticalLookSpeed = SpringArmComp->VerticalLookSpeed;
+	CurrentHorizontalLookSpeed = SpringArmComp->HorizontalLookSpeed;
 	SpringArmComp->AimZoomStop();
 }
 
 void AGP3PlayerPawn::OnTakeDamage(UPrimitiveComponent* OverlappedComp, AActor* OtherActor,
 	UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult)
 {
-	if (!bPlayerAlive || !bIsInvincible)
+	if (!bPlayerAlive || bIsInvincible)
 		return;
 	
-	if (Cast<AGP3_ChargeEnemyCharacter>(OtherActor))
-	{
-		AGP3_ChargeEnemyCharacter* Enemy = Cast<AGP3_ChargeEnemyCharacter>(OtherActor);
-		RemovePlayerHealth(Enemy->Damage, true);
-		OnTookDamage();
-	}
+	//if (Cast<AGP3_ChargeEnemyCharacter>(OtherActor))
+	//{
+	//	AGP3_ChargeEnemyCharacter* Enemy = Cast<AGP3_ChargeEnemyCharacter>(OtherActor);
+	//	RemovePlayerHealth(Enemy->Damage, true);
+	//	OnTookDamage();
+	//}
 
-	if (Cast<AGP3_ChargeTrail>(OtherActor))
-	{
-		ChargeTrailRef = Cast<AGP3_ChargeTrail>(OtherActor);
-		AGP3_ChargeTrail* Trail = Cast<AGP3_ChargeTrail>(OtherActor);
-		OnTookDamage();
-		//RemovePlayerHealth(Trail->TrailDamage, true);
-	}
+	//if (Cast<AGP3_ChargeTrail>(OtherActor))
+	//{
+	//	ChargeTrailRef = Cast<AGP3_ChargeTrail>(OtherActor);
+	//	AGP3_ChargeTrail* Trail = Cast<AGP3_ChargeTrail>(OtherActor);
+	//	OnTookDamage();
+	//	//RemovePlayerHealth(Trail->TrailDamage, true);
+	//}
 
 }
 
 void AGP3PlayerPawn::TakeExplosiveDamage(float Damage)
 {
-	if (!bPlayerAlive || !bIsInvincible)
+	if (!bPlayerAlive || bIsInvincible)
 		return;
 	
 	RemovePlayerHealth(Damage, true);

@@ -53,8 +53,6 @@ public:
 	UFUNCTION()
 	void InterruptDash();
 	
-	// bool IsUpSlopeWalkable(FVector TargetDestination, FHitResult* Hit);
-	
 	FVector ApplySlopeSliding(FVector TargetDestination, FHitResult* Hit);
 	
 	FVector ApplyDepenetration(FVector Step, FHitResult* HitResult);
@@ -89,30 +87,6 @@ public:
 	UPROPERTY(Category="Dash - Curve", EditDefaultsOnly)
 	UCurveFloat* DashCurve = NULL;
 
-	UPROPERTY(Category="Dash - Debug Info", VisibleAnywhere)
-	FVector DashInstantVelocity;
-	
-	UPROPERTY(Category="Dash - Debug Info", VisibleAnywhere)
-	float DashTime;
-
-	UPROPERTY(Category="Dash - Debug Info", VisibleAnywhere)
-	float DashCurveValue;
-
-	UPROPERTY(Category="Dash - Debug Info", VisibleAnywhere)
-	float DistanceTravelled;
-
-	UPROPERTY(Category="Dash - Debug Info", VisibleAnywhere)
-	FVector StartPosition;
-
-	UPROPERTY(Category="Dash - Debug Info", VisibleAnywhere)
-	FVector Direction;
-
-	UPROPERTY(Category="Dash - Debug Info", VisibleAnywhere)
-	FVector DashMagnitude;
-	
-	UPROPERTY()
-	AGP3PlayerPawn* Owner = nullptr;
-
 	bool ReadyToDash = true;
 
 	bool ObstacleMet = false;
@@ -128,21 +102,46 @@ public:
 
 	int ObstacleCounter = 0;
 
+	UPROPERTY()
+	float DashTime = 0;
+
+	UPROPERTY()
+	float DashCurveValue = 0;
+
+	UPROPERTY()
+	float DistanceTravelled = 0;
+
+	UPROPERTY()
+	float InternalDashCooldownTimer = 0.0f;
+
 	float InternalMoveCooldownTimer = 0.0f;
 
 	float InternalGracePeriodTimer = 0.0f;
 
 	float DashBufferTimestamp = 0.0f;
 
-	UPROPERTY(Category="Dash - Debug Info", VisibleAnywhere)
-	float InternalDashCooldownTimer = 0.0f;
+	UPROPERTY()
+	FVector DashInstantVelocity = {0.0f, 0.0f, 0.0f};
+
+	UPROPERTY()
+	FVector StartPosition = {0.0f, 0.0f, 0.0f};
+
+	UPROPERTY()
+	FVector Direction = {0.0f, 0.0f, 0.0f};
+
+	UPROPERTY()
+	FVector DashMagnitude = {0.0f, 0.0f, 0.0f};
+
+	FRotator DashRotation = {0.0f, 0.0f, 0.0f};
 
 	FVector DashBufferInput = {0.0f, 0.0f, 0.0f};
 
-	FRotator DashRotation;
-
 	FOnDashEvent OnDash;
 
-	AGP3PlayerDashTrail* CurrentDashTrail;
+	AGP3PlayerDashTrail* CurrentDashTrail = nullptr;
+
+	UPROPERTY()
+	AGP3PlayerPawn* Owner = nullptr;
+	
 	FActorSpawnParameters SpawnParams;
 };

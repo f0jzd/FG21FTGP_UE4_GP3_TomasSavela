@@ -153,12 +153,6 @@ public:
 	
 	UPROPERTY(BlueprintReadWrite)
 	float ForwardInputValue = 0.0f;
-	
-	UPROPERTY(BlueprintReadWrite)
-	float HorizontalMouseSensitivity = 0.5f;
-	
-	UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
-	float VerticalMouseSensitivity = 0.5f;
 
 	UPROPERTY()
 	float LaunchVelocity;
@@ -171,6 +165,10 @@ public:
 	
 	UPROPERTY()
 	float ProjectileRadius = 10.0f;
+
+	float CurrentHorizontalLookSpeed = 0.0f;
+
+	float CurrentVerticalLookSpeed = 0.0f;
 
 	UPROPERTY(EditAnywhere)
 	bool bDebugPlayerCantDie;

@@ -21,34 +21,34 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 
 template<> GP3_TEAM03_API UScriptStruct* StaticStruct<struct FWeaponData>();
 
-#define GP3_Team03_Source_GP3_Team03_Public_Weapons_WeaponBase_h_56_DELEGATE \
+#define GP3_Team03_Source_GP3_Team03_Public_Weapons_WeaponBase_h_47_DELEGATE \
 static inline void FOnAmmoChangedEvent_DelegateWrapper(const FMulticastScriptDelegate& OnAmmoChangedEvent) \
 { \
 	OnAmmoChangedEvent.ProcessMulticastDelegate<UObject>(NULL); \
 }
 
 
-#define GP3_Team03_Source_GP3_Team03_Public_Weapons_WeaponBase_h_55_DELEGATE \
+#define GP3_Team03_Source_GP3_Team03_Public_Weapons_WeaponBase_h_46_DELEGATE \
 static inline void FOnReloadedEvent_DelegateWrapper(const FMulticastScriptDelegate& OnReloadedEvent) \
 { \
 	OnReloadedEvent.ProcessMulticastDelegate<UObject>(NULL); \
 }
 
 
-#define GP3_Team03_Source_GP3_Team03_Public_Weapons_WeaponBase_h_53_SPARSE_DATA
-#define GP3_Team03_Source_GP3_Team03_Public_Weapons_WeaponBase_h_53_RPC_WRAPPERS \
+#define GP3_Team03_Source_GP3_Team03_Public_Weapons_WeaponBase_h_44_SPARSE_DATA
+#define GP3_Team03_Source_GP3_Team03_Public_Weapons_WeaponBase_h_44_RPC_WRAPPERS \
  \
 	DECLARE_FUNCTION(execInstantReload); \
 	DECLARE_FUNCTION(execReLoadGun);
 
 
-#define GP3_Team03_Source_GP3_Team03_Public_Weapons_WeaponBase_h_53_RPC_WRAPPERS_NO_PURE_DECLS \
+#define GP3_Team03_Source_GP3_Team03_Public_Weapons_WeaponBase_h_44_RPC_WRAPPERS_NO_PURE_DECLS \
  \
 	DECLARE_FUNCTION(execInstantReload); \
 	DECLARE_FUNCTION(execReLoadGun);
 
 
-#define GP3_Team03_Source_GP3_Team03_Public_Weapons_WeaponBase_h_53_INCLASS_NO_PURE_DECLS \
+#define GP3_Team03_Source_GP3_Team03_Public_Weapons_WeaponBase_h_44_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesAWeaponBase(); \
 	friend struct Z_Construct_UClass_AWeaponBase_Statics; \
@@ -57,7 +57,7 @@ public: \
 	DECLARE_SERIALIZER(AWeaponBase)
 
 
-#define GP3_Team03_Source_GP3_Team03_Public_Weapons_WeaponBase_h_53_INCLASS \
+#define GP3_Team03_Source_GP3_Team03_Public_Weapons_WeaponBase_h_44_INCLASS \
 private: \
 	static void StaticRegisterNativesAWeaponBase(); \
 	friend struct Z_Construct_UClass_AWeaponBase_Statics; \
@@ -66,7 +66,7 @@ public: \
 	DECLARE_SERIALIZER(AWeaponBase)
 
 
-#define GP3_Team03_Source_GP3_Team03_Public_Weapons_WeaponBase_h_53_STANDARD_CONSTRUCTORS \
+#define GP3_Team03_Source_GP3_Team03_Public_Weapons_WeaponBase_h_44_STANDARD_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	NO_API AWeaponBase(const FObjectInitializer& ObjectInitializer); \
 	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(AWeaponBase) \
@@ -79,7 +79,7 @@ private: \
 public:
 
 
-#define GP3_Team03_Source_GP3_Team03_Public_Weapons_WeaponBase_h_53_ENHANCED_CONSTRUCTORS \
+#define GP3_Team03_Source_GP3_Team03_Public_Weapons_WeaponBase_h_44_ENHANCED_CONSTRUCTORS \
 private: \
 	/** Private move- and copy-constructors, should never be used */ \
 	NO_API AWeaponBase(AWeaponBase&&); \
@@ -90,33 +90,32 @@ public: \
 	DEFINE_DEFAULT_CONSTRUCTOR_CALL(AWeaponBase)
 
 
-#define GP3_Team03_Source_GP3_Team03_Public_Weapons_WeaponBase_h_53_PRIVATE_PROPERTY_OFFSET \
-	FORCEINLINE static uint32 __PPO__MeshComp() { return STRUCT_OFFSET(AWeaponBase, MeshComp); } \
+#define GP3_Team03_Source_GP3_Team03_Public_Weapons_WeaponBase_h_44_PRIVATE_PROPERTY_OFFSET \
 	FORCEINLINE static uint32 __PPO__WeaponDataTable() { return STRUCT_OFFSET(AWeaponBase, WeaponDataTable); } \
 	FORCEINLINE static uint32 __PPO__DefaultWeaponName() { return STRUCT_OFFSET(AWeaponBase, DefaultWeaponName); }
 
 
-#define GP3_Team03_Source_GP3_Team03_Public_Weapons_WeaponBase_h_50_PROLOG
-#define GP3_Team03_Source_GP3_Team03_Public_Weapons_WeaponBase_h_53_GENERATED_BODY_LEGACY \
+#define GP3_Team03_Source_GP3_Team03_Public_Weapons_WeaponBase_h_41_PROLOG
+#define GP3_Team03_Source_GP3_Team03_Public_Weapons_WeaponBase_h_44_GENERATED_BODY_LEGACY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	GP3_Team03_Source_GP3_Team03_Public_Weapons_WeaponBase_h_53_PRIVATE_PROPERTY_OFFSET \
-	GP3_Team03_Source_GP3_Team03_Public_Weapons_WeaponBase_h_53_SPARSE_DATA \
-	GP3_Team03_Source_GP3_Team03_Public_Weapons_WeaponBase_h_53_RPC_WRAPPERS \
-	GP3_Team03_Source_GP3_Team03_Public_Weapons_WeaponBase_h_53_INCLASS \
-	GP3_Team03_Source_GP3_Team03_Public_Weapons_WeaponBase_h_53_STANDARD_CONSTRUCTORS \
+	GP3_Team03_Source_GP3_Team03_Public_Weapons_WeaponBase_h_44_PRIVATE_PROPERTY_OFFSET \
+	GP3_Team03_Source_GP3_Team03_Public_Weapons_WeaponBase_h_44_SPARSE_DATA \
+	GP3_Team03_Source_GP3_Team03_Public_Weapons_WeaponBase_h_44_RPC_WRAPPERS \
+	GP3_Team03_Source_GP3_Team03_Public_Weapons_WeaponBase_h_44_INCLASS \
+	GP3_Team03_Source_GP3_Team03_Public_Weapons_WeaponBase_h_44_STANDARD_CONSTRUCTORS \
 public: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
 
-#define GP3_Team03_Source_GP3_Team03_Public_Weapons_WeaponBase_h_53_GENERATED_BODY \
+#define GP3_Team03_Source_GP3_Team03_Public_Weapons_WeaponBase_h_44_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	GP3_Team03_Source_GP3_Team03_Public_Weapons_WeaponBase_h_53_PRIVATE_PROPERTY_OFFSET \
-	GP3_Team03_Source_GP3_Team03_Public_Weapons_WeaponBase_h_53_SPARSE_DATA \
-	GP3_Team03_Source_GP3_Team03_Public_Weapons_WeaponBase_h_53_RPC_WRAPPERS_NO_PURE_DECLS \
-	GP3_Team03_Source_GP3_Team03_Public_Weapons_WeaponBase_h_53_INCLASS_NO_PURE_DECLS \
-	GP3_Team03_Source_GP3_Team03_Public_Weapons_WeaponBase_h_53_ENHANCED_CONSTRUCTORS \
+	GP3_Team03_Source_GP3_Team03_Public_Weapons_WeaponBase_h_44_PRIVATE_PROPERTY_OFFSET \
+	GP3_Team03_Source_GP3_Team03_Public_Weapons_WeaponBase_h_44_SPARSE_DATA \
+	GP3_Team03_Source_GP3_Team03_Public_Weapons_WeaponBase_h_44_RPC_WRAPPERS_NO_PURE_DECLS \
+	GP3_Team03_Source_GP3_Team03_Public_Weapons_WeaponBase_h_44_INCLASS_NO_PURE_DECLS \
+	GP3_Team03_Source_GP3_Team03_Public_Weapons_WeaponBase_h_44_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 

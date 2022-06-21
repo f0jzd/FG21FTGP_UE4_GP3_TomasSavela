@@ -34,25 +34,9 @@ void AGunProjectile::OnConstruction(const FTransform& Transform)
 void AGunProjectile::BeginPlay()
 {
 	Super::BeginPlay();
-	//ShellVelocity = GetActorForwardVector() * 1500.f;
 }
 
 void AGunProjectile::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
-	
-	FHitResult Hit;
-	AddActorWorldOffset(ProjectileComponent->Velocity * DeltaTime, true, &Hit);
-	//
-	//if (Hit.bBlockingHit)
-	//{
-	//	if (Hit.Actor->IsA<AGP3_ChargeEnemyCharacter>()) // if i hit a car with the poopashell they die
-	//		{
-	//			GEngine->AddOnScreenDebugMessage(0, 5.0f, FColor::Cyan, TEXT("Hit A charge enemy"));
-	//			Destroy(); // destroy the projectile
-	//			return;
-	//		}
-	//	GEngine->AddOnScreenDebugMessage(0, 5.0f, FColor::Cyan, TEXT("Did not Hit A charge enemy"));
-	//	Destroy();
-	//}
 }

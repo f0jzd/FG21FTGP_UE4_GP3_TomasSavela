@@ -25,9 +25,6 @@ public:
 	UFUNCTION(BlueprintCallable)
 	void Reload();
 
-	UFUNCTION()
-	void SetProjectileVelocity(float Delta);
-
 protected:
 	virtual void BeginPlay() override;
 	void TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction) override;

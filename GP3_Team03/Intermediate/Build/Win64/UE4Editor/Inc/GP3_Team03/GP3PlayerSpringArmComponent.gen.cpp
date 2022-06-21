@@ -38,6 +38,14 @@ void EmptyLinkFunctionForGeneratedCodeGP3PlayerSpringArmComponent() {}
 #endif
 		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_DefaultFov;
 #if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_VerticalLookSpeed_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_VerticalLookSpeed;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_HorizontalLookSpeed_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_HorizontalLookSpeed;
+#if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_UseFov_MetaData[];
 #endif
 		static void NewProp_UseFov_SetBit(void* Obj);
@@ -85,6 +93,14 @@ void EmptyLinkFunctionForGeneratedCodeGP3PlayerSpringArmComponent() {}
 #endif
 		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_AimZoomArmSpeed;
 #if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_AimZoomVerticalLookSpeed_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_AimZoomVerticalLookSpeed;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_AimZoomHorizontalLookSpeed_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_AimZoomHorizontalLookSpeed;
+#if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_DashFov_MetaData[];
 #endif
 		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_DashFov;
@@ -124,6 +140,22 @@ void EmptyLinkFunctionForGeneratedCodeGP3PlayerSpringArmComponent() {}
 	};
 #endif
 	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UClass_UGP3PlayerSpringArmComponent_Statics::NewProp_DefaultFov = { "DefaultFov", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UGP3PlayerSpringArmComponent, DefaultFov), METADATA_PARAMS(Z_Construct_UClass_UGP3PlayerSpringArmComponent_Statics::NewProp_DefaultFov_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UGP3PlayerSpringArmComponent_Statics::NewProp_DefaultFov_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UGP3PlayerSpringArmComponent_Statics::NewProp_VerticalLookSpeed_MetaData[] = {
+		{ "Category", "DefaultCameraSettings" },
+		{ "Comment", "/** Speed of mouse look. Higher = faster. */" },
+		{ "ModuleRelativePath", "Public/Player/GP3PlayerSpringArmComponent.h" },
+		{ "ToolTip", "Speed of mouse look. Higher = faster." },
+	};
+#endif
+	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UClass_UGP3PlayerSpringArmComponent_Statics::NewProp_VerticalLookSpeed = { "VerticalLookSpeed", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UGP3PlayerSpringArmComponent, VerticalLookSpeed), METADATA_PARAMS(Z_Construct_UClass_UGP3PlayerSpringArmComponent_Statics::NewProp_VerticalLookSpeed_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UGP3PlayerSpringArmComponent_Statics::NewProp_VerticalLookSpeed_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UGP3PlayerSpringArmComponent_Statics::NewProp_HorizontalLookSpeed_MetaData[] = {
+		{ "Category", "DefaultCameraSettings" },
+		{ "ModuleRelativePath", "Public/Player/GP3PlayerSpringArmComponent.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UClass_UGP3PlayerSpringArmComponent_Statics::NewProp_HorizontalLookSpeed = { "HorizontalLookSpeed", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UGP3PlayerSpringArmComponent, HorizontalLookSpeed), METADATA_PARAMS(Z_Construct_UClass_UGP3PlayerSpringArmComponent_Statics::NewProp_HorizontalLookSpeed_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UGP3PlayerSpringArmComponent_Statics::NewProp_HorizontalLookSpeed_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UGP3PlayerSpringArmComponent_Statics::NewProp_UseFov_MetaData[] = {
 		{ "Category", "CameraAimZoomSettings" },
@@ -235,6 +267,22 @@ void EmptyLinkFunctionForGeneratedCodeGP3PlayerSpringArmComponent() {}
 #endif
 	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UClass_UGP3PlayerSpringArmComponent_Statics::NewProp_AimZoomArmSpeed = { "AimZoomArmSpeed", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UGP3PlayerSpringArmComponent, AimZoomArmSpeed), METADATA_PARAMS(Z_Construct_UClass_UGP3PlayerSpringArmComponent_Statics::NewProp_AimZoomArmSpeed_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UGP3PlayerSpringArmComponent_Statics::NewProp_AimZoomArmSpeed_MetaData)) };
 #if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UGP3PlayerSpringArmComponent_Statics::NewProp_AimZoomVerticalLookSpeed_MetaData[] = {
+		{ "Category", "CameraAimZoomSettings" },
+		{ "Comment", "/** Speed of mouse look. Higher = faster. */" },
+		{ "ModuleRelativePath", "Public/Player/GP3PlayerSpringArmComponent.h" },
+		{ "ToolTip", "Speed of mouse look. Higher = faster." },
+	};
+#endif
+	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UClass_UGP3PlayerSpringArmComponent_Statics::NewProp_AimZoomVerticalLookSpeed = { "AimZoomVerticalLookSpeed", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UGP3PlayerSpringArmComponent, AimZoomVerticalLookSpeed), METADATA_PARAMS(Z_Construct_UClass_UGP3PlayerSpringArmComponent_Statics::NewProp_AimZoomVerticalLookSpeed_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UGP3PlayerSpringArmComponent_Statics::NewProp_AimZoomVerticalLookSpeed_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UGP3PlayerSpringArmComponent_Statics::NewProp_AimZoomHorizontalLookSpeed_MetaData[] = {
+		{ "Category", "CameraAimZoomSettings" },
+		{ "ModuleRelativePath", "Public/Player/GP3PlayerSpringArmComponent.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UClass_UGP3PlayerSpringArmComponent_Statics::NewProp_AimZoomHorizontalLookSpeed = { "AimZoomHorizontalLookSpeed", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UGP3PlayerSpringArmComponent, AimZoomHorizontalLookSpeed), METADATA_PARAMS(Z_Construct_UClass_UGP3PlayerSpringArmComponent_Statics::NewProp_AimZoomHorizontalLookSpeed_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UGP3PlayerSpringArmComponent_Statics::NewProp_AimZoomHorizontalLookSpeed_MetaData)) };
+#if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UGP3PlayerSpringArmComponent_Statics::NewProp_DashFov_MetaData[] = {
 		{ "Category", "CameraDashSettings" },
 		{ "Comment", "/** FOV when aiming */" },
@@ -270,6 +318,8 @@ void EmptyLinkFunctionForGeneratedCodeGP3PlayerSpringArmComponent() {}
 	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_UGP3PlayerSpringArmComponent_Statics::NewProp_CameraComp = { "CameraComp", nullptr, (EPropertyFlags)0x0010000000090009, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UGP3PlayerSpringArmComponent, CameraComp), Z_Construct_UClass_UGP3PlayerCameraComponent_NoRegister, METADATA_PARAMS(Z_Construct_UClass_UGP3PlayerSpringArmComponent_Statics::NewProp_CameraComp_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UGP3PlayerSpringArmComponent_Statics::NewProp_CameraComp_MetaData)) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_UGP3PlayerSpringArmComponent_Statics::PropPointers[] = {
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UGP3PlayerSpringArmComponent_Statics::NewProp_DefaultFov,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UGP3PlayerSpringArmComponent_Statics::NewProp_VerticalLookSpeed,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UGP3PlayerSpringArmComponent_Statics::NewProp_HorizontalLookSpeed,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UGP3PlayerSpringArmComponent_Statics::NewProp_UseFov,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UGP3PlayerSpringArmComponent_Statics::NewProp_AimZoomFov,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UGP3PlayerSpringArmComponent_Statics::NewProp_AimZoomFovSpeed,
@@ -281,6 +331,8 @@ void EmptyLinkFunctionForGeneratedCodeGP3PlayerSpringArmComponent() {}
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UGP3PlayerSpringArmComponent_Statics::NewProp_UseSpringArm,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UGP3PlayerSpringArmComponent_Statics::NewProp_AimZoomArmLength,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UGP3PlayerSpringArmComponent_Statics::NewProp_AimZoomArmSpeed,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UGP3PlayerSpringArmComponent_Statics::NewProp_AimZoomVerticalLookSpeed,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UGP3PlayerSpringArmComponent_Statics::NewProp_AimZoomHorizontalLookSpeed,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UGP3PlayerSpringArmComponent_Statics::NewProp_DashFov,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UGP3PlayerSpringArmComponent_Statics::NewProp_DashFovSpeedStart,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UGP3PlayerSpringArmComponent_Statics::NewProp_DashFovSpeedStop,
@@ -313,7 +365,7 @@ void EmptyLinkFunctionForGeneratedCodeGP3PlayerSpringArmComponent() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(UGP3PlayerSpringArmComponent, 3055189977);
+	IMPLEMENT_CLASS(UGP3PlayerSpringArmComponent, 1032582416);
 	template<> GP3_TEAM03_API UClass* StaticClass<UGP3PlayerSpringArmComponent>()
 	{
 		return UGP3PlayerSpringArmComponent::StaticClass();

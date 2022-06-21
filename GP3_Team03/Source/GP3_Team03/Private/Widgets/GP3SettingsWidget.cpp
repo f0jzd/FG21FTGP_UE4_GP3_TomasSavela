@@ -14,7 +14,7 @@ void UGP3SettingsWidget::NativeConstruct()
 
 	SetupFullscreenModeDropdown(GetFullscreenModeDropdown());
 
-	SetupFullscreenToggle(GetFullscreenToggle());
+	//SetupFullscreenToggle(GetFullscreenToggle());
 
 	SetupResolutionDropdown(GetResolutionDropdown());
 	
