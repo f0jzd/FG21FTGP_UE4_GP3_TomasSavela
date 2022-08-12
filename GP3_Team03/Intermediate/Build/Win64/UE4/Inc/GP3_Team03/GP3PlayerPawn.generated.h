@@ -16,35 +16,37 @@ struct FHitResult;
 #endif
 #define GP3_TEAM03_GP3PlayerPawn_generated_h
 
-#define GP3_Team03_Source_GP3_Team03_Public_Player_GP3PlayerPawn_h_29_DELEGATE \
+#define GP3_Team03_Source_GP3_Team03_Public_Player_GP3PlayerPawn_h_31_DELEGATE \
 static inline void FTookDamageEvent_DelegateWrapper(const FMulticastScriptDelegate& TookDamageEvent) \
 { \
 	TookDamageEvent.ProcessMulticastDelegate<UObject>(NULL); \
 }
 
 
-#define GP3_Team03_Source_GP3_Team03_Public_Player_GP3PlayerPawn_h_27_SPARSE_DATA
-#define GP3_Team03_Source_GP3_Team03_Public_Player_GP3PlayerPawn_h_27_RPC_WRAPPERS \
+#define GP3_Team03_Source_GP3_Team03_Public_Player_GP3PlayerPawn_h_29_SPARSE_DATA
+#define GP3_Team03_Source_GP3_Team03_Public_Player_GP3PlayerPawn_h_29_RPC_WRAPPERS \
  \
 	DECLARE_FUNCTION(execTakeExplosiveDamage); \
 	DECLARE_FUNCTION(execOnTakeDamage); \
+	DECLARE_FUNCTION(execResetDeathCounter); \
 	DECLARE_FUNCTION(execPlayerDie); \
 	DECLARE_FUNCTION(execAddPlayerHealth); \
 	DECLARE_FUNCTION(execRemovePlayerHealth);
 
 
-#define GP3_Team03_Source_GP3_Team03_Public_Player_GP3PlayerPawn_h_27_RPC_WRAPPERS_NO_PURE_DECLS \
+#define GP3_Team03_Source_GP3_Team03_Public_Player_GP3PlayerPawn_h_29_RPC_WRAPPERS_NO_PURE_DECLS \
  \
 	DECLARE_FUNCTION(execTakeExplosiveDamage); \
 	DECLARE_FUNCTION(execOnTakeDamage); \
+	DECLARE_FUNCTION(execResetDeathCounter); \
 	DECLARE_FUNCTION(execPlayerDie); \
 	DECLARE_FUNCTION(execAddPlayerHealth); \
 	DECLARE_FUNCTION(execRemovePlayerHealth);
 
 
-#define GP3_Team03_Source_GP3_Team03_Public_Player_GP3PlayerPawn_h_27_EVENT_PARMS
-#define GP3_Team03_Source_GP3_Team03_Public_Player_GP3PlayerPawn_h_27_CALLBACK_WRAPPERS
-#define GP3_Team03_Source_GP3_Team03_Public_Player_GP3PlayerPawn_h_27_INCLASS_NO_PURE_DECLS \
+#define GP3_Team03_Source_GP3_Team03_Public_Player_GP3PlayerPawn_h_29_EVENT_PARMS
+#define GP3_Team03_Source_GP3_Team03_Public_Player_GP3PlayerPawn_h_29_CALLBACK_WRAPPERS
+#define GP3_Team03_Source_GP3_Team03_Public_Player_GP3PlayerPawn_h_29_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesAGP3PlayerPawn(); \
 	friend struct Z_Construct_UClass_AGP3PlayerPawn_Statics; \
@@ -53,7 +55,7 @@ public: \
 	DECLARE_SERIALIZER(AGP3PlayerPawn)
 
 
-#define GP3_Team03_Source_GP3_Team03_Public_Player_GP3PlayerPawn_h_27_INCLASS \
+#define GP3_Team03_Source_GP3_Team03_Public_Player_GP3PlayerPawn_h_29_INCLASS \
 private: \
 	static void StaticRegisterNativesAGP3PlayerPawn(); \
 	friend struct Z_Construct_UClass_AGP3PlayerPawn_Statics; \
@@ -62,7 +64,7 @@ public: \
 	DECLARE_SERIALIZER(AGP3PlayerPawn)
 
 
-#define GP3_Team03_Source_GP3_Team03_Public_Player_GP3PlayerPawn_h_27_STANDARD_CONSTRUCTORS \
+#define GP3_Team03_Source_GP3_Team03_Public_Player_GP3PlayerPawn_h_29_STANDARD_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	NO_API AGP3PlayerPawn(const FObjectInitializer& ObjectInitializer); \
 	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(AGP3PlayerPawn) \
@@ -75,7 +77,7 @@ private: \
 public:
 
 
-#define GP3_Team03_Source_GP3_Team03_Public_Player_GP3PlayerPawn_h_27_ENHANCED_CONSTRUCTORS \
+#define GP3_Team03_Source_GP3_Team03_Public_Player_GP3PlayerPawn_h_29_ENHANCED_CONSTRUCTORS \
 private: \
 	/** Private move- and copy-constructors, should never be used */ \
 	NO_API AGP3PlayerPawn(AGP3PlayerPawn&&); \
@@ -86,33 +88,36 @@ public: \
 	DEFINE_DEFAULT_CONSTRUCTOR_CALL(AGP3PlayerPawn)
 
 
-#define GP3_Team03_Source_GP3_Team03_Public_Player_GP3PlayerPawn_h_27_PRIVATE_PROPERTY_OFFSET
-#define GP3_Team03_Source_GP3_Team03_Public_Player_GP3PlayerPawn_h_24_PROLOG \
-	GP3_Team03_Source_GP3_Team03_Public_Player_GP3PlayerPawn_h_27_EVENT_PARMS
+#define GP3_Team03_Source_GP3_Team03_Public_Player_GP3PlayerPawn_h_29_PRIVATE_PROPERTY_OFFSET \
+	FORCEINLINE static uint32 __PPO__PlayerController() { return STRUCT_OFFSET(AGP3PlayerPawn, PlayerController); }
 
 
-#define GP3_Team03_Source_GP3_Team03_Public_Player_GP3PlayerPawn_h_27_GENERATED_BODY_LEGACY \
+#define GP3_Team03_Source_GP3_Team03_Public_Player_GP3PlayerPawn_h_26_PROLOG \
+	GP3_Team03_Source_GP3_Team03_Public_Player_GP3PlayerPawn_h_29_EVENT_PARMS
+
+
+#define GP3_Team03_Source_GP3_Team03_Public_Player_GP3PlayerPawn_h_29_GENERATED_BODY_LEGACY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	GP3_Team03_Source_GP3_Team03_Public_Player_GP3PlayerPawn_h_27_PRIVATE_PROPERTY_OFFSET \
-	GP3_Team03_Source_GP3_Team03_Public_Player_GP3PlayerPawn_h_27_SPARSE_DATA \
-	GP3_Team03_Source_GP3_Team03_Public_Player_GP3PlayerPawn_h_27_RPC_WRAPPERS \
-	GP3_Team03_Source_GP3_Team03_Public_Player_GP3PlayerPawn_h_27_CALLBACK_WRAPPERS \
-	GP3_Team03_Source_GP3_Team03_Public_Player_GP3PlayerPawn_h_27_INCLASS \
-	GP3_Team03_Source_GP3_Team03_Public_Player_GP3PlayerPawn_h_27_STANDARD_CONSTRUCTORS \
+	GP3_Team03_Source_GP3_Team03_Public_Player_GP3PlayerPawn_h_29_PRIVATE_PROPERTY_OFFSET \
+	GP3_Team03_Source_GP3_Team03_Public_Player_GP3PlayerPawn_h_29_SPARSE_DATA \
+	GP3_Team03_Source_GP3_Team03_Public_Player_GP3PlayerPawn_h_29_RPC_WRAPPERS \
+	GP3_Team03_Source_GP3_Team03_Public_Player_GP3PlayerPawn_h_29_CALLBACK_WRAPPERS \
+	GP3_Team03_Source_GP3_Team03_Public_Player_GP3PlayerPawn_h_29_INCLASS \
+	GP3_Team03_Source_GP3_Team03_Public_Player_GP3PlayerPawn_h_29_STANDARD_CONSTRUCTORS \
 public: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
 
-#define GP3_Team03_Source_GP3_Team03_Public_Player_GP3PlayerPawn_h_27_GENERATED_BODY \
+#define GP3_Team03_Source_GP3_Team03_Public_Player_GP3PlayerPawn_h_29_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	GP3_Team03_Source_GP3_Team03_Public_Player_GP3PlayerPawn_h_27_PRIVATE_PROPERTY_OFFSET \
-	GP3_Team03_Source_GP3_Team03_Public_Player_GP3PlayerPawn_h_27_SPARSE_DATA \
-	GP3_Team03_Source_GP3_Team03_Public_Player_GP3PlayerPawn_h_27_RPC_WRAPPERS_NO_PURE_DECLS \
-	GP3_Team03_Source_GP3_Team03_Public_Player_GP3PlayerPawn_h_27_CALLBACK_WRAPPERS \
-	GP3_Team03_Source_GP3_Team03_Public_Player_GP3PlayerPawn_h_27_INCLASS_NO_PURE_DECLS \
-	GP3_Team03_Source_GP3_Team03_Public_Player_GP3PlayerPawn_h_27_ENHANCED_CONSTRUCTORS \
+	GP3_Team03_Source_GP3_Team03_Public_Player_GP3PlayerPawn_h_29_PRIVATE_PROPERTY_OFFSET \
+	GP3_Team03_Source_GP3_Team03_Public_Player_GP3PlayerPawn_h_29_SPARSE_DATA \
+	GP3_Team03_Source_GP3_Team03_Public_Player_GP3PlayerPawn_h_29_RPC_WRAPPERS_NO_PURE_DECLS \
+	GP3_Team03_Source_GP3_Team03_Public_Player_GP3PlayerPawn_h_29_CALLBACK_WRAPPERS \
+	GP3_Team03_Source_GP3_Team03_Public_Player_GP3PlayerPawn_h_29_INCLASS_NO_PURE_DECLS \
+	GP3_Team03_Source_GP3_Team03_Public_Player_GP3PlayerPawn_h_29_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 

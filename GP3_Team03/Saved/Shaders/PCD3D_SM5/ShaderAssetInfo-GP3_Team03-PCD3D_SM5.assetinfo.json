@@ -2,42 +2,6 @@
 	"AssetInfoVersion": 2,
 	"ShaderCodeToAssets": [
 		{
-			"ShaderMapHash": "3C38407CDC69B96A9C50A4DA3B221DED3C77CB47",
-			"Assets": [
-				"/Engine/EngineMaterials/PhAT_JointLimitMaterial"
-			]
-		},
-		{
-			"ShaderMapHash": "A2C097021E9B39610D55033ED6D2A4F270CD9EC6",
-			"Assets": [
-				"/Engine/EngineMaterials/GizmoMaterial"
-			]
-		},
-		{
-			"ShaderMapHash": "693F5D8441932DCA3C010659E10D80AA4CFED6FC",
-			"Assets": [
-				"/Engine/EngineMaterials/M_InvalidLightmapSettings"
-			]
-		},
-		{
-			"ShaderMapHash": "C4359193E47C063A73C0B6249DA498374AA7DCFA",
-			"Assets": [
-				"/Engine/EngineMaterials/EmissiveMeshMaterial"
-			]
-		},
-		{
-			"ShaderMapHash": "8D7D8117754FBCB3E6EAF4484CB55FBB0B7F49DB",
-			"Assets": [
-				"/Engine/EngineDebugMaterials/DebugMeshMaterial"
-			]
-		},
-		{
-			"ShaderMapHash": "1DE5B3C3078204FBD8C2559DA141189D5E37777E",
-			"Assets": [
-				"/Engine/EngineMaterials/RemoveSurfaceMaterial"
-			]
-		},
-		{
 			"ShaderMapHash": "7B48EFA7785D362B0DE4CE89C337822BE851F69E",
 			"Assets": [
 				"/OculusVR/Materials/TouchForQuestRiftSControllerMaterial"
@@ -57,7 +21,7 @@
 			]
 		},
 		{
-			"ShaderMapHash": "2266C9E402E8BFB54E7D599DF2BE9C8C130D003F",
+			"ShaderMapHash": "56F13B9A070F285B92F21BCC4D75E91D2B232675",
 			"Assets": [
 				"/OculusVR/Materials/OculusMR_ChromaKey"
 			]
@@ -86,12 +50,6 @@
 			]
 		},
 		{
-			"ShaderMapHash": "55691DB30875E073E96ED8309D594252A7C2E2A9",
-			"Assets": [
-				"/Engine/EngineDebugMaterials/M_VolumeRenderSphereTracePP"
-			]
-		},
-		{
 			"ShaderMapHash": "E6C881C4367A017C30CB5E1C97A435C113595511",
 			"Assets": [
 				"/SpeedTreeImporter/SpeedTree9/SpeedTreeBillboardMaster"
@@ -101,24 +59,6 @@
 			"ShaderMapHash": "A954F8FBE7BFB625D53290FA0E043AE0D60F25A7",
 			"Assets": [
 				"/SpeedTreeImporter/SpeedTree9/SpeedTreeMaster"
-			]
-		},
-		{
-			"ShaderMapHash": "31092181B2311DF8BFEFC02342BF71F96DDB0AC4",
-			"Assets": [
-				"/Engine/EngineDebugMaterials/WireframeMaterial"
-			]
-		},
-		{
-			"ShaderMapHash": "390CDBF1087A3BD7F6C4AC756A31D2EFF50EB629",
-			"Assets": [
-				"/Engine/EngineDebugMaterials/VertexColorMaterial"
-			]
-		},
-		{
-			"ShaderMapHash": "EFA0ABFC95AAB7148BE65BAC8E4D403FA1C0640F",
-			"Assets": [
-				"/Engine/EngineMaterials/DefaultMaterial"
 			]
 		},
 		{
@@ -134,33 +74,9 @@
 			]
 		},
 		{
-			"ShaderMapHash": "4131408FCDC8DBD3F5D0F64AD1F0D9AC3ED13F71",
+			"ShaderMapHash": "AF5474014C42773A8323D24C611664B331C4F498",
 			"Assets": [
 				"/OculusVR/Materials/PokeAHoleMaterial"
-			]
-		},
-		{
-			"ShaderMapHash": "EDD9ADA24C2458F03EE9B1332FD26BB86BBD80AA",
-			"Assets": [
-				"/Engine/EngineDebugMaterials/M_SimpleUnlitTranslucent"
-			]
-		},
-		{
-			"ShaderMapHash": "BDB6049078966B7E0BE2307A7474CF8D1CB2FB85",
-			"Assets": [
-				"/Engine/EditorMaterials/Camera/CineMat"
-			]
-		},
-		{
-			"ShaderMapHash": "E1AFA634E3AB713D9AF1CE895241F0CAF55A3813",
-			"Assets": [
-				"/Engine/VREditor/TransformGizmo/TranslucentTransformGizmoMaterial"
-			]
-		},
-		{
-			"ShaderMapHash": "D1CD339FEE452E5B3914E87435A66220C3B5604A",
-			"Assets": [
-				"/Engine/VREditor/TransformGizmo/TransformGizmoMaterial"
 			]
 		},
 		{
@@ -188,40 +104,16 @@
 			]
 		},
 		{
-			"ShaderMapHash": "756823B80E02934AEFFBFFB5B3C64ECDEFEC5CF6",
+			"ShaderMapHash": "630E9AFDB4EE088B29752B81349C1D48A442BBA6",
 			"Assets": [
 				"/Engine/EngineMaterials/Widget3DPassThrough_Translucent_OneSided",
 				"/Engine/EngineMaterials/Widget3DPassThrough"
 			]
 		},
 		{
-			"ShaderMapHash": "D1CDE5662FED22405E7A4E13F4C26CCBBD37DEB7",
+			"ShaderMapHash": "4BA733DE705941F0A1C33674BB7BD5D480D9655E",
 			"Assets": [
 				"/Engine/EngineMaterials/Widget3DPassThrough_Translucent"
-			]
-		},
-		{
-			"ShaderMapHash": "6CB5CAC2EF8223107EA2B21906291F541215A3CF",
-			"Assets": [
-				"/Engine/VREditor/TransformGizmo/Xray"
-			]
-		},
-		{
-			"ShaderMapHash": "7AC6A1390AF3DBB7E84E8B4A480B7C7EA824BE87",
-			"Assets": [
-				"/Engine/VREditor/TransformGizmo/Main"
-			]
-		},
-		{
-			"ShaderMapHash": "14DAEDE5D017A5B05D9C06BE65F40ACF062368C6",
-			"Assets": [
-				"/Engine/EngineMaterials/BaseFlattenMaterial"
-			]
-		},
-		{
-			"ShaderMapHash": "2D004EBC46FA930DC5EEB476F7B9347C43CA9F1B",
-			"Assets": [
-				"/Engine/EngineSky/VolumetricClouds/m_SimpleVolumetricCloud"
 			]
 		},
 		{
@@ -237,7 +129,7 @@
 			]
 		},
 		{
-			"ShaderMapHash": "12C1F1A235C8BA81EC4F2D0CFB449FF28BCCEE3F",
+			"ShaderMapHash": "DB18FB6FADD8862E3E3475DE4DEFF20C4597E583",
 			"Assets": [
 				"/Engine/EngineMaterials/DefaultDeferredDecalMaterial"
 			]
@@ -249,9 +141,450 @@
 			]
 		},
 		{
-			"ShaderMapHash": "24C433FACF74298D2606D7B0639A88B8B135B9A2",
+			"ShaderMapHash": "A2C097021E9B39610D55033ED6D2A4F270CD9EC6",
 			"Assets": [
-				"/Engine/EngineMaterials/DefaultTextMaterialOpaque"
+				"/Engine/EngineMaterials/GizmoMaterial"
+			]
+		},
+		{
+			"ShaderMapHash": "3C097A826C2CC0AFF170896E355C8F91D2AFC379",
+			"Assets": [
+				"/Engine/EngineSky/VolumetricClouds/m_SimpleVolumetricCloud"
+			]
+		},
+		{
+			"ShaderMapHash": "43F90DEBC8E98525FBD4A1534EB1CC529B846CF5",
+			"Assets": [
+				"/Game/3D_Art/Characters/Monster_VFX/Monster_Skin_VFX/Creepy_Energy"
+			]
+		},
+		{
+			"ShaderMapHash": "FF95A2AB15ADF4E418D4413C50BCBF13B569274A",
+			"Assets": [
+				"/Game/3D_Art/Materials/Models/Gate/LeftGate",
+				"/Game/3D_Art/Props/Statue/Statue_MAT",
+				"/Game/3D_Art/Materials/Models/PillarRoof/PillarRoof",
+				"/Game/3D_Art/Materials/Models/Bridges/TempleBridge",
+				"/Game/3D_Art/Props/Shrine/Shrinemat",
+				"/Game/3D_Art/Materials/Models/Stairs/BakedStair",
+				"/Game/3D_Art/Materials/Models/Ramps/RampMaterial",
+				"/Game/3D_Art/Materials/Models/Roof/Roof",
+				"/Game/3D_Art/Materials/Models/PillarRoof/PillarRoofCornerPiece1",
+				"/Game/3D_Art/Materials/Models/PillarRoof/PillarRoofCornerPiece",
+				"/Game/3D_Art/Materials/Models/Gate/RightGate",
+				"/Game/3D_Art/Materials/Models/Pillar/BrokenPillar",
+				"/Game/3D_Art/Materials/Models/Pillar/PillarRoofTop",
+				"/Game/3D_Art/Materials/Models/Pillar/Pillars",
+				"/Game/3D_Art/Materials/Models/TopWall/Cornerpiece",
+				"/Game/3D_Art/Materials/Models/Archway/Archway",
+				"/Game/3D_Art/Materials/Models/Archway/ArchwayTopPiece",
+				"/Game/3D_Art/Materials/Models/Bridges/CorridorBridge",
+				"/Game/3D_Art/Materials/Models/EntrywayCorridor/EntryWayCorridor",
+				"/Game/3D_Art/Materials/Models/EntryWayTopStructures/TopWallLeft",
+				"/Game/3D_Art/Materials/Models/EntryWayTopStructures/TopWallLeft1",
+				"/Game/3D_Art/Materials/Models/EntryWayTopStructures/TopWallLeftCorner",
+				"/Game/3D_Art/Materials/Models/EntryWayTopStructures/TopWallRight",
+				"/Game/3D_Art/Materials/Models/EntryWayTopStructures/TopWallRight1",
+				"/Game/3D_Art/Materials/Models/EntryWayTopStructures/TopWallRightCorner",
+				"/Game/3D_Art/Materials/Models/Walls/TopWall",
+				"/Game/3D_Art/Materials/Models/TopWall/TopWall"
+			]
+		},
+		{
+			"ShaderMapHash": "C380564A6414222F6A7E5F57D0F14982D5FD4F14",
+			"Assets": [
+				"/Engine/EngineSky/M_Sky_Panning_Clouds2"
+			]
+		},
+		{
+			"ShaderMapHash": "5F17D9B7F2F5E77876E7973CA30CAD9C658DC82F",
+			"Assets": [
+				"/Game/2D_Art/Sky/M_Skybox"
+			]
+		},
+		{
+			"ShaderMapHash": "7D64DBA6CC9B81769ACC396C169135E7AA491DCD",
+			"Assets": [
+				"/Game/3D_Art/Props/Rocky/lambert3",
+				"/Game/3D_Art/Props/Rocky/lambert2",
+				"/Game/3D_Art/Props/Rocky/lambert4",
+				"/Game/3D_Art/Props/Rocky/lambert1"
+			]
+		},
+		{
+			"ShaderMapHash": "697FA7BBC661A21FEE30A0E58D90AAFFAA837C7B",
+			"Assets": [
+				"/Game/3D_Art/Materials/Substance/Secondtest/Rocky/FloorTilesNoSand4x4",
+				"/Game/3D_Art/Materials/Substance/Secondtest/Rocky/FloorTilesBroken4x4"
+			]
+		},
+		{
+			"ShaderMapHash": "97225365049B312779A26182345F09A59CF9D5A7",
+			"Assets": [
+				"/Game/3D_Art/Materials/Substance/Secondtest/Rocky/LandscapeMaterials/StylizedDesert"
+			]
+		},
+		{
+			"ShaderMapHash": "6CECC4CA18CC1452FB080E665596F30D0D745102",
+			"Assets": [
+				"/Game/3D_Art/Materials/Models/Walls/SandStoneSlabs"
+			]
+		},
+		{
+			"ShaderMapHash": "D34E2FF555EE78290E273223E25E66AD0EAB332F",
+			"Assets": [
+				"/Game/3D_Art/Materials/Substance/TempleWall/TempleWalls"
+			]
+		},
+		{
+			"ShaderMapHash": "DF9769200A71DFC174011D1621230D294B56ECE6",
+			"Assets": [
+				"/Game/3D_Art/Materials/Substance/TempleWall/TempleWallWithoutPattern"
+			]
+		},
+		{
+			"ShaderMapHash": "B04CAF56274FBCA899A561779297BFB0E6BD223C",
+			"Assets": [
+				"/Game/2D_Art/Paintings/Painting3_Decal",
+				"/Game/2D_Art/Paintings/Painting1_Decal"
+			]
+		},
+		{
+			"ShaderMapHash": "2112D5D2B1575672DD196F6B31D3CA3032ECB59D",
+			"Assets": [
+				"/Game/3D_Art/Materials/Models/Obelisk/Obelisk"
+			]
+		},
+		{
+			"ShaderMapHash": "FABD40EBE67AB8B02E601A2A909DD27E7F49A86A",
+			"Assets": [
+				"/Game/2D_Art/Paintings/Painting2_Decal"
+			]
+		},
+		{
+			"ShaderMapHash": "AF630D10EC29E174CC6981011633B94F1A86668B",
+			"Assets": [
+				"/Game/3D_Art/Materials/Models/Pillar/Pillar_1600x200_lambert1_BaseColor_Mat"
+			]
+		},
+		{
+			"ShaderMapHash": "13D38AFEE94DF184B459A1141BB5F684828B2BF8",
+			"Assets": [
+				"/Game/3D_Art/Materials/Substance/Secondtest/Rocky/FloorTiles4x4"
+			]
+		},
+		{
+			"ShaderMapHash": "18DEAA75E070CA35F146B9A9E8775ADD50F5DD36",
+			"Assets": [
+				"/Game/3D_Art/Materials/Substance/Secondtest/Rocky/TilesMaster"
+			]
+		},
+		{
+			"ShaderMapHash": "22964F2E11DDA79E0178F8369062E2E8AF63D0A2",
+			"Assets": [
+				"/Game/3D_Art/Materials/Substance/Props/Brazier_225x100_Low"
+			]
+		},
+		{
+			"ShaderMapHash": "10A3FF4DC9790442870FB91A92B7275C997454C4",
+			"Assets": [
+				"/Game/3D_Art/Materials/Substance/Props/BigUrn",
+				"/Game/3D_Art/Materials/Substance/Props/Urn_2",
+				"/Game/3D_Art/Materials/Substance/Props/Urn_3"
+			]
+		},
+		{
+			"ShaderMapHash": "EE3ADA83670AB682D5079F33E8D8137D3138E578",
+			"Assets": [
+				"/Game/3D_Art/Materials/Substance/Props/Urn_1"
+			]
+		},
+		{
+			"ShaderMapHash": "5532C31F2D3986334CDEFCBF4E1201FB6D4D6B00",
+			"Assets": [
+				"/Engine/EngineDebugMaterials/DebugEditorMaterial"
+			]
+		},
+		{
+			"ShaderMapHash": "A4BC21BDB19D9A2A7ACA48D6578362C6FF2248BE",
+			"Assets": [
+				"/Game/3D_Art/lambert1"
+			]
+		},
+		{
+			"ShaderMapHash": "6D966E5C41CF95F7429D1D0F70508D19DCFA4D60",
+			"Assets": [
+				"/Engine/EditorMaterials/PreviewShadowIndicatorMaterial"
+			]
+		},
+		{
+			"ShaderMapHash": "8D5C9971654E22D92212E61C55D92EEA6D6F673A",
+			"Assets": [
+				"/Engine/BasicShapes/BasicShapeMaterial"
+			]
+		},
+		{
+			"ShaderMapHash": "66CACE543954CB7B8CA20DABD4E8B2F18088D31E",
+			"Assets": [
+				"/Game/Materials/Sand_Material"
+			]
+		},
+		{
+			"ShaderMapHash": "75B43402EEA2BB1522BE5E8B59C46A68254F0B50",
+			"Assets": [
+				"/Game/Materials/Blockout/Materials/M_BlockoutTools_Grid"
+			]
+		},
+		{
+			"ShaderMapHash": "D6D45141B90A1A71E35CD8F6C2F34ABE3EA0DC5B",
+			"Assets": [
+				"/Game/Materials/DefaultTextMaterialOpaque"
+			]
+		},
+		{
+			"ShaderMapHash": "A71E049E1D07E0C6DF8D255FC9D343476638C114",
+			"Assets": [
+				"/Game/Maps/Sub_Level_01_Start"
+			]
+		},
+		{
+			"ShaderMapHash": "7A4C33EE03B37F8E5B27895DDC995C8E7C891A67",
+			"Assets": [
+				"/Game/Maps/Sub_Level_01_Start_ArchPass"
+			]
+		},
+		{
+			"ShaderMapHash": "E1FC4086A4FF9B5BE55FAE7A1967F1421844B85C",
+			"Assets": [
+				"/Game/Maps/Sub_Level_01_Start_ArchPass"
+			]
+		},
+		{
+			"ShaderMapHash": "227FAC00AF8BDC1EDB26688B6B4D0646A9072312",
+			"Assets": [
+				"/Game/Maps/Level2_ArchPass"
+			]
+		},
+		{
+			"ShaderMapHash": "185B6C3802CE734AC73F4FD4618AC63B1F3DB528",
+			"Assets": [
+				"/Game/Maps/Level2_ArchPass"
+			]
+		},
+		{
+			"ShaderMapHash": "27C29AB934E79C3469F65E7B05C98157BE0D3CB0",
+			"Assets": [
+				"/Game/3D_Art/Characters/Monster_VFX/Monster_Skin_VFX/Creepy_Energy_Inst"
+			]
+		},
+		{
+			"ShaderMapHash": "836BEE64EB04C6F61489FC5E30E64C33031F95EF",
+			"Assets": [
+				"/Game/3D_Art/Characters/Sanara/Mixamo_V2/BetlPocket_mat7",
+				"/Game/3D_Art/Characters/Sanara/Mixamo_V2/Boots_mat7",
+				"/Game/3D_Art/Characters/Sanara/Mixamo_V2/Hair_mat7",
+				"/Game/3D_Art/Characters/Sanara/Mixamo_V2/Head_mat7",
+				"/Game/3D_Art/Characters/Sanara/Mixamo_V2/Mouth_eyes_mat7",
+				"/Game/3D_Art/Characters/Sanara/Mixamo_V2/Pauldron_mat7"
+			]
+		},
+		{
+			"ShaderMapHash": "C8501CE476D824535FE94EA9474E7202F06652EB",
+			"Assets": [
+				"/Game/3D_Art/Characters/Sanara/Mixamo_V2/Body_mat7"
+			]
+		},
+		{
+			"ShaderMapHash": "DD7B6150B1E81D082441F26196F4A6466594D9FD",
+			"Assets": [
+				"/Game/3D_Art/Characters/Sanara/Mixamo_V2/Cloth_mat7"
+			]
+		},
+		{
+			"ShaderMapHash": "80EAD736699876D594FC48A461BF2C6DB334F548",
+			"Assets": [
+				"/Game/3D_Art/Characters/Sanara/Mixamo_V2/Scarf_mat7"
+			]
+		},
+		{
+			"ShaderMapHash": "D3B04883C404CF41D31899AC6D1982A3B176DA4C",
+			"Assets": [
+				"/Game/3D_Art/Characters/Monster_VFX/Death_Charger/Charge_01_Death_Mat"
+			]
+		},
+		{
+			"ShaderMapHash": "B035D1B064E56AB0024ECC87798D5A9D46B12590",
+			"Assets": [
+				"/Game/3D_Art/Characters/Monster/Charge_01/Charge_01_Charge_01_Mat"
+			]
+		},
+		{
+			"ShaderMapHash": "F287200422F5ADE7EBF5A20275E246A8E1B3E694",
+			"Assets": [
+				"/Game/3D_Art/Characters/Monster_VFX/Spawn_Charger/Spawn_Charger_MAT"
+			]
+		},
+		{
+			"ShaderMapHash": "8C6FEE4792E4391B1320B97E40F74B719D6AA925",
+			"Assets": [
+				"/Game/3D_Art/Characters/Monster/Charge_01/M_Static_Charger_01_Material1"
+			]
+		},
+		{
+			"ShaderMapHash": "ED0F8BC7488B6BFF740F43604DE7DC910367ADEA",
+			"Assets": [
+				"/Game/3D_Art/Characters/Sanara_VFX/Cast_Fire_Ball/Black_Smoke_MAT"
+			]
+		},
+		{
+			"ShaderMapHash": "76826FF74E9F63865E6BAA12A9E7D8159F0A7535",
+			"Assets": [
+				"/Game/3D_Art/Characters/Monster/Ranged_01/Ranged_01_Material"
+			]
+		},
+		{
+			"ShaderMapHash": "ECEA01AE93994FD86F1B40F508328E8A19FFE7CD",
+			"Assets": [
+				"/Game/3D_Art/Characters/Monster_VFX/Spawn_Charger/Radial",
+				"/Game/3D_Art/Characters/Monster_VFX/Weakpoint_exposed/WPE_circle_MAT"
+			]
+		},
+		{
+			"ShaderMapHash": "4EF3783533A0822EEE76238B82C645CD93B3787C",
+			"Assets": [
+				"/Game/3D_Art/Characters/Monster_VFX/Spawn_Ranged/Spawn_Ranged_MAT"
+			]
+		},
+		{
+			"ShaderMapHash": "7CB7A15A34D7E83F66EA537C0582038665E11C59",
+			"Assets": [
+				"/Game/3D_Art/Characters/Monster_VFX/Death_Ranged/Ranged_01_Spawn_Material"
+			]
+		},
+		{
+			"ShaderMapHash": "526DB6E510FCA4E888AE3AFC08ADFF9D37567B2F",
+			"Assets": [
+				"/Game/3D_Art/Materials/VFX/M_MainTrail_2"
+			]
+		},
+		{
+			"ShaderMapHash": "BEC013479291CCFCED667CD400828A968BC878D8",
+			"Assets": [
+				"/Game/3D_Art/Characters/Monster_VFX/Weakpoint_Hit/Weakpoint_hit_Burst"
+			]
+		},
+		{
+			"ShaderMapHash": "DC1521B2EA61754C73FF582BDDBBE7E3B0120D80",
+			"Assets": [
+				"/Game/3D_Art/Characters/Monster_VFX/Shadow_Ball_Ranged/Cast_Fire_Ball/Shadow_ball_MAT"
+			]
+		},
+		{
+			"ShaderMapHash": "12A295DB2CE9EC94B7B1EDB76EE856E947BFF3DB",
+			"Assets": [
+				"/Game/3D_Art/Characters/Monster_VFX/Spawn_Charger/Circle_Mat"
+			]
+		},
+		{
+			"ShaderMapHash": "EDB503E362350ECC21892BD69E7F92DCCD446CD8",
+			"Assets": [
+				"/Game/3D_Art/Characters/Monster_VFX/Spawn_Charger/M_sphere"
+			]
+		},
+		{
+			"ShaderMapHash": "ED5880FA9A32E0C1332AF91B3A0C41BA118F43D8",
+			"Assets": [
+				"/Engine/EngineResources/M_StreamingPause"
+			]
+		},
+		{
+			"ShaderMapHash": "7DCE418DDCAA75C7DDB12A1C0F84491BC31F1318",
+			"Assets": [
+				"/Game/3D_Art/Characters/Sanara_VFX/Cast_Fire_Ball/Black_Glow_MAT"
+			]
+		},
+		{
+			"ShaderMapHash": "9D1286C9AC744971CCEF29CF96C7FA8D361BC2D9",
+			"Assets": [
+				"/Game/3D_Art/Characters/Sanara_VFX/Cast_Fire_Ball/Fire_Ball_MAT"
+			]
+		},
+		{
+			"ShaderMapHash": "8F248FE66F3D21A85C469FF6F4ECD60423D51DFA",
+			"Assets": [
+				"/Game/3D_Art/Characters/Sanara_VFX/Impact/StarterContent/Particles/Materials/M_Burst"
+			]
+		},
+		{
+			"ShaderMapHash": "237E51E494F39D873FE8943B0EB946EBD32B5619",
+			"Assets": [
+				"/Game/3D_Art/Characters/Sanara_VFX/Impact/StarterContent/Particles/Materials/M_explosion_subUV"
+			]
+		},
+		{
+			"ShaderMapHash": "0F15C7C33DAB407EE0806777BE6257C8C7745830",
+			"Assets": [
+				"/Game/3D_Art/Characters/Sanara_VFX/Impact/StarterContent/Particles/Materials/m_flare_01"
+			]
+		},
+		{
+			"ShaderMapHash": "3D2DBA8242C909DC62EBC29DE8F12719EE527D19",
+			"Assets": [
+				"/Game/3D_Art/Characters/Sanara_VFX/Impact/StarterContent/Particles/Materials/M_radial_ramp"
+			]
+		},
+		{
+			"ShaderMapHash": "405DBF81706B331BF73B0F899A76F828C56F2FBD",
+			"Assets": [
+				"/Game/3D_Art/Characters/Sanara_VFX/Impact/StarterContent/Particles/Materials/M_smoke_subUV"
+			]
+		},
+		{
+			"ShaderMapHash": "357348173ED96C873573DA3E33F7A7FCD0173680",
+			"Assets": [
+				"/Game/3D_Art/Materials/VFX/M_Projectile"
+			]
+		},
+		{
+			"ShaderMapHash": "F42CD61A46463FF22E0C7C5DADBB605ED4CE201A",
+			"Assets": [
+				"/Niagara/DefaultAssets/DefaultSpriteMaterial"
+			]
+		},
+		{
+			"ShaderMapHash": "61580D2F55AB1F0341E7EDB875F79A3559251E14",
+			"Assets": [
+				"/Game/3D_Art/Characters/Monster_VFX/Charger_Trail/Dots_MAT"
+			]
+		},
+		{
+			"ShaderMapHash": "A481E7B0CDDAE90B7976CA0FD3130C49DF617F6D",
+			"Assets": [
+				"/Game/3D_Art/Characters/Monster_VFX/Charger_Trail/M_Fire_SubUV"
+			]
+		},
+		{
+			"ShaderMapHash": "D12F69F78898330EB826A261BA681444651691D6",
+			"Assets": [
+				"/Game/3D_Art/Characters/Monster_VFX/Charger_Trail/M_smoke_subUV_Path"
+			]
+		},
+		{
+			"ShaderMapHash": "168645B325CA0E481E289A5A3FD6750895116C3E",
+			"Assets": [
+				"/Game/3D_Art/Characters/Monster_VFX/Charger_Trail/MainTrail_MAT"
+			]
+		},
+		{
+			"ShaderMapHash": "0005AD304325219D6029379970F761908C6FD14A",
+			"Assets": [
+				"/Game/3D_Art/Characters/Monster_VFX/Charger_Trail/Path_MAT"
+			]
+		},
+		{
+			"ShaderMapHash": "42846D3788B8912F9DEDE4F2876C34744981DB99",
+			"Assets": [
+				"/Engine/VREditor/LaserPointer/M_LaserPointer-Outer"
 			]
 		},
 		{
@@ -267,113 +600,111 @@
 			]
 		},
 		{
-			"ShaderMapHash": "A4BC21BDB19D9A2A7ACA48D6578362C6FF2248BE",
+			"ShaderMapHash": "EB4352717EBFFEB0F5EC8FCDDE793C30C942FEFC",
 			"Assets": [
-				"/Game/3D_Art/Characters/Sanara/Mesh/Scarf",
-				"/Game/3D_Art/Characters/Sanara/Mesh/Mouth",
-				"/Game/3D_Art/Characters/Sanara/Mesh/Head_low",
-				"/Game/3D_Art/Characters/Sanara/Mesh/Hair",
-				"/Game/3D_Art/Characters/Sanara/Mesh/Eye_Brow_Lashes",
-				"/Game/3D_Art/Characters/Sanara/Mesh/eyeballs",
-				"/Game/3D_Art/Characters/Sanara/Mesh/ElbowBand",
-				"/Game/3D_Art/Characters/Sanara/Mesh/Cloth",
-				"/Game/3D_Art/Characters/Sanara/Mesh/Boots",
-				"/Game/3D_Art/Characters/Sanara/Mesh/Body",
-				"/Game/3D_Art/Characters/Sanara/Mesh/Belt",
-				"/Game/3D_Art/lambert1"
+				"/Engine/EngineMaterials/DefaultTextMaterialOpaque"
 			]
 		},
 		{
-			"ShaderMapHash": "03C3A6AB8D37BB2B60C53A51399CA645CC5D01C3",
+			"ShaderMapHash": "14DAEDE5D017A5B05D9C06BE65F40ACF062368C6",
 			"Assets": [
-				"/Game/3D_Art/Characters/Sanara/Mesh/ClothBack"
+				"/Engine/EngineMaterials/BaseFlattenMaterial"
 			]
 		},
 		{
-			"ShaderMapHash": "8D5C9971654E22D92212E61C55D92EEA6D6F673A",
+			"ShaderMapHash": "1ADBAF05C72913E91D480A1107AECC6C01DAA463",
 			"Assets": [
-				"/Engine/BasicShapes/BasicShapeMaterial"
+				"/Engine/VREditor/TransformGizmo/Main"
 			]
 		},
 		{
-			"ShaderMapHash": "C380564A6414222F6A7E5F57D0F14982D5FD4F14",
+			"ShaderMapHash": "6CB5CAC2EF8223107EA2B21906291F541215A3CF",
 			"Assets": [
-				"/Engine/EngineSky/M_Sky_Panning_Clouds2"
+				"/Engine/VREditor/TransformGizmo/Xray"
 			]
 		},
 		{
-			"ShaderMapHash": "6D966E5C41CF95F7429D1D0F70508D19DCFA4D60",
+			"ShaderMapHash": "D1CD339FEE452E5B3914E87435A66220C3B5604A",
 			"Assets": [
-				"/Engine/EditorMaterials/PreviewShadowIndicatorMaterial"
+				"/Engine/VREditor/TransformGizmo/TransformGizmoMaterial"
 			]
 		},
 		{
-			"ShaderMapHash": "5532C31F2D3986334CDEFCBF4E1201FB6D4D6B00",
+			"ShaderMapHash": "441812205A984AA62871DB50A6D0F5347F9EAFC8",
 			"Assets": [
-				"/Engine/EngineDebugMaterials/DebugEditorMaterial"
+				"/Engine/VREditor/TransformGizmo/TranslucentTransformGizmoMaterial"
 			]
 		},
 		{
-			"ShaderMapHash": "A5D32F548B1EBE36C24B65D686FF51931FA0A834",
+			"ShaderMapHash": "BDB6049078966B7E0BE2307A7474CF8D1CB2FB85",
 			"Assets": [
-				"/Engine/VREditor/LaserPointer/M_LaserPointer-Outer"
+				"/Engine/EditorMaterials/Camera/CineMat"
 			]
 		},
 		{
-			"ShaderMapHash": "F4087CBFC96A1FA5CBB775D59564D738700B0DEF",
+			"ShaderMapHash": "BFD65452ED862C3580FA40A81B8DF01A43EB00FF",
 			"Assets": [
-				"/Game/3D_Art/Characters/Monster/Charge_01/lambert1",
-				"/Game/3D_Art/Characters/Monster/Ranged_01/Ranged_02"
+				"/Engine/EngineDebugMaterials/M_SimpleUnlitTranslucent"
 			]
 		},
 		{
-			"ShaderMapHash": "66CACE543954CB7B8CA20DABD4E8B2F18088D31E",
+			"ShaderMapHash": "EFA0ABFC95AAB7148BE65BAC8E4D403FA1C0640F",
 			"Assets": [
-				"/Game/Materials/Sand_Material"
+				"/Engine/EngineMaterials/DefaultMaterial"
 			]
 		},
 		{
-			"ShaderMapHash": "D6D45141B90A1A71E35CD8F6C2F34ABE3EA0DC5B",
+			"ShaderMapHash": "390CDBF1087A3BD7F6C4AC756A31D2EFF50EB629",
 			"Assets": [
-				"/Game/Materials/DefaultTextMaterialOpaque"
+				"/Engine/EngineDebugMaterials/VertexColorMaterial"
 			]
 		},
 		{
-			"ShaderMapHash": "75B43402EEA2BB1522BE5E8B59C46A68254F0B50",
+			"ShaderMapHash": "31092181B2311DF8BFEFC02342BF71F96DDB0AC4",
 			"Assets": [
-				"/Game/Materials/Blockout/Materials/M_BlockoutTools_Grid"
+				"/Engine/EngineDebugMaterials/WireframeMaterial"
 			]
 		},
 		{
-			"ShaderMapHash": "E70679D569A960CCC6D268DA326DB27BFCA59893",
+			"ShaderMapHash": "1DE5B3C3078204FBD8C2559DA141189D5E37777E",
 			"Assets": [
-				"/Engine/VREditor/LaserPointer/M_LaserPointer-Core"
+				"/Engine/EngineMaterials/RemoveSurfaceMaterial"
 			]
 		},
 		{
-			"ShaderMapHash": "9ABEFE9E2D0CE80D10BB033DE4DE301E6959E919",
+			"ShaderMapHash": "55691DB30875E073E96ED8309D594252A7C2E2A9",
 			"Assets": [
-				"/Engine/EngineResources/M_StreamingPause"
+				"/Engine/EngineDebugMaterials/M_VolumeRenderSphereTracePP"
 			]
 		},
 		{
-			"ShaderMapHash": "A71E049E1D07E0C6DF8D255FC9D343476638C114",
+			"ShaderMapHash": "39FAD6FE792ED929B27DF491E76EAE3298BBC7B3",
 			"Assets": [
-				"/Game/Maps/Sub_Level_01_Start",
-				"/Game/Maps/OssiansTestLevels/OssianLevel2",
-				"/Game/Maps/OssiansTestLevels/OssianLevel3"
+				"/Substance/Templates/parent_materials/Substance_Basic_Template"
 			]
 		},
 		{
-			"ShaderMapHash": "13D38AFEE94DF184B459A1141BB5F684828B2BF8",
+			"ShaderMapHash": "F822C5A4ADC1B264128B6BA1D6FD185A58630429",
 			"Assets": [
-				"/Game/3D_Art/Materials/Substance/Secondtest/Rocky/FloorTiles4x4"
+				"/Engine/EngineDebugMaterials/DebugMeshMaterial"
 			]
 		},
 		{
-			"ShaderMapHash": "97225365049B312779A26182345F09A59CF9D5A7",
+			"ShaderMapHash": "C4359193E47C063A73C0B6249DA498374AA7DCFA",
 			"Assets": [
-				"/Game/3D_Art/Materials/Substance/Secondtest/Rocky/LandscapeMaterials/StylizedDesert"
+				"/Engine/EngineMaterials/EmissiveMeshMaterial"
+			]
+		},
+		{
+			"ShaderMapHash": "693F5D8441932DCA3C010659E10D80AA4CFED6FC",
+			"Assets": [
+				"/Engine/EngineMaterials/M_InvalidLightmapSettings"
+			]
+		},
+		{
+			"ShaderMapHash": "78613262B0A1158726BABB15DD0E1E805B572A21",
+			"Assets": [
+				"/Engine/EngineMaterials/PhAT_JointLimitMaterial"
 			]
 		}
 	]

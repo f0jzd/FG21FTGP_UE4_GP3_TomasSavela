@@ -22,10 +22,9 @@ struct FVector;
 	DECLARE_FUNCTION(execIsGrounded); \
 	DECLARE_FUNCTION(execExecuteMovement); \
 	DECLARE_FUNCTION(execCalculateAccelerationDeceleration); \
-	DECLARE_FUNCTION(execGetDirectionFromInput); \
+	DECLARE_FUNCTION(execCalculateInput); \
 	DECLARE_FUNCTION(execUpdateCurveTimers); \
 	DECLARE_FUNCTION(execCheckInputs); \
-	DECLARE_FUNCTION(execPlayerStopCheck); \
 	DECLARE_FUNCTION(execMove);
 
 
@@ -36,10 +35,9 @@ struct FVector;
 	DECLARE_FUNCTION(execIsGrounded); \
 	DECLARE_FUNCTION(execExecuteMovement); \
 	DECLARE_FUNCTION(execCalculateAccelerationDeceleration); \
-	DECLARE_FUNCTION(execGetDirectionFromInput); \
+	DECLARE_FUNCTION(execCalculateInput); \
 	DECLARE_FUNCTION(execUpdateCurveTimers); \
 	DECLARE_FUNCTION(execCheckInputs); \
-	DECLARE_FUNCTION(execPlayerStopCheck); \
 	DECLARE_FUNCTION(execMove);
 
 

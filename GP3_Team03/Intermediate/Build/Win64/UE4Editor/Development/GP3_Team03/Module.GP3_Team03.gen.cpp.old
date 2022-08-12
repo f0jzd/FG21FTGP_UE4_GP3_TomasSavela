@@ -24,8 +24,6 @@
 #include "C:/Users/tomas.savela/Perforce/FG21FTGP_UE4_GP3_TomasSavela/GP3_Team03/Intermediate/Build/Win64/UE4Editor/Inc/GP3_Team03/GP3PlayerCameraComponent.gen.cpp"
 #include "C:/Users/tomas.savela/Perforce/FG21FTGP_UE4_GP3_TomasSavela/GP3_Team03/Intermediate/Build/Win64/UE4Editor/Inc/GP3_Team03/GP3PlayerDashTrail.gen.cpp"
 #include "C:/Users/tomas.savela/Perforce/FG21FTGP_UE4_GP3_TomasSavela/GP3_Team03/Intermediate/Build/Win64/UE4Editor/Inc/GP3_Team03/GP3PlayerHealthWidget.gen.cpp"
-#include "C:/Users/tomas.savela/Perforce/FG21FTGP_UE4_GP3_TomasSavela/GP3_Team03/Intermediate/Build/Win64/UE4Editor/Inc/GP3_Team03/GP3PlayerPawn.gen.cpp"
-#include "C:/Users/tomas.savela/Perforce/FG21FTGP_UE4_GP3_TomasSavela/GP3_Team03/Intermediate/Build/Win64/UE4Editor/Inc/GP3_Team03/GP3PlayerSpringArmComponent.gen.cpp"
 #include "C:/Users/tomas.savela/Perforce/FG21FTGP_UE4_GP3_TomasSavela/GP3_Team03/Intermediate/Build/Win64/UE4Editor/Inc/GP3_Team03/GP3ReloadWidget.gen.cpp"
 #include "C:/Users/tomas.savela/Perforce/FG21FTGP_UE4_GP3_TomasSavela/GP3_Team03/Intermediate/Build/Win64/UE4Editor/Inc/GP3_Team03/GP3SettingsSaveGame.gen.cpp"
 #include "C:/Users/tomas.savela/Perforce/FG21FTGP_UE4_GP3_TomasSavela/GP3_Team03/Intermediate/Build/Win64/UE4Editor/Inc/GP3_Team03/GP3SettingsWidget.gen.cpp"

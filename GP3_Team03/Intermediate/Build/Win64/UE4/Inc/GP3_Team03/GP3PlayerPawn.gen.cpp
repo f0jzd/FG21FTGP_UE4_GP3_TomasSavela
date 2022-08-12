@@ -35,6 +35,8 @@ void EmptyLinkFunctionForGeneratedCodeGP3PlayerPawn() {}
 	COREUOBJECT_API UClass* Z_Construct_UClass_UClass();
 	GP3_TEAM03_API UClass* Z_Construct_UClass_ASunShaftProjectile_NoRegister();
 	GP3_TEAM03_API UClass* Z_Construct_UClass_AGP3_ChargeTrail_NoRegister();
+	ENGINE_API UClass* Z_Construct_UClass_APlayerController_NoRegister();
+	ENGINE_API UClass* Z_Construct_UClass_UAnimSequence_NoRegister();
 // End Cross Module References
 	struct Z_Construct_UDelegateFunction_AGP3PlayerPawn_TookDamageEvent__DelegateSignature_Statics
 	{
@@ -79,6 +81,13 @@ void EmptyLinkFunctionForGeneratedCodeGP3PlayerPawn() {}
 		P_THIS->OnTakeDamage(Z_Param_OverlappedComp,Z_Param_OtherActor,Z_Param_OtherComp,Z_Param_OtherBodyIndex,Z_Param_bFromSweep,Z_Param_Out_SweepResult);
 		P_NATIVE_END;
 	}
+	DEFINE_FUNCTION(AGP3PlayerPawn::execResetDeathCounter)
+	{
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		P_THIS->ResetDeathCounter();
+		P_NATIVE_END;
+	}
 	DEFINE_FUNCTION(AGP3PlayerPawn::execPlayerDie)
 	{
 		P_FINISH;
@@ -113,15 +122,40 @@ void EmptyLinkFunctionForGeneratedCodeGP3PlayerPawn() {}
 	{
 		ProcessEvent(FindFunctionChecked(NAME_AGP3PlayerPawn_OnDashStart),NULL);
 	}
+	static FName NAME_AGP3PlayerPawn_OnDeath = FName(TEXT("OnDeath"));
+	void AGP3PlayerPawn::OnDeath()
+	{
+		ProcessEvent(FindFunctionChecked(NAME_AGP3PlayerPawn_OnDeath),NULL);
+	}
 	static FName NAME_AGP3PlayerPawn_OnForwardInput = FName(TEXT("OnForwardInput"));
 	void AGP3PlayerPawn::OnForwardInput()
 	{
 		ProcessEvent(FindFunctionChecked(NAME_AGP3PlayerPawn_OnForwardInput),NULL);
 	}
+	static FName NAME_AGP3PlayerPawn_OnMoveFinish = FName(TEXT("OnMoveFinish"));
+	void AGP3PlayerPawn::OnMoveFinish()
+	{
+		ProcessEvent(FindFunctionChecked(NAME_AGP3PlayerPawn_OnMoveFinish),NULL);
+	}
+	static FName NAME_AGP3PlayerPawn_OnMoveStart = FName(TEXT("OnMoveStart"));
+	void AGP3PlayerPawn::OnMoveStart()
+	{
+		ProcessEvent(FindFunctionChecked(NAME_AGP3PlayerPawn_OnMoveStart),NULL);
+	}
 	static FName NAME_AGP3PlayerPawn_OnRightInput = FName(TEXT("OnRightInput"));
 	void AGP3PlayerPawn::OnRightInput()
 	{
 		ProcessEvent(FindFunctionChecked(NAME_AGP3PlayerPawn_OnRightInput),NULL);
+	}
+	static FName NAME_AGP3PlayerPawn_OnShoot = FName(TEXT("OnShoot"));
+	void AGP3PlayerPawn::OnShoot()
+	{
+		ProcessEvent(FindFunctionChecked(NAME_AGP3PlayerPawn_OnShoot),NULL);
+	}
+	static FName NAME_AGP3PlayerPawn_OnTookDamage = FName(TEXT("OnTookDamage"));
+	void AGP3PlayerPawn::OnTookDamage()
+	{
+		ProcessEvent(FindFunctionChecked(NAME_AGP3PlayerPawn_OnTookDamage),NULL);
 	}
 	void AGP3PlayerPawn::StaticRegisterNativesAGP3PlayerPawn()
 	{
@@ -131,6 +165,7 @@ void EmptyLinkFunctionForGeneratedCodeGP3PlayerPawn() {}
 			{ "OnTakeDamage", &AGP3PlayerPawn::execOnTakeDamage },
 			{ "PlayerDie", &AGP3PlayerPawn::execPlayerDie },
 			{ "RemovePlayerHealth", &AGP3PlayerPawn::execRemovePlayerHealth },
+			{ "ResetDeathCounter", &AGP3PlayerPawn::execResetDeathCounter },
 			{ "TakeExplosiveDamage", &AGP3PlayerPawn::execTakeExplosiveDamage },
 		};
 		FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, UE_ARRAY_COUNT(Funcs));
@@ -212,6 +247,28 @@ void EmptyLinkFunctionForGeneratedCodeGP3PlayerPawn() {}
 		}
 		return ReturnFunction;
 	}
+	struct Z_Construct_UFunction_AGP3PlayerPawn_OnDeath_Statics
+	{
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UE4CodeGen_Private::FFunctionParams FuncParams;
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_AGP3PlayerPawn_OnDeath_Statics::Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "Public/Player/GP3PlayerPawn.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AGP3PlayerPawn_OnDeath_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AGP3PlayerPawn, nullptr, "OnDeath", nullptr, nullptr, 0, nullptr, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x08020800, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_AGP3PlayerPawn_OnDeath_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_AGP3PlayerPawn_OnDeath_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_AGP3PlayerPawn_OnDeath()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AGP3PlayerPawn_OnDeath_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
 	struct Z_Construct_UFunction_AGP3PlayerPawn_OnForwardInput_Statics
 	{
 #if WITH_METADATA
@@ -234,6 +291,50 @@ void EmptyLinkFunctionForGeneratedCodeGP3PlayerPawn() {}
 		}
 		return ReturnFunction;
 	}
+	struct Z_Construct_UFunction_AGP3PlayerPawn_OnMoveFinish_Statics
+	{
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UE4CodeGen_Private::FFunctionParams FuncParams;
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_AGP3PlayerPawn_OnMoveFinish_Statics::Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "Public/Player/GP3PlayerPawn.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AGP3PlayerPawn_OnMoveFinish_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AGP3PlayerPawn, nullptr, "OnMoveFinish", nullptr, nullptr, 0, nullptr, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x08020800, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_AGP3PlayerPawn_OnMoveFinish_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_AGP3PlayerPawn_OnMoveFinish_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_AGP3PlayerPawn_OnMoveFinish()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AGP3PlayerPawn_OnMoveFinish_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
+	struct Z_Construct_UFunction_AGP3PlayerPawn_OnMoveStart_Statics
+	{
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UE4CodeGen_Private::FFunctionParams FuncParams;
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_AGP3PlayerPawn_OnMoveStart_Statics::Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "Public/Player/GP3PlayerPawn.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AGP3PlayerPawn_OnMoveStart_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AGP3PlayerPawn, nullptr, "OnMoveStart", nullptr, nullptr, 0, nullptr, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x08020800, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_AGP3PlayerPawn_OnMoveStart_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_AGP3PlayerPawn_OnMoveStart_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_AGP3PlayerPawn_OnMoveStart()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AGP3PlayerPawn_OnMoveStart_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
 	struct Z_Construct_UFunction_AGP3PlayerPawn_OnRightInput_Statics
 	{
 #if WITH_METADATA
@@ -253,6 +354,28 @@ void EmptyLinkFunctionForGeneratedCodeGP3PlayerPawn() {}
 		if (!ReturnFunction)
 		{
 			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AGP3PlayerPawn_OnRightInput_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
+	struct Z_Construct_UFunction_AGP3PlayerPawn_OnShoot_Statics
+	{
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UE4CodeGen_Private::FFunctionParams FuncParams;
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_AGP3PlayerPawn_OnShoot_Statics::Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "Public/Player/GP3PlayerPawn.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AGP3PlayerPawn_OnShoot_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AGP3PlayerPawn, nullptr, "OnShoot", nullptr, nullptr, 0, nullptr, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x08020800, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_AGP3PlayerPawn_OnShoot_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_AGP3PlayerPawn_OnShoot_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_AGP3PlayerPawn_OnShoot()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AGP3PlayerPawn_OnShoot_Statics::FuncParams);
 		}
 		return ReturnFunction;
 	}
@@ -337,6 +460,28 @@ void EmptyLinkFunctionForGeneratedCodeGP3PlayerPawn() {}
 		}
 		return ReturnFunction;
 	}
+	struct Z_Construct_UFunction_AGP3PlayerPawn_OnTookDamage_Statics
+	{
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UE4CodeGen_Private::FFunctionParams FuncParams;
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_AGP3PlayerPawn_OnTookDamage_Statics::Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "Public/Player/GP3PlayerPawn.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AGP3PlayerPawn_OnTookDamage_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AGP3PlayerPawn, nullptr, "OnTookDamage", nullptr, nullptr, 0, nullptr, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x08020800, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_AGP3PlayerPawn_OnTookDamage_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_AGP3PlayerPawn_OnTookDamage_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_AGP3PlayerPawn_OnTookDamage()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AGP3PlayerPawn_OnTookDamage_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
 	struct Z_Construct_UFunction_AGP3PlayerPawn_PlayerDie_Statics
 	{
 #if WITH_METADATA
@@ -399,6 +544,28 @@ void EmptyLinkFunctionForGeneratedCodeGP3PlayerPawn() {}
 		if (!ReturnFunction)
 		{
 			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AGP3PlayerPawn_RemovePlayerHealth_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
+	struct Z_Construct_UFunction_AGP3PlayerPawn_ResetDeathCounter_Statics
+	{
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UE4CodeGen_Private::FFunctionParams FuncParams;
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_AGP3PlayerPawn_ResetDeathCounter_Statics::Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "Public/Player/GP3PlayerPawn.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AGP3PlayerPawn_ResetDeathCounter_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AGP3PlayerPawn, nullptr, "ResetDeathCounter", nullptr, nullptr, 0, nullptr, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x44020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_AGP3PlayerPawn_ResetDeathCounter_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_AGP3PlayerPawn_ResetDeathCounter_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_AGP3PlayerPawn_ResetDeathCounter()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AGP3PlayerPawn_ResetDeathCounter_Statics::FuncParams);
 		}
 		return ReturnFunction;
 	}
@@ -486,25 +653,9 @@ void EmptyLinkFunctionForGeneratedCodeGP3PlayerPawn() {}
 #endif
 		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_SplinePath;
 #if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_RightInputValue_MetaData[];
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_DefaultTrailDamageTimeDelay_MetaData[];
 #endif
-		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_RightInputValue;
-#if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_ForwardInputValue_MetaData[];
-#endif
-		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_ForwardInputValue;
-#if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_HorizontalMouseSensitivity_MetaData[];
-#endif
-		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_HorizontalMouseSensitivity;
-#if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_VerticalMouseSensitivity_MetaData[];
-#endif
-		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_VerticalMouseSensitivity;
-#if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_TookDamage_MetaData[];
-#endif
-		static const UE4CodeGen_Private::FMulticastDelegatePropertyParams NewProp_TookDamage;
+		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_DefaultTrailDamageTimeDelay;
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_PlayerHealth_MetaData[];
 #endif
@@ -514,23 +665,13 @@ void EmptyLinkFunctionForGeneratedCodeGP3PlayerPawn() {}
 #endif
 		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_PlayerMaxHealth;
 #if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_bDebugPlayerCantDie_MetaData[];
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_RightInputValue_MetaData[];
 #endif
-		static void NewProp_bDebugPlayerCantDie_SetBit(void* Obj);
-		static const UE4CodeGen_Private::FBoolPropertyParams NewProp_bDebugPlayerCantDie;
+		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_RightInputValue;
 #if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_GameInstance_MetaData[];
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_ForwardInputValue_MetaData[];
 #endif
-		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_GameInstance;
-#if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_MovementStack_MetaData[];
-#endif
-		static const UE4CodeGen_Private::FUnsizedIntPropertyParams NewProp_MovementStack;
-#if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_bIsInvincible_MetaData[];
-#endif
-		static void NewProp_bIsInvincible_SetBit(void* Obj);
-		static const UE4CodeGen_Private::FBoolPropertyParams NewProp_bIsInvincible;
+		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_ForwardInputValue;
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_LaunchVelocity_MetaData[];
 #endif
@@ -544,21 +685,62 @@ void EmptyLinkFunctionForGeneratedCodeGP3PlayerPawn() {}
 #endif
 		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_MaxLaunchVelocity;
 #if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_Projectile_MetaData[];
-#endif
-		static const UE4CodeGen_Private::FClassPropertyParams NewProp_Projectile;
-#if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_ProjectileRadius_MetaData[];
 #endif
 		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_ProjectileRadius;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_bDebugPlayerCantDie_MetaData[];
+#endif
+		static void NewProp_bDebugPlayerCantDie_SetBit(void* Obj);
+		static const UE4CodeGen_Private::FBoolPropertyParams NewProp_bDebugPlayerCantDie;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_bIsInvincible_MetaData[];
+#endif
+		static void NewProp_bIsInvincible_SetBit(void* Obj);
+		static const UE4CodeGen_Private::FBoolPropertyParams NewProp_bIsInvincible;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_bIsDashing_MetaData[];
+#endif
+		static void NewProp_bIsDashing_SetBit(void* Obj);
+		static const UE4CodeGen_Private::FBoolPropertyParams NewProp_bIsDashing;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_bIsUsingGamepad_MetaData[];
+#endif
+		static void NewProp_bIsUsingGamepad_SetBit(void* Obj);
+		static const UE4CodeGen_Private::FBoolPropertyParams NewProp_bIsUsingGamepad;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_TookDamage_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FMulticastDelegatePropertyParams NewProp_TookDamage;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_GameInstance_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_GameInstance;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_Projectile_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FClassPropertyParams NewProp_Projectile;
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_ChargeTrailRef_MetaData[];
 #endif
 		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_ChargeTrailRef;
 #if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_DefaultTrailDamageTimeDelay_MetaData[];
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_PlayerController_MetaData[];
 #endif
-		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_DefaultTrailDamageTimeDelay;
+		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_PlayerController;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_DeathDelay_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_DeathDelay;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_bPlayerAlive_MetaData[];
+#endif
+		static void NewProp_bPlayerAlive_SetBit(void* Obj);
+		static const UE4CodeGen_Private::FBoolPropertyParams NewProp_bPlayerAlive;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_DeathAnimation_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_DeathAnimation;
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
 		static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
 		static const UE4CodeGen_Private::FClassParams ClassParams;
@@ -571,11 +753,17 @@ void EmptyLinkFunctionForGeneratedCodeGP3PlayerPawn() {}
 		{ &Z_Construct_UFunction_AGP3PlayerPawn_AddPlayerHealth, "AddPlayerHealth" }, // 2434429276
 		{ &Z_Construct_UFunction_AGP3PlayerPawn_OnDashFinish, "OnDashFinish" }, // 3440252721
 		{ &Z_Construct_UFunction_AGP3PlayerPawn_OnDashStart, "OnDashStart" }, // 2666297814
+		{ &Z_Construct_UFunction_AGP3PlayerPawn_OnDeath, "OnDeath" }, // 345460625
 		{ &Z_Construct_UFunction_AGP3PlayerPawn_OnForwardInput, "OnForwardInput" }, // 3781622372
+		{ &Z_Construct_UFunction_AGP3PlayerPawn_OnMoveFinish, "OnMoveFinish" }, // 2490665999
+		{ &Z_Construct_UFunction_AGP3PlayerPawn_OnMoveStart, "OnMoveStart" }, // 2040627938
 		{ &Z_Construct_UFunction_AGP3PlayerPawn_OnRightInput, "OnRightInput" }, // 1693248411
+		{ &Z_Construct_UFunction_AGP3PlayerPawn_OnShoot, "OnShoot" }, // 1001439153
 		{ &Z_Construct_UFunction_AGP3PlayerPawn_OnTakeDamage, "OnTakeDamage" }, // 3395765627
+		{ &Z_Construct_UFunction_AGP3PlayerPawn_OnTookDamage, "OnTookDamage" }, // 2057243548
 		{ &Z_Construct_UFunction_AGP3PlayerPawn_PlayerDie, "PlayerDie" }, // 2480501349
 		{ &Z_Construct_UFunction_AGP3PlayerPawn_RemovePlayerHealth, "RemovePlayerHealth" }, // 3591378610
+		{ &Z_Construct_UFunction_AGP3PlayerPawn_ResetDeathCounter, "ResetDeathCounter" }, // 2086647314
 		{ &Z_Construct_UFunction_AGP3PlayerPawn_TakeExplosiveDamage, "TakeExplosiveDamage" }, // 4042139414
 		{ &Z_Construct_UDelegateFunction_AGP3PlayerPawn_TookDamageEvent__DelegateSignature, "TookDamageEvent__DelegateSignature" }, // 3465460693
 	};
@@ -641,7 +829,7 @@ void EmptyLinkFunctionForGeneratedCodeGP3PlayerPawn() {}
 		{ "ModuleRelativePath", "Public/Player/GP3PlayerPawn.h" },
 	};
 #endif
-	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AGP3PlayerPawn_Statics::NewProp_CapsuleComp = { "CapsuleComp", nullptr, (EPropertyFlags)0x0010000000090009, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AGP3PlayerPawn, CapsuleComp), Z_Construct_UClass_UCapsuleComponent_NoRegister, METADATA_PARAMS(Z_Construct_UClass_AGP3PlayerPawn_Statics::NewProp_CapsuleComp_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AGP3PlayerPawn_Statics::NewProp_CapsuleComp_MetaData)) };
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AGP3PlayerPawn_Statics::NewProp_CapsuleComp = { "CapsuleComp", nullptr, (EPropertyFlags)0x001000000009001d, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AGP3PlayerPawn, CapsuleComp), Z_Construct_UClass_UCapsuleComponent_NoRegister, METADATA_PARAMS(Z_Construct_UClass_AGP3PlayerPawn_Statics::NewProp_CapsuleComp_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AGP3PlayerPawn_Statics::NewProp_CapsuleComp_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AGP3PlayerPawn_Statics::NewProp_SpringArmComp_MetaData[] = {
 		{ "Category", "Built in components" },
@@ -668,39 +856,12 @@ void EmptyLinkFunctionForGeneratedCodeGP3PlayerPawn() {}
 #endif
 	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AGP3PlayerPawn_Statics::NewProp_SplinePath = { "SplinePath", nullptr, (EPropertyFlags)0x00100000000b000d, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AGP3PlayerPawn, SplinePath), Z_Construct_UClass_USplineComponent_NoRegister, METADATA_PARAMS(Z_Construct_UClass_AGP3PlayerPawn_Statics::NewProp_SplinePath_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AGP3PlayerPawn_Statics::NewProp_SplinePath_MetaData)) };
 #if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AGP3PlayerPawn_Statics::NewProp_RightInputValue_MetaData[] = {
-		{ "Category", "GP3PlayerPawn" },
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AGP3PlayerPawn_Statics::NewProp_DefaultTrailDamageTimeDelay_MetaData[] = {
+		{ "Category", "Player Values" },
 		{ "ModuleRelativePath", "Public/Player/GP3PlayerPawn.h" },
 	};
 #endif
-	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UClass_AGP3PlayerPawn_Statics::NewProp_RightInputValue = { "RightInputValue", nullptr, (EPropertyFlags)0x0010000000000004, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AGP3PlayerPawn, RightInputValue), METADATA_PARAMS(Z_Construct_UClass_AGP3PlayerPawn_Statics::NewProp_RightInputValue_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AGP3PlayerPawn_Statics::NewProp_RightInputValue_MetaData)) };
-#if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AGP3PlayerPawn_Statics::NewProp_ForwardInputValue_MetaData[] = {
-		{ "Category", "GP3PlayerPawn" },
-		{ "ModuleRelativePath", "Public/Player/GP3PlayerPawn.h" },
-	};
-#endif
-	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UClass_AGP3PlayerPawn_Statics::NewProp_ForwardInputValue = { "ForwardInputValue", nullptr, (EPropertyFlags)0x0010000000000004, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AGP3PlayerPawn, ForwardInputValue), METADATA_PARAMS(Z_Construct_UClass_AGP3PlayerPawn_Statics::NewProp_ForwardInputValue_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AGP3PlayerPawn_Statics::NewProp_ForwardInputValue_MetaData)) };
-#if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AGP3PlayerPawn_Statics::NewProp_HorizontalMouseSensitivity_MetaData[] = {
-		{ "Category", "GP3PlayerPawn" },
-		{ "ModuleRelativePath", "Public/Player/GP3PlayerPawn.h" },
-	};
-#endif
-	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UClass_AGP3PlayerPawn_Statics::NewProp_HorizontalMouseSensitivity = { "HorizontalMouseSensitivity", nullptr, (EPropertyFlags)0x0010000000000004, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AGP3PlayerPawn, HorizontalMouseSensitivity), METADATA_PARAMS(Z_Construct_UClass_AGP3PlayerPawn_Statics::NewProp_HorizontalMouseSensitivity_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AGP3PlayerPawn_Statics::NewProp_HorizontalMouseSensitivity_MetaData)) };
-#if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AGP3PlayerPawn_Statics::NewProp_VerticalMouseSensitivity_MetaData[] = {
-		{ "Category", "GP3PlayerPawn" },
-		{ "ModuleRelativePath", "Public/Player/GP3PlayerPawn.h" },
-	};
-#endif
-	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UClass_AGP3PlayerPawn_Statics::NewProp_VerticalMouseSensitivity = { "VerticalMouseSensitivity", nullptr, (EPropertyFlags)0x0010000000010015, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AGP3PlayerPawn, VerticalMouseSensitivity), METADATA_PARAMS(Z_Construct_UClass_AGP3PlayerPawn_Statics::NewProp_VerticalMouseSensitivity_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AGP3PlayerPawn_Statics::NewProp_VerticalMouseSensitivity_MetaData)) };
-#if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AGP3PlayerPawn_Statics::NewProp_TookDamage_MetaData[] = {
-		{ "ModuleRelativePath", "Public/Player/GP3PlayerPawn.h" },
-	};
-#endif
-	const UE4CodeGen_Private::FMulticastDelegatePropertyParams Z_Construct_UClass_AGP3PlayerPawn_Statics::NewProp_TookDamage = { "TookDamage", nullptr, (EPropertyFlags)0x0010100010080000, UE4CodeGen_Private::EPropertyGenFlags::InlineMulticastDelegate, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AGP3PlayerPawn, TookDamage), Z_Construct_UDelegateFunction_AGP3PlayerPawn_TookDamageEvent__DelegateSignature, METADATA_PARAMS(Z_Construct_UClass_AGP3PlayerPawn_Statics::NewProp_TookDamage_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AGP3PlayerPawn_Statics::NewProp_TookDamage_MetaData)) };
+	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UClass_AGP3PlayerPawn_Statics::NewProp_DefaultTrailDamageTimeDelay = { "DefaultTrailDamageTimeDelay", nullptr, (EPropertyFlags)0x0010000000000005, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AGP3PlayerPawn, DefaultTrailDamageTimeDelay), METADATA_PARAMS(Z_Construct_UClass_AGP3PlayerPawn_Statics::NewProp_DefaultTrailDamageTimeDelay_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AGP3PlayerPawn_Statics::NewProp_DefaultTrailDamageTimeDelay_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AGP3PlayerPawn_Statics::NewProp_PlayerHealth_MetaData[] = {
 		{ "Category", "Player Values" },
@@ -716,6 +877,44 @@ void EmptyLinkFunctionForGeneratedCodeGP3PlayerPawn() {}
 #endif
 	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UClass_AGP3PlayerPawn_Statics::NewProp_PlayerMaxHealth = { "PlayerMaxHealth", nullptr, (EPropertyFlags)0x0010000000010005, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AGP3PlayerPawn, PlayerMaxHealth), METADATA_PARAMS(Z_Construct_UClass_AGP3PlayerPawn_Statics::NewProp_PlayerMaxHealth_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AGP3PlayerPawn_Statics::NewProp_PlayerMaxHealth_MetaData)) };
 #if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AGP3PlayerPawn_Statics::NewProp_RightInputValue_MetaData[] = {
+		{ "Category", "GP3PlayerPawn" },
+		{ "ModuleRelativePath", "Public/Player/GP3PlayerPawn.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UClass_AGP3PlayerPawn_Statics::NewProp_RightInputValue = { "RightInputValue", nullptr, (EPropertyFlags)0x0010000000000004, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AGP3PlayerPawn, RightInputValue), METADATA_PARAMS(Z_Construct_UClass_AGP3PlayerPawn_Statics::NewProp_RightInputValue_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AGP3PlayerPawn_Statics::NewProp_RightInputValue_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AGP3PlayerPawn_Statics::NewProp_ForwardInputValue_MetaData[] = {
+		{ "Category", "GP3PlayerPawn" },
+		{ "ModuleRelativePath", "Public/Player/GP3PlayerPawn.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UClass_AGP3PlayerPawn_Statics::NewProp_ForwardInputValue = { "ForwardInputValue", nullptr, (EPropertyFlags)0x0010000000000004, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AGP3PlayerPawn, ForwardInputValue), METADATA_PARAMS(Z_Construct_UClass_AGP3PlayerPawn_Statics::NewProp_ForwardInputValue_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AGP3PlayerPawn_Statics::NewProp_ForwardInputValue_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AGP3PlayerPawn_Statics::NewProp_LaunchVelocity_MetaData[] = {
+		{ "ModuleRelativePath", "Public/Player/GP3PlayerPawn.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UClass_AGP3PlayerPawn_Statics::NewProp_LaunchVelocity = { "LaunchVelocity", nullptr, (EPropertyFlags)0x0010000000000000, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AGP3PlayerPawn, LaunchVelocity), METADATA_PARAMS(Z_Construct_UClass_AGP3PlayerPawn_Statics::NewProp_LaunchVelocity_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AGP3PlayerPawn_Statics::NewProp_LaunchVelocity_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AGP3PlayerPawn_Statics::NewProp_MinLaunchVelocity_MetaData[] = {
+		{ "ModuleRelativePath", "Public/Player/GP3PlayerPawn.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UClass_AGP3PlayerPawn_Statics::NewProp_MinLaunchVelocity = { "MinLaunchVelocity", nullptr, (EPropertyFlags)0x0010000000000000, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AGP3PlayerPawn, MinLaunchVelocity), METADATA_PARAMS(Z_Construct_UClass_AGP3PlayerPawn_Statics::NewProp_MinLaunchVelocity_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AGP3PlayerPawn_Statics::NewProp_MinLaunchVelocity_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AGP3PlayerPawn_Statics::NewProp_MaxLaunchVelocity_MetaData[] = {
+		{ "ModuleRelativePath", "Public/Player/GP3PlayerPawn.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UClass_AGP3PlayerPawn_Statics::NewProp_MaxLaunchVelocity = { "MaxLaunchVelocity", nullptr, (EPropertyFlags)0x0010000000000000, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AGP3PlayerPawn, MaxLaunchVelocity), METADATA_PARAMS(Z_Construct_UClass_AGP3PlayerPawn_Statics::NewProp_MaxLaunchVelocity_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AGP3PlayerPawn_Statics::NewProp_MaxLaunchVelocity_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AGP3PlayerPawn_Statics::NewProp_ProjectileRadius_MetaData[] = {
+		{ "ModuleRelativePath", "Public/Player/GP3PlayerPawn.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UClass_AGP3PlayerPawn_Statics::NewProp_ProjectileRadius = { "ProjectileRadius", nullptr, (EPropertyFlags)0x0010000000000000, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AGP3PlayerPawn, ProjectileRadius), METADATA_PARAMS(Z_Construct_UClass_AGP3PlayerPawn_Statics::NewProp_ProjectileRadius_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AGP3PlayerPawn_Statics::NewProp_ProjectileRadius_MetaData)) };
+#if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AGP3PlayerPawn_Statics::NewProp_bDebugPlayerCantDie_MetaData[] = {
 		{ "Category", "GP3PlayerPawn" },
 		{ "ModuleRelativePath", "Public/Player/GP3PlayerPawn.h" },
@@ -726,19 +925,6 @@ void EmptyLinkFunctionForGeneratedCodeGP3PlayerPawn() {}
 		((AGP3PlayerPawn*)Obj)->bDebugPlayerCantDie = 1;
 	}
 	const UE4CodeGen_Private::FBoolPropertyParams Z_Construct_UClass_AGP3PlayerPawn_Statics::NewProp_bDebugPlayerCantDie = { "bDebugPlayerCantDie", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Bool | UE4CodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, sizeof(bool), sizeof(AGP3PlayerPawn), &Z_Construct_UClass_AGP3PlayerPawn_Statics::NewProp_bDebugPlayerCantDie_SetBit, METADATA_PARAMS(Z_Construct_UClass_AGP3PlayerPawn_Statics::NewProp_bDebugPlayerCantDie_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AGP3PlayerPawn_Statics::NewProp_bDebugPlayerCantDie_MetaData)) };
-#if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AGP3PlayerPawn_Statics::NewProp_GameInstance_MetaData[] = {
-		{ "ModuleRelativePath", "Public/Player/GP3PlayerPawn.h" },
-	};
-#endif
-	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AGP3PlayerPawn_Statics::NewProp_GameInstance = { "GameInstance", nullptr, (EPropertyFlags)0x0010000000000000, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AGP3PlayerPawn, GameInstance), Z_Construct_UClass_UGP3GameInstance_NoRegister, METADATA_PARAMS(Z_Construct_UClass_AGP3PlayerPawn_Statics::NewProp_GameInstance_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AGP3PlayerPawn_Statics::NewProp_GameInstance_MetaData)) };
-#if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AGP3PlayerPawn_Statics::NewProp_MovementStack_MetaData[] = {
-		{ "Category", "GP3PlayerPawn" },
-		{ "ModuleRelativePath", "Public/Player/GP3PlayerPawn.h" },
-	};
-#endif
-	const UE4CodeGen_Private::FUnsizedIntPropertyParams Z_Construct_UClass_AGP3PlayerPawn_Statics::NewProp_MovementStack = { "MovementStack", nullptr, (EPropertyFlags)0x0010000000020005, UE4CodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AGP3PlayerPawn, MovementStack), METADATA_PARAMS(Z_Construct_UClass_AGP3PlayerPawn_Statics::NewProp_MovementStack_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AGP3PlayerPawn_Statics::NewProp_MovementStack_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AGP3PlayerPawn_Statics::NewProp_bIsInvincible_MetaData[] = {
 		{ "Category", "GP3PlayerPawn" },
@@ -751,41 +937,47 @@ void EmptyLinkFunctionForGeneratedCodeGP3PlayerPawn() {}
 	}
 	const UE4CodeGen_Private::FBoolPropertyParams Z_Construct_UClass_AGP3PlayerPawn_Statics::NewProp_bIsInvincible = { "bIsInvincible", nullptr, (EPropertyFlags)0x0010000000020001, UE4CodeGen_Private::EPropertyGenFlags::Bool | UE4CodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, sizeof(bool), sizeof(AGP3PlayerPawn), &Z_Construct_UClass_AGP3PlayerPawn_Statics::NewProp_bIsInvincible_SetBit, METADATA_PARAMS(Z_Construct_UClass_AGP3PlayerPawn_Statics::NewProp_bIsInvincible_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AGP3PlayerPawn_Statics::NewProp_bIsInvincible_MetaData)) };
 #if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AGP3PlayerPawn_Statics::NewProp_LaunchVelocity_MetaData[] = {
-		{ "Comment", "//\n" },
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AGP3PlayerPawn_Statics::NewProp_bIsDashing_MetaData[] = {
+		{ "Category", "GP3PlayerPawn" },
 		{ "ModuleRelativePath", "Public/Player/GP3PlayerPawn.h" },
 	};
 #endif
-	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UClass_AGP3PlayerPawn_Statics::NewProp_LaunchVelocity = { "LaunchVelocity", nullptr, (EPropertyFlags)0x0010000000000000, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AGP3PlayerPawn, LaunchVelocity), METADATA_PARAMS(Z_Construct_UClass_AGP3PlayerPawn_Statics::NewProp_LaunchVelocity_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AGP3PlayerPawn_Statics::NewProp_LaunchVelocity_MetaData)) };
+	void Z_Construct_UClass_AGP3PlayerPawn_Statics::NewProp_bIsDashing_SetBit(void* Obj)
+	{
+		((AGP3PlayerPawn*)Obj)->bIsDashing = 1;
+	}
+	const UE4CodeGen_Private::FBoolPropertyParams Z_Construct_UClass_AGP3PlayerPawn_Statics::NewProp_bIsDashing = { "bIsDashing", nullptr, (EPropertyFlags)0x0010000000020001, UE4CodeGen_Private::EPropertyGenFlags::Bool | UE4CodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, sizeof(bool), sizeof(AGP3PlayerPawn), &Z_Construct_UClass_AGP3PlayerPawn_Statics::NewProp_bIsDashing_SetBit, METADATA_PARAMS(Z_Construct_UClass_AGP3PlayerPawn_Statics::NewProp_bIsDashing_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AGP3PlayerPawn_Statics::NewProp_bIsDashing_MetaData)) };
 #if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AGP3PlayerPawn_Statics::NewProp_MinLaunchVelocity_MetaData[] = {
-		{ "Comment", "//\n" },
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AGP3PlayerPawn_Statics::NewProp_bIsUsingGamepad_MetaData[] = {
+		{ "Category", "GP3PlayerPawn" },
 		{ "ModuleRelativePath", "Public/Player/GP3PlayerPawn.h" },
 	};
 #endif
-	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UClass_AGP3PlayerPawn_Statics::NewProp_MinLaunchVelocity = { "MinLaunchVelocity", nullptr, (EPropertyFlags)0x0010000000000000, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AGP3PlayerPawn, MinLaunchVelocity), METADATA_PARAMS(Z_Construct_UClass_AGP3PlayerPawn_Statics::NewProp_MinLaunchVelocity_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AGP3PlayerPawn_Statics::NewProp_MinLaunchVelocity_MetaData)) };
+	void Z_Construct_UClass_AGP3PlayerPawn_Statics::NewProp_bIsUsingGamepad_SetBit(void* Obj)
+	{
+		((AGP3PlayerPawn*)Obj)->bIsUsingGamepad = 1;
+	}
+	const UE4CodeGen_Private::FBoolPropertyParams Z_Construct_UClass_AGP3PlayerPawn_Statics::NewProp_bIsUsingGamepad = { "bIsUsingGamepad", nullptr, (EPropertyFlags)0x0010000000020005, UE4CodeGen_Private::EPropertyGenFlags::Bool | UE4CodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, sizeof(bool), sizeof(AGP3PlayerPawn), &Z_Construct_UClass_AGP3PlayerPawn_Statics::NewProp_bIsUsingGamepad_SetBit, METADATA_PARAMS(Z_Construct_UClass_AGP3PlayerPawn_Statics::NewProp_bIsUsingGamepad_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AGP3PlayerPawn_Statics::NewProp_bIsUsingGamepad_MetaData)) };
 #if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AGP3PlayerPawn_Statics::NewProp_MaxLaunchVelocity_MetaData[] = {
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AGP3PlayerPawn_Statics::NewProp_TookDamage_MetaData[] = {
 		{ "Comment", "//\n" },
 		{ "ModuleRelativePath", "Public/Player/GP3PlayerPawn.h" },
 	};
 #endif
-	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UClass_AGP3PlayerPawn_Statics::NewProp_MaxLaunchVelocity = { "MaxLaunchVelocity", nullptr, (EPropertyFlags)0x0010000000000000, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AGP3PlayerPawn, MaxLaunchVelocity), METADATA_PARAMS(Z_Construct_UClass_AGP3PlayerPawn_Statics::NewProp_MaxLaunchVelocity_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AGP3PlayerPawn_Statics::NewProp_MaxLaunchVelocity_MetaData)) };
+	const UE4CodeGen_Private::FMulticastDelegatePropertyParams Z_Construct_UClass_AGP3PlayerPawn_Statics::NewProp_TookDamage = { "TookDamage", nullptr, (EPropertyFlags)0x0010100010080000, UE4CodeGen_Private::EPropertyGenFlags::InlineMulticastDelegate, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AGP3PlayerPawn, TookDamage), Z_Construct_UDelegateFunction_AGP3PlayerPawn_TookDamageEvent__DelegateSignature, METADATA_PARAMS(Z_Construct_UClass_AGP3PlayerPawn_Statics::NewProp_TookDamage_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AGP3PlayerPawn_Statics::NewProp_TookDamage_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AGP3PlayerPawn_Statics::NewProp_GameInstance_MetaData[] = {
+		{ "ModuleRelativePath", "Public/Player/GP3PlayerPawn.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AGP3PlayerPawn_Statics::NewProp_GameInstance = { "GameInstance", nullptr, (EPropertyFlags)0x0010000000000000, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AGP3PlayerPawn, GameInstance), Z_Construct_UClass_UGP3GameInstance_NoRegister, METADATA_PARAMS(Z_Construct_UClass_AGP3PlayerPawn_Statics::NewProp_GameInstance_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AGP3PlayerPawn_Statics::NewProp_GameInstance_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AGP3PlayerPawn_Statics::NewProp_Projectile_MetaData[] = {
 		{ "Category", "GP3PlayerPawn" },
-		{ "Comment", "//\n" },
 		{ "ModuleRelativePath", "Public/Player/GP3PlayerPawn.h" },
 	};
 #endif
 	const UE4CodeGen_Private::FClassPropertyParams Z_Construct_UClass_AGP3PlayerPawn_Statics::NewProp_Projectile = { "Projectile", nullptr, (EPropertyFlags)0x0014000000000001, UE4CodeGen_Private::EPropertyGenFlags::Class, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AGP3PlayerPawn, Projectile), Z_Construct_UClass_ASunShaftProjectile_NoRegister, Z_Construct_UClass_UClass, METADATA_PARAMS(Z_Construct_UClass_AGP3PlayerPawn_Statics::NewProp_Projectile_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AGP3PlayerPawn_Statics::NewProp_Projectile_MetaData)) };
-#if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AGP3PlayerPawn_Statics::NewProp_ProjectileRadius_MetaData[] = {
-		{ "Comment", "//\n" },
-		{ "ModuleRelativePath", "Public/Player/GP3PlayerPawn.h" },
-	};
-#endif
-	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UClass_AGP3PlayerPawn_Statics::NewProp_ProjectileRadius = { "ProjectileRadius", nullptr, (EPropertyFlags)0x0010000000000000, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AGP3PlayerPawn, ProjectileRadius), METADATA_PARAMS(Z_Construct_UClass_AGP3PlayerPawn_Statics::NewProp_ProjectileRadius_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AGP3PlayerPawn_Statics::NewProp_ProjectileRadius_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AGP3PlayerPawn_Statics::NewProp_ChargeTrailRef_MetaData[] = {
 		{ "Comment", "//\n" },
@@ -794,12 +986,36 @@ void EmptyLinkFunctionForGeneratedCodeGP3PlayerPawn() {}
 #endif
 	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AGP3PlayerPawn_Statics::NewProp_ChargeTrailRef = { "ChargeTrailRef", nullptr, (EPropertyFlags)0x0010000000000000, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AGP3PlayerPawn, ChargeTrailRef), Z_Construct_UClass_AGP3_ChargeTrail_NoRegister, METADATA_PARAMS(Z_Construct_UClass_AGP3PlayerPawn_Statics::NewProp_ChargeTrailRef_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AGP3PlayerPawn_Statics::NewProp_ChargeTrailRef_MetaData)) };
 #if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AGP3PlayerPawn_Statics::NewProp_DefaultTrailDamageTimeDelay_MetaData[] = {
-		{ "Category", "Player Values" },
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AGP3PlayerPawn_Statics::NewProp_PlayerController_MetaData[] = {
 		{ "ModuleRelativePath", "Public/Player/GP3PlayerPawn.h" },
 	};
 #endif
-	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UClass_AGP3PlayerPawn_Statics::NewProp_DefaultTrailDamageTimeDelay = { "DefaultTrailDamageTimeDelay", nullptr, (EPropertyFlags)0x0010000000000005, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AGP3PlayerPawn, DefaultTrailDamageTimeDelay), METADATA_PARAMS(Z_Construct_UClass_AGP3PlayerPawn_Statics::NewProp_DefaultTrailDamageTimeDelay_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AGP3PlayerPawn_Statics::NewProp_DefaultTrailDamageTimeDelay_MetaData)) };
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AGP3PlayerPawn_Statics::NewProp_PlayerController = { "PlayerController", nullptr, (EPropertyFlags)0x0040000000000000, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AGP3PlayerPawn, PlayerController), Z_Construct_UClass_APlayerController_NoRegister, METADATA_PARAMS(Z_Construct_UClass_AGP3PlayerPawn_Statics::NewProp_PlayerController_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AGP3PlayerPawn_Statics::NewProp_PlayerController_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AGP3PlayerPawn_Statics::NewProp_DeathDelay_MetaData[] = {
+		{ "Category", "Player Death" },
+		{ "ModuleRelativePath", "Public/Player/GP3PlayerPawn.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UClass_AGP3PlayerPawn_Statics::NewProp_DeathDelay = { "DeathDelay", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AGP3PlayerPawn, DeathDelay), METADATA_PARAMS(Z_Construct_UClass_AGP3PlayerPawn_Statics::NewProp_DeathDelay_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AGP3PlayerPawn_Statics::NewProp_DeathDelay_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AGP3PlayerPawn_Statics::NewProp_bPlayerAlive_MetaData[] = {
+		{ "Category", "GP3PlayerPawn" },
+		{ "ModuleRelativePath", "Public/Player/GP3PlayerPawn.h" },
+	};
+#endif
+	void Z_Construct_UClass_AGP3PlayerPawn_Statics::NewProp_bPlayerAlive_SetBit(void* Obj)
+	{
+		((AGP3PlayerPawn*)Obj)->bPlayerAlive = 1;
+	}
+	const UE4CodeGen_Private::FBoolPropertyParams Z_Construct_UClass_AGP3PlayerPawn_Statics::NewProp_bPlayerAlive = { "bPlayerAlive", nullptr, (EPropertyFlags)0x0010000000010015, UE4CodeGen_Private::EPropertyGenFlags::Bool | UE4CodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, sizeof(bool), sizeof(AGP3PlayerPawn), &Z_Construct_UClass_AGP3PlayerPawn_Statics::NewProp_bPlayerAlive_SetBit, METADATA_PARAMS(Z_Construct_UClass_AGP3PlayerPawn_Statics::NewProp_bPlayerAlive_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AGP3PlayerPawn_Statics::NewProp_bPlayerAlive_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AGP3PlayerPawn_Statics::NewProp_DeathAnimation_MetaData[] = {
+		{ "Category", "Player Death" },
+		{ "ModuleRelativePath", "Public/Player/GP3PlayerPawn.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AGP3PlayerPawn_Statics::NewProp_DeathAnimation = { "DeathAnimation", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AGP3PlayerPawn, DeathAnimation), Z_Construct_UClass_UAnimSequence_NoRegister, METADATA_PARAMS(Z_Construct_UClass_AGP3PlayerPawn_Statics::NewProp_DeathAnimation_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AGP3PlayerPawn_Statics::NewProp_DeathAnimation_MetaData)) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_AGP3PlayerPawn_Statics::PropPointers[] = {
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AGP3PlayerPawn_Statics::NewProp_WASDMovementComp,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AGP3PlayerPawn_Statics::NewProp_ShootComp,
@@ -811,24 +1027,27 @@ void EmptyLinkFunctionForGeneratedCodeGP3PlayerPawn() {}
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AGP3PlayerPawn_Statics::NewProp_SpringArmComp,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AGP3PlayerPawn_Statics::NewProp_StartProjectileLocation,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AGP3PlayerPawn_Statics::NewProp_SplinePath,
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AGP3PlayerPawn_Statics::NewProp_RightInputValue,
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AGP3PlayerPawn_Statics::NewProp_ForwardInputValue,
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AGP3PlayerPawn_Statics::NewProp_HorizontalMouseSensitivity,
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AGP3PlayerPawn_Statics::NewProp_VerticalMouseSensitivity,
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AGP3PlayerPawn_Statics::NewProp_TookDamage,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AGP3PlayerPawn_Statics::NewProp_DefaultTrailDamageTimeDelay,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AGP3PlayerPawn_Statics::NewProp_PlayerHealth,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AGP3PlayerPawn_Statics::NewProp_PlayerMaxHealth,
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AGP3PlayerPawn_Statics::NewProp_bDebugPlayerCantDie,
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AGP3PlayerPawn_Statics::NewProp_GameInstance,
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AGP3PlayerPawn_Statics::NewProp_MovementStack,
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AGP3PlayerPawn_Statics::NewProp_bIsInvincible,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AGP3PlayerPawn_Statics::NewProp_RightInputValue,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AGP3PlayerPawn_Statics::NewProp_ForwardInputValue,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AGP3PlayerPawn_Statics::NewProp_LaunchVelocity,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AGP3PlayerPawn_Statics::NewProp_MinLaunchVelocity,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AGP3PlayerPawn_Statics::NewProp_MaxLaunchVelocity,
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AGP3PlayerPawn_Statics::NewProp_Projectile,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AGP3PlayerPawn_Statics::NewProp_ProjectileRadius,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AGP3PlayerPawn_Statics::NewProp_bDebugPlayerCantDie,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AGP3PlayerPawn_Statics::NewProp_bIsInvincible,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AGP3PlayerPawn_Statics::NewProp_bIsDashing,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AGP3PlayerPawn_Statics::NewProp_bIsUsingGamepad,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AGP3PlayerPawn_Statics::NewProp_TookDamage,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AGP3PlayerPawn_Statics::NewProp_GameInstance,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AGP3PlayerPawn_Statics::NewProp_Projectile,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AGP3PlayerPawn_Statics::NewProp_ChargeTrailRef,
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AGP3PlayerPawn_Statics::NewProp_DefaultTrailDamageTimeDelay,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AGP3PlayerPawn_Statics::NewProp_PlayerController,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AGP3PlayerPawn_Statics::NewProp_DeathDelay,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AGP3PlayerPawn_Statics::NewProp_bPlayerAlive,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AGP3PlayerPawn_Statics::NewProp_DeathAnimation,
 	};
 	const FCppClassTypeInfoStatic Z_Construct_UClass_AGP3PlayerPawn_Statics::StaticCppClassTypeInfo = {
 		TCppClassTypeTraits<AGP3PlayerPawn>::IsAbstract,
@@ -857,7 +1076,7 @@ void EmptyLinkFunctionForGeneratedCodeGP3PlayerPawn() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(AGP3PlayerPawn, 3497193520);
+	IMPLEMENT_CLASS(AGP3PlayerPawn, 735792553);
 	template<> GP3_TEAM03_API UClass* StaticClass<AGP3PlayerPawn>()
 	{
 		return AGP3PlayerPawn::StaticClass();

@@ -8,6 +8,7 @@
 #include "UObject/ScriptMacros.h"
 
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
+struct FVector;
 #ifdef GP3_TEAM03_GP3PlayerDashTrail_generated_h
 #error "GP3PlayerDashTrail.generated.h already included, missing '#pragma once' in GP3PlayerDashTrail.h"
 #endif
@@ -16,6 +17,15 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #define GP3_Team03_Source_GP3_Team03_Public_Player_GP3PlayerDashTrail_h_14_SPARSE_DATA
 #define GP3_Team03_Source_GP3_Team03_Public_Player_GP3PlayerDashTrail_h_14_RPC_WRAPPERS
 #define GP3_Team03_Source_GP3_Team03_Public_Player_GP3PlayerDashTrail_h_14_RPC_WRAPPERS_NO_PURE_DECLS
+#define GP3_Team03_Source_GP3_Team03_Public_Player_GP3PlayerDashTrail_h_14_EVENT_PARMS \
+	struct GP3PlayerDashTrail_eventOnExtendSpline_Parms \
+	{ \
+		int32 Index; \
+		FVector Location; \
+	};
+
+
+#define GP3_Team03_Source_GP3_Team03_Public_Player_GP3PlayerDashTrail_h_14_CALLBACK_WRAPPERS
 #define GP3_Team03_Source_GP3_Team03_Public_Player_GP3PlayerDashTrail_h_14_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesAGP3PlayerDashTrail(); \
@@ -59,13 +69,17 @@ public: \
 
 
 #define GP3_Team03_Source_GP3_Team03_Public_Player_GP3PlayerDashTrail_h_14_PRIVATE_PROPERTY_OFFSET
-#define GP3_Team03_Source_GP3_Team03_Public_Player_GP3PlayerDashTrail_h_11_PROLOG
+#define GP3_Team03_Source_GP3_Team03_Public_Player_GP3PlayerDashTrail_h_11_PROLOG \
+	GP3_Team03_Source_GP3_Team03_Public_Player_GP3PlayerDashTrail_h_14_EVENT_PARMS
+
+
 #define GP3_Team03_Source_GP3_Team03_Public_Player_GP3PlayerDashTrail_h_14_GENERATED_BODY_LEGACY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
 	GP3_Team03_Source_GP3_Team03_Public_Player_GP3PlayerDashTrail_h_14_PRIVATE_PROPERTY_OFFSET \
 	GP3_Team03_Source_GP3_Team03_Public_Player_GP3PlayerDashTrail_h_14_SPARSE_DATA \
 	GP3_Team03_Source_GP3_Team03_Public_Player_GP3PlayerDashTrail_h_14_RPC_WRAPPERS \
+	GP3_Team03_Source_GP3_Team03_Public_Player_GP3PlayerDashTrail_h_14_CALLBACK_WRAPPERS \
 	GP3_Team03_Source_GP3_Team03_Public_Player_GP3PlayerDashTrail_h_14_INCLASS \
 	GP3_Team03_Source_GP3_Team03_Public_Player_GP3PlayerDashTrail_h_14_STANDARD_CONSTRUCTORS \
 public: \
@@ -78,6 +92,7 @@ public: \
 	GP3_Team03_Source_GP3_Team03_Public_Player_GP3PlayerDashTrail_h_14_PRIVATE_PROPERTY_OFFSET \
 	GP3_Team03_Source_GP3_Team03_Public_Player_GP3PlayerDashTrail_h_14_SPARSE_DATA \
 	GP3_Team03_Source_GP3_Team03_Public_Player_GP3PlayerDashTrail_h_14_RPC_WRAPPERS_NO_PURE_DECLS \
+	GP3_Team03_Source_GP3_Team03_Public_Player_GP3PlayerDashTrail_h_14_CALLBACK_WRAPPERS \
 	GP3_Team03_Source_GP3_Team03_Public_Player_GP3PlayerDashTrail_h_14_INCLASS_NO_PURE_DECLS \
 	GP3_Team03_Source_GP3_Team03_Public_Player_GP3PlayerDashTrail_h_14_ENHANCED_CONSTRUCTORS \
 private: \

@@ -1,6 +1,5 @@
 C:\Users\tomas.savela\Perforce\FG21FTGP_UE4_GP3_TomasSavela\GP3_Team03\Plugins\FMODStudio\Source\FMODStudio\Classes\FMODAmbientSound.h
 C:\Users\tomas.savela\Perforce\FG21FTGP_UE4_GP3_TomasSavela\GP3_Team03\Plugins\FMODStudio\Source\FMODStudio\Classes\FMODAnimNotifyPlay.h
-C:\Users\tomas.savela\Perforce\FG21FTGP_UE4_GP3_TomasSavela\GP3_Team03\Plugins\FMODStudio\Source\FMODStudio\Classes\FMODAsset.h
 C:\Users\tomas.savela\Perforce\FG21FTGP_UE4_GP3_TomasSavela\GP3_Team03\Plugins\FMODStudio\Source\FMODStudio\Classes\FMODAudioComponent.h
 C:\Users\tomas.savela\Perforce\FG21FTGP_UE4_GP3_TomasSavela\GP3_Team03\Plugins\FMODStudio\Source\FMODStudio\Classes\FMODBank.h
 C:\Users\tomas.savela\Perforce\FG21FTGP_UE4_GP3_TomasSavela\GP3_Team03\Plugins\FMODStudio\Source\FMODStudio\Classes\FMODBlueprintStatics.h
@@ -11,6 +10,7 @@ C:\Users\tomas.savela\Perforce\FG21FTGP_UE4_GP3_TomasSavela\GP3_Team03\Plugins\F
 C:\Users\tomas.savela\Perforce\FG21FTGP_UE4_GP3_TomasSavela\GP3_Team03\Plugins\FMODStudio\Source\FMODStudio\Classes\FMODSnapshot.h
 C:\Users\tomas.savela\Perforce\FG21FTGP_UE4_GP3_TomasSavela\GP3_Team03\Plugins\FMODStudio\Source\FMODStudio\Classes\FMODSnapshotReverb.h
 C:\Users\tomas.savela\Perforce\FG21FTGP_UE4_GP3_TomasSavela\GP3_Team03\Plugins\FMODStudio\Source\FMODStudio\Classes\FMODVCA.h
+C:\Users\tomas.savela\Perforce\FG21FTGP_UE4_GP3_TomasSavela\GP3_Team03\Plugins\FMODStudio\Source\FMODStudio\Classes\FMODAsset.h
 C:\Users\tomas.savela\Perforce\FG21FTGP_UE4_GP3_TomasSavela\GP3_Team03\Plugins\FMODStudio\Source\FMODStudio\Private\Sequencer\FMODEventControlSection.h
 C:\Users\tomas.savela\Perforce\FG21FTGP_UE4_GP3_TomasSavela\GP3_Team03\Plugins\FMODStudio\Source\FMODStudio\Private\Sequencer\FMODEventControlSectionTemplate.h
 C:\Users\tomas.savela\Perforce\FG21FTGP_UE4_GP3_TomasSavela\GP3_Team03\Plugins\FMODStudio\Source\FMODStudio\Private\Sequencer\FMODEventControlTrack.h

@@ -1,4 +1,4 @@
-GP3_Team03/Binaries/Win64/GP3_Team03.exe	2022-06-02T14:13:39.717Z
+GP3_Team03/Binaries/Win64/GP3_Team03.exe	2022-08-08T08:51:04.121Z
 GP3_Team03/Binaries/Win64/OpenImageDenoise.dll	2021-10-21T14:43:12.506Z
 GP3_Team03/Binaries/Win64/tbb12.dll	2021-10-21T14:43:12.507Z
 Engine/Extras/Redist/en-us/UE4PrereqSetup_x64.exe	2021-10-21T14:36:58.877Z
@@ -20,10 +20,9 @@ Engine/Binaries/ThirdParty/Vorbis/Win64/VS2015/libvorbis_64.dll	2021-10-21T14:35
 Engine/Binaries/ThirdParty/Vorbis/Win64/VS2015/libvorbisfile_64.dll	2021-10-21T14:35:16.450Z
 Engine/Binaries/ThirdParty/NVIDIA/NVaftermath/Win64/GFSDK_Aftermath_Lib.x64.dll	2021-10-21T14:34:50.287Z
 Engine/Binaries/ThirdParty/OpenXR/win64/openxr_loader.dll	2021-10-21T14:34:50.373Z
-Engine/Binaries/ThirdParty/OpenVR/OpenVRv1_5_17/Win64/openvr_api.dll	2021-10-21T14:34:50.348Z
 Engine/Binaries/ThirdParty/NVIDIA/GeForceNOW/Win64/GfnRuntimeSdk.dll	2021-10-21T14:34:50.284Z
 Engine/Binaries/ThirdParty/Windows/WinPixEventRuntime/x64/WinPixEventRuntime.dll	2021-10-21T14:35:16.478Z
 Engine/Binaries/ThirdParty/Windows/XAudio2_9/x64/xaudio2_9redist.dll	2021-10-21T14:35:16.632Z
-GP3_Team03/Content/FMOD/Desktop/Master.bank	2022-05-31T07:02:10.399Z
-GP3_Team03/Content/FMOD/Desktop/Master.strings.bank	2022-05-31T07:02:10.401Z
-GP3_Team03.exe	2022-06-02T14:14:59.580Z
+GP3_Team03/Content/FMOD/Desktop/Master.bank	2022-06-21T13:54:01.600Z
+GP3_Team03/Content/FMOD/Desktop/Master.strings.bank	2022-06-21T13:54:01.602Z
+GP3_Team03.exe	2022-08-08T09:19:34.427Z

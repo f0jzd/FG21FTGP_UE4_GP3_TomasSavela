@@ -33,6 +33,49 @@
 			}
 		},
 		{
+			"File": "../../../Engine/Plugins/Marketplace/Substance/Substance.uplugin",
+			"Descriptor": 
+			{
+				"FileVersion": 3,
+				"Version": 69,
+				"VersionName": "4.27.0.2",
+				"FriendlyName": "Substance in UE4",
+				"Description": "Adds support for Substance (sbsar) textures",
+				"Category": "Editor",
+				"CreatedBy": "Substance by Adobe",
+				"CreatedByURL": "https://www.substance3d.com/",
+				"DocsURL": "https://docs.substance3d.com/display/integrations/Unreal+Engine",
+				"MarketplaceURL": "com.epicgames.launcher://ue/marketplace/content/2f6439c2f9584f49809d9b13b16c2ba4",
+				"SupportURL": "",
+				"EngineVersion": "4.27.0",
+				"CanContainContent": true,
+				"Installed": true,
+				"Modules": [
+					{
+						"Name": "SubstanceCore",
+						"Type": "Runtime",
+						"LoadingPhase": "PreDefault",
+						"WhitelistPlatforms": [
+							"Win64",
+							"Mac",
+							"Linux",
+							"PS4"
+						]
+					},
+					{
+						"Name": "SubstanceEditor",
+						"Type": "Editor",
+						"LoadingPhase": "PostDefault",
+						"WhitelistPlatforms": [
+							"Win64",
+							"Mac",
+							"Linux"
+						]
+					}
+				]
+			}
+		},
+		{
 			"File": "../../../Engine/Plugins/2D/Paper2D/Paper2D.uplugin",
 			"Descriptor": 
 			{
@@ -3229,75 +3272,6 @@
 						"Name": "SoundFields",
 						"Type": "Runtime",
 						"LoadingPhase": "PreDefault"
-					}
-				]
-			}
-		},
-		{
-			"File": "../../../Engine/Plugins/Runtime/Steam/SteamVR/SteamVR.uplugin",
-			"Descriptor": 
-			{
-				"FileVersion": 3,
-				"Version": 1,
-				"VersionName": "1.0",
-				"FriendlyName": "SteamVR",
-				"Description": "Support for the SteamVR API",
-				"Category": "Virtual Reality",
-				"CreatedBy": "Epic Games, Inc.",
-				"CreatedByURL": "http://epicgames.com",
-				"DocsURL": "",
-				"MarketplaceURL": "",
-				"SupportURL": "",
-				"EnabledByDefault": true,
-				"CanContainContent": true,
-				"SupportedTargetPlatforms": [
-					"Win32",
-					"Win64",
-					"Linux"
-				],
-				"Modules": [
-					{
-						"Name": "SteamVR",
-						"Type": "Runtime",
-						"LoadingPhase": "PostConfigInit",
-						"WhitelistPlatforms": [
-							"Win64",
-							"Win32",
-							"Linux"
-						]
-					},
-					{
-						"Name": "SteamVRInput",
-						"Type": "Runtime",
-						"LoadingPhase": "PostConfigInit",
-						"WhitelistPlatforms": [
-							"Win64",
-							"Win32"
-						]
-					},
-					{
-						"Name": "SteamVRInputDevice",
-						"Type": "Runtime",
-						"LoadingPhase": "PostConfigInit",
-						"WhitelistPlatforms": [
-							"Win64",
-							"Win32"
-						]
-					},
-					{
-						"Name": "SteamVREditor",
-						"Type": "UncookedOnly",
-						"LoadingPhase": "PostEngineInit",
-						"WhitelistPlatforms": [
-							"Win64",
-							"Win32"
-						]
-					}
-				],
-				"Plugins": [
-					{
-						"Name": "ProceduralMeshComponent",
-						"Enabled": true
 					}
 				]
 			}

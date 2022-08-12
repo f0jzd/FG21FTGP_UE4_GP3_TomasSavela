@@ -41,7 +41,7 @@ void EmptyLinkFunctionForGeneratedCodeGP3_Team03_init() {}
 				SingletonFuncArray,
 				UE_ARRAY_COUNT(SingletonFuncArray),
 				PKG_CompiledIn | 0x00000000,
-				0x9907B210,
+				0xB5AB7E16,
 				0xF6C0FEAD,
 				METADATA_PARAMS(nullptr, 0)
 			};

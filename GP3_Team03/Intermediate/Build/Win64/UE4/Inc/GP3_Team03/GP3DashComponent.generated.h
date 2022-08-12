@@ -24,6 +24,8 @@ static inline void FOnDashEvent_DelegateWrapper(const FMulticastScriptDelegate& 
 #define GP3_Team03_Source_GP3_Team03_Public_Player_GP3DashComponent_h_14_SPARSE_DATA
 #define GP3_Team03_Source_GP3_Team03_Public_Player_GP3DashComponent_h_14_RPC_WRAPPERS \
  \
+	DECLARE_FUNCTION(execInterruptDash); \
+	DECLARE_FUNCTION(execExtendDashTrail); \
 	DECLARE_FUNCTION(execDecreaseDashCooldown); \
 	DECLARE_FUNCTION(execApplySlopeAxis); \
 	DECLARE_FUNCTION(execHandleDashStates); \
@@ -36,6 +38,8 @@ static inline void FOnDashEvent_DelegateWrapper(const FMulticastScriptDelegate& 
 
 #define GP3_Team03_Source_GP3_Team03_Public_Player_GP3DashComponent_h_14_RPC_WRAPPERS_NO_PURE_DECLS \
  \
+	DECLARE_FUNCTION(execInterruptDash); \
+	DECLARE_FUNCTION(execExtendDashTrail); \
 	DECLARE_FUNCTION(execDecreaseDashCooldown); \
 	DECLARE_FUNCTION(execApplySlopeAxis); \
 	DECLARE_FUNCTION(execHandleDashStates); \

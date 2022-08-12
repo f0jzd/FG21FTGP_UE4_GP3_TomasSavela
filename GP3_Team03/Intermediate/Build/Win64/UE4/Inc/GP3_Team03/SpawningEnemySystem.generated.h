@@ -9,6 +9,7 @@
 
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
 class AGP3_AI_BaseCharacter;
+struct FVector;
 #ifdef GP3_TEAM03_SpawningEnemySystem_generated_h
 #error "SpawningEnemySystem.generated.h already included, missing '#pragma once' in SpawningEnemySystem.h"
 #endif
@@ -17,18 +18,24 @@ class AGP3_AI_BaseCharacter;
 #define GP3_Team03_Source_GP3_Team03_Public_AI_SpawningEnemySystem_h_14_SPARSE_DATA
 #define GP3_Team03_Source_GP3_Team03_Public_AI_SpawningEnemySystem_h_14_RPC_WRAPPERS \
  \
-	DECLARE_FUNCTION(execSpawnMoreEnemiesAfterKills); \
-	DECLARE_FUNCTION(execSpawnEnemiesOnTimer); \
+	DECLARE_FUNCTION(execSpawnEnemy); \
 	DECLARE_FUNCTION(execSpawnEnemies);
 
 
 #define GP3_Team03_Source_GP3_Team03_Public_AI_SpawningEnemySystem_h_14_RPC_WRAPPERS_NO_PURE_DECLS \
  \
-	DECLARE_FUNCTION(execSpawnMoreEnemiesAfterKills); \
-	DECLARE_FUNCTION(execSpawnEnemiesOnTimer); \
+	DECLARE_FUNCTION(execSpawnEnemy); \
 	DECLARE_FUNCTION(execSpawnEnemies);
 
 
+#define GP3_Team03_Source_GP3_Team03_Public_AI_SpawningEnemySystem_h_14_EVENT_PARMS \
+	struct SpawningEnemySystem_eventOnSpawn_Parms \
+	{ \
+		FVector SpawnedEnemyLocation; \
+	};
+
+
+#define GP3_Team03_Source_GP3_Team03_Public_AI_SpawningEnemySystem_h_14_CALLBACK_WRAPPERS
 #define GP3_Team03_Source_GP3_Team03_Public_AI_SpawningEnemySystem_h_14_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesASpawningEnemySystem(); \
@@ -72,13 +79,17 @@ public: \
 
 
 #define GP3_Team03_Source_GP3_Team03_Public_AI_SpawningEnemySystem_h_14_PRIVATE_PROPERTY_OFFSET
-#define GP3_Team03_Source_GP3_Team03_Public_AI_SpawningEnemySystem_h_11_PROLOG
+#define GP3_Team03_Source_GP3_Team03_Public_AI_SpawningEnemySystem_h_11_PROLOG \
+	GP3_Team03_Source_GP3_Team03_Public_AI_SpawningEnemySystem_h_14_EVENT_PARMS
+
+
 #define GP3_Team03_Source_GP3_Team03_Public_AI_SpawningEnemySystem_h_14_GENERATED_BODY_LEGACY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
 	GP3_Team03_Source_GP3_Team03_Public_AI_SpawningEnemySystem_h_14_PRIVATE_PROPERTY_OFFSET \
 	GP3_Team03_Source_GP3_Team03_Public_AI_SpawningEnemySystem_h_14_SPARSE_DATA \
 	GP3_Team03_Source_GP3_Team03_Public_AI_SpawningEnemySystem_h_14_RPC_WRAPPERS \
+	GP3_Team03_Source_GP3_Team03_Public_AI_SpawningEnemySystem_h_14_CALLBACK_WRAPPERS \
 	GP3_Team03_Source_GP3_Team03_Public_AI_SpawningEnemySystem_h_14_INCLASS \
 	GP3_Team03_Source_GP3_Team03_Public_AI_SpawningEnemySystem_h_14_STANDARD_CONSTRUCTORS \
 public: \
@@ -91,6 +102,7 @@ public: \
 	GP3_Team03_Source_GP3_Team03_Public_AI_SpawningEnemySystem_h_14_PRIVATE_PROPERTY_OFFSET \
 	GP3_Team03_Source_GP3_Team03_Public_AI_SpawningEnemySystem_h_14_SPARSE_DATA \
 	GP3_Team03_Source_GP3_Team03_Public_AI_SpawningEnemySystem_h_14_RPC_WRAPPERS_NO_PURE_DECLS \
+	GP3_Team03_Source_GP3_Team03_Public_AI_SpawningEnemySystem_h_14_CALLBACK_WRAPPERS \
 	GP3_Team03_Source_GP3_Team03_Public_AI_SpawningEnemySystem_h_14_INCLASS_NO_PURE_DECLS \
 	GP3_Team03_Source_GP3_Team03_Public_AI_SpawningEnemySystem_h_14_ENHANCED_CONSTRUCTORS \
 private: \

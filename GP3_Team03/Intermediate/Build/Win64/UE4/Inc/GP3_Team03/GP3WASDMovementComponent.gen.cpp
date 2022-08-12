@@ -53,20 +53,20 @@ void EmptyLinkFunctionForGeneratedCodeGP3WASDMovementComponent() {}
 	}
 	DEFINE_FUNCTION(UGP3WASDMovementComponent::execCalculateAccelerationDeceleration)
 	{
-		P_GET_STRUCT(FVector,Z_Param_InDirection);
+		P_GET_STRUCT(FVector,Z_Param_InInput);
 		P_GET_PROPERTY(FFloatProperty,Z_Param_DeltaTime);
 		P_FINISH;
 		P_NATIVE_BEGIN;
-		*(FVector*)Z_Param__Result=P_THIS->CalculateAccelerationDeceleration(Z_Param_InDirection,Z_Param_DeltaTime);
+		*(FVector*)Z_Param__Result=P_THIS->CalculateAccelerationDeceleration(Z_Param_InInput,Z_Param_DeltaTime);
 		P_NATIVE_END;
 	}
-	DEFINE_FUNCTION(UGP3WASDMovementComponent::execGetDirectionFromInput)
+	DEFINE_FUNCTION(UGP3WASDMovementComponent::execCalculateInput)
 	{
 		P_GET_PROPERTY(FFloatProperty,Z_Param_ForwardAxis);
 		P_GET_PROPERTY(FFloatProperty,Z_Param_RightAxis);
 		P_FINISH;
 		P_NATIVE_BEGIN;
-		*(FVector*)Z_Param__Result=P_THIS->GetDirectionFromInput(Z_Param_ForwardAxis,Z_Param_RightAxis);
+		*(FVector*)Z_Param__Result=P_THIS->CalculateInput(Z_Param_ForwardAxis,Z_Param_RightAxis);
 		P_NATIVE_END;
 	}
 	DEFINE_FUNCTION(UGP3WASDMovementComponent::execUpdateCurveTimers)
@@ -86,14 +86,6 @@ void EmptyLinkFunctionForGeneratedCodeGP3WASDMovementComponent() {}
 		P_THIS->CheckInputs(Z_Param_InForwardInput,Z_Param_InRightInput);
 		P_NATIVE_END;
 	}
-	DEFINE_FUNCTION(UGP3WASDMovementComponent::execPlayerStopCheck)
-	{
-		P_GET_PROPERTY(FFloatProperty,Z_Param_DeltaTime);
-		P_FINISH;
-		P_NATIVE_BEGIN;
-		P_THIS->PlayerStopCheck(Z_Param_DeltaTime);
-		P_NATIVE_END;
-	}
 	DEFINE_FUNCTION(UGP3WASDMovementComponent::execMove)
 	{
 		P_GET_PROPERTY(FFloatProperty,Z_Param_ForwardInput);
@@ -110,12 +102,11 @@ void EmptyLinkFunctionForGeneratedCodeGP3WASDMovementComponent() {}
 		static const FNameNativePtrPair Funcs[] = {
 			{ "ApplySlopeAxis", &UGP3WASDMovementComponent::execApplySlopeAxis },
 			{ "CalculateAccelerationDeceleration", &UGP3WASDMovementComponent::execCalculateAccelerationDeceleration },
+			{ "CalculateInput", &UGP3WASDMovementComponent::execCalculateInput },
 			{ "CheckInputs", &UGP3WASDMovementComponent::execCheckInputs },
 			{ "ExecuteMovement", &UGP3WASDMovementComponent::execExecuteMovement },
-			{ "GetDirectionFromInput", &UGP3WASDMovementComponent::execGetDirectionFromInput },
 			{ "IsGrounded", &UGP3WASDMovementComponent::execIsGrounded },
 			{ "Move", &UGP3WASDMovementComponent::execMove },
-			{ "PlayerStopCheck", &UGP3WASDMovementComponent::execPlayerStopCheck },
 			{ "RotatePlayerWithController", &UGP3WASDMovementComponent::execRotatePlayerWithController },
 			{ "UpdateCurveTimers", &UGP3WASDMovementComponent::execUpdateCurveTimers },
 		};
@@ -157,11 +148,11 @@ void EmptyLinkFunctionForGeneratedCodeGP3WASDMovementComponent() {}
 	{
 		struct GP3WASDMovementComponent_eventCalculateAccelerationDeceleration_Parms
 		{
-			FVector InDirection;
+			FVector InInput;
 			float DeltaTime;
 			FVector ReturnValue;
 		};
-		static const UE4CodeGen_Private::FStructPropertyParams NewProp_InDirection;
+		static const UE4CodeGen_Private::FStructPropertyParams NewProp_InInput;
 		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_DeltaTime;
 		static const UE4CodeGen_Private::FStructPropertyParams NewProp_ReturnValue;
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
@@ -170,11 +161,11 @@ void EmptyLinkFunctionForGeneratedCodeGP3WASDMovementComponent() {}
 #endif
 		static const UE4CodeGen_Private::FFunctionParams FuncParams;
 	};
-	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UFunction_UGP3WASDMovementComponent_CalculateAccelerationDeceleration_Statics::NewProp_InDirection = { "InDirection", nullptr, (EPropertyFlags)0x0010000000000080, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(GP3WASDMovementComponent_eventCalculateAccelerationDeceleration_Parms, InDirection), Z_Construct_UScriptStruct_FVector, METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UFunction_UGP3WASDMovementComponent_CalculateAccelerationDeceleration_Statics::NewProp_InInput = { "InInput", nullptr, (EPropertyFlags)0x0010000000000080, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(GP3WASDMovementComponent_eventCalculateAccelerationDeceleration_Parms, InInput), Z_Construct_UScriptStruct_FVector, METADATA_PARAMS(nullptr, 0) };
 	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UFunction_UGP3WASDMovementComponent_CalculateAccelerationDeceleration_Statics::NewProp_DeltaTime = { "DeltaTime", nullptr, (EPropertyFlags)0x0010000000000080, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(GP3WASDMovementComponent_eventCalculateAccelerationDeceleration_Parms, DeltaTime), METADATA_PARAMS(nullptr, 0) };
 	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UFunction_UGP3WASDMovementComponent_CalculateAccelerationDeceleration_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(GP3WASDMovementComponent_eventCalculateAccelerationDeceleration_Parms, ReturnValue), Z_Construct_UScriptStruct_FVector, METADATA_PARAMS(nullptr, 0) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UGP3WASDMovementComponent_CalculateAccelerationDeceleration_Statics::PropPointers[] = {
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UGP3WASDMovementComponent_CalculateAccelerationDeceleration_Statics::NewProp_InDirection,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UGP3WASDMovementComponent_CalculateAccelerationDeceleration_Statics::NewProp_InInput,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UGP3WASDMovementComponent_CalculateAccelerationDeceleration_Statics::NewProp_DeltaTime,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UGP3WASDMovementComponent_CalculateAccelerationDeceleration_Statics::NewProp_ReturnValue,
 	};
@@ -190,6 +181,46 @@ void EmptyLinkFunctionForGeneratedCodeGP3WASDMovementComponent() {}
 		if (!ReturnFunction)
 		{
 			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UGP3WASDMovementComponent_CalculateAccelerationDeceleration_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
+	struct Z_Construct_UFunction_UGP3WASDMovementComponent_CalculateInput_Statics
+	{
+		struct GP3WASDMovementComponent_eventCalculateInput_Parms
+		{
+			float ForwardAxis;
+			float RightAxis;
+			FVector ReturnValue;
+		};
+		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_ForwardAxis;
+		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_RightAxis;
+		static const UE4CodeGen_Private::FStructPropertyParams NewProp_ReturnValue;
+		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UE4CodeGen_Private::FFunctionParams FuncParams;
+	};
+	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UFunction_UGP3WASDMovementComponent_CalculateInput_Statics::NewProp_ForwardAxis = { "ForwardAxis", nullptr, (EPropertyFlags)0x0010000000000080, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(GP3WASDMovementComponent_eventCalculateInput_Parms, ForwardAxis), METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UFunction_UGP3WASDMovementComponent_CalculateInput_Statics::NewProp_RightAxis = { "RightAxis", nullptr, (EPropertyFlags)0x0010000000000080, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(GP3WASDMovementComponent_eventCalculateInput_Parms, RightAxis), METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UFunction_UGP3WASDMovementComponent_CalculateInput_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(GP3WASDMovementComponent_eventCalculateInput_Parms, ReturnValue), Z_Construct_UScriptStruct_FVector, METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UGP3WASDMovementComponent_CalculateInput_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UGP3WASDMovementComponent_CalculateInput_Statics::NewProp_ForwardAxis,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UGP3WASDMovementComponent_CalculateInput_Statics::NewProp_RightAxis,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UGP3WASDMovementComponent_CalculateInput_Statics::NewProp_ReturnValue,
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UGP3WASDMovementComponent_CalculateInput_Statics::Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "Public/Player/GP3WASDMovementComponent.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UGP3WASDMovementComponent_CalculateInput_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UGP3WASDMovementComponent, nullptr, "CalculateInput", nullptr, nullptr, sizeof(GP3WASDMovementComponent_eventCalculateInput_Parms), Z_Construct_UFunction_UGP3WASDMovementComponent_CalculateInput_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UGP3WASDMovementComponent_CalculateInput_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00820401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_UGP3WASDMovementComponent_CalculateInput_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_UGP3WASDMovementComponent_CalculateInput_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_UGP3WASDMovementComponent_CalculateInput()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UGP3WASDMovementComponent_CalculateInput_Statics::FuncParams);
 		}
 		return ReturnFunction;
 	}
@@ -262,46 +293,6 @@ void EmptyLinkFunctionForGeneratedCodeGP3WASDMovementComponent() {}
 		if (!ReturnFunction)
 		{
 			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UGP3WASDMovementComponent_ExecuteMovement_Statics::FuncParams);
-		}
-		return ReturnFunction;
-	}
-	struct Z_Construct_UFunction_UGP3WASDMovementComponent_GetDirectionFromInput_Statics
-	{
-		struct GP3WASDMovementComponent_eventGetDirectionFromInput_Parms
-		{
-			float ForwardAxis;
-			float RightAxis;
-			FVector ReturnValue;
-		};
-		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_ForwardAxis;
-		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_RightAxis;
-		static const UE4CodeGen_Private::FStructPropertyParams NewProp_ReturnValue;
-		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
-#if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
-#endif
-		static const UE4CodeGen_Private::FFunctionParams FuncParams;
-	};
-	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UFunction_UGP3WASDMovementComponent_GetDirectionFromInput_Statics::NewProp_ForwardAxis = { "ForwardAxis", nullptr, (EPropertyFlags)0x0010000000000080, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(GP3WASDMovementComponent_eventGetDirectionFromInput_Parms, ForwardAxis), METADATA_PARAMS(nullptr, 0) };
-	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UFunction_UGP3WASDMovementComponent_GetDirectionFromInput_Statics::NewProp_RightAxis = { "RightAxis", nullptr, (EPropertyFlags)0x0010000000000080, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(GP3WASDMovementComponent_eventGetDirectionFromInput_Parms, RightAxis), METADATA_PARAMS(nullptr, 0) };
-	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UFunction_UGP3WASDMovementComponent_GetDirectionFromInput_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(GP3WASDMovementComponent_eventGetDirectionFromInput_Parms, ReturnValue), Z_Construct_UScriptStruct_FVector, METADATA_PARAMS(nullptr, 0) };
-	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UGP3WASDMovementComponent_GetDirectionFromInput_Statics::PropPointers[] = {
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UGP3WASDMovementComponent_GetDirectionFromInput_Statics::NewProp_ForwardAxis,
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UGP3WASDMovementComponent_GetDirectionFromInput_Statics::NewProp_RightAxis,
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UGP3WASDMovementComponent_GetDirectionFromInput_Statics::NewProp_ReturnValue,
-	};
-#if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UGP3WASDMovementComponent_GetDirectionFromInput_Statics::Function_MetaDataParams[] = {
-		{ "ModuleRelativePath", "Public/Player/GP3WASDMovementComponent.h" },
-	};
-#endif
-	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UGP3WASDMovementComponent_GetDirectionFromInput_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UGP3WASDMovementComponent, nullptr, "GetDirectionFromInput", nullptr, nullptr, sizeof(GP3WASDMovementComponent_eventGetDirectionFromInput_Parms), Z_Construct_UFunction_UGP3WASDMovementComponent_GetDirectionFromInput_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UGP3WASDMovementComponent_GetDirectionFromInput_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00820401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_UGP3WASDMovementComponent_GetDirectionFromInput_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_UGP3WASDMovementComponent_GetDirectionFromInput_Statics::Function_MetaDataParams)) };
-	UFunction* Z_Construct_UFunction_UGP3WASDMovementComponent_GetDirectionFromInput()
-	{
-		static UFunction* ReturnFunction = nullptr;
-		if (!ReturnFunction)
-		{
-			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UGP3WASDMovementComponent_GetDirectionFromInput_Statics::FuncParams);
 		}
 		return ReturnFunction;
 	}
@@ -379,38 +370,6 @@ void EmptyLinkFunctionForGeneratedCodeGP3WASDMovementComponent() {}
 		if (!ReturnFunction)
 		{
 			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UGP3WASDMovementComponent_Move_Statics::FuncParams);
-		}
-		return ReturnFunction;
-	}
-	struct Z_Construct_UFunction_UGP3WASDMovementComponent_PlayerStopCheck_Statics
-	{
-		struct GP3WASDMovementComponent_eventPlayerStopCheck_Parms
-		{
-			float DeltaTime;
-		};
-		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_DeltaTime;
-		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
-#if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
-#endif
-		static const UE4CodeGen_Private::FFunctionParams FuncParams;
-	};
-	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UFunction_UGP3WASDMovementComponent_PlayerStopCheck_Statics::NewProp_DeltaTime = { "DeltaTime", nullptr, (EPropertyFlags)0x0010000000000080, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(GP3WASDMovementComponent_eventPlayerStopCheck_Parms, DeltaTime), METADATA_PARAMS(nullptr, 0) };
-	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UGP3WASDMovementComponent_PlayerStopCheck_Statics::PropPointers[] = {
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UGP3WASDMovementComponent_PlayerStopCheck_Statics::NewProp_DeltaTime,
-	};
-#if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UGP3WASDMovementComponent_PlayerStopCheck_Statics::Function_MetaDataParams[] = {
-		{ "ModuleRelativePath", "Public/Player/GP3WASDMovementComponent.h" },
-	};
-#endif
-	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UGP3WASDMovementComponent_PlayerStopCheck_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UGP3WASDMovementComponent, nullptr, "PlayerStopCheck", nullptr, nullptr, sizeof(GP3WASDMovementComponent_eventPlayerStopCheck_Parms), Z_Construct_UFunction_UGP3WASDMovementComponent_PlayerStopCheck_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UGP3WASDMovementComponent_PlayerStopCheck_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_UGP3WASDMovementComponent_PlayerStopCheck_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_UGP3WASDMovementComponent_PlayerStopCheck_Statics::Function_MetaDataParams)) };
-	UFunction* Z_Construct_UFunction_UGP3WASDMovementComponent_PlayerStopCheck()
-	{
-		static UFunction* ReturnFunction = nullptr;
-		if (!ReturnFunction)
-		{
-			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UGP3WASDMovementComponent_PlayerStopCheck_Statics::FuncParams);
 		}
 		return ReturnFunction;
 	}
@@ -530,21 +489,18 @@ void EmptyLinkFunctionForGeneratedCodeGP3WASDMovementComponent() {}
 		static void NewProp_IsOnGround_SetBit(void* Obj);
 		static const UE4CodeGen_Private::FBoolPropertyParams NewProp_IsOnGround;
 #if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_Acceleration_MetaData[];
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_MovementDisabled_MetaData[];
 #endif
-		static const UE4CodeGen_Private::FStructPropertyParams NewProp_Acceleration;
+		static void NewProp_MovementDisabled_SetBit(void* Obj);
+		static const UE4CodeGen_Private::FBoolPropertyParams NewProp_MovementDisabled;
 #if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_LastRegisteredInput_MetaData[];
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_DepenetrationIterationCount_MetaData[];
 #endif
-		static const UE4CodeGen_Private::FStructPropertyParams NewProp_LastRegisteredInput;
+		static const UE4CodeGen_Private::FUnsizedIntPropertyParams NewProp_DepenetrationIterationCount;
 #if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_Direction_MetaData[];
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_GravityScalar_MetaData[];
 #endif
-		static const UE4CodeGen_Private::FStructPropertyParams NewProp_Direction;
-#if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_LocalInstantVelocity_MetaData[];
-#endif
-		static const UE4CodeGen_Private::FStructPropertyParams NewProp_LocalInstantVelocity;
+		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_GravityScalar;
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_AccelerationCurveValue_MetaData[];
 #endif
@@ -553,20 +509,6 @@ void EmptyLinkFunctionForGeneratedCodeGP3WASDMovementComponent() {}
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_DecelerationCurveValue_MetaData[];
 #endif
 		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_DecelerationCurveValue;
-#if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_DrawHitresultLine_MetaData[];
-#endif
-		static void NewProp_DrawHitresultLine_SetBit(void* Obj);
-		static const UE4CodeGen_Private::FBoolPropertyParams NewProp_DrawHitresultLine;
-#if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_MovementDisabled_MetaData[];
-#endif
-		static void NewProp_MovementDisabled_SetBit(void* Obj);
-		static const UE4CodeGen_Private::FBoolPropertyParams NewProp_MovementDisabled;
-#if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_InstantVelocity_MetaData[];
-#endif
-		static const UE4CodeGen_Private::FStructPropertyParams NewProp_InstantVelocity;
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_AcceleratingTime_MetaData[];
 #endif
@@ -580,13 +522,29 @@ void EmptyLinkFunctionForGeneratedCodeGP3WASDMovementComponent() {}
 #endif
 		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_TimeBeforeStopped;
 #if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_DepenetrationIterationCount_MetaData[];
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_LocalInstantVelocity_MetaData[];
 #endif
-		static const UE4CodeGen_Private::FUnsizedIntPropertyParams NewProp_DepenetrationIterationCount;
+		static const UE4CodeGen_Private::FStructPropertyParams NewProp_LocalInstantVelocity;
 #if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_GravityScalar_MetaData[];
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_AnimationSpeed_MetaData[];
 #endif
-		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_GravityScalar;
+		static const UE4CodeGen_Private::FStructPropertyParams NewProp_AnimationSpeed;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_InstantVelocity_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FStructPropertyParams NewProp_InstantVelocity;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_Acceleration_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FStructPropertyParams NewProp_Acceleration;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_LastRegisteredInput_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FStructPropertyParams NewProp_LastRegisteredInput;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_Input_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FStructPropertyParams NewProp_Input;
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_CurrentGravityForce_MetaData[];
 #endif
@@ -601,13 +559,12 @@ void EmptyLinkFunctionForGeneratedCodeGP3WASDMovementComponent() {}
 	};
 	const FClassFunctionLinkInfo Z_Construct_UClass_UGP3WASDMovementComponent_Statics::FuncInfo[] = {
 		{ &Z_Construct_UFunction_UGP3WASDMovementComponent_ApplySlopeAxis, "ApplySlopeAxis" }, // 3967555808
-		{ &Z_Construct_UFunction_UGP3WASDMovementComponent_CalculateAccelerationDeceleration, "CalculateAccelerationDeceleration" }, // 3893483306
+		{ &Z_Construct_UFunction_UGP3WASDMovementComponent_CalculateAccelerationDeceleration, "CalculateAccelerationDeceleration" }, // 4178245755
+		{ &Z_Construct_UFunction_UGP3WASDMovementComponent_CalculateInput, "CalculateInput" }, // 1698249733
 		{ &Z_Construct_UFunction_UGP3WASDMovementComponent_CheckInputs, "CheckInputs" }, // 381490269
 		{ &Z_Construct_UFunction_UGP3WASDMovementComponent_ExecuteMovement, "ExecuteMovement" }, // 1689074482
-		{ &Z_Construct_UFunction_UGP3WASDMovementComponent_GetDirectionFromInput, "GetDirectionFromInput" }, // 2531352280
 		{ &Z_Construct_UFunction_UGP3WASDMovementComponent_IsGrounded, "IsGrounded" }, // 256277037
 		{ &Z_Construct_UFunction_UGP3WASDMovementComponent_Move, "Move" }, // 2468238809
-		{ &Z_Construct_UFunction_UGP3WASDMovementComponent_PlayerStopCheck, "PlayerStopCheck" }, // 1807335731
 		{ &Z_Construct_UFunction_UGP3WASDMovementComponent_RotatePlayerWithController, "RotatePlayerWithController" }, // 2911323397
 		{ &Z_Construct_UFunction_UGP3WASDMovementComponent_UpdateCurveTimers, "UpdateCurveTimers" }, // 3338124193
 	};
@@ -689,7 +646,6 @@ void EmptyLinkFunctionForGeneratedCodeGP3WASDMovementComponent() {}
 	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_UGP3WASDMovementComponent_Statics::NewProp_DecelerationCurve = { "DecelerationCurve", nullptr, (EPropertyFlags)0x0010000000010001, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UGP3WASDMovementComponent, DecelerationCurve), Z_Construct_UClass_UCurveFloat_NoRegister, METADATA_PARAMS(Z_Construct_UClass_UGP3WASDMovementComponent_Statics::NewProp_DecelerationCurve_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UGP3WASDMovementComponent_Statics::NewProp_DecelerationCurve_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UGP3WASDMovementComponent_Statics::NewProp_IsReceivingInput_MetaData[] = {
-		{ "Category", "Character Movement - Debugging Info" },
 		{ "ModuleRelativePath", "Public/Player/GP3WASDMovementComponent.h" },
 	};
 #endif
@@ -697,10 +653,9 @@ void EmptyLinkFunctionForGeneratedCodeGP3WASDMovementComponent() {}
 	{
 		((UGP3WASDMovementComponent*)Obj)->IsReceivingInput = 1;
 	}
-	const UE4CodeGen_Private::FBoolPropertyParams Z_Construct_UClass_UGP3WASDMovementComponent_Statics::NewProp_IsReceivingInput = { "IsReceivingInput", nullptr, (EPropertyFlags)0x0010000000020001, UE4CodeGen_Private::EPropertyGenFlags::Bool | UE4CodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, sizeof(bool), sizeof(UGP3WASDMovementComponent), &Z_Construct_UClass_UGP3WASDMovementComponent_Statics::NewProp_IsReceivingInput_SetBit, METADATA_PARAMS(Z_Construct_UClass_UGP3WASDMovementComponent_Statics::NewProp_IsReceivingInput_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UGP3WASDMovementComponent_Statics::NewProp_IsReceivingInput_MetaData)) };
+	const UE4CodeGen_Private::FBoolPropertyParams Z_Construct_UClass_UGP3WASDMovementComponent_Statics::NewProp_IsReceivingInput = { "IsReceivingInput", nullptr, (EPropertyFlags)0x0010000000000000, UE4CodeGen_Private::EPropertyGenFlags::Bool | UE4CodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, sizeof(bool), sizeof(UGP3WASDMovementComponent), &Z_Construct_UClass_UGP3WASDMovementComponent_Statics::NewProp_IsReceivingInput_SetBit, METADATA_PARAMS(Z_Construct_UClass_UGP3WASDMovementComponent_Statics::NewProp_IsReceivingInput_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UGP3WASDMovementComponent_Statics::NewProp_IsReceivingInput_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UGP3WASDMovementComponent_Statics::NewProp_IsOnGround_MetaData[] = {
-		{ "Category", "Character Movement - Debugging Info" },
 		{ "ModuleRelativePath", "Public/Player/GP3WASDMovementComponent.h" },
 	};
 #endif
@@ -708,63 +663,9 @@ void EmptyLinkFunctionForGeneratedCodeGP3WASDMovementComponent() {}
 	{
 		((UGP3WASDMovementComponent*)Obj)->IsOnGround = 1;
 	}
-	const UE4CodeGen_Private::FBoolPropertyParams Z_Construct_UClass_UGP3WASDMovementComponent_Statics::NewProp_IsOnGround = { "IsOnGround", nullptr, (EPropertyFlags)0x0010000000020001, UE4CodeGen_Private::EPropertyGenFlags::Bool | UE4CodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, sizeof(bool), sizeof(UGP3WASDMovementComponent), &Z_Construct_UClass_UGP3WASDMovementComponent_Statics::NewProp_IsOnGround_SetBit, METADATA_PARAMS(Z_Construct_UClass_UGP3WASDMovementComponent_Statics::NewProp_IsOnGround_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UGP3WASDMovementComponent_Statics::NewProp_IsOnGround_MetaData)) };
-#if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UGP3WASDMovementComponent_Statics::NewProp_Acceleration_MetaData[] = {
-		{ "Category", "Character Movement - Debugging Info" },
-		{ "ModuleRelativePath", "Public/Player/GP3WASDMovementComponent.h" },
-	};
-#endif
-	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UClass_UGP3WASDMovementComponent_Statics::NewProp_Acceleration = { "Acceleration", nullptr, (EPropertyFlags)0x0010000000020001, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UGP3WASDMovementComponent, Acceleration), Z_Construct_UScriptStruct_FVector, METADATA_PARAMS(Z_Construct_UClass_UGP3WASDMovementComponent_Statics::NewProp_Acceleration_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UGP3WASDMovementComponent_Statics::NewProp_Acceleration_MetaData)) };
-#if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UGP3WASDMovementComponent_Statics::NewProp_LastRegisteredInput_MetaData[] = {
-		{ "Category", "Character Movement - Debugging Info" },
-		{ "ModuleRelativePath", "Public/Player/GP3WASDMovementComponent.h" },
-	};
-#endif
-	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UClass_UGP3WASDMovementComponent_Statics::NewProp_LastRegisteredInput = { "LastRegisteredInput", nullptr, (EPropertyFlags)0x0010000000020001, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UGP3WASDMovementComponent, LastRegisteredInput), Z_Construct_UScriptStruct_FVector, METADATA_PARAMS(Z_Construct_UClass_UGP3WASDMovementComponent_Statics::NewProp_LastRegisteredInput_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UGP3WASDMovementComponent_Statics::NewProp_LastRegisteredInput_MetaData)) };
-#if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UGP3WASDMovementComponent_Statics::NewProp_Direction_MetaData[] = {
-		{ "Category", "Character Movement - Debugging Info" },
-		{ "ModuleRelativePath", "Public/Player/GP3WASDMovementComponent.h" },
-	};
-#endif
-	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UClass_UGP3WASDMovementComponent_Statics::NewProp_Direction = { "Direction", nullptr, (EPropertyFlags)0x0010000000020001, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UGP3WASDMovementComponent, Direction), Z_Construct_UScriptStruct_FVector, METADATA_PARAMS(Z_Construct_UClass_UGP3WASDMovementComponent_Statics::NewProp_Direction_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UGP3WASDMovementComponent_Statics::NewProp_Direction_MetaData)) };
-#if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UGP3WASDMovementComponent_Statics::NewProp_LocalInstantVelocity_MetaData[] = {
-		{ "Category", "Character Movement - Debugging Info" },
-		{ "ModuleRelativePath", "Public/Player/GP3WASDMovementComponent.h" },
-	};
-#endif
-	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UClass_UGP3WASDMovementComponent_Statics::NewProp_LocalInstantVelocity = { "LocalInstantVelocity", nullptr, (EPropertyFlags)0x0010000000020015, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UGP3WASDMovementComponent, LocalInstantVelocity), Z_Construct_UScriptStruct_FVector, METADATA_PARAMS(Z_Construct_UClass_UGP3WASDMovementComponent_Statics::NewProp_LocalInstantVelocity_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UGP3WASDMovementComponent_Statics::NewProp_LocalInstantVelocity_MetaData)) };
-#if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UGP3WASDMovementComponent_Statics::NewProp_AccelerationCurveValue_MetaData[] = {
-		{ "Category", "Character Movement - Debugging Info" },
-		{ "ModuleRelativePath", "Public/Player/GP3WASDMovementComponent.h" },
-	};
-#endif
-	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UClass_UGP3WASDMovementComponent_Statics::NewProp_AccelerationCurveValue = { "AccelerationCurveValue", nullptr, (EPropertyFlags)0x0010000000020001, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UGP3WASDMovementComponent, AccelerationCurveValue), METADATA_PARAMS(Z_Construct_UClass_UGP3WASDMovementComponent_Statics::NewProp_AccelerationCurveValue_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UGP3WASDMovementComponent_Statics::NewProp_AccelerationCurveValue_MetaData)) };
-#if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UGP3WASDMovementComponent_Statics::NewProp_DecelerationCurveValue_MetaData[] = {
-		{ "Category", "Character Movement - Debugging Info" },
-		{ "ModuleRelativePath", "Public/Player/GP3WASDMovementComponent.h" },
-	};
-#endif
-	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UClass_UGP3WASDMovementComponent_Statics::NewProp_DecelerationCurveValue = { "DecelerationCurveValue", nullptr, (EPropertyFlags)0x0010000000020001, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UGP3WASDMovementComponent, DecelerationCurveValue), METADATA_PARAMS(Z_Construct_UClass_UGP3WASDMovementComponent_Statics::NewProp_DecelerationCurveValue_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UGP3WASDMovementComponent_Statics::NewProp_DecelerationCurveValue_MetaData)) };
-#if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UGP3WASDMovementComponent_Statics::NewProp_DrawHitresultLine_MetaData[] = {
-		{ "Category", "Character Movement - Debugging Info" },
-		{ "ModuleRelativePath", "Public/Player/GP3WASDMovementComponent.h" },
-	};
-#endif
-	void Z_Construct_UClass_UGP3WASDMovementComponent_Statics::NewProp_DrawHitresultLine_SetBit(void* Obj)
-	{
-		((UGP3WASDMovementComponent*)Obj)->DrawHitresultLine = 1;
-	}
-	const UE4CodeGen_Private::FBoolPropertyParams Z_Construct_UClass_UGP3WASDMovementComponent_Statics::NewProp_DrawHitresultLine = { "DrawHitresultLine", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Bool | UE4CodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, sizeof(bool), sizeof(UGP3WASDMovementComponent), &Z_Construct_UClass_UGP3WASDMovementComponent_Statics::NewProp_DrawHitresultLine_SetBit, METADATA_PARAMS(Z_Construct_UClass_UGP3WASDMovementComponent_Statics::NewProp_DrawHitresultLine_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UGP3WASDMovementComponent_Statics::NewProp_DrawHitresultLine_MetaData)) };
+	const UE4CodeGen_Private::FBoolPropertyParams Z_Construct_UClass_UGP3WASDMovementComponent_Statics::NewProp_IsOnGround = { "IsOnGround", nullptr, (EPropertyFlags)0x0010000000000000, UE4CodeGen_Private::EPropertyGenFlags::Bool | UE4CodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, sizeof(bool), sizeof(UGP3WASDMovementComponent), &Z_Construct_UClass_UGP3WASDMovementComponent_Statics::NewProp_IsOnGround_SetBit, METADATA_PARAMS(Z_Construct_UClass_UGP3WASDMovementComponent_Statics::NewProp_IsOnGround_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UGP3WASDMovementComponent_Statics::NewProp_IsOnGround_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UGP3WASDMovementComponent_Statics::NewProp_MovementDisabled_MetaData[] = {
-		{ "Category", "Character Movement - Debugging Info" },
 		{ "ModuleRelativePath", "Public/Player/GP3WASDMovementComponent.h" },
 	};
 #endif
@@ -772,14 +673,31 @@ void EmptyLinkFunctionForGeneratedCodeGP3WASDMovementComponent() {}
 	{
 		((UGP3WASDMovementComponent*)Obj)->MovementDisabled = 1;
 	}
-	const UE4CodeGen_Private::FBoolPropertyParams Z_Construct_UClass_UGP3WASDMovementComponent_Statics::NewProp_MovementDisabled = { "MovementDisabled", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Bool | UE4CodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, sizeof(bool), sizeof(UGP3WASDMovementComponent), &Z_Construct_UClass_UGP3WASDMovementComponent_Statics::NewProp_MovementDisabled_SetBit, METADATA_PARAMS(Z_Construct_UClass_UGP3WASDMovementComponent_Statics::NewProp_MovementDisabled_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UGP3WASDMovementComponent_Statics::NewProp_MovementDisabled_MetaData)) };
+	const UE4CodeGen_Private::FBoolPropertyParams Z_Construct_UClass_UGP3WASDMovementComponent_Statics::NewProp_MovementDisabled = { "MovementDisabled", nullptr, (EPropertyFlags)0x0010000000000000, UE4CodeGen_Private::EPropertyGenFlags::Bool | UE4CodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, sizeof(bool), sizeof(UGP3WASDMovementComponent), &Z_Construct_UClass_UGP3WASDMovementComponent_Statics::NewProp_MovementDisabled_SetBit, METADATA_PARAMS(Z_Construct_UClass_UGP3WASDMovementComponent_Statics::NewProp_MovementDisabled_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UGP3WASDMovementComponent_Statics::NewProp_MovementDisabled_MetaData)) };
 #if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UGP3WASDMovementComponent_Statics::NewProp_InstantVelocity_MetaData[] = {
-		{ "Category", "Character Movement - Debugging Info" },
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UGP3WASDMovementComponent_Statics::NewProp_DepenetrationIterationCount_MetaData[] = {
 		{ "ModuleRelativePath", "Public/Player/GP3WASDMovementComponent.h" },
 	};
 #endif
-	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UClass_UGP3WASDMovementComponent_Statics::NewProp_InstantVelocity = { "InstantVelocity", nullptr, (EPropertyFlags)0x0010000000020015, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UGP3WASDMovementComponent, InstantVelocity), Z_Construct_UScriptStruct_FVector, METADATA_PARAMS(Z_Construct_UClass_UGP3WASDMovementComponent_Statics::NewProp_InstantVelocity_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UGP3WASDMovementComponent_Statics::NewProp_InstantVelocity_MetaData)) };
+	const UE4CodeGen_Private::FUnsizedIntPropertyParams Z_Construct_UClass_UGP3WASDMovementComponent_Statics::NewProp_DepenetrationIterationCount = { "DepenetrationIterationCount", nullptr, (EPropertyFlags)0x0010000000000000, UE4CodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UGP3WASDMovementComponent, DepenetrationIterationCount), METADATA_PARAMS(Z_Construct_UClass_UGP3WASDMovementComponent_Statics::NewProp_DepenetrationIterationCount_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UGP3WASDMovementComponent_Statics::NewProp_DepenetrationIterationCount_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UGP3WASDMovementComponent_Statics::NewProp_GravityScalar_MetaData[] = {
+		{ "ModuleRelativePath", "Public/Player/GP3WASDMovementComponent.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UClass_UGP3WASDMovementComponent_Statics::NewProp_GravityScalar = { "GravityScalar", nullptr, (EPropertyFlags)0x0010000000000000, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UGP3WASDMovementComponent, GravityScalar), METADATA_PARAMS(Z_Construct_UClass_UGP3WASDMovementComponent_Statics::NewProp_GravityScalar_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UGP3WASDMovementComponent_Statics::NewProp_GravityScalar_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UGP3WASDMovementComponent_Statics::NewProp_AccelerationCurveValue_MetaData[] = {
+		{ "ModuleRelativePath", "Public/Player/GP3WASDMovementComponent.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UClass_UGP3WASDMovementComponent_Statics::NewProp_AccelerationCurveValue = { "AccelerationCurveValue", nullptr, (EPropertyFlags)0x0010000000000000, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UGP3WASDMovementComponent, AccelerationCurveValue), METADATA_PARAMS(Z_Construct_UClass_UGP3WASDMovementComponent_Statics::NewProp_AccelerationCurveValue_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UGP3WASDMovementComponent_Statics::NewProp_AccelerationCurveValue_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UGP3WASDMovementComponent_Statics::NewProp_DecelerationCurveValue_MetaData[] = {
+		{ "ModuleRelativePath", "Public/Player/GP3WASDMovementComponent.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UClass_UGP3WASDMovementComponent_Statics::NewProp_DecelerationCurveValue = { "DecelerationCurveValue", nullptr, (EPropertyFlags)0x0010000000000000, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UGP3WASDMovementComponent, DecelerationCurveValue), METADATA_PARAMS(Z_Construct_UClass_UGP3WASDMovementComponent_Statics::NewProp_DecelerationCurveValue_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UGP3WASDMovementComponent_Statics::NewProp_DecelerationCurveValue_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UGP3WASDMovementComponent_Statics::NewProp_AcceleratingTime_MetaData[] = {
 		{ "ModuleRelativePath", "Public/Player/GP3WASDMovementComponent.h" },
@@ -799,17 +717,44 @@ void EmptyLinkFunctionForGeneratedCodeGP3WASDMovementComponent() {}
 #endif
 	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UClass_UGP3WASDMovementComponent_Statics::NewProp_TimeBeforeStopped = { "TimeBeforeStopped", nullptr, (EPropertyFlags)0x0010000000000000, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UGP3WASDMovementComponent, TimeBeforeStopped), METADATA_PARAMS(Z_Construct_UClass_UGP3WASDMovementComponent_Statics::NewProp_TimeBeforeStopped_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UGP3WASDMovementComponent_Statics::NewProp_TimeBeforeStopped_MetaData)) };
 #if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UGP3WASDMovementComponent_Statics::NewProp_DepenetrationIterationCount_MetaData[] = {
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UGP3WASDMovementComponent_Statics::NewProp_LocalInstantVelocity_MetaData[] = {
+		{ "Category", "GP3WASDMovementComponent" },
 		{ "ModuleRelativePath", "Public/Player/GP3WASDMovementComponent.h" },
 	};
 #endif
-	const UE4CodeGen_Private::FUnsizedIntPropertyParams Z_Construct_UClass_UGP3WASDMovementComponent_Statics::NewProp_DepenetrationIterationCount = { "DepenetrationIterationCount", nullptr, (EPropertyFlags)0x0010000000000000, UE4CodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UGP3WASDMovementComponent, DepenetrationIterationCount), METADATA_PARAMS(Z_Construct_UClass_UGP3WASDMovementComponent_Statics::NewProp_DepenetrationIterationCount_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UGP3WASDMovementComponent_Statics::NewProp_DepenetrationIterationCount_MetaData)) };
+	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UClass_UGP3WASDMovementComponent_Statics::NewProp_LocalInstantVelocity = { "LocalInstantVelocity", nullptr, (EPropertyFlags)0x0010000000000014, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UGP3WASDMovementComponent, LocalInstantVelocity), Z_Construct_UScriptStruct_FVector, METADATA_PARAMS(Z_Construct_UClass_UGP3WASDMovementComponent_Statics::NewProp_LocalInstantVelocity_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UGP3WASDMovementComponent_Statics::NewProp_LocalInstantVelocity_MetaData)) };
 #if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UGP3WASDMovementComponent_Statics::NewProp_GravityScalar_MetaData[] = {
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UGP3WASDMovementComponent_Statics::NewProp_AnimationSpeed_MetaData[] = {
+		{ "Category", "GP3WASDMovementComponent" },
 		{ "ModuleRelativePath", "Public/Player/GP3WASDMovementComponent.h" },
 	};
 #endif
-	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UClass_UGP3WASDMovementComponent_Statics::NewProp_GravityScalar = { "GravityScalar", nullptr, (EPropertyFlags)0x0010000000000000, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UGP3WASDMovementComponent, GravityScalar), METADATA_PARAMS(Z_Construct_UClass_UGP3WASDMovementComponent_Statics::NewProp_GravityScalar_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UGP3WASDMovementComponent_Statics::NewProp_GravityScalar_MetaData)) };
+	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UClass_UGP3WASDMovementComponent_Statics::NewProp_AnimationSpeed = { "AnimationSpeed", nullptr, (EPropertyFlags)0x0010000000000014, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UGP3WASDMovementComponent, AnimationSpeed), Z_Construct_UScriptStruct_FVector, METADATA_PARAMS(Z_Construct_UClass_UGP3WASDMovementComponent_Statics::NewProp_AnimationSpeed_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UGP3WASDMovementComponent_Statics::NewProp_AnimationSpeed_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UGP3WASDMovementComponent_Statics::NewProp_InstantVelocity_MetaData[] = {
+		{ "Category", "GP3WASDMovementComponent" },
+		{ "ModuleRelativePath", "Public/Player/GP3WASDMovementComponent.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UClass_UGP3WASDMovementComponent_Statics::NewProp_InstantVelocity = { "InstantVelocity", nullptr, (EPropertyFlags)0x0010000000000014, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UGP3WASDMovementComponent, InstantVelocity), Z_Construct_UScriptStruct_FVector, METADATA_PARAMS(Z_Construct_UClass_UGP3WASDMovementComponent_Statics::NewProp_InstantVelocity_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UGP3WASDMovementComponent_Statics::NewProp_InstantVelocity_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UGP3WASDMovementComponent_Statics::NewProp_Acceleration_MetaData[] = {
+		{ "ModuleRelativePath", "Public/Player/GP3WASDMovementComponent.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UClass_UGP3WASDMovementComponent_Statics::NewProp_Acceleration = { "Acceleration", nullptr, (EPropertyFlags)0x0010000000000000, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UGP3WASDMovementComponent, Acceleration), Z_Construct_UScriptStruct_FVector, METADATA_PARAMS(Z_Construct_UClass_UGP3WASDMovementComponent_Statics::NewProp_Acceleration_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UGP3WASDMovementComponent_Statics::NewProp_Acceleration_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UGP3WASDMovementComponent_Statics::NewProp_LastRegisteredInput_MetaData[] = {
+		{ "ModuleRelativePath", "Public/Player/GP3WASDMovementComponent.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UClass_UGP3WASDMovementComponent_Statics::NewProp_LastRegisteredInput = { "LastRegisteredInput", nullptr, (EPropertyFlags)0x0010000000000000, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UGP3WASDMovementComponent, LastRegisteredInput), Z_Construct_UScriptStruct_FVector, METADATA_PARAMS(Z_Construct_UClass_UGP3WASDMovementComponent_Statics::NewProp_LastRegisteredInput_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UGP3WASDMovementComponent_Statics::NewProp_LastRegisteredInput_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UGP3WASDMovementComponent_Statics::NewProp_Input_MetaData[] = {
+		{ "ModuleRelativePath", "Public/Player/GP3WASDMovementComponent.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UClass_UGP3WASDMovementComponent_Statics::NewProp_Input = { "Input", nullptr, (EPropertyFlags)0x0010000000000000, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UGP3WASDMovementComponent, Input), Z_Construct_UScriptStruct_FVector, METADATA_PARAMS(Z_Construct_UClass_UGP3WASDMovementComponent_Statics::NewProp_Input_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UGP3WASDMovementComponent_Statics::NewProp_Input_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UGP3WASDMovementComponent_Statics::NewProp_CurrentGravityForce_MetaData[] = {
 		{ "ModuleRelativePath", "Public/Player/GP3WASDMovementComponent.h" },
@@ -829,20 +774,20 @@ void EmptyLinkFunctionForGeneratedCodeGP3WASDMovementComponent() {}
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UGP3WASDMovementComponent_Statics::NewProp_DecelerationCurve,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UGP3WASDMovementComponent_Statics::NewProp_IsReceivingInput,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UGP3WASDMovementComponent_Statics::NewProp_IsOnGround,
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UGP3WASDMovementComponent_Statics::NewProp_Acceleration,
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UGP3WASDMovementComponent_Statics::NewProp_LastRegisteredInput,
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UGP3WASDMovementComponent_Statics::NewProp_Direction,
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UGP3WASDMovementComponent_Statics::NewProp_LocalInstantVelocity,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UGP3WASDMovementComponent_Statics::NewProp_MovementDisabled,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UGP3WASDMovementComponent_Statics::NewProp_DepenetrationIterationCount,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UGP3WASDMovementComponent_Statics::NewProp_GravityScalar,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UGP3WASDMovementComponent_Statics::NewProp_AccelerationCurveValue,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UGP3WASDMovementComponent_Statics::NewProp_DecelerationCurveValue,
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UGP3WASDMovementComponent_Statics::NewProp_DrawHitresultLine,
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UGP3WASDMovementComponent_Statics::NewProp_MovementDisabled,
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UGP3WASDMovementComponent_Statics::NewProp_InstantVelocity,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UGP3WASDMovementComponent_Statics::NewProp_AcceleratingTime,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UGP3WASDMovementComponent_Statics::NewProp_DeceleratingTime,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UGP3WASDMovementComponent_Statics::NewProp_TimeBeforeStopped,
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UGP3WASDMovementComponent_Statics::NewProp_DepenetrationIterationCount,
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UGP3WASDMovementComponent_Statics::NewProp_GravityScalar,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UGP3WASDMovementComponent_Statics::NewProp_LocalInstantVelocity,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UGP3WASDMovementComponent_Statics::NewProp_AnimationSpeed,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UGP3WASDMovementComponent_Statics::NewProp_InstantVelocity,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UGP3WASDMovementComponent_Statics::NewProp_Acceleration,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UGP3WASDMovementComponent_Statics::NewProp_LastRegisteredInput,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UGP3WASDMovementComponent_Statics::NewProp_Input,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UGP3WASDMovementComponent_Statics::NewProp_CurrentGravityForce,
 	};
 	const FCppClassTypeInfoStatic Z_Construct_UClass_UGP3WASDMovementComponent_Statics::StaticCppClassTypeInfo = {
@@ -872,7 +817,7 @@ void EmptyLinkFunctionForGeneratedCodeGP3WASDMovementComponent() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(UGP3WASDMovementComponent, 3051248457);
+	IMPLEMENT_CLASS(UGP3WASDMovementComponent, 2237213462);
 	template<> GP3_TEAM03_API UClass* StaticClass<UGP3WASDMovementComponent>()
 	{
 		return UGP3WASDMovementComponent::StaticClass();

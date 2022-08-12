@@ -51,14 +51,6 @@ void EmptyLinkFunctionForGeneratedCodeGP3ShootComponent() {}
 		P_THIS->OnReloaded();
 		P_NATIVE_END;
 	}
-	DEFINE_FUNCTION(UGP3ShootComponent::execSetProjectileVelocity)
-	{
-		P_GET_PROPERTY(FFloatProperty,Z_Param_Delta);
-		P_FINISH;
-		P_NATIVE_BEGIN;
-		P_THIS->SetProjectileVelocity(Z_Param_Delta);
-		P_NATIVE_END;
-	}
 	DEFINE_FUNCTION(UGP3ShootComponent::execReload)
 	{
 		P_FINISH;
@@ -79,7 +71,6 @@ void EmptyLinkFunctionForGeneratedCodeGP3ShootComponent() {}
 		static const FNameNativePtrPair Funcs[] = {
 			{ "OnReloaded", &UGP3ShootComponent::execOnReloaded },
 			{ "Reload", &UGP3ShootComponent::execReload },
-			{ "SetProjectileVelocity", &UGP3ShootComponent::execSetProjectileVelocity },
 			{ "Shoot", &UGP3ShootComponent::execShoot },
 		};
 		FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, UE_ARRAY_COUNT(Funcs));
@@ -125,38 +116,6 @@ void EmptyLinkFunctionForGeneratedCodeGP3ShootComponent() {}
 		if (!ReturnFunction)
 		{
 			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UGP3ShootComponent_Reload_Statics::FuncParams);
-		}
-		return ReturnFunction;
-	}
-	struct Z_Construct_UFunction_UGP3ShootComponent_SetProjectileVelocity_Statics
-	{
-		struct GP3ShootComponent_eventSetProjectileVelocity_Parms
-		{
-			float Delta;
-		};
-		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_Delta;
-		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
-#if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
-#endif
-		static const UE4CodeGen_Private::FFunctionParams FuncParams;
-	};
-	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UFunction_UGP3ShootComponent_SetProjectileVelocity_Statics::NewProp_Delta = { "Delta", nullptr, (EPropertyFlags)0x0010000000000080, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(GP3ShootComponent_eventSetProjectileVelocity_Parms, Delta), METADATA_PARAMS(nullptr, 0) };
-	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UGP3ShootComponent_SetProjectileVelocity_Statics::PropPointers[] = {
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UGP3ShootComponent_SetProjectileVelocity_Statics::NewProp_Delta,
-	};
-#if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UGP3ShootComponent_SetProjectileVelocity_Statics::Function_MetaDataParams[] = {
-		{ "ModuleRelativePath", "Public/Player/GP3ShootComponent.h" },
-	};
-#endif
-	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UGP3ShootComponent_SetProjectileVelocity_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UGP3ShootComponent, nullptr, "SetProjectileVelocity", nullptr, nullptr, sizeof(GP3ShootComponent_eventSetProjectileVelocity_Parms), Z_Construct_UFunction_UGP3ShootComponent_SetProjectileVelocity_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UGP3ShootComponent_SetProjectileVelocity_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_UGP3ShootComponent_SetProjectileVelocity_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_UGP3ShootComponent_SetProjectileVelocity_Statics::Function_MetaDataParams)) };
-	UFunction* Z_Construct_UFunction_UGP3ShootComponent_SetProjectileVelocity()
-	{
-		static UFunction* ReturnFunction = nullptr;
-		if (!ReturnFunction)
-		{
-			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UGP3ShootComponent_SetProjectileVelocity_Statics::FuncParams);
 		}
 		return ReturnFunction;
 	}
@@ -234,7 +193,6 @@ void EmptyLinkFunctionForGeneratedCodeGP3ShootComponent() {}
 		{ &Z_Construct_UFunction_UGP3ShootComponent_OnReloaded, "OnReloaded" }, // 1239280500
 		{ &Z_Construct_UDelegateFunction_UGP3ShootComponent_OnWeaponEquippedEvent__DelegateSignature, "OnWeaponEquippedEvent__DelegateSignature" }, // 1195623040
 		{ &Z_Construct_UFunction_UGP3ShootComponent_Reload, "Reload" }, // 3549439714
-		{ &Z_Construct_UFunction_UGP3ShootComponent_SetProjectileVelocity, "SetProjectileVelocity" }, // 3546006030
 		{ &Z_Construct_UFunction_UGP3ShootComponent_Shoot, "Shoot" }, // 1729935960
 	};
 #if WITH_METADATA
@@ -331,7 +289,7 @@ void EmptyLinkFunctionForGeneratedCodeGP3ShootComponent() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(UGP3ShootComponent, 3376097217);
+	IMPLEMENT_CLASS(UGP3ShootComponent, 1023054365);
 	template<> GP3_TEAM03_API UClass* StaticClass<UGP3ShootComponent>()
 	{
 		return UGP3ShootComponent::StaticClass();

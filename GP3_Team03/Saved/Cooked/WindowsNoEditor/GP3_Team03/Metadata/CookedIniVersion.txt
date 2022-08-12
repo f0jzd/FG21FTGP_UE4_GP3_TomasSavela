@@ -16,12 +16,18 @@ Windows.Engine:AssetRegistry:bFilterDependenciesWithNoTags:0=false
 Windows.Engine:AssetRegistry:bFilterSearchableNames:0=true
 Windows.Engine:Core.System:LegacyBulkDataOffsets:0=False
 Windows.Engine:Core.System:CanUseUnversionedPropertySerialization:0=False
-Windows.Engine:/Script/EngineSettings.GameMapsSettings:GameInstanceClass:0=/Script/Engine.GameInstance
-Windows.Engine:/Script/EngineSettings.GameMapsSettings:GameDefaultMap:0=/Game/Maps/MainMenuLevel.MainMenuLevel
+Windows.Engine:/Script/EngineSettings.GameMapsSettings:GameInstanceClass:0=/Game/Blueprints/GameInstance/GP3SettingsGameInstance.GP3SettingsGameInstance_C
+Windows.Engine:/Script/EngineSettings.GameMapsSettings:GameDefaultMap:0=/Game/Maps/Devons_Test_Level1.Devons_Test_Level1
 Windows.Engine:/Script/EngineSettings.GameMapsSettings:ServerDefaultMap:0=/Engine/Maps/Entry
 Windows.Engine:/Script/EngineSettings.GameMapsSettings:GlobalDefaultGameMode:0=/Game/Blueprints/GameMode/GM_GP3.GM_GP3_C
+Windows.Engine:SystemSettings:fx.NiagaraAllowRuntimeScalabilityChanges:0=1
 Windows.Game:/Script/UnrealEd.ProjectPackagingSettings:bDeterministicShaderCodeOrder:0=False
 Windows.Input:/Script/Engine.InputSettings:DefaultTouchInterface:0=/Engine/MobileResources/HUD/DefaultVirtualJoysticks.DefaultVirtualJoysticks
+Windows.Scalability:EffectsQuality@0:fx.Niagara.QualityLevel:0=0
+Windows.Scalability:EffectsQuality@1:fx.Niagara.QualityLevel:0=1
+Windows.Scalability:EffectsQuality@2:fx.Niagara.QualityLevel:0=2
+Windows.Scalability:EffectsQuality@3:fx.Niagara.QualityLevel:0=3
+Windows.Scalability:EffectsQuality@Cine:fx.Niagara.QualityLevel:0=4
 Engine:Core.System:CanStripEditorOnlyExportsAndImports:0=True
 Engine:Core.System:CanSkipEditorReferencedPackagesWhenCooking:0=False
 Engine:Core.System:DetailedCallstacksInNonMonolithicBuilds:0=True
@@ -43,9 +49,9 @@ Engine:/Script/UdpMessaging.UdpMessagingSettings:EnableTunnel:0=False
 Engine:/Script/UdpMessaging.UdpMessagingSettings:TunnelUnicastEndpoint:0=
 Engine:/Script/UdpMessaging.UdpMessagingSettings:TunnelMulticastEndpoint:0=
 Engine:/Script/LuminPlatformEditor.MagicLeapSDKSettings:MLSDKPath:0=(Path="")
-Engine:/Script/EngineSettings.GameMapsSettings:GameInstanceClass:0=/Script/Engine.GameInstance
+Engine:/Script/EngineSettings.GameMapsSettings:GameInstanceClass:0=/Game/Blueprints/GameInstance/GP3SettingsGameInstance.GP3SettingsGameInstance_C
 Engine:/Script/EngineSettings.GameMapsSettings:EditorStartupMap:0=/Engine/Maps/Templates/Template_Default
-Engine:/Script/EngineSettings.GameMapsSettings:GameDefaultMap:0=/Game/Maps/MainMenuLevel.MainMenuLevel
+Engine:/Script/EngineSettings.GameMapsSettings:GameDefaultMap:0=/Game/Maps/Devons_Test_Level1.Devons_Test_Level1
 Engine:/Script/EngineSettings.GameMapsSettings:ServerDefaultMap:0=/Engine/Maps/Entry
 Engine:/Script/EngineSettings.GameMapsSettings:GlobalDefaultGameMode:0=/Game/Blueprints/GameMode/GM_GP3.GM_GP3_C
 Engine:/Script/EngineSettings.GameMapsSettings:LocalMapOptions:0=
@@ -165,7 +171,7 @@ Engine:/Script/Engine.Engine:NearClipPlane:0=10.0
 Engine:/Script/Engine.Engine:ActiveGameNameRedirects:0=(OldGameName="TP_Blank",NewGameName="/Script/GP3_Team03")
 Engine:/Script/Engine.Engine:ActiveGameNameRedirects:1=(OldGameName="/Script/TP_Blank",NewGameName="/Script/GP3_Team03")
 Engine:/Script/Engine.Engine:ActiveClassRedirects:0=(OldClassName="TP_BlankGameModeBase",NewClassName="GP3_Team03GameModeBase")
-Engine:/Script/Engine.Engine:bUseFixedFrameRate:0=True
+Engine:/Script/Engine.Engine:bUseFixedFrameRate:0=False
 Engine:/Script/Engine.Engine:FixedFrameRate:0=60.000000
 Engine:CoreUObject.Metadata:MetadataRedirects:0=(OldKey="K2Protected", NewKey="BlueprintProtected")
 Engine:CoreUObject.Metadata:MetadataRedirects:1=(OldKey="K2UnsafeForConstructionScripts", NewKey="UnsafeDuringActorConstruction")
@@ -183,6 +189,7 @@ Engine:/Script/Engine.UserInterfaceSettings:UIScaleRule:0=ShortestSide
 Engine:/Script/Engine.UserInterfaceSettings:UIScaleCurve:0=(EditorCurveData=(Keys=((Time=480,Value=0.444),(Time=720,Value=0.666),(Time=1080,Value=1.0),(Time=8640,Value=8.0))),ExternalCurve=None)
 Engine:/Script/Engine.UserInterfaceSettings:bLoadWidgetsOnDedicatedServer:0=True
 Engine:/Script/Engine.UserInterfaceSettings:bAllowHighDPIInGameMode:0=False
+Engine:/Script/Engine.UserInterfaceSettings:RenderFocusRule:0=Always
 Engine:/Script/Engine.GameEngine:MaxDeltaTime:0=0
 Engine:/Script/Engine.GameEngine:ServerFlushLogInterval:0=30
 Engine:/Script/Engine.StreamingSettings:s.MinBulkDataSizeForAsyncLoading:0=131072
@@ -236,6 +243,7 @@ Engine:/Script/Engine.RendererSettings:VisualizeCalibrationColorMaterialPath:0=/
 Engine:/Script/Engine.RendererSettings:VisualizeCalibrationGrayscaleMaterialPath:0=/Engine/EngineMaterials/PPM_DefaultCalibrationGrayscale.PPM_DefaultCalibrationGrayscale
 Engine:/Script/Engine.RendererSettings:r.GPUCrashDebugging:0=false
 Engine:/Script/Engine.RendererSettings:MaxSkinBones:0=(Default=65536,PerPlatform=(("Mobile", 256)))
+Engine:/Script/Engine.RendererSettings:r.SupportSkyAtmosphereAffectsHeightFog:0=True
 Engine:/Script/OnlineSubsystemUtils.IpNetDriver:ConnectionTimeout:0=60.0
 Engine:/Script/OnlineSubsystemUtils.IpNetDriver:InitialConnectTimeout:0=60.0
 Engine:/Script/OnlineSubsystemUtils.IpNetDriver:RecentlyDisconnectedTrackingTime:0=120
@@ -367,6 +375,8 @@ Engine:/Script/NavigationSystem.RecastNavMesh:MinRegionArea:0=0.f
 Engine:/Script/NavigationSystem.RecastNavMesh:MergeRegionSize:0=400.f
 Engine:/Script/NavigationSystem.RecastNavMesh:bUseBetterOffsetsFromCorners:0=true
 Engine:/Script/NavigationSystem.RecastNavMesh:MaxSimplificationError:0=1.300000
+Engine:/Script/NavigationSystem.RecastNavMesh:bForceRebuildOnLoad:0=True
+Engine:/Script/NavigationSystem.RecastNavMesh:RuntimeGeneration:0=Dynamic
 Engine:/Script/NavigationSystem.NavArea_Null:DrawColor:0=(R=38,G=38,B=38,A=64)
 Engine:/Script/NavigationSystem.NavArea_Default:DrawColor:0=(R=140,G=255,B=0,A=164)
 Engine:RemoteConfiguration:Enabled:0=false
@@ -520,7 +530,8 @@ Engine:/Script/HardwareTargeting.HardwareTargetingSettings:TargetedHardwareClass
 Engine:/Script/HardwareTargeting.HardwareTargetingSettings:AppliedTargetedHardwareClass:0=Desktop
 Engine:/Script/HardwareTargeting.HardwareTargetingSettings:DefaultGraphicsPerformance:0=Maximum
 Engine:/Script/HardwareTargeting.HardwareTargetingSettings:AppliedDefaultGraphicsPerformance:0=Maximum
-Game:/Script/UnrealEd.ProjectPackagingSettings:StagingDirectory:0=(Path="C/Users/tomas.savela/OneDrive - Change Maker Education/Documents/UE4TestBuild/,jahkjhsadfsa")
+Engine:/Script/FMODStudio.FMODSettings:BankOutputDirectory:0=(Path="FMOD/Banks")
+Game:/Script/UnrealEd.ProjectPackagingSettings:StagingDirectory:0=(Path="C/Users/tomas.savela/OneDrive - Change Maker Education/Desktop/UE4Build")
 Game:/Script/UnrealEd.ProjectPackagingSettings:BuildConfiguration:0=PPBC_Development
 Game:/Script/UnrealEd.ProjectPackagingSettings:FullRebuild:0=False
 Game:/Script/UnrealEd.ProjectPackagingSettings:UsePakFile:0=True
@@ -1105,10 +1116,11 @@ OverlappingVerticeDetectionVer:612FBE52DA53400B910D4F919FB1857C=1
 VisualLogger:A4237A36CAEA41C98FA218F858681BF3=4
 VirtualTextureBuiltDataVersion:804E3F7570884B49A4D68C063C7EB6DC=5
 VariantManagerObjectVer:24BB7AF356464F831F2F2DC249AD96FF=5
-NiagaraVer:FCF57AFA50764283B9A9E658FFA02D32=68
 ChaosClothConfigVer:76A52329092345B598AED841CF2F6AD8=5
 ChaosClothSharedConfigVer:5FBC690755C840AE8E67F1845EFFF13F=1
+NiagaraVer:FCF57AFA50764283B9A9E658FFA02D32=68
 Paper2DVer:11310AED2E554D61AF679AA3C5A1082C=17
+SubstanceCoreVer:C52D92BED4A6A49C11E593249A6C11E5=2
 AudioSynesthesiaVer:82E77C4E332343A5B46B13C597310DF3=0
 EditableMeshVer:FB26E4121F154B4D9372550A961D2F70=3
 PackageFileVersions:522=0

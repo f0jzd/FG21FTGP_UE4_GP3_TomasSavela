@@ -1,29 +1,4 @@
 ﻿  Using 'git status' to determine working set for adaptive non-unity build (C:\Users\tomas.savela\Perforce\FG21FTGP_UE4_GP3_TomasSavela).
-  Invalidating makefile for GP3_Team03Editor (working set of source files changed)
-  Parsing headers for GP3_Team03Editor
-    Running UnrealHeaderTool "C:\Users\tomas.savela\Perforce\FG21FTGP_UE4_GP3_TomasSavela\GP3_Team03\GP3_Team03.uproject" "C:\Users\tomas.savela\Perforce\FG21FTGP_UE4_GP3_TomasSavela\GP3_Team03\Intermediate\Build\Win64\GP3_Team03Editor\Development\GP3_Team03Editor.uhtmanifest" -LogCmds="loginit warning, logexit warning, logdatabase error" -Unattended -WarningsAsErrors -abslog="C:\Users\tomas.savela\AppData\Local\UnrealBuildTool\Log_UHT.txt" -installed
-  LogInit: Display: Loading text-based GConfig....
-  Reflection code generated for GP3_Team03Editor in 15,6278129 seconds
-  Building GP3_Team03Editor...
-  Using Visual Studio 2022 14.31.31105 toolchain (C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.31.31103) and Windows 10.0.19041.0 SDK (C:\Program Files (x86)\Windows Kits\10).
-  [Adaptive unity build] Excluded from GP3_Team03 unity file: SpawningEnemySystem.cpp, GP3DashComponent.cpp, GP3PlayerPawn.cpp, GP3ShootComponent.cpp, GP3WASDMovementComponent.cpp, GunProjectile.cpp, WeaponBase.cpp, GP3CrosshairWidget.cpp, GP3DashCooldownWidget.cpp, GP3SettingsWidget.cpp
-  [Adaptive unity build] Excluded from GP3_Team03.gen unity file: GP3_Team03.init.gen.cpp, GP3PlayerPawn.gen.cpp, GP3PlayerSpringArmComponent.gen.cpp, GP3ShootComponent.gen.cpp, SpawningEnemySystem.gen.cpp, WeaponBase.gen.cpp
-  Building 14 actions with 6 processes...
-    [1/14] GP3_Team03.init.gen.cpp
-    [2/14] GP3WASDMovementComponent.cpp
-    [3/14] GunProjectile.cpp
-    [4/14] GP3PlayerPawn.gen.cpp
-    [5/14] GP3DashComponent.cpp
-    [6/14] GP3PlayerPawn.cpp
-    [7/14] GP3DashCooldownWidget.cpp
-    [8/14] GP3CrosshairWidget.cpp
-    [9/14] GP3ShootComponent.cpp
-    [10/14] Module.GP3_Team03.gen.cpp
-    [11/14] Module.GP3_Team03.cpp
-    [12/14] UE4Editor-GP3_Team03.lib
-       Creating library C:\Users\tomas.savela\Perforce\FG21FTGP_UE4_GP3_TomasSavela\GP3_Team03\Intermediate\Build\Win64\UE4Editor\Development\GP3_Team03\UE4Editor-GP3_Team03.lib and object C:\Users\tomas.savela\Perforce\FG21FTGP_UE4_GP3_TomasSavela\GP3_Team03\Intermediate\Build\Win64\UE4Editor\Development\GP3_Team03\UE4Editor-GP3_Team03.exp
-    [13/14] UE4Editor-GP3_Team03.dll
-       Creating library C:\Users\tomas.savela\Perforce\FG21FTGP_UE4_GP3_TomasSavela\GP3_Team03\Intermediate\Build\Win64\UE4Editor\Development\GP3_Team03\UE4Editor-GP3_Team03.suppressed.lib and object C:\Users\tomas.savela\Perforce\FG21FTGP_UE4_GP3_TomasSavela\GP3_Team03\Intermediate\Build\Win64\UE4Editor\Development\GP3_Team03\UE4Editor-GP3_Team03.suppressed.exp
-    [14/14] GP3_Team03Editor.target
-  Total time in Parallel executor: 24,87 seconds
-  Total execution time: 44,13 seconds
+  Waiting for 'git status' command to complete
+  Target is up to date
+  Total execution time: 4,74 seconds
